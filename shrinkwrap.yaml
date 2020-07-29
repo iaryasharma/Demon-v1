@@ -6,6 +6,7 @@ dependencies:
   moment: 2.27.0
   path: 0.12.7
   quick.db: 7.1.1
+  something-random-on-discord: 0.0.1
 packages:
   /@discordjs/collection/0.1.6:
     dev: false
@@ -847,6 +848,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-bCR6cP+aTdScaQCnQKbPKtJOKDp/hj9EDLJo3Nw4y1QksqaovlW/bnptB6/c1e+qmNIDHRK+oXFDdEqBT8WzUA==
+  /something-random-on-discord/0.0.1:
+    dependencies:
+      node-fetch: 2.6.0
+    dev: false
+    resolution:
+      integrity: sha512-2MLnlryu0VlINo+MNcDANR4vfWdFFDdi4Dkuk1rKjtc+MIO0JCFW/iRj4a1J+iAOyEx581OqBG9dn2jx2j4tKg==
   /statuses/1.5.0:
     dev: false
     engines:
@@ -1032,3 +1039,4 @@ specifiers:
   moment: ^2.27.0
   path: ^0.12.7
   quick.db: ^7.1.1
+  something-random-on-discord: ^0.0.1
