@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-const { prefix } = require("./config.json");
+const { default_prefix } = require("./config.json");
 const { config } = require("dotenv");
 const db = require("quick.db");
 const constant = require("discord.js/src/util/Constants.js");
@@ -58,6 +58,9 @@ client.on("message", async message => {
     message.channel.send(embed);
   }
 
+   let prefix = db.get(`prefix_${message.guild.id}`)
+  if(prefix === null) prefix = default_prefix;
+  
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)help$`);
   if (message.content.match(prefixMention)) {
     let embed = new discord.MessageEmbed()
@@ -128,7 +131,10 @@ client.on("guildMemberAdd", (member) => {
     return;
   }
   
-  let url = 'https://cdn.discordapp.com/attachments/696417925418057789/716197399336583178/giphy.gif'
+  let default_url = 'https://cdn.discordapp.com/attachments/696417925418057789/716197399336583178/giphy.gif'
+  
+  let url = db.get(`url_${member.guild.id}`)
+  if(url === null) url = default_url;
 
   let wembed = new discord.MessageEmbed()
   .setAuthor(member.user.username, member.user.avatarURL({dynamic: true, size: 2048}))
