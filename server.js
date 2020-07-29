@@ -146,7 +146,7 @@ client.on("guildMemberAdd", (member) => {
   .setColor("RANDOM")
   .setThumbnail(member.user.avatarURL({dynmic: true, size: 2048}))
   .setImage(url)
-  .setDescription(msg);
+  .setDescription(`${msg}`);
   
   client.channels.cache.get(chx).send(wembed)
 })
