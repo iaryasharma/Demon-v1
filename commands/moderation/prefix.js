@@ -1,7 +1,7 @@
   
 const db = require("quick.db")
 const { default_prefix } = require("../../config.json")
-
+let reset = { default_prefix }
 
 module.exports = {
   name: "prefix",
