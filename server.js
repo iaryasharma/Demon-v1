@@ -130,7 +130,7 @@ client.on("guildMemberAdd", (member) => {
 
   let wembed = new discord.MessageEmbed()
   .setAuthor(member.user.username, member.user.avatarURL())
-  .setColor("#ff2050")
+  .setColor("RANDOM")
   .setThumbnail(member.user.avatarURL())
   .setDescription(`We are very happy to have you in our server`);
   
