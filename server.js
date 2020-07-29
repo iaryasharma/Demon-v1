@@ -127,11 +127,14 @@ client.on("guildMemberAdd", (member) => {
   if(chx === null) {
     return;
   }
+  
+  let url = 'https://cdn.discordapp.com/attachments/696417925418057789/716197399336583178/giphy.gif'
 
   let wembed = new discord.MessageEmbed()
-  .setAuthor(member.user.username, member.user.avatarURL())
+  .setAuthor(member.user.username, member.user.avatarURL({dynamic: true, size: 2048}))
   .setColor("RANDOM")
-  .setThumbnail(member.user.avatarURL())
+  .setThumbnail(member.user.avatarURL({dynmic: true, size: 2048}))
+  .setImage(url)
   .setDescription(`We are very happy to have you in our server`);
   
   client.channels.cache.get(chx).send(wembed)
