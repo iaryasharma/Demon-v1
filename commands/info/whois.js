@@ -35,6 +35,7 @@ module.exports = {
     let createdate = moment.utc(target.createdAt).format("ddd, Do MMMM YYYY");
     let joindate = moment.utc(target.joinedAt).format("ddd, Do MMMM YYYY");
     let flags = target.flags.toArray();
+    if(target.flags.toArray() < 1) flags = "None";
     
     const embed = new MessageEmbed()
     .setAuthor(target.tag, avatar)
