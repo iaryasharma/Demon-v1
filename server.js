@@ -133,7 +133,7 @@ client.on("guildMemberAdd", (member) => {
   
   let default_url = 'https://cdn.discordapp.com/attachments/696417925418057789/716197399336583178/giphy.gif'
   
-  let default_msg = `<#737303916932366398>, <a:socio:736571094705766411>, <:VerifiedBotDev:736571463355596872>`
+  let default_msg = `<#737303916932366398>, {:socio:}, <:VerifiedBotDev:736571463355596872>`
   
   let url = db.get(`url_${member.guild.id}`)
   if(url === null) url = default_url;
