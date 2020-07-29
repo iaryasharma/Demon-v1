@@ -17,4 +17,4 @@ module.exports = {
      return await message.channel.send("Reseted Welcome Image ✅")
     }
     
-  }
+}

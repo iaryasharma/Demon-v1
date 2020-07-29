@@ -1,10 +1,10 @@
   
 const db = require("quick.db")
-const { url } = require("../../server.js")
+const { msg } = require("../../server.js")
 
 module.exports = {
-  name: "setwelcomeimg",
-  aliases: ["setwimage", "setwimg", "setwelcomeimage"],
+  name: "setwelcomemsg",
+  aliases: ["setwmessage", "setwmsg", "setmessage"],
   category: "moderation",
   usage: "prefix <new-prefix>",
   description: "Change the guild prefix",
@@ -15,15 +15,15 @@ module.exports = {
     }
     
       if(!args[0]) {
-      return message.channel.send("Please give the link of the image")
-    } 
-    
-    if(args[1]) {
-      return message.channel.send("You can not set a double argument")
+      return message.channel.send("Please give the message to set")
     }
     
-    db.set(`url_${message.guild.id}`, args[0])
-  await message.channel.send(`Welcome image seted to ${args[0]}`)
+    if(args[0]).length > 2000) {
+      return mesaage.channle.send("Welcome message can't exceed 200")
+    }
+    
+    db.set(`msg_${message.guild.id}`, args[0])
+  await message.channel.send(`Welcome message seted to ${args[0]}`)
     
   }
 }
