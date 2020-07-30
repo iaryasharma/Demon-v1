@@ -18,12 +18,10 @@ module.exports = {
       return message.channel.send("Please give the message to set")
     }
     
-    if(args[0].length > 2000) {
-      return message.channel.send("Welcome message can't exceed 200")
-    }
+    let msg = args.slice(0).join(" ")
     
-    db.set(`msg_${message.guild.id}`, args[0])
-  await message.channel.send(`Welcome message seted to ${args[0]}`)
+    db.set(`msg_${message.guild.id}`, `${msg}`)
+  await message.channel.send(`Welcome message seted to ${msg}`)
     
   }
 }
