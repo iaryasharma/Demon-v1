@@ -133,10 +133,10 @@ client.on("guildMemberAdd", (member) => {
   
   let default_url = 'https://cdn.discordapp.com/attachments/696417925418057789/716197399336583178/giphy.gif'
   
-  let default_msg = "Hey, ${member} welcome to ${member.guild}"
+  
   
   let msg = db.get(`msg_${member.guild.id}`)
-  if(msg === null)msg = default_msg
+  if(msg === null)msg = `Hey, ${member} welcome to ${member.guild}`
   
   let url = db.get(`url_${member.guild.id}`)
   if(url === null) url = default_url;
@@ -146,10 +146,10 @@ client.on("guildMemberAdd", (member) => {
   .setColor("RANDOM")
   .setThumbnail(member.user.avatarURL({dynmic: true, size: 2048}))
   .setImage(url)
-  .setDescription(`${msg}`);
+  .setDescription(msg);
   
   client.channels.cache.get(chx).send(wembed)
 })
- 
+
 
 client.login(process.env.token);
