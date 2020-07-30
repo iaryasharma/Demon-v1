@@ -133,7 +133,7 @@ client.on("guildMemberAdd", (member) => {
   
   let default_url = 'https://cdn.discordapp.com/attachments/696417925418057789/716197399336583178/giphy.gif'
   
-  let default_msg = `Hey, ${member} welcome to ${member.guild}`
+  let default_msg = "Hey, ${member} welcome to ${member.guild}"
   
   let msg = db.get(`msg_${member.guild.id}`)
   if(msg === null)msg = default_msg
@@ -150,5 +150,6 @@ client.on("guildMemberAdd", (member) => {
   
   client.channels.cache.get(chx).send(wembed)
 })
+ 
 
 client.login(process.env.token);
