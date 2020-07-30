@@ -17,6 +17,7 @@ module.exports = {
     }
 
     const user = message.mentions.members.first();
+    const vroles = user._roles
     
     if(!user) {
       return message.channel.send("Please mention the member to who you want to mute")
@@ -40,30 +41,27 @@ module.exports = {
     
     
       if(!muterole) {
-              muterole = await message.guild.roles.create({
-                  data: {
-                      name: "Muted",
-                      color: "#808080",
-                      permissions: [
-                        {
-                          deny: ["VIEW CHANNEL", "SEND MESSAGES", "READ MESSAGE HISTORY"]
-                        }
-                      ]
-                  },
-                  reason: "Role needed to mute the user"
-              })
-          }
+      return message.channel.send("This server do not have role with name `Muted`")
+    }
     
     
    if(user.roles.cache.has(muterole)) {
       return message.channel.send("Given User is already muted")
     }
     
- user.roles.add(muterole)
+  
+    
+    
+    user.roles.add(muterole)
+    
+    user.roles.remove(vroles)
     
 await message.channel.send(`You muted **${message.mentions.users.first().username}** For \`${reason}\``)
     
     user.send(`You are muted in **${message.guild.name}** For \`${reason}\``)
+    
+    
+//WE ARE DONE HERE 
     
   }
 };
