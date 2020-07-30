@@ -136,7 +136,22 @@ client.on("guildMemberAdd", (member) => {
   
   
   let msg = db.get(`msg_${member.guild.id}`)
-  if(msg === null)msg = `Hey, ${member} welcome to ${member.guild}`
+  if(msg === null)msg = (
+  `
+𒃾─────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎
+            
+𒃾─────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎ 
+CHECK THE SERVER RULES IN <#711852403137314846>
+
+IF YOU WANT TO JOIN OUR CLAN YOU CAN APPLY IN <#731578491094433812>
+
+TAKE YOUR FAV ROLES FROM <#711852438927441920>
+
+CHILL AND ENJOY IN OUR <#737298789131485278>
+𒃾─────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎ 
+USER NAME :- ${member}
+SERVER :- ${member.guild}
+𒃾─────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎ `)
   
   let url = db.get(`url_${member.guild.id}`)
   if(url === null) url = default_url;
