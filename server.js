@@ -133,21 +133,11 @@ client.on("guildMemberAdd", (member) => {
   
   let default_url = 'https://cdn.discordapp.com/attachments/696417925418057789/716197399336583178/giphy.gif'
   
-  
+  let default_msg = `
+`
   
   let msg = db.get(`msg_${member.guild.id}`)
-  if(msg === null)msg = (
-  `
-𒃾─────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎
-𒃾─────────────╌╌╌╌╌╌╌╌┄┄┈┈┈┈𖣔︎
-                                :hyper_W::hyper_E::hyper_L::hyper_C::hyper_O::hyper_M::hyper_E:
-𒃾─────────────╌╌╌╌╌╌╌╌┄┄┈┈┈┈𖣔︎OLES FROM <#711852438927441920>
-
-CHILL AND ENJOY IN OUR <#737298789131485278>
-𒃾─────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎ 
-USER NAME :- ${member}
-SERVER :- ${member.guild}
-𒃾─────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎ `)
+  if(msg === null)msg = default_msg
   
   let url = db.get(`url_${member.guild.id}`)
   if(url === null) url = default_url;
@@ -163,6 +153,4 @@ SERVER :- ${member.guild}
 })
 
 
-client.login(process.env.token);𒃾─────────────╌╌╌╌╌╌╌╌┄┄┈┈┈┈𖣔︎
-                                :hyper_W::hyper_E::hyper_L::hyper_C::hyper_O::hyper_M::hyper_E:
-𒃾─────────────╌╌╌╌╌╌╌╌┄┄┈┈┈┈𖣔︎
+client.login(process.env.token);
