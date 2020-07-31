@@ -58,7 +58,7 @@ client.on("message", async message => {
     message.channel.send(embed);
   }
 
-   let prefix = db.get(`prefix_${message.guild.id}`)
+   let prefix = db.get(`prefix_${message.guild}`)
   if(prefix === null) prefix = default_prefix;
   
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)help$`);
@@ -131,7 +131,7 @@ client.on("guildMemberAdd", (member) => {
     return;
   }
   
-  let default_url = 'https://cdn.discordapp.com/attachments/696417925418057789/716197399336583178/giphy.gif'
+  let default_url = `https://cdn.discordapp.com/attachments/696417925418057789/716197399336583178/giphy.gif`//default msg mtt change krna yeh hyper ke liye lagaye hai ek baar custom msg shi ho gaya toh isko bhi shi kr denge
   
   let default_msg = `
 𒃾────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎
@@ -145,8 +145,8 @@ TAKE YOUR FAV ROLES FROM <#711852438927441920>
 
 CHILL AND ENJOY IN OUR <#737298789131485278>
 𒃾────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎
-USER :- ${member}
-SERVER :- ${member.guild}
+USER :- ${member.user}
+SERVER :- ${member.guild.name}
 𒃾────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎`
   
   let msg = db.get(`msg_${member.guild.id}`)

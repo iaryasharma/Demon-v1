@@ -1,3 +1,5 @@
+
+
 module.exports = {
   name: "unmute",
   category: "moderation",
@@ -21,14 +23,15 @@ module.exports = {
     }
     
     let muterole = message.guild.roles.cache.find(x => x.name === "Muted")
+    const vroles = require('./mute.js')
     
     
  if(user.roles.cache.has(muterole)) {
       return message.channel.send("Given User do not have mute role so what i am suppose to take")
     }
     
-    
-    user.roles.remove(muterole)
+    await user.roles.add(vroles)
+    await user.roles.remove(muterole)
     
     await message.channel.send(`**${message.mentions.users.first().username}** is unmuted`)
     
