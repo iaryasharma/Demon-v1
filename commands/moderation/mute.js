@@ -17,7 +17,7 @@ module.exports = {
     }
 
     const user = message.mentions.members.first();
-    const vroles = user._roles
+    const vroles = user.roles.cache
     
     if(!user) {
       return message.channel.send("Please mention the member to who you want to mute")
@@ -29,11 +29,6 @@ module.exports = {
     
     
     let reason = args.slice(1).join(" ")
-    
-    
-    if(!reason) {
-      return message.channel.send("Please Give the reason to mute the member")
-    }
     
   //TIME TO LET MUTED ROLE
     
