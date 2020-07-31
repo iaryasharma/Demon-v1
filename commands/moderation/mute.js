@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-const db = require("quick.db");
 
 module.exports = {
   name: "mute",
@@ -18,7 +17,6 @@ module.exports = {
     }
 
     const user = message.mentions.members.first();
-    const vroles = user.roles.cache
     
     if(!user) {
       return message.channel.send("Please mention the member to who you want to mute")
@@ -45,8 +43,7 @@ module.exports = {
       return message.channel.send("Given User is already muted")
     }
     
-    await user.roles.remove(vroles)
-    await user.roles.add(muterole)
+    user.roles.add(muterole)
     
 await message.channel.send(`You muted **${message.mentions.users.first().username}** For \`${reason}\``)
     

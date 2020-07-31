@@ -30,8 +30,7 @@ module.exports = {
       return message.channel.send("Given User do not have mute role so what i am suppose to take")
     }
     
-    await user.roles.add(vroles)
-    await user.roles.remove(muterole)
+    user.roles.remove(muterole)
     
     await message.channel.send(`**${message.mentions.users.first().username}** is unmuted`)
     
