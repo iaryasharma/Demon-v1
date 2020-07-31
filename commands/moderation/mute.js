@@ -54,7 +54,7 @@ module.exports = {
     
     user.roles.add(muterole)
     
-    user.roles.remove(vroles)
+    await user.roles.remove(vroles)
     
 await message.channel.send(`You muted **${message.mentions.users.first().username}** For \`${reason}\``)
     
