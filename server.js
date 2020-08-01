@@ -157,7 +157,7 @@ SERVER :- ${member.guild.name}
 
   let wembed = new discord.MessageEmbed()
   .setAuthor(member.user.username, member.user.avatarURL({dynamic: true, size: 2048}))
-  .setThumbnail(member.displayAvatarURL({dynamic: true, size: 2048}))
+  .setThumbnail(member.user.displayAvatarURL({dynamic: true, size: 2048}))
   .setColor("RANDOM")
   .setImage(url)
   .setDescription(msg);
