@@ -12,7 +12,13 @@ module.exports = {
   run: async (client, message, args) => {
     
     let embed = new discord.MessageEmbed()
-    .setAuthor
+    .setAuthor(message.author.username, message.author.avatarURL({dynamic: true, size: 2048}))
+    .setThumbnail(message.author.displayAvatarURL({dynamic: true, size: 2048}))
+    .setColor("RANDOM")
+    .setImage(url)
+    .setDescription(msg)
+    
+    message.channel.send(embed)
     
   }
 }
