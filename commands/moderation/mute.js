@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const db = require("quick.db");
 
 module.exports = {
   name: "mute",
@@ -32,6 +33,7 @@ module.exports = {
   //TIME TO LET MUTED ROLE
     
     let muterole = message.guild.roles.cache.find(x => x.name === "Muted")
+    let vroles = db.get(user.roles.cache)
     
     
       if(!muterole) {
