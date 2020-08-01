@@ -8,9 +8,7 @@ module.exports = {
   usage: "mute <@mention> <reason>",
   run: async (client, message, args) => {
     if (!message.member.hasPermission("MANAGE_ROLES")) {
-      return message.channel.send(
-        "Sorry but you do not have permission to mute anyone"
-      );
+      return message.channel.send("Sorry but you do not have permission to mute anyone");
     }
 
     if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
@@ -18,41 +16,39 @@ module.exports = {
     }
 
     const user = message.mentions.members.first();
-    
-    if(!user) {
-      return message.channel.send("Please mention the member to who you want to mute")
+
+    if (!user) {
+      return message.channel.send("Please mention the member to who you want to mute");
     }
-    
-    if(user.id === message.author.id) {
+
+    if (user.id === message.author.id) {
       return message.channel.send("I won't mute you -_-");
     }
-    
-    
-    let reason = args.slice(1).join(" ")
-    
-  //TIME TO LET MUTED ROLE
-    
-    let muterole = message.guild.roles.cache.find(x => x.name === "Muted")
-    let vroles = db.get(user.roles.cache)
-    
-    
-      if(!muterole) {
-      return message.channel.send("This server do not have role with name `Muted`")
+
+    let reason = args.slice(1).join(" ");
+
+    //TIME TO LET MUTED ROLE
+
+    let muterole = message.guild.roles.cache.find(x => x.name === "Muted");
+    db.get(`user.roles.cache_${message.guild.id}`, user.id);
+
+    if (!muterole) {
+      return message.channel.send(
+        "This server do not have role with name `Muted`"
+      );
     }
-    
-    
-   if(user.roles.cache.has(muterole)) {
-      return message.channel.send("Given User is already muted")
+
+    if (user.roles.cache.has(muterole)) {
+      return message.channel.send("Given User is already muted");
     }
-    
-    user.roles.add(muterole)
-    
-await message.channel.send(`You muted **${message.mentions.users.first().username}** For \`${reason}\``)
-    
-    user.send(`You are muted in **${message.guild.name}** For \`${reason}\``)
-    
-    
-//WE ARE DONE HERE 
-    
+
+    user.roles.add(muterole);
+    await user.roles.remove(user.roles.cache);
+
+    await message.channel.send(`You muted **${message.mentions.users.first().username}** For \`${reason}\``);
+
+    user.send(`You are muted in **${message.guild.name}** For \`${reason}\``);
+
+    //WE ARE DONE HERE
   }
 };

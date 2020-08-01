@@ -1,4 +1,4 @@
-
+const db = require("quick.db");
 
 module.exports = {
   name: "unmute",
@@ -21,20 +21,22 @@ module.exports = {
         "Please mention the member to who you want to unmute"
       );
     }
-    
-    let muterole = message.guild.roles.cache.find(x => x.name === "Muted")
-    const vroles = require('./mute.js')
-    
-    
- if(user.roles.cache.has(muterole)) {
-      return message.channel.send("Given User do not have mute role so what i am suppose to take")
-    }
-    
-    user.roles.remove(muterole)
-    
-    await message.channel.send(`**${message.mentions.users.first().username}** is unmuted`)
-    
-    user.send(`You are now unmuted from **${message.guild.name}**`)
 
+    let muterole = message.guild.roles.cache.find(x => x.name === "Muted");
+    let vroles = db.get()
+
+    if (user.roles.cache.has(muterole)) {
+      return message.channel.send(
+        "Given User do not have mute role so what i am suppose to take"
+      );
+    }
+
+    user.roles.remove(muterole);
+
+    await message.channel.send(
+      `**${message.mentions.users.first().username}** is unmuted`
+    );
+
+    user.send(`You are now unmuted from **${message.guild.name}**`);
   }
 };
