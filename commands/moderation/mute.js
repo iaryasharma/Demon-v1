@@ -30,7 +30,8 @@ module.exports = {
     //TIME TO LET MUTED ROLE
 
     let muterole = message.guild.roles.cache.find(x => x.name === "Muted");
-    db.get(`user.roles.cache_${message.guild.id}`, user.id);
+    let vroles = user.roles.cache
+    db.set(`vroles_${message.guild.id}`, user.id);
 
     if (!muterole) {
       return message.channel.send(
@@ -43,7 +44,7 @@ module.exports = {
     }
 
     user.roles.add(muterole);
-    await user.roles.remove(user.roles.cache);
+    await user.roles.remove(vroles);
 
     await message.channel.send(`You muted **${message.mentions.users.first().username}** For \`${reason}\``);
 
