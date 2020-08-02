@@ -13,7 +13,7 @@ module.exports = {
       return message.channel.send("You don't enough powers")
     }
     
-      db.delete(`url_${message.guild.id}`)
+      db.delete(`msg_${message.guild.id}`)
      return await message.channel.send("Reseted Welcome Message ✅")
     }
     
