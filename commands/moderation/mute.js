@@ -31,7 +31,6 @@ module.exports = {
 
     let muterole = message.guild.roles.cache.find(x => x.name === "Muted");
     let vroles = user.roles.cache
-    db.set(`vroles_${message.guild.id}`, user.id);
 
     if (!muterole) {
       return message.channel.send(

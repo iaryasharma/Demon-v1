@@ -21,18 +21,14 @@ module.exports = {
     }
 
     let muterole = message.guild.roles.cache.find(x => x.name === "Muted");
-    let vroles = db.get(`vroles_${user.id}`)
 
     if (user.roles.cache.has(muterole)) {
       return message.channel.send("Given User do not have mute role so what i am suppose to take");
     }
 
     user.roles.remove(muterole)
-    await user.roles.add(vroles)
 
-    await message.channel.send(
-      `**${message.mentions.users.first().username}** is unmuted`
-    );
+    await message.channel.send(`**${message.mentions.users.first().username}** is now unmuted`);
 
     user.send(`You are now unmuted from **${message.guild.name}**`);
   }
