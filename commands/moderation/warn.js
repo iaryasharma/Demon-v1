@@ -45,14 +45,6 @@ module.exports = {
 
     let warnings = db.get(`warnings_${message.guild.id}_${user.id}`);
 
-    if (warnings === 3) {
-      return message.channel.send(
-        `${
-          message.mentions.users.first().username
-        } already reached his/her limit with 3 warnings`
-      );
-    }
-
     if (warnings === null) {
       db.set(`warnings_${message.guild.id}_${user.id}`, 1);
       user.send(
@@ -63,12 +55,14 @@ module.exports = {
           message.mentions.users.first().username
         }** for ${reason}`
       );
-    } else if (warnings !== null) {
+    } else if(warnings !== null) {
+      
       db.add(`warnings_${message.guild.id}_${user.id}`, 1);
-      user.send(
-        `You have been warned in **${message.guild.name}** for ${reason}`
-      );
+      
+      user.send(`You have been warned in **${message.guild.name}** for ${reason}`);
+      
       await message.channel.send(`You warned **${message.mentions.users.first().username}** for ${reason}`);
+      
     }
   }
 };

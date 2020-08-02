@@ -1,40 +1,58 @@
-const discord = require("discord.js")
+const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "help",
-  description: "Get the command list of the bot",
+  description: "Get list of all command and even get to know every command detials",
+  usage: "help <cmd>",
+  category: "info",
   run: async (client, message, args) => {
-    
-    let embed = new discord.MessageEmbed()
-    .setAuthor(`Command list of ${client.user.username}`, `${client.user.avatarURL()}`)
-      .setDescription(
-        `
+    if (args[0]) {
+      const command = await client.commands.get(args[0]);
 
-> __**MODERATION**__
-> <a:thisr:728929598544543825> \`prefix\`:- Change the prefix of **${client.user.username}** for the server
-> <a:thisr:728929598544543825> \`welcome\`:- Welcomes the user in your server
-> <a:thisr:728929598544543825> \`mute\`:- Mute any user
-> <a:thisr:728929598544543825> \`unmute\`:- Unmute any user muted by **${client.user.username}**
-> <a:thisr:728929598544543825> \`kick\`:- Kick any member of the server
-> <a:thisr:728929598544543825> \`ban\`:- Ban any member of the server
-> 
-> __**INFO**__
-> <a:thisr:728929598544543825> \`ping\`:- Check your ping
-> <a:thisr:728929598544543825> \`id\`:- Get id of any member of the ${message.guild}
-> <a:thisr:728929598544543825> \`serverid\`:- Get the id of ${message.guild}
-> <a:thisr:728929598544543825> \`anime\`:- Get information of any cartoon character/show
-> <a:thisr:728929598544543825> \`pokemon\`:- Get information of any pokemon
-> <a:thisr:728929598544543825> \`imdb\`:- Get information of any movie or web series
-> <a:thisr:728929598544543825> \`weather\`:- Get the weather report of anywhere
-> <a:thisr:728929598544543825> \`invite\`:- Get the invite link of the bot
-> 
-> [Invite Link](https://discord.com/api/oauth2/authorize?client_id=732252376517574746&permissions=8&scope=bot) | [Support Server](https://discord.gg/7BVTsHG)`
-      )
-      .setThumbnail(client.user.displayAvatarURL())
-      .setColor("RANDOM")
-      .setFooter(`Asked by ${message.author.username}`, `${message.author.avatarURL({dynamic: true, size: 2048})}`)
-      .setTimestamp()
-    
-    message.channel.send(embed)
+      if (!command) {
+        return message.channel.send("Unknown Command: " + args[0]);
+      }
+
+      let embed = new MessageEmbed()
+        .setAuthor(command.name, client.user.displayAvatarURL())
+        .addField("Description", command.description || "Not Provided :(")
+        .addField("Usage", "`" + command.usage + "`" || "Not Provied")
+        .setThumbnail(client.user.displayAvatarURL())
+        .setColor("GREEN")
+        .setFooter(client.user.username, client.user.displayAvatarURL())
+        .setTimestamp();
+
+      return message.channel.send(embed);
+    } else {
+      const commands = await client.commands;
+
+      let emx = new MessageEmbed()
+        .setDescription("Join my server or Die :D")
+        .setColor("GREEN")
+        .setFooter(client.user.username, client.user.displayAvatarURL())
+        .setThumbnail(client.user.displayAvatarURL())
+        .setTimestamp();
+
+      let com = {};
+      for (let comm of commands.array()) {
+        let category = comm.category || "Unknown";
+        let name = comm.name;
+
+        if (!com[category]) {
+          com[category] = [];
+        }
+        com[category].push(name);
+      }
+
+      for(const [key, value] of Object.entries(com)) {
+        let category = key;
+
+        let desc = "`" + value.join("`, `") + "`";
+
+        emx.addField(`${category.toUpperCase()}[${value.length}]`, desc);
+      }
+
+      return message.channel.send(emx);
+    }
   }
-}
+};
