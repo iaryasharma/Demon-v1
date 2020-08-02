@@ -53,7 +53,7 @@ client.on("message", async message => {
     message.channel.send(embed);
   }
 
-  let prefix = db.get(`prefix_${message.guild}`)
+  let prefix = db.get(`prefix_${message.guild.id}`)
   if(prefix === null) prefix = default_prefix;
   
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)help$`);
