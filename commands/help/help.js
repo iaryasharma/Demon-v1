@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-const default_prefix = require("../../config.json");
 
 module.exports = {
   name: "help",
@@ -27,12 +26,10 @@ module.exports = {
       
     } else {
       
-      let prefix = 
-      
       const commands = await client.commands;
 
       let emx = new MessageEmbed()
-        .setDescription(`For more info type \`${prefix} help <command_name>\``)
+        .setDescription(`For more info type \`help <command_name>\``)
         .setColor("GREEN")
         .setFooter(client.user.username, client.user.displayAvatarURL())
         .setThumbnail(client.user.displayAvatarURL())
