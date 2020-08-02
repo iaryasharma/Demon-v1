@@ -1,10 +1,11 @@
 const { MessageEmbed } = require("discord.js");
+const default_prefix = require("../../config.json");
 
 module.exports = {
   name: "help",
   description: "Get list of all command and even get to know every command detials",
   usage: "help <cmd>",
-  category: "info",
+  category: "help",
   run: async (client, message, args) => {
     if (args[0]) {
       const command = await client.commands.get(args[0]);
@@ -23,11 +24,15 @@ module.exports = {
         .setTimestamp();
 
       return message.channel.send(embed);
+      
     } else {
+      
+      let prefix = 
+      
       const commands = await client.commands;
 
       let emx = new MessageEmbed()
-        .setDescription("Join my server or Die :D")
+        .setDescription(`For more info type \`${prefix} help <command_name>\``)
         .setColor("GREEN")
         .setFooter(client.user.username, client.user.displayAvatarURL())
         .setThumbnail(client.user.displayAvatarURL())
@@ -44,7 +49,7 @@ module.exports = {
         com[category].push(name);
       }
 
-      for(const [key, value] of Object.entries(com)) {
+      for (const [key, value] of Object.entries(com)) {
         let category = key;
 
         let desc = "`" + value.join("`, `") + "`";

@@ -17,12 +17,7 @@ client.aliases = new discord.Collection();
 
 client.on("ready", () => {
   function randomStatus() {
-    let status = [
-      `@${client.user.tag} help with ʜყ℘г ❘❘ GØD™ٴ`,
-      `@${client.user.tag} help for ${client.users.cache.size} users`,
-      `@${client.user.tag} help on ${client.guilds.cache.size} servers`,
-      `@${client.user.tag} help in ${client.channels.cache.size} channels`
-    ];
+    let status = [`@${client.user.tag} help with ʜყ℘г ❘❘ GØD™ٴ`, `@${client.user.tag} help for ${client.users.cache.size} users`, `@${client.user.tag} help on ${client.guilds.cache.size} servers`, `@${client.user.tag} help in ${client.channels.cache.size} channels`];
     let rstatus = Math.floor(Math.random() * status.length);
     client.user.setActivity(status[rstatus], { type: "WATCHING" });
   }
@@ -58,7 +53,7 @@ client.on("message", async message => {
     message.channel.send(embed);
   }
 
-   let prefix = db.get(`prefix_${message.guild}`)
+  let prefix = db.get(`prefix_${message.guild}`)
   if(prefix === null) prefix = default_prefix;
   
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)help$`);
