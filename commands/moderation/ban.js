@@ -11,6 +11,8 @@ module.exports = {
     
     const reason = args.slice(2).join(" ")
     
+    
+    
     if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply(`You don't have enough powers to ban someone`)
     
     if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply(`I don't have powers to ban someone`)
@@ -19,11 +21,24 @@ module.exports = {
     
     if(!target) return message.reply(`I can't find that member`)
     
-    if(target.roles.highest.position >= message.author.roles.highest.position || message.author.id !== message.guild.owner.id) {
-      return message.reply(`They ave more power than you`)
+    if(target.roles.highest.position >= message.member.roles.highest.position || message.author.id !== message.guild.owner.id) {
+      return message.reply(`They have more power than you`)
     }
     
+    if(target.id === message.author.id) return message.reply(`I can't ban you as you are the Boss`)
     
-
+    if(target.bannable) {
+      let embed = new discord.MessageEmbed()
+      .setColor("RANDOM")
+      .setDescription(`Banned \`${target}\` for \`${reason || "No Reason Provided"}\``)
+      
+      message.channel.send(embed)
+      
+      target.ban()
+      
+    } else {
+      return message.reply(`I can't ban them, make sure that my role is above of theirs`)
+    }
+    return undefined
   }
 };
