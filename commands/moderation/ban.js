@@ -9,15 +9,13 @@ module.exports = {
     
     const target = message.mentions.members.first()
     
-    const reason = args.slice(2).join(" ")
-    
-    
+    const reason = args.slice(1).join(" ")
     
     if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply(`You don't have enough powers to ban someone`)
     
     if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply(`I don't have powers to ban someone`)
     
-    if(!args[1]) return message.reply(`Please mention someone to ban`)
+    if(!args[0]) return message.reply(`Please mention someone to ban`)
     
     if(!target) return message.reply(`I can't find that member`)
     
