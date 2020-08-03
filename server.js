@@ -140,8 +140,8 @@ TAKE YOUR FAV ROLES FROM <#711852438927441920>
 
 CHILL AND ENJOY IN OUR <#737298789131485278>
 𒃾────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎
-USER :- ${member.user}
-SERVER :- ${member.guild.name}
+USER :- ${member}
+SERVER :- ${member.guild}
 𒃾────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎`
   
   let msg = db.get(`msg_${member.guild.id}`)
