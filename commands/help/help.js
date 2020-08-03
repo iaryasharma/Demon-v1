@@ -28,11 +28,13 @@ module.exports = {
       
     } else {
       
+      let prefix = await db.fetch(`prefix_${message.guild.id}`);
+      if (prefix == null) {prefix = config.DEFAULT_PREFIX};
       
       const commands = await client.commands;
 
       let emx = new MessageEmbed()
-        .setDescription(`For more info type \`help <command_name>\``)
+        .setDescription(`For more info type \`${prefix}help <command_name>\``)
         .setColor("GREEN")
         .setFooter(client.user.username, client.user.displayAvatarURL())
         .setThumbnail(client.user.displayAvatarURL())

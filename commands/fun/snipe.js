@@ -18,7 +18,7 @@ module.exports = {
     if(!msg) return message.channel.send("There are no deleted messages in this channel!");
     
     const embed = new Discord.MessageEmbed()
-      .setAuthor(msg.author,msg.author.avatarURL({ dynamic: true, size: 2048 }))
+      .setAuthor(msg.author)
       .setColor("RANDOM")
       .setDescription(msg.content)
       .setTimestamp();
