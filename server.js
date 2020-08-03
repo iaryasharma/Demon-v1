@@ -15,6 +15,16 @@ client.aliases = new discord.Collection();
   require(`./handlers/${handler}`)(client);
 });
 
+client.snipes = new Map()
+client.on('messageDelete', function(message, channel){
+  
+  client.snipes.set(message.channel.id, {
+    content:message.content,
+    author:message.author.tag,
+    image:message.attachments.first() ? message.attachments.first().proxyURL : null
+  })
+});
+
 client.on("ready", () => {
   function randomStatus() {
     let status = [`@${client.user.tag} help with ʜყ℘г ❘❘ GØD™ٴ`, `@${client.user.tag} help for ${client.users.cache.size} users`, `@${client.user.tag} help on ${client.guilds.cache.size} servers`, `@${client.user.tag} help in ${client.channels.cache.size} channels`];

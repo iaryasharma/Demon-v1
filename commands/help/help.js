@@ -1,4 +1,6 @@
 const { MessageEmbed } = require("discord.js");
+const config = require("../../config.json");
+const db = require("quick.db");
 
 module.exports = {
   name: "help",
@@ -25,6 +27,7 @@ module.exports = {
       return message.channel.send(embed);
       
     } else {
+      
       
       const commands = await client.commands;
 
