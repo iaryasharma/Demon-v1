@@ -17,7 +17,13 @@ module.exports = {
     
     if(!args[1]) return message.reply(`Please mention someone to ban`)
     
-    if(!target) return message.reply
+    if(!target) return message.reply(`I can't find that member`)
+    
+    if(target.roles.highest.position >= message.author.roles.highest.position || message.author.id !== message.guild.owner.id) {
+      return message.reply(`They ave more power than you`)
+    }
+    
+    
 
   }
 };
