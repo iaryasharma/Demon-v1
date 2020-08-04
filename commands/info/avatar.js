@@ -17,7 +17,7 @@ module.exports = {
       
     } else {
       
-      let target = message.mentions.users.first()
+      let target = message.mentions.users.first() || message.user.id.first()
       
       embed.setDescription(`[Download](${target.displayAvatarURL({ dynamic: true, size: 1024 })})`)
       embed.setImage(target.displayAvatarURL({ dynamic: true, size: 1024 }))
