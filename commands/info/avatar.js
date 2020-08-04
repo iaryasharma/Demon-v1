@@ -7,7 +7,7 @@ module.exports = {
   description: "Get dp of any user",
   run: async (client, message, args) => {
     
-    let embed = new discord.MessageEmbed()
+      let embed = new discord.MessageEmbed()
     
       let target = message.mentions.users.first() || message.guild.members.cache.get(args[0]) || message.author.id
       
