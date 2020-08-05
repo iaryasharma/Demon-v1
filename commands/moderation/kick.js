@@ -19,7 +19,7 @@ module.exports = {
     
     if(!target) return message.reply(`I can't find that member`)
     
-    if(target.roles.highest.position >= message.member.roles.highest.position || message.author.id !== message.guild.owner.id) {
+    if(target.roles.highest.position >= message.author.roles.highest.position || message.author.id !== message.guild.owner.id) {
       return message.reply(`They have more power than you`)
     }
     
@@ -27,6 +27,7 @@ module.exports = {
     
     if(target.kickable) {
       let embed = new discord.MessageEmbed()
+      .setAuthor(target.username.tag, target.avatarURL({dynamic: true, size: 1024}))
       .setColor("RANDOM")
       .setDescription(
         `
