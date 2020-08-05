@@ -3,53 +3,40 @@ const discord = require("discord.js");
 module.exports = {
   name: "kick",
   category: "moderation",
-  description: "Kick anyone with one shot xD",
-  usage: "kick <@user> <raeson>",
+  description: "Kick anyone with one shot whithout knowing anyone xD",
+  usage: "kick <@user> <reason>",
   run: async (client, message, args) => {
     
-    if(!message.member.hasPermission("KICK_MEMBERS")) {
-      return message.channel.send(`**${message.author}**, You do not have enough permission to use this command`)
+    const target = message.mentions.members.first()
+    
+    const reason = args.slice(1).join(" ")
+    
+    if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply(`You don't have enough powers to kick someone`)
+    
+    if(!message.guild.me.hasPermission("KICK_MEMBERS")) return message.reply(`I don't have powers to kick someone`)
+    
+    if(!args[0]) return message.reply(`Please mention someone to kick`)
+    
+    if(!target) return message.reply(`I can't find that member`)
+    
+    if(target.roles.highest.position >= message.member.roles.highest.position || message.author.id !== message.guild.owner.id) {
+      return message.reply(`They have more power than you`)
     }
     
-    if(!message.guild.me.hasPermission("KICK_MEMBERS")) {
-      return message.channel.send(`**${message.author}**, I do not have enough permission to use this command`)
+    if(target.id === message.author.id) return message.reply(`I can't kick you as you are the Boss`)
+    
+    if(target.kickable) {
+      let embed = new discord.MessageEmbed()
+      .setColor("RANDOM")
+      .setDescription(`Kicked \`${target}\` for \`${reason || "No Reason Provided"}\``)
+      
+      message.channel.send(embed)
+      
+      target.kick()
+      
+    } else {
+      return message.reply(`I can't kick them, make sure that my role is above of theirs`)
     }
-    
-    let target = message.mentions.members.first();
-    
-    if(!target) {
-      return message.channel.send(`**${message.author}**, Please mention the person who you want to kick`)
-    }
-    
-    if(!target.kickable) {
-      return message.reply(`I cannot kick them as they have admin/mod powers.`)
-    }
-    
-  if(!args[1]) {
-    return message.channel.send(`**${message.author}**, Please Give Reason to kick`)
+    return undefined
   }
-    
-    let reason = args.slice(1).join(" ")
-    
-    let embed1 = new discord.MessageEmbed()
-    .setTitle(`Kicked from ${message.guild}`)
-    .setDescription(`You were kicked from \`${message.guild}\` for \`${reason}\``)
-    .setColor("RANDOM")
-    .setFooter(`Kicked by ${message.author.username}`)
-    .setTimestamp(message.timestamp = Date.now())
-    
-    target.send(embed1)
-    
-    let embed = new discord.MessageEmbed()
-    .setDescription(`<a:verifynew:733244253215653931> | **Kicked** **${target}** for \`${reason}\``)
-    .setColor("RANDOM")
-    .setFooter(`Kicked by ${message.author.username}`)
-    .setTimestamp(message.timestamp = Date.now())
-    
-    await message.channel.send(embed)
-    target.kick(args[1]);
-    
-    
-    
-  }
-}
+};
