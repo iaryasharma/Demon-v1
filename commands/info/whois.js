@@ -8,7 +8,15 @@ module.exports = {
   description: "Get info of any user",
   run: async (client, message, args) => {
     
-    let target = message.mentions.users.first() || message.author;
+    let target
+    
+    if(message.mentions.users.first()) {
+      target = message.mentions.users.first();
+    } else if(args[0]) {
+        target = message.guild.members.cache.get(args[0]).user;
+      } else {
+        target = message.author
+      }
     
     if (target.presence.status === "dnd") target.presence.status = "Do Not Disturb <:DoNotDisturb:733303060989739100>";
     if (target.presence.status === "idle") target.presence.status = "Idle <:IdleIcon:733303179181293608>";
