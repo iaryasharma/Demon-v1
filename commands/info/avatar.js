@@ -7,22 +7,24 @@ module.exports = {
   description: "Get dp of any user",
   run: async (client, message, args) => {
     
+    let target
+    
+    if(message.mentions.users.first()) {
+      target = message.mentions.users.first();
+    } else if(args[0]) {
+        target = message.guild.members.cache.get(args[0]).user;
+      } else {
+        target = message.author
+      }
+    
+    let avatar = target.displayAvatarURL({dynamic: true, size: 1024})
+    
       let embed = new discord.MessageEmbed()
       
-      if(!message.mentions.users.first()) {
-        embed.setDescription(`[Download](${message.author.displayAvatarURL({ dynamic: true, size: 1024 })})`)
-        embed.setImage(message.author.displayAvatarURL({ dynamic: true, size: 1024 }))
-        embed.setColor("RANDOM")
-        message.channel.send(embed)
-        
-      } else {
-        
-      let target = message.mentions.users.first() || message.guild.members.cache.get(args[0]).target
-      embed.setDescription(`[Download](${target.displayAvatarURL({ dynamic: true, size: 1024 })})`)
-      embed.setImage(target.displayAvatarURL({ dynamic: true, size: 1024 }))
+      embed.setDescription(`[Download](${avatar})`)
+      embed.setImage(avatar)
       embed.setColor("RANDOM")
       message.channel.send(embed)
-        
-      } 
+         
   }
 }
