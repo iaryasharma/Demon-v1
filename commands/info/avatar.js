@@ -17,7 +17,7 @@ module.exports = {
         
       } else {
         
-     let target = message.mentions.users.first()
+      let target = message.mentions.users.first() || message.guild.members.cache.get(args[0]).target
       embed.setDescription(`[Download](${target.displayAvatarURL({ dynamic: true, size: 1024 })})`)
       embed.setImage(target.displayAvatarURL({ dynamic: true, size: 1024 }))
       embed.setColor("RANDOM")
