@@ -34,6 +34,8 @@ module.exports = {
       
       target.ban()
       
+      message.delete()
+      
     } else {
       return message.reply(`I can't ban them, make sure that my role is above of theirs`)
     }

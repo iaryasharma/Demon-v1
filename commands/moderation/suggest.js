@@ -29,5 +29,8 @@ module.exports = {
     });
 
     message.channel.send("Sent Your Suggestion to " + `${channel}`);
+    
+    message.delete()
+    
   }
 };

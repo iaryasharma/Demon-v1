@@ -63,6 +63,8 @@ module.exports = {
       
       await message.channel.send(`You warned **${message.mentions.users.first().username}** for ${reason}`);
       
+      message.delete
+      
     }
   }
 };

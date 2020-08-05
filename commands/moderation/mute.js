@@ -49,6 +49,6 @@ module.exports = {
 
     user.send(`You are muted in **${message.guild.name}** For \`${reason}\``);
 
-    //WE ARE DONE HERE
+    message.delete()
   }
 };

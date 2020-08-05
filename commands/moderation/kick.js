@@ -7,7 +7,7 @@ module.exports = {
   usage: "kick <@user> <reason>",
   run: async (client, message, args) => {
     
-    const target = message.mentions.members.first()
+    const target = message.mentions.users.first() || message.guild.members.cache.get(args[0]).user
     
     const reason = args.slice(1).join(" ")
     
@@ -28,7 +28,11 @@ module.exports = {
     if(target.kickable) {
       let embed = new discord.MessageEmbed()
       .setColor("RANDOM")
-      .setDescription(`Kicked \`${target}\` for \`${reason || "No Reason Provided"}\``)
+      .setDescription(
+        `
+**❯ User:** ${target}
+**❯ Action:** Kick
+**❯ Reason:** \`${reason || "No Reason Provided"}\``)
       
       message.channel.send(embed)
       
