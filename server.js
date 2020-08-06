@@ -7,7 +7,6 @@ constant.DefaultOptions.ws.properties.$browser = "Discord Android";
 const client = new discord.Client({
   disableEveryone: true
 });
-
 client.commands = new discord.Collection();
 client.aliases = new discord.Collection();
 
@@ -15,12 +14,15 @@ client.aliases = new discord.Collection();
   require(`./handlers/${handler}`)(client);
 });
 
-
-
 client.on("ready", () => {
   function randomStatus() {
-    let status = [`@${client.user.tag} help with ʜყ℘г ❘❘ GØD™ٴ`, `@${client.user.tag} help for ${client.users.cache.size} users`, `@${client.user.tag} help on ${client.guilds.cache.size} servers`, `@${client.user.tag} help in ${client.channels.cache.size} channels`];
-    client.user.setActivity(`PARAS OP`, {type: "WATCHING" });
+    let status = [
+      `@${client.user.tag} help with ʜყ℘г ❘❘ GØD™ٴ`,
+      `@${client.user.tag} help for ${client.users.cache.size} users`,
+      `@${client.user.tag} help on ${client.guilds.cache.size} servers`,
+      `@${client.user.tag} help in ${client.channels.cache.size} channels`
+    ];
+    client.user.setActivity(`PARAS OP`, { type: "WATCHING" });
   }
   setInterval(randomStatus, 20000);
 
@@ -54,9 +56,9 @@ client.on("message", async message => {
     message.channel.send(embed);
   }
 
-  let prefix = db.get(`prefix_${message.guild.id}`)
-  if(prefix === null) prefix = default_prefix;
-  
+  let prefix = db.get(`prefix_${message.guild.id}`);
+  if (prefix === null) prefix = default_prefix;
+
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)help$`);
   if (message.content.match(prefixMention)) {
     let embed = new discord.MessageEmbed()
@@ -117,18 +119,18 @@ My prefix is \`${prefix}\`
   if (command) command.run(client, message, args);
 });
 
-client.models = { user: require('./database/models/user.js') }
-require('./database/connect.js')
+client.models = { user: require("./database/models/user.js") };
+require("./database/connect.js");
 
-client.on("guildMemberAdd", (member) => {
+client.on("guildMemberAdd", member => {
   let chx = db.get(`welchannel_${member.guild.id}`);
-  
-  if(chx === null) {
+
+  if (chx === null) {
     return;
   }
-  
-  let default_url = `https://cdn.discordapp.com/attachments/696417925418057789/716197399336583178/giphy.gif`//default msg mtt change krna yeh hyper ke liye lagaye hai ek baar custom msg shi ho gaya toh isko bhi shi kr denge
-  
+
+  let default_url = `https://cdn.discordapp.com/attachments/696417925418057789/716197399336583178/giphy.gif`; //default msg mtt change krna yeh hyper ke liye lagaye hai ek baar custom msg shi ho gaya toh isko bhi shi kr denge
+
   let default_msg = `
 𒃾────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎
                                <a:hyper_W:721376031767920651><a:hyper_E:717220813828259870><a:hyper_L:717220922662322227><a:hyper_C:717220750729412638><a:hyper_O:717220550774358149><a:hyper_M:717220462282670130><a:hyper_E:717220813828259870>
@@ -143,23 +145,25 @@ CHILL AND ENJOY IN OUR <#737298789131485278>
 𒃾────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎
 USER :- ${member}
 SERVER :- ${member.guild}
-𒃾────────╌╌╌╌╌╌𖣔︎`
-  
-  let msg = db.get(`msg_${member.guild.id}`)
-  if(msg === null)msg = default_msg
-  
-  let url = db.get(`url_${member.guild.id}`)
-  if(url === null) url = default_url;
+𒃾────────╌╌╌╌╌╌𖣔︎`;
+
+  let msg = db.get(`msg_${member.guild.id}`);
+  if (msg === null) msg = default_msg;
+
+  let url = db.get(`url_${member.guild.id}`);
+  if (url === null) url = default_url;
 
   let wembed = new discord.MessageEmbed()
-  .setAuthor(member.user.username, member.user.avatarURL({dynamic: true, size: 2048}))
-  .setThumbnail(member.user.displayAvatarURL({dynamic: true, size: 2048}))
-  .setColor("RANDOM")
-  .setImage(url)
-  .setDescription(msg);
-  
-  client.channels.cache.get(chx).send(wembed)
-})
+    .setAuthor(
+      member.user.username,
+      member.user.avatarURL({ dynamic: true, size: 2048 })
+    )
+    .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
+    .setColor("RANDOM")
+    .setImage(url)
+    .setDescription(msg);
 
+  client.channels.cache.get(chx).send(wembed);
+});
 
 client.login(process.env.token);
