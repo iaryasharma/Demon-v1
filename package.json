@@ -25,7 +25,8 @@
     "ascii-table": "^0.0.9",
     "mongoose": "^5.9.27",
     "request-promise-native": "^1.0.9",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "canvas-senpai": "^0.1.6"
   },
   "engines": {
     "node": "12.x"
