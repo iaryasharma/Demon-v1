@@ -2,6 +2,7 @@ const discord = require("discord.js");
 const { default_prefix } = require("./config.json");
 const { config } = require("dotenv");
 const db = require("quick.db");
+require("./uptime.js")
 const constant = require("discord.js/src/util/Constants.js");
 constant.DefaultOptions.ws.properties.$browser = "Discord Android";
 const client = new discord.Client({
