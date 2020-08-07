@@ -8,7 +8,7 @@ const client = new discord.Client({
   disableEveryone: true
 });
 
-const { CanvasSenpai } = require("canvas-senpai") 
+const { CanvasSenpai } = require("canvas-senpai");
 const canva = new CanvasSenpai();
 client.commands = new discord.Collection();
 client.aliases = new discord.Collection();
@@ -162,14 +162,12 @@ SERVER :- ${member.guild}
       member.user.avatarURL({ dynamic: true, size: 2048 })
     )
     .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
-    .setColor("RANDOM")
+    .setColor("RADOM")
     .setImage(url)
     .setDescription(msg);
 
   client.channels.cache.get(chx).send(wembed);
 });
-let data = await canva.
 
-///  kl hm code kr dete hai canvas
 
 client.login(process.env.token);
