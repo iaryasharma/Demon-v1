@@ -7,6 +7,8 @@ constant.DefaultOptions.ws.properties.$browser = "Discord Android";
 const client = new discord.Client({
   disableEveryone: true
 });
+const { CanvasSenpai } = require("canvas-senpai")
+const canva = new CanvasSenpai();
 
 client.commands = new discord.Collection();
 client.aliases = new discord.Collection();
@@ -70,7 +72,7 @@ SERVER :- ${member.guild}
   if(url === null) url = default_url;
    let data = await canva.welcome(member, { link: "https://wallpapercave.com/wp/wp5128415.jpg" })
  
-    const attachment = new Discord.MessageAttachment(
+    const attachment = new discord.MessageAttachment(
       data,
       "welcome-image.png"
     );
@@ -83,7 +85,7 @@ SERVER :- ${member.guild}
   .setImage(url)
   .setDescription(msg);
   
-  client.channels.cache.get(chx).send(wembed)
+  client.channels.cache.get(chx).send(wembed,attachment)
 })
 
 
