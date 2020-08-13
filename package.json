@@ -26,7 +26,9 @@
     "mongoose": "^5.9.27",
     "request-promise-native": "^1.0.9",
     "request": "^2.88.2",
-    "canvas-senpai": "^0.1.6"
+    "canvas-senpai": "^0.1.6",
+    "simple-youtube-api": "^5.2.1",
+    "ytdl-core": "^3.2.1"
   },
   "engines": {
     "node": "12.x"

@@ -3,6 +3,7 @@ const { default_prefix } = require("./config.json");
 const { config } = require("dotenv");
 const db = require("quick.db");
 require("./uptime.js")
+require("./music.js")
 
 const client = new discord.Client({
   disableEveryone: true

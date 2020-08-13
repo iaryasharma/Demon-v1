@@ -15,6 +15,7 @@ dependencies:
   quick.db: 7.1.1
   request: 2.88.2
   request-promise-native: 1.0.9
+  simple-youtube-api: 5.2.1
   something-random-on-discord: 0.0.1
 packages:
   /@babel/runtime/7.11.2:
@@ -1203,6 +1204,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=
+  /iso8601-duration/1.2.0:
+    dev: false
+    resolution:
+      integrity: sha512-ErTBd++b17E8nmWII1K1uZtBgD1E8RjyvwmxlCjPHNqHMD7gmcMHOw0E8Ro/6+QT4PhHRSnnMo7bxa1vFPkwhg==
   /isstream/0.1.2:
     dev: false
     resolution:
@@ -2006,6 +2011,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-bCR6cP+aTdScaQCnQKbPKtJOKDp/hj9EDLJo3Nw4y1QksqaovlW/bnptB6/c1e+qmNIDHRK+oXFDdEqBT8WzUA==
+  /simple-youtube-api/5.2.1:
+    dependencies:
+      iso8601-duration: 1.2.0
+      node-fetch: 2.6.0
+    dev: false
+    resolution:
+      integrity: sha512-vmndP9Bkh35tifn2OwY+th2imSsfYtmDqczgdOW5yEARFzvSoR8VSQFsivJnctfV5QHQUL6VrOpNdbmDRLh9Bg==
   /sliced/1.0.1:
     dev: false
     resolution:
@@ -2336,4 +2348,5 @@ specifiers:
   quick.db: ^7.1.1
   request: ^2.88.2
   request-promise-native: ^1.0.9
+  simple-youtube-api: ^5.2.1
   something-random-on-discord: ^0.0.1
