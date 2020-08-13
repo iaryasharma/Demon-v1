@@ -1,48 +1,37 @@
-const { MessageEmbed, version: djsversion } = require("discord.js");
-const { version } = require("../../package.json");
-const { utc } = require("moment");
-const os = require("os");
-const ms = require("ms");
+const discord = require("discord.js");
 
 module.exports = {
   name: "botinfo",
-  category: "info",
-  description: "Get the info of the bot",
-  run: (client, message, args) => {
-    
-    let aicon = message.author.avatarURL({ size: 2048 });
-
-    let avatar = client.user.avatarURL({ size: 2048 });
-
-    let embed = new MessageEmbed()
-
-      .setAuthor(client.user.tag, avatar)
-      .setColor("RANDOM")
-      .setThumbnail(client.user.displayAvatarURL({ size: 2048 }))
-      .setDescription(
+  category: "help",
+  description: "INVITE PARAS BOT",
+  run: async (client, message, args) => {
+    let embed = new discord.MessageEmbed()
+      .setTitle(`__**INFORMATION ABOUT BOT**__`)
+      .addField("<a:1_:729258591420153856>BOT NAME", `PARAS BOT #0203`)
+      .addField(
+        "<a:1_:729258591420153856>BOT DEVELOPER ",
         `
-**❯ Name:** ${client.user}
-
-**❯ Owner:** ʜყ℘г ❘❘ GØD ™ٴ#6177
-
-**❯ Creation Date:** ${utc(client.user.createdTimestamp).format('ddd, Do MMMM YYYY')}
-
-**❯ Commands:** ${client.commands.size} commands
-
-**❯ Servers:** ${client.guilds.cache.size} servers
-
-**❯ Users:** ${client.users.cache.size} users
-
-**❯ Version:** v${version}
-
-**❯ Platform:** ${process.platform}
-
-**❯ Node.js:** ${process.version}
-
-**❯ Discord.js:** v${djsversion}`
+<:DB:729627031448453213> <@567704764813541376>
+<:DB:729627031448453213> <@641916872719204352> `
       )
-      .setFooter(`Asked by ${message.author.username}`, aicon)
-      .setTimestamp();
+      .addField(
+        "<a:1_:729258591420153856>TOTAL SERVER",
+        `${client.guilds.cache.size}`,
+        true
+      )
+      .addField(
+        "<a:1_:729258591420153856>TOTAL CHANNAL",
+        `${client.channels.cache.size}`
+      )
+      .addField(
+        "<a:1_:729258591420153856>TOTAL USER",
+        `${client.users.cache.size}`,
+        true
+      )
+      .addField("<a:1_:729258591420153856>BOT LIBRARY", `discord.js`)
+
+      .setColor("RANDOM")
+      .setFooter(`information about bot`);
 
     message.channel.send(embed);
   }
