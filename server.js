@@ -3,8 +3,7 @@ const { default_prefix } = require("./config.json");
 const { config } = require("dotenv");
 const db = require("quick.db");
 require("./uptime.js")
-const constant = require("discord.js/src/util/Constants.js");
-constant.DefaultOptions.ws.properties.$browser = "Discord Android";
+
 const client = new discord.Client({
   disableEveryone: true
 });
@@ -29,12 +28,10 @@ client.on('messageDelete', function(message, channel){
 });
 
 client.on("ready", () => {
-  function randomStatus() {
-    let status = [`@${client.user.tag} help with ʜყ℘г ❘❘ GØD™ٴ`, `@${client.user.tag} help for ${client.users.cache.size} users`, `@${client.user.tag} help on ${client.guilds.cache.size} servers`, `@${client.user.tag} help in ${client.channels.cache.size} channels`];
-    let rstatus = Math.floor(Math.random() * status.length);
-    client.user.setActivity(status[rstatus], { type: "WATCHING" });
-  }
-  setInterval(randomStatus, 20000);
+
+    client.user.setActivity(`maintaince`, { type: "WATCHING" });
+  
+  
 
   console.log(`${client.user.username} is now ready`);
 });
