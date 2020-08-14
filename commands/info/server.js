@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 
 module.exports = {
-  name: "S",
+  name: "serverinfo",
   category: "info",
   description: "Get the info of any server",
   run: async (client, message, args) => {
