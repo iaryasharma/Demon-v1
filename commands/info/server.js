@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 
 module.exports = {
-  name: "serverinfo",
+  name: "s",
   category: "info",
   description: "Get the info of any server",
   run: async (client, message, args) => {
@@ -37,10 +37,8 @@ module.exports = {
 <a:ok_:731369076315652167>**OWNER**
 ${message.guild.owner.user.tag}
 
-
 <a:mb:731368836846321694>**SERVER ID**
 ${message.guild.id}
-
 
 <a:mb:731368836846321694>**REGION**
 ${message.guild.region}
@@ -54,14 +52,11 @@ ${message.guild.channels.cache.size}
 <a:mb:731368836846321694>**TOTAL ROLES**
 ${message.guild.roles.cache.size}
 
-
 <a:mb:731368836846321694>**TOTAL EMOJI **
 ${message.guild.emojis.cache.size}
 
-
 <a:mb:731368836846321694>**SERVER CREATED AT**
 ${message.guild.createdAt}
-
 
 **SERVER BOOST**
 ${message.guild.premiumSubscriptionCount}
