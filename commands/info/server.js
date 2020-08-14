@@ -64,6 +64,8 @@ ${message.guild.premiumSubscriptionCount}
 **BOOST LEVEL**
 ${boostlevel}
 
+**Security** 
+${message.guild.verificationLevel}
 
 
 `)
