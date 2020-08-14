@@ -59,10 +59,10 @@ ${message.guild.emojis.cache.size}
 ${message.guild.createdAt}
 
 **SERVER BOOST**
-${message.guild.premiumSubscriptionCount}
+${message.guild.premiumSubscriptionCount} <:nitroboost:743905977996410901>
 
 **BOOST LEVEL**
-${boostlevel}
+${boostlevel} <:boost:743907434770202656>
 
 **Security** 
 ${message.guild.verificationLevel}
