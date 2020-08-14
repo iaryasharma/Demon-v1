@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 
 module.exports = {
-  name: "s",
+  name: "serverinfo",
   category: "info",
   description: "Get the info of any server",
   run: async (client, message, args) => {
@@ -47,7 +47,7 @@ ${message.guild.region}
 ${message.guild.memberCount}
 
 <a:1_:729258591420153856>**TOTAL CHANNELS **
-${message.guild.channels.cache.size}
+ ${message.guild.channels.cache.size}
 
 <a:1_:729258591420153856>**TOTAL ROLES**
 ${message.guild.roles.cache.size}
