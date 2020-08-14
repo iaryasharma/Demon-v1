@@ -34,46 +34,43 @@ module.exports = {
       .setTitle(message.guild)
       .setDescription(
         `
-<a:ok_:731369076315652167>**OWNER**
+<a:1_:729258591420153856>**OWNER**
 ${message.guild.owner.user.tag}
 
-<a:mb:731368836846321694>**SERVER ID**
+<a:1_:729258591420153856>**SERVER ID**
 ${message.guild.id}
 
-<a:mb:731368836846321694>**REGION**
+<a:1_:729258591420153856>**REGION**
 ${message.guild.region}
 
-<a:mb:731368836846321694>**TOTAL MEMBERS  **
+<a:1_:729258591420153856>**TOTAL MEMBERS  **
 ${message.guild.memberCount}
 
-<a:mb:731368836846321694>**TOTAL CHANNELS **
+<a:1_:729258591420153856>**TOTAL CHANNELS **
 ${message.guild.channels.cache.size}
 
-<a:mb:731368836846321694>**TOTAL ROLES**
+<a:1_:729258591420153856>**TOTAL ROLES**
 ${message.guild.roles.cache.size}
 
-<a:mb:731368836846321694>**TOTAL EMOJI **
+<a:1_:729258591420153856>**TOTAL EMOJI **
 ${message.guild.emojis.cache.size}
 
-<a:mb:731368836846321694>**SERVER CREATED AT**
+<a:1_:729258591420153856>**SERVER CREATED AT**
 ${message.guild.createdAt}
 
-**SERVER BOOST**
+<a:1_:729258591420153856>**SERVER BOOST**
 ${message.guild.premiumSubscriptionCount} <:nitroboost:743905977996410901>
 
-**BOOST LEVEL**
+<a:1_:729258591420153856>**BOOST LEVEL**
 ${boostlevel} <:boost:743907434770202656>
 
-**Security** 
+<a:1_:729258591420153856>**Security** 
 ${message.guild.verificationLevel}
-
-
 `)
       .setThumbnail(message.guild.iconURL())
-      .setImage(message.guild.iconURL())
+      .setImage(message.guild.iconURL({dynamic: true, size: 1024}))
       .setColor("RANDOM")
       .setFooter(message.guild)
-      .setTimestamp((message.timestamp = Date.now()));
 
     message.channel.send(embed);
   }
