@@ -15,7 +15,7 @@ client.aliases = new discord.Collection();
 
 client.on("ready", () => {
   console.log(` ${client.user.username} is turned on`);
-  client.user.setActivity(`MAINTAINCE`);
+  client.user.setActivity(`MAINTAINCE BREAK`);
 });
 
 client.on("message", async message => {
