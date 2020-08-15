@@ -6,6 +6,7 @@ dependencies:
   dotenv: 8.2.0
   express: 4.17.1
   fs: 0.0.2
+  hastebin-gen: 2.0.5
   imdb-api: 4.2.0
   mathjs: 7.1.0
   moment: 2.27.0
@@ -1101,6 +1102,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-4Ob+aijPUROIVeCG0Wkedx3iqLk=
+  /hastebin-gen/2.0.5:
+    dependencies:
+      node-fetch: 2.6.0
+    dev: false
+    resolution:
+      integrity: sha512-At1LaKtcqh2jiP8xfE2sDGT9IshIki6FqsgLwn2y7FzAvlFJRtpUsSPh3yWjWIQIvxi/GPF07IBqSI8WhPL/gQ==
   /html-entities/1.3.1:
     dev: false
     resolution:
@@ -2443,6 +2450,7 @@ specifiers:
   dotenv: ^8.2.0
   express: ^4.17.1
   fs: ^0.0.2
+  hastebin-gen: ^2.0.5
   imdb-api: ^4.2.0
   mathjs: ^7.1.0
   moment: ^2.27.0
