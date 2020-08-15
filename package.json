@@ -29,7 +29,8 @@
     "canvas-senpai": "^0.1.6",
     "simple-youtube-api": "^5.2.1",
     "ytdl-core": "^3.2.1",
-    "opusscript": "^0.0.7"
+    "opusscript": "^0.0.7",
+    "mathjs": "^7.1.0"
   },
   "engines": {
     "node": "12.x"
