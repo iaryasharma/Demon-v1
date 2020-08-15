@@ -6,7 +6,6 @@ const client = new discord.Client({
 });
 require("./music.js");
 require("./uptime.js");
-require("./covid.js");
 client.commands = new discord.Collection();
 client.aliases = new discord.Collection();
 

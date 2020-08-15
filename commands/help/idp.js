@@ -8,18 +8,19 @@ module.exports = {
       return message.channel.send("Please give the Room ID")
     }
     
-    if(!args[2]) {
+    let pass = args.slice(1).join(" ")
+    
+    if(!pass) {
       return message.channel.send("Please give the Room Password");
     }
 
   let embed = new discord.MessageEmbed()
-  .addFeild("Room ID", "`" + args[1] + "`")
-  .addFeild("Password", "`" + args[2] + "`")
+  .addField("Room ID", "`" + args[1] + "`")
+  .addField("Password", "`" + pass + "`")
   .setColor("RANDOM")
   message.channel.send(embed)
 
   message.delete()
     
   }
-};
- 
+}
