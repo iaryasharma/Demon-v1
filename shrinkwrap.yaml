@@ -11,6 +11,7 @@ dependencies:
   moment: 2.27.0
   mongoose: 5.9.27
   ms: 2.1.2
+  novelcovid: 3.0.0
   opusscript: 0.0.7
   os: 0.1.1
   path: 0.12.7
@@ -21,6 +22,10 @@ dependencies:
   something-random-on-discord: 0.0.1
   ytdl-core: 3.2.1
 packages:
+  /@aero/centra/1.0.4:
+    dev: false
+    resolution:
+      integrity: sha512-CBTzOuANi7U55TrUxhmk6MVqr2IbkH7XPC4ppoJkphU45wt6a92lDbHIKOPsfFNAYbis4acc01QDKUZr9SGPAw==
   /@babel/runtime/7.11.2:
     dependencies:
       regenerator-runtime: 0.13.7
@@ -1610,6 +1615,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-CvaGwVMztSMJLOeXPrez7fyfObdZqNUK1cPAEzLHrTybIua9pMdmmPR5YwtfNftIOMv3DPUhFaxsZMNTQO20Kg==
+  /novelcovid/3.0.0:
+    dependencies:
+      '@aero/centra': 1.0.4
+    dev: false
+    resolution:
+      integrity: sha512-70LZiuOY52f3uIrcZ5dP1F0LFkbz8GuGRuiC/e+YjGv/jYrbq8WXll67GaCafWCvznFmgSEgDJcztDoXz4m+kg==
   /npm-bundled/1.1.1:
     dependencies:
       npm-normalize-package-bin: 1.0.1
@@ -2437,6 +2448,7 @@ specifiers:
   moment: ^2.27.0
   mongoose: ^5.9.27
   ms: ^2.1.2
+  novelcovid: ^3.0.0
   opusscript: ^0.0.7
   os: ^0.1.1
   path: ^0.12.7
