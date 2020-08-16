@@ -75,7 +75,7 @@ SERVER :- {member.guild}
   
   let m1 = db.get(`msg_${member.guild.id}`)
   if(m1 === null)msg = default_msg;
-const msg = m1.replace("{member}", member.user).replace("{member.guild}", member.guild)
+const msg = m1.replace("{member}", member.user).replace("{member.guild}", member.guild).replace("(:HEART)",`<a:BH:731369456634429493>`)
   
   let url = db.get(`url_${member.guild.id}`)
   if(url === null) url = default_url;
