@@ -8,8 +8,8 @@ module.exports = {
     let embed = new discord.MessageEmbed()
       .setTitle(`PARAS BOT  HELP MENU`)
       .setDescription(`
-        WELCOME TO PARAS BOT!
-
+        > __**MODERATION COMMAND**__
+   addrole,cleaer
  
 `)
       .setThumbnail(client.user.displayAvatarURL())
