@@ -27,7 +27,7 @@ NEW COMMAND SOON LIKE RANK SYSTEM,RADIO,GLOBAL CHAT
 `)
 
       .setThumbnail(client.user.displayAvatarURL())
-      .setColor("RANDOM")
+      .setColor("#35CB31")
       .setFooter(`PARAS BOT `)
       .setTimestamp((message.timestamp = Date.now()));
 
