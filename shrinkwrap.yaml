@@ -12,6 +12,7 @@ dependencies:
   moment: 2.27.0
   mongoose: 5.9.27
   ms: 2.1.2
+  nekos.life: 2.0.7
   novelcovid: 3.0.0
   opusscript: 0.0.7
   os: 0.1.1
@@ -20,6 +21,7 @@ dependencies:
   request: 2.88.2
   request-promise-native: 1.0.9
   simple-youtube-api: 5.2.1
+  snekfetch: 4.0.4
   something-random-on-discord: 0.0.1
   ytdl-core: 3.2.1
 packages:
@@ -1573,6 +1575,10 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
+  /nekos.life/2.0.7:
+    dev: false
+    resolution:
+      integrity: sha512-kL5sYOqaDTIdVH40YVrtWQPX60bGK3Ri/j2jnHugZ86lxc4xIytUmGelspFwKAs4TOHDSZh4jiJGGL8dQ55HNA==
   /node-abi/2.18.0:
     dependencies:
       semver: 5.7.1
@@ -2112,6 +2118,11 @@ packages:
     dev: false
     resolution:
       integrity: sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=
+  /snekfetch/4.0.4:
+    deprecated: use node-fetch instead
+    dev: false
+    resolution:
+      integrity: sha512-dyycG9fvwtSJqKPfMVOpXt+60qvMGe7vWLwOJDiSJaiAx+hs2EnFChG2bXCWn7ulz+zGzrHdN9/yeEb0YqEPww==
   /something-random-on-discord/0.0.1:
     dependencies:
       node-fetch: 2.6.0
@@ -2456,6 +2467,7 @@ specifiers:
   moment: ^2.27.0
   mongoose: ^5.9.27
   ms: ^2.1.2
+  nekos.life: ^2.0.7
   novelcovid: ^3.0.0
   opusscript: ^0.0.7
   os: ^0.1.1
@@ -2464,5 +2476,6 @@ specifiers:
   request: ^2.88.2
   request-promise-native: ^1.0.9
   simple-youtube-api: ^5.2.1
+  snekfetch: ^4.0.4
   something-random-on-discord: ^0.0.1
   ytdl-core: ^3.2.1
