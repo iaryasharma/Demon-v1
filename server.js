@@ -1,6 +1,8 @@
 const { prefix } = require("./config.json");
 const { config } = require("dotenv");
 const db =require("quick.db");
+const { CanvasSenpai } = require("canvas-senpai")
+const canva = new CanvasSenpai();
 const discord = require("discord.js");
 const client = new discord.Client({
   disableEveryone: false
@@ -48,7 +50,7 @@ client.on("message", async message => {
 });
 
 
-client.on("guildMemberAdd", (member) => {
+client.on("guildMemberAdd", async (member) => {
   let chx = db.get(`welchannel_${member.guild.id}`);
   
   if(chx === null) {
@@ -78,13 +80,20 @@ SERVER :- {member.guild}
 const msg = m1.replace("{member}", member.user).replace("{member.guild}", member.guild).replace("(:HEART)",`<a:BH:731369456634429493>`)
   
   let url = db.get(`url_${member.guild.id}`)
-  if(url === null) url = default_url;
+  if(url === null) url = default_url
+  
+   let data = await canva.welcome(member, { link: "https://wallpapercave.com/wp/wp5128415.jpg" })
+ 
+    const attachment = new discord.MessageAttachment(
+      data,
+      "welcome-image.png"
+    );
 
   let wembed = new discord.MessageEmbed()
   .setAuthor(member.user.username, member.user.avatarURL({dynamic: true, size: 2048}))
   .setThumbnail(member.user.displayAvatarURL({dynamic: true, size: 2048}))
   .setColor("RANDOM")
-  .setImage(url)
+  .setImage()
   .setDescription(msg);
   
   client.channels.cache.get(chx).send(wembed)
