@@ -3,7 +3,7 @@ const db = require("quick.db")
 const { msg } = require("../../server.js")
 
 module.exports = {
-  name: "setwelcomemsg",
+  name: "setmessage",
   aliases: ["setwmessage", "setwmsg", "setmessage"],
   category: "moderation",
   usage: "prefix <new-prefix>",

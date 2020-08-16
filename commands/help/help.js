@@ -14,15 +14,21 @@ module.exports = {
 \`advice,suggest,ascii,cat,cry,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,slap\`
 > __**INFORMATION COMMANDS**__
 \`avatar,botinfo,serverinfo,hastebin,imdb,membercount,ping,pokemon,servericon,,whois,userinfo\`
-> __
+> __**MUSIC COMMANDS**__
+\`play,search,skip,stop,pause,resume,nowplaying,queue,volume\`
 > __**NSFW COMMANDS**__
 \`ass.bdsm,cum,doujin,femdom,hentai,maid,nmw,nsfw,orgy,panty\`
+> __**WELCOME COMMANDS**__
+\`setwelcome,setmessage\`
+> __**SPECIAL COMMANDS**__
+\`giveaway,math,announce,emoji,\`
  
+NEW COMMAND SOON LIKE RANK SYSTEM,RADIO,GLOBAL CHAT
 `)
 
       .setThumbnail(client.user.displayAvatarURL())
       .setColor("RANDOM")
-      .setFooter(`PARAS DEVELOPER `)
+      .setFooter(`PARAS BOT `)
       .setTimestamp((message.timestamp = Date.now()));
 
     await message.channel.send(embed);
