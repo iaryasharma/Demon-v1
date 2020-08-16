@@ -1,7 +1,7 @@
 const discord = require("discord.js")
 
 module.exports = {
-  name: "serveravatar",
+  name: "servericon",
   aliases: ["sav", "guildavatar"],
   category: "info",
   description: "Get avatar of the server",
