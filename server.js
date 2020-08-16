@@ -96,7 +96,8 @@ const msg = m1.replace("{member}", member.user).replace("{member.guild}", member
   .setImage()
   .setDescription(msg);
   
-  client.channels.cache.get(chx).send(wembed+attachment)
+  client.channels.cache.get(chx).send(wembed)
+  client.channels.cache.get(chx).send(attachment)
 })
 
 
