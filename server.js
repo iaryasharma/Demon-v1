@@ -47,6 +47,7 @@ client.on("message", async message => {
   if (command) command.run(client, message, args);
 });
 
+
 client.on("guildMemberAdd", (member) => {
   let chx = db.get(`welchannel_${member.guild.id}`);
   
@@ -68,12 +69,13 @@ TAKE YOUR FAV ROLES FROM <#711852438927441920>
 
 CHILL AND ENJOY IN OUR <#737298789131485278>
 𒃾────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎
-USER :- ${member}
-SERVER :- ${member.guild}
+USER :- {member}
+SERVER :- {member.guild}
 𒃾────────╌╌╌╌╌╌┄┄┈┈┈𖣔︎`
   
-  let msg = db.get(`msg_${member.guild.id}`)
-  if(msg === null)msg = default_msg
+  let m1 = db.get(`msg_${member.guild.id}`)
+  if(m1 === null)msg = default_msg;
+const msg = m1.replace("{member}", member.user).replace("{member.guild}", member.guild)
   
   let url = db.get(`url_${member.guild.id}`)
   if(url === null) url = default_url;
@@ -87,7 +89,6 @@ SERVER :- ${member.guild}
   
   client.channels.cache.get(chx).send(wembed)
 })
-
 
 
 client.login(process.env.TOKEN);
