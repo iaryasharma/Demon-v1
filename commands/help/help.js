@@ -9,7 +9,8 @@ module.exports = {
       .setTitle(`PARAS BOT  HELP MENU`)
       .setDescription(`
         > __**MODERATION COMMAND**__
-   addrole,cleaer
+\`addrole,removerole,cleaer[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
+ .
  
 `)
       .setThumbnail(client.user.displayAvatarURL())
