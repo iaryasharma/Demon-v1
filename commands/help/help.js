@@ -8,11 +8,13 @@ module.exports = {
     let embed = new discord.MessageEmbed()
       .setTitle(`PARAS BOT  HELP MENU`)
       .setDescription(`
-        > __**MODERATION COMMAND**__
+> __**MODERATION COMMANDS**__
 \`addrole,removerole,cleaer[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
- .
+> __**FUN COMMANDS**__
+ \`advice,suggest,ascii,cat,cry,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,slap\`
  
 `)
+
       .setThumbnail(client.user.displayAvatarURL())
       .setColor("RANDOM")
       .setFooter(`PARAS DEVELOPER `)
