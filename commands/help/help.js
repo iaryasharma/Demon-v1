@@ -6,10 +6,10 @@ module.exports = {
   description: "BOT GET SOON UPDATES ",
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
-      .setTitle(`BOT WILL SOON NEW FEATURES `)
+      .setTitle(`${client.user.tag}  HELP MENU`)
       .setDescription(`
         WELCOME TO PARAS BOT!
-\```HELLO\```
+
  
 `)
       .setThumbnail(client.user.displayAvatarURL())
