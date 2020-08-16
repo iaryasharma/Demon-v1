@@ -11,9 +11,7 @@ module.exports = {
       )
       .setDescription(
         `
-PARAS BOT'S PREFIX IS :- P!
-<a:links:731369152404520996>[INVITE LINK](https://discord.com/api/oauth2/authorize?client_id=712302003665240106&permissions=8&scope=bot) || <a:links:731369152404520996>[SUPPORT SERVER](https://discord.gg/B7aEqBw)
-<a:cc_flame:731435785617670208>**MODERATION FEATURES**<a:cc_flame:731435785617670208> 
+**MODERATION FEATURES**
 \`warn,mute,softban,ban,kick,clear,lockdown,addrole,removerole\`
 
 <a:cc_flame:731435785617670208>**UTILITY FEATURES**<a:cc_flame:731435785617670208>

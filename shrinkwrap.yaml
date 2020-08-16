@@ -5,6 +5,7 @@ dependencies:
   discord.js: 12.2.0
   dotenv: 8.2.0
   express: 4.17.1
+  figlet: 1.5.0
   fs: 0.0.2
   hastebin-gen: 2.0.5
   imdb-api: 4.2.0
@@ -964,6 +965,12 @@ packages:
       domexception: ^2.0.1
     resolution:
       integrity: sha512-Uf+gxPCe1hTOFXwkxYyckn8iUSk6CFXGy5VENZKifovUTZC9eUODWSBhOBS7zICGrAetKzdwLMr85KhIcePMAQ==
+  /figlet/1.5.0:
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha512-ZQJM4aifMpz6H19AW1VqvZ7l4pOE9p7i/3LyxgO2kp+PO/VcDYNqIHEMtkccqIhTXMKci4kjueJr/iCQEaT/Ww==
   /file-type/9.0.0:
     dev: false
     engines:
@@ -2460,6 +2467,7 @@ specifiers:
   discord.js: ^12.2.0
   dotenv: ^8.2.0
   express: ^4.17.1
+  figlet: ^1.5.0
   fs: ^0.0.2
   hastebin-gen: ^2.0.5
   imdb-api: ^4.2.0
