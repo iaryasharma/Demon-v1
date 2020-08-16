@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js')
 
 module.exports = {
 name: "announce",
-aliases: [""],
+aliases: ["announce", "a"],
 category: "Utility",
 usage: "embed <text to say>",
 description: "Returns provided text in Embed form.",
@@ -16,7 +16,7 @@ run: async(client, message, args) => {
 .setAuthor(message.author.username, message.author.avatarURL())
   .setDescription(`${say}`)
   .setColor("RANDOM")
-.setFooter(`Embed by ${message.guild}`)
+.setFooter(` ${message.guild}`)
 .setTimestamp()
   message.channel.send(embed)
 }
