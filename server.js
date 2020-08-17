@@ -18,7 +18,7 @@ client.aliases = new discord.Collection();
 
 client.on("ready", () => {
   console.log(` ${client.user.username} is turned on`);
-  client.user.setActivity(`P!help | P!invite`);
+  client.user.setActivity(`P!help | P!invite`,{type:"WATCHING"});
 });
 
 client.on("message", async message => {
