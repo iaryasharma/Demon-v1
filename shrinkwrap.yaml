@@ -13,6 +13,7 @@ dependencies:
   moment: 2.27.0
   mongoose: 5.9.27
   ms: 2.1.2
+  neko-love: 2.0.2
   nekos.life: 2.0.7
   novelcovid: 3.0.0
   opusscript: 0.0.7
@@ -764,6 +765,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-vDPw+rDgn3bZe1+F/pyEwb1oMG2XTlRVgAa6B4KccTEpYgF8w6eQllVbQcfIJnZyvzFtFpxnpGtx8dd7DJp/Rw==
+  /decode-uri-component/0.2.0:
+    dev: false
+    engines:
+      node: '>=0.10'
+    resolution:
+      integrity: sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
   /decompress-response/4.2.1:
     dependencies:
       mimic-response: 2.1.0
@@ -1582,6 +1589,14 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
+  /neko-love/2.0.2:
+    dependencies:
+      node-fetch: 2.6.0
+      query-string: 6.13.1
+      wumpfetch: 0.3.1
+    dev: false
+    resolution:
+      integrity: sha512-LQWbvBQ+KitX0hYSjYiHwhq7fPh+TOsVl38TcSoqqYXTq+ykE+TgTgDPamK2kPfyS+qkv9v1wFEbnD/JhX7xBA==
   /nekos.life/2.0.7:
     dev: false
     resolution:
@@ -1882,6 +1897,16 @@ packages:
       node: '>=0.6'
     resolution:
       integrity: sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
+  /query-string/6.13.1:
+    dependencies:
+      decode-uri-component: 0.2.0
+      split-on-first: 1.1.0
+      strict-uri-encode: 2.0.0
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-RfoButmcK+yCta1+FuU8REvisx1oEzhMKwhLUNcepQTPGcNMp1sIqjnfCtfnvGSQZQEhaBHvccujtWoUV3TTbA==
   /quick.db/7.1.1:
     dependencies:
       better-sqlite3: 6.0.1
@@ -2143,6 +2168,12 @@ packages:
     optional: true
     resolution:
       integrity: sha1-/0rm5oZWBWuks+eSqzM004JzyhE=
+  /split-on-first/1.1.0:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==
   /sshpk/1.16.1:
     dependencies:
       asn1: 0.2.4
@@ -2172,6 +2203,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
+  /strict-uri-encode/2.0.0:
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-ucczDHBChi9rFC3CdLvMWGbONUY=
   /string-width/1.0.2:
     dependencies:
       code-point-at: 1.1.0
@@ -2408,6 +2445,10 @@ packages:
       utf-8-validate: ^5.0.2
     resolution:
       integrity: sha512-D3RuNkynyHmEJIpD2qrgVkc9DQ23OrN/moAwZX4L8DfvszsJxpjQuUq3LMx6HoYji9fbIOBY18XWBsAux1ZZUA==
+  /wumpfetch/0.3.1:
+    dev: false
+    resolution:
+      integrity: sha512-KbvB4asL0z/Uh1eavIXjhdo6rFudT5WtEudNfK3z9KGbvBE0JvGqRntRRjtKPOW1lEh85kcKzIOmRo8KHU5myQ==
   /xhr/2.5.0:
     dependencies:
       global: 4.3.2
@@ -2475,6 +2516,7 @@ specifiers:
   moment: ^2.27.0
   mongoose: ^5.9.27
   ms: ^2.1.2
+  neko-love: ^2.0.2
   nekos.life: ^2.0.7
   novelcovid: ^3.0.0
   opusscript: ^0.0.7
