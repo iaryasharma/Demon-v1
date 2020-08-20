@@ -74,7 +74,7 @@ client.on("guildMemberAdd", async (member) => {
 `
   
   let m1 = db.get(`msg_${member.guild.id}`)
-
+if(!m1) m1 = default_msg;
 const msg = m1.replace("{member}", member.user).replace("{member.guild}", member.guild).replace("(:HEART)",`<a:BH:731369456634429493>`)
 
   
