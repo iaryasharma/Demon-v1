@@ -17,7 +17,7 @@ module.exports = {
 > __**MUSIC COMMANDS**__
 \`play,search,skip,stop,pause,resume,nowplaying,queue,volume\`
 > __**NSFW COMMANDS**__
-\`JYADA CHARVI CHADI HAI`\
+\`JYADA CHARVI CHADI HAI\`
 > __**WELCOME COMMANDS**__
 \`setwelcome,setmessage\`
 > __**SPECIAL COMMANDS**__
@@ -28,7 +28,7 @@ NEW COMMAND SOON LIKE RANK SYSTEM,RADIO,GLOBAL CHAT
 
       .setThumbnail(client.user.displayAvatarURL())
       .setColor("#35CB31")
-      .setFooter(`PARAS BOT `)
+      .setFooter(`SENPAI BOT `)
       .setTimestamp((message.timestamp = Date.now()));
 
     await message.channel.send(embed);
