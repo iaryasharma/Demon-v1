@@ -6,7 +6,7 @@ module.exports = {
   description: "BOT GET SOON UPDATES ",
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
-      .setTitle(`PARAS BOT  HELP MENU`)
+      .setTitle(`SENPAI HELP MENU`)
       .setDescription(`
 > __**MODERATION COMMANDS**__
 \`addrole,removerole,cleaer[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
@@ -17,7 +17,7 @@ module.exports = {
 > __**MUSIC COMMANDS**__
 \`play,search,skip,stop,pause,resume,nowplaying,queue,volume\`
 > __**NSFW COMMANDS**__
-\`ass.bdsm,cum,doujin,femdom,hentai,maid,nmw,nsfw,orgy,panty\`
+\`JYADA CHARVI CHADI HAI`\
 > __**WELCOME COMMANDS**__
 \`setwelcome,setmessage\`
 > __**SPECIAL COMMANDS**__
