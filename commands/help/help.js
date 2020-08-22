@@ -6,7 +6,7 @@ module.exports = {
   description: "BOT GET SOON UPDATES ",
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
-      .setTitle(`<a:RJ:731452508547055618>SENPAI BOT  HELP MENU <a:RJ:731452508547055618> <a:s1:746651420593225729>`)
+      .setTitle(`<a:RJ:731452508547055618>SENPAI BOT  HELP MENU <a:RJ:731452508547055618> <a:op34:736150905392726029>`)
       .setDescription(`
 <a:drl:730449009902223402> __**MODERATION COMMANDS**__<a:drl:730449009902223402>
 \`addrole,removerole,cleaer[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
