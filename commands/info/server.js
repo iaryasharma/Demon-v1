@@ -59,10 +59,10 @@ ${message.guild.emojis.cache.size}
 ${message.guild.createdAt}
 
 <a:1_:729258591420153856>**SERVER BOOST**
-${message.guild.premiumSubscriptionCount} <:nitroboost:743905977996410901>
+${message.guild.premiumSubscriptionCount} <a:mars_nitroCrystal:746676320049692692>
 
 <a:1_:729258591420153856>**BOOST LEVEL**
-${boostlevel} <:boost:743907434770202656>
+${boostlevel} <a:mars_nitroCrystal:746676320049692692>
 
 <a:1_:729258591420153856>**Security** 
 ${message.guild.verificationLevel}
