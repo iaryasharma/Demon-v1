@@ -8,12 +8,10 @@ module.exports = {
   description: "Slap someone",
   run: async (client, message, args) => {
     
-    let target = message.mentions.members.first()
-    
-    let data = await random.getAnimeImgURL("slap");
+   
     
     let embed = new discord.MessageEmbed()
-    .setImage(data)
+    .setImage()
     .setColor("RANDOM")
     .setFooter(`${message.author.username} slaps ${target.user.username}`)
     .setTimestamp()
