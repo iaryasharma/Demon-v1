@@ -20,4 +20,4 @@ run: async(client, message, args) => {
 .setTimestamp()
   message.channel.send(embed)
 }
-}
+} 
