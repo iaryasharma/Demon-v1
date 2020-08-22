@@ -27,7 +27,7 @@ client.on("message", async message => {
     return message.reply(`My prefix is \`${prefix}\``);
   }
 
-  if (message.author.bot) return;
+  if (message.author.bot) return; 
   if (!message.guild) return;
   if (!message.content.startsWith(prefix)) return;
 
