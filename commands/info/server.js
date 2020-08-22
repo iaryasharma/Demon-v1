@@ -34,37 +34,37 @@ module.exports = {
       .setTitle(message.guild)
       .setDescription(
         `
-<a:1_:729258591420153856>**OWNER**
+**OWNER**
 ${message.guild.owner.user.tag}
 
-<a:1_:729258591420153856>**SERVER ID**
+**SERVER ID**
 ${message.guild.id}
 
-<a:1_:729258591420153856>**REGION**
+**REGION**
 ${message.guild.region}
 
-<a:1_:729258591420153856>**TOTAL MEMBERS  **
+**TOTAL MEMBERS  **
 ${message.guild.memberCount}
 
-<a:1_:729258591420153856>**TOTAL CHANNELS **
+**TOTAL CHANNELS **
  ${message.guild.channels.cache.size}
 
-<a:1_:729258591420153856>**TOTAL ROLES**
+**TOTAL ROLES**
 ${message.guild.roles.cache.size}
 
-<a:1_:729258591420153856>**TOTAL EMOJI **
+**TOTAL EMOJI **
 ${message.guild.emojis.cache.size}
 
-<a:1_:729258591420153856>**SERVER CREATED AT**
+**SERVER CREATED AT**
 ${message.guild.createdAt}
 
-<a:1_:729258591420153856>**SERVER BOOST**
+**SERVER BOOST**
 ${message.guild.premiumSubscriptionCount} <:nitroboost:743905977996410901>
 
-<a:1_:729258591420153856>**BOOST LEVEL**
+**BOOST LEVEL**
 ${boostlevel} <:boost:743907434770202656>
 
-<a:1_:729258591420153856>**Security** 
+**Security** 
 ${message.guild.verificationLevel}
 `)
       .setThumbnail(message.guild.iconURL())
