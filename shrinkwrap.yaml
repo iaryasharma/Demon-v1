@@ -25,6 +25,7 @@ dependencies:
   simple-youtube-api: 5.2.1
   snekfetch: 4.0.4
   something-random-on-discord: 0.0.1
+  weather-js: 2.0.0
   ytdl-core: 3.2.1
 packages:
   /@babel/runtime/7.11.2:
@@ -2418,6 +2419,13 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-OhBcoXBTr1XW4nDB+CiGguGNpAA=
+  /weather-js/2.0.0:
+    dependencies:
+      request: 2.88.2
+      xml2js: 0.4.23
+    dev: false
+    resolution:
+      integrity: sha1-DZvNsFpPhNBrm585kAKKYB6kofw=
   /which-pm-runs/1.0.0:
     dev: false
     resolution:
@@ -2524,4 +2532,5 @@ specifiers:
   simple-youtube-api: ^5.2.1
   snekfetch: ^4.0.4
   something-random-on-discord: ^0.0.1
+  weather-js: ^2.0.0
   ytdl-core: ^3.2.1

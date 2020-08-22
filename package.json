@@ -36,7 +36,8 @@
     "snekfetch": "^4.0.4",
     "nekos.life": "^2.0.7",
     "figlet": "^1.5.0",
-    "neko-love": "^2.0.2"
+    "neko-love": "^2.0.2",
+    "weather-js": "^2.0.0"
   },
   "engines": {
     "node": "12.x"
