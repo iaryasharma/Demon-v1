@@ -1,14 +1,14 @@
 const discord = require("discord.js");
 
 module.exports = {
-  name: "invite",
+  name: "surport",
   category: "help",
-  description: "INVITE SENPAI BOT",
+  description: "server of SENPAI BOT",
   run: async (client, message, args) => {
     
     let embed = new discord.MessageEmbed()
-    .setTitle(`SURPORT SERVER FOR SENPAI OP`)
-    .setDescription(`[CLICK HERE](https://discord.com/api/oauth2/authorize?client_id=746361678840725644&permissions=8&scope=bot)`)
+    .setTitle(`HERE IS THE INVITE LINK OF THE SENPAI BOT surport `)
+    .setDescription(`[click me](https://discord.gg/tJkAk9p`)
     .setColor("RANDOM")
     .setFooter(`BOT MADE BY KANEKI`)
     .setTimestamp(message.timestamp = Date.now())
@@ -17,4 +17,4 @@ module.exports = {
      
   
   }
-}     
+}      
