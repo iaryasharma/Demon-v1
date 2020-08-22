@@ -22,6 +22,7 @@ module.exports = {
 
 <a:drl:730449009902223402> __**WELCOME COMMANDS**__<a:drl:730449009902223402>
 \`setwelcome,setmessage\`
+
 <a:drl:730449009902223402> __**SPECIAL COMMANDS**__<a:drl:730449009902223402>
 \`giveaway,math,announce,emoji,\`
  
@@ -30,7 +31,7 @@ NEW COMMAND SOON LIKE RANK SYSTEM,RADIO,GLOBAL CHAT
 
       .setThumbnail(client.user.displayAvatarURL())
       .setColor("#35CB31")
-      .setFooter(`PARAS BOT `)
+      .setFooter(`SENPAI OP BOT `)
       .setTimestamp((message.timestamp = Date.now()));
 
     await message.channel.send(embed);
