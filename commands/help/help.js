@@ -18,16 +18,16 @@ module.exports = {
 \`avatar,botinfo,serverinfo,hastebin,imdb,membercount,ping,pokemon,servericon,,whois,userinfo\`<a:info:746693700939153488>
 
 <a:arrowright:746687100178661396> __**MUSIC COMMANDS**__ <a:larrow:746692948057522217>
-\`play,search,skip,stop,pause,resume,nowplaying,queue,volume\`
+\`play,search,skip,stop,pause,resume,nowplaying,queue,volume\`<a:MusicDance:746694040669650964>
 
 <a:arrowright:746687100178661396> __**NSFW COMMANDS**__ <a:larrow:746692948057522217>
-\`nahi hai\`
+\`nahi hai\`<a:Nikal_pehli_fursat:742237977278808114>
 
 <a:arrowright:746687100178661396> __**WELCOME COMMANDS**__ <a:larrow:746692948057522217>
-\`setwelcome,setmessage\`
+\`setwelcome,setmessage\`<a:Welcome:746694465560903781>
 
 <a:arrowright:746687100178661396> __**SPECIAL COMMANDS**__ <a:larrow:746692948057522217>
-\`giveaway,math,announce,emoji,\`
+\`giveaway,math,announce,emoji,\`<a:TheSquirtle:746694921486073894>
  
 NEW COMMAND SOON LIKE RANK SYSTEM,RADIO,GLOBAL CHAT,SOME COMMANDS ARE NOT WORKING 
 `)
