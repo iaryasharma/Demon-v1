@@ -1,5 +1,6 @@
 dependencies:
   akaneko: 3.0.2
+  animejs: 3.2.0
   ascii-table: 0.0.9
   canvas-senpai: 0.1.6
   discord.js: 12.2.0
@@ -485,6 +486,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-YUewYx1mX6M27VYnFPhjqIkq4o1vvlowHpp+Y1D7uCom+d4hJw9eDS5mxtWi7Xe/8qaAQ829L00AqzR3GIkL/w==
+  /animejs/3.2.0:
+    dev: false
+    resolution:
+      integrity: sha512-zhtGl5cS0G2f5DfciMO8uwWpnx06nfFnHlXYYXHBazHep1Lyd6kEtBQP+9hpYKE0dBZjIigHp9VpMO95ZfXQJQ==
   /ansi-regex/2.1.1:
     dev: false
     engines:
@@ -2507,6 +2512,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   akaneko: ^3.0.2
+  animejs: ^3.2.0
   ascii-table: ^0.0.9
   canvas-senpai: ^0.1.6
   discord.js: ^12.2.0
