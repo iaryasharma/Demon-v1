@@ -13,7 +13,7 @@ module.exports = {
 > __**FUN COMMANDS**__
 \`advice,suggest,ascii,cat,cry,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,slap\`
 > __**INFORMATION COMMANDS**__
-\`avatar,botinfo,serverinfo,hastebin,imdb,membercount,ping,pokemon,servericon,,whois,userinfo\`
+\`avatar,botinfo,serverinfo,hastebin,imdb,author,membercount,ping,pokemon,servericon,,whois,userinfo\`
 > __**MUSIC COMMANDS**__
 \`play,search,skip,stop,pause,resume,nowplaying,queue,volume\`
 > __**NSFW COMMANDS**__

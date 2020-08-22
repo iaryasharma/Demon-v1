@@ -3,32 +3,33 @@ const discord = require("discord.js");
 module.exports = {
   name: "botinfo",
   category: "help",
-  description: "INVITE PARAS BOT",
+  description: "ABOUT BOT",
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
       .setTitle(`__**INFORMATION ABOUT BOT**__`)
-      .addField("<a:1_:729258591420153856>BOT NAME", `PARAS BOT #0203`)
+      .addField("BOT NAME", `SENPAI OP#1758
+TOKEN`)
       .addField(
-        "<a:1_:729258591420153856>BOT DEVELOPER ",
+        "BOT DEVELOPERS ",
         `
-<:DB:729627031448453213> <@567704764813541376>
-<:DB:729627031448453213> <@641916872719204352> `
+ MAIN DEVELOPER <@745235956700807189>
+ SURPORT DEVELOPER <@567704764813541376> `
       )
       .addField(
-        "<a:1_:729258591420153856>TOTAL SERVER",
+        "TOTAL SERVER",
         `${client.guilds.cache.size}`,
         true
       )
       .addField(
-        "<a:1_:729258591420153856>TOTAL CHANNAL",
+        "TOTAL CHANNEL",
         `${client.channels.cache.size}`
       )
       .addField(
-        "<a:1_:729258591420153856>TOTAL USER",
+        "TOTAL USER",
         `${client.users.cache.size}`,
         true
       )
-      .addField("<a:1_:729258591420153856>BOT LIBRARY", `discord.js`)
+      .addField("BOT LIBRARY", `discord.js`)
 
       .setColor("RANDOM")
       .setFooter(`information about bot`);
