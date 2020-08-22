@@ -6,24 +6,21 @@ module.exports = {
   description: "BOT GET SOON UPDATES ",
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
-      .setTitle(`<a:RJ:731452508547055618>SENPAI BOT  HELP MENU <a:RJ:731452508547055618> <a:op34:736150905392726029>`)
+      .setTitle(`PARAS BOT  HELP MENU`)
       .setDescription(`
-<a:drl:730449009902223402> __**MODERATION COMMANDS**__<a:drl:730449009902223402>
+> __**MODERATION COMMANDS**__
 \`addrole,removerole,cleaer[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
-
-                                                    <a:drl:730449009902223402> __**FUN COMMANDS**__<a:drl:730449009902223402>
-                                                                      \`advice,suggest,ascii,cat,cry,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,slap\`
-
-<a:drl:730449009902223402> __**INFORMATION COMMANDS**__<a:drl:730449009902223402>
+> __**FUN COMMANDS**__
+\`advice,suggest,ascii,cat,cry,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,slap\`
+> __**INFORMATION COMMANDS**__
 \`avatar,botinfo,serverinfo,hastebin,imdb,membercount,ping,pokemon,servericon,,whois,userinfo\`
-
-<a:drl:730449009902223402> __**MUSIC COMMANDS**__<a:drl:730449009902223402>
+> __**MUSIC COMMANDS**__<a:cc_heart:742232464109338638>
 \`play,search,skip,stop,pause,resume,nowplaying,queue,volume\`
-
-<a:drl:730449009902223402> __**WELCOME COMMANDS**__<a:drl:730449009902223402>
+> __**NSFW COMMANDS**__
+\`nahi hai\`
+> __**WELCOME COMMANDS**__
 \`setwelcome,setmessage\`
-
-<a:drl:730449009902223402> __**SPECIAL COMMANDS**__<a:drl:730449009902223402>
+> __**SPECIAL COMMANDS**__
 \`giveaway,math,announce,emoji,\`
  
 NEW COMMAND SOON LIKE RANK SYSTEM,RADIO,GLOBAL CHAT
@@ -31,7 +28,7 @@ NEW COMMAND SOON LIKE RANK SYSTEM,RADIO,GLOBAL CHAT
 
       .setThumbnail(client.user.displayAvatarURL())
       .setColor("#35CB31")
-      .setFooter(`SENPAI OP BOT `)
+      .setFooter(`PARAS BOT `)
       .setTimestamp((message.timestamp = Date.now()));
 
     await message.channel.send(embed);
