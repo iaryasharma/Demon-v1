@@ -21,7 +21,7 @@ module.exports = {
       .setTitle("Global Cases")
       .setColor("#ff2050")
       .setDescription("Sometimes cases number may differ from small amount.")
-      .addField("Total Cases", corona.cases, true)
+      .addField("Total Cases", corona.cases, true )
       .addField("Total Deaths", corona.deaths, true)
       .addField("Total Recovered", corona.recovered, true)
       .addField("Today's Cases", corona.todayCases, true)
