@@ -1,2 +1,2 @@
 const discord = require("discord.js")
-const { NovelCovid} = require
+const { NovelCovid} = require("novelcovid") 
