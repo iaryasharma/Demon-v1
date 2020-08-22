@@ -9,7 +9,7 @@ module.exports = {
       .setTitle(`SENPAI HELP MENU`)
       .setDescription(`
 > __**MODERATION COMMANDS**__
-\`addrole,removerole,cleaer[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
+\`addrole,removerole,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
 > __**FUN COMMANDS**__
 \`advice,suggest,ascii,cat,cry,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,slap\`
 > __**INFORMATION COMMANDS**__
