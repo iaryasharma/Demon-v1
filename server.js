@@ -87,7 +87,7 @@ const msg = m1.replace("{member}", member.user).replace("{member.guild}", member
       data,
       "welcome-image.png"
     );
-
+  
   let wembed = new discord.MessageEmbed()
   .setAuthor(member.user.username, member.user.avatarURL({dynamic: true, size: 2048}))
   .setThumbnail(member.user.displayAvatarURL({dynamic: true, size: 2048}))
