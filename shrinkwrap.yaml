@@ -21,6 +21,7 @@ dependencies:
   os: 0.1.1
   path: 0.12.7
   quick.db: 7.1.1
+  react-anime: 3.0.3
   request: 2.88.2
   request-promise-native: 1.0.9
   simple-youtube-api: 5.2.1
@@ -1347,6 +1348,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-8UyQoYmdRDy81Brz6aLAUhfZLwr5zV0L3taTQ4hju7m6biuwiWiJXjPhBJxbUQJA8PrkvJ/7Enqmwk2sM14soA==
+  /lodash.isequal/4.5.0:
+    dev: false
+    resolution:
+      integrity: sha1-QVxEePK8wwEgwizhDtMib30+GOA=
   /lodash/4.17.15:
     dev: false
     resolution:
@@ -1943,6 +1948,16 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==
+  /react-anime/3.0.3:
+    dependencies:
+      animejs: 3.2.0
+      lodash.isequal: 4.5.0
+    dev: false
+    peerDependencies:
+      react: ^16.x
+      react-dom: ^16.x
+    resolution:
+      integrity: sha512-VQjEAMvbkFMZoLSH96z8tzMg96EhFsBXyv83LIJC5lbetYbka/koTBCSvR5f1LPspqbJUbJtN9rEHA6DhCsESw==
   /readable-stream/2.3.7:
     dependencies:
       core-util-is: 1.0.2
@@ -2533,6 +2548,7 @@ specifiers:
   os: ^0.1.1
   path: ^0.12.7
   quick.db: ^7.1.1
+  react-anime: ^3.0.3
   request: ^2.88.2
   request-promise-native: ^1.0.9
   simple-youtube-api: ^5.2.1

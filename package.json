@@ -38,7 +38,8 @@
     "figlet": "^1.5.0",
     "neko-love": "^2.0.2",
     "weather-js": "^2.0.0",
-    "animejs": "^3.2.0"
+    "animejs": "^3.2.0",
+    "react-anime": "^3.0.3"
   },
   "engines": {
     "node": "12.x"

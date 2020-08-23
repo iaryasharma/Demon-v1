@@ -28,6 +28,9 @@ module.exports = {
 
 <a:arrowright:746687100178661396> __**SPECIAL COMMANDS**__ <a:larrow:746692948057522217>
 \`giveaway,math,announce,emoji,\`<a:TheSquirtle:746694921486073894>
+
+<a:arrowright:746687100178661396> __**CORONA COMMANDS**__ <a:larrow:746692948057522217>
+\`corona all, corona<country>\`
  
 NEW COMMAND SOON LIKE RANK SYSTEM,RADIO,GLOBAL CHAT,SOME COMMANDS ARE NOT WORKING 
 `)
