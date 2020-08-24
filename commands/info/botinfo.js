@@ -9,25 +9,25 @@ module.exports = {
       .setTitle(`__**INFORMATION ABOUT BOT**__`)
       .addField("> :PurpleFire:BOT NAME:PurpleFire:", `Zeyrox`)
       .addField(
-        "> :PurpleFire:BOT DEVELOPER:PurpleFire: ",
+        "> <a:firepurple:747318123643928677>BOT DEVELOPER<a:firepurple:747318123643928677> ",
         `
- <@551675716635328512> `
+ <@747319827856621648>`
       )
       .addField(
-        "> :PurpleFire:TOTAL SERVER:PurpleFire:",
+        "> <a:firepurple:747318123643928677> TOTAL SERVER <a:firepurple:747318123643928677>",
        `${client.guilds.cache.size}`,
         true
       )
       .addField(
-         "> :PurpleFire:TOTAL CHANNAL:PurpleFire:",
+         "<a:firepurple:747318123643928677>TOTAL CHANNEL <a:firepurple:747318123643928677>",
         `${client.channels.cache.size}`
       )
       .addField(
-        "> :PurpleFire:TOTAL USER:PurpleFire:",
+        "> <a:firepurple:747318123643928677> TOTAL USER <a:firepurple:747318123643928677>",
         `${client.users.cache.size}`,
         true
       )
-      .addField("> :PurpleFire:BOT LIBRARY:PurpleFire:", `discord.js`)
+      .addField("> <a:firepurple:747318123643928677> BOT LIBRARY: <a:firepurple:747318123643928677>", `discord.js`)
 
       .setColor("#00FFFF")
       .setFooter(`information about bot`);
