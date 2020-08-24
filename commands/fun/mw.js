@@ -3,7 +3,7 @@ const akaneko = require('akaneko');
 
 module.exports = {
   name: "mwallpapers",
-  aliases: ["mw", "mobilewallpapers", "mwall"],
+  aliases: ["mw", "mobilewallpapers", "mwall", "Agirls"],
   category: "nsfw",
   description: "Get some wallpapers",
   run: async (client, message, args) => {
