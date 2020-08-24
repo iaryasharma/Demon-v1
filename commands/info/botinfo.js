@@ -3,37 +3,35 @@ const discord = require("discord.js");
 module.exports = {
   name: "botinfo",
   category: "help",
-  description: "INVITE PARAS BOT",
+  description: "INVITE BOT",
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
       .setTitle(`__**INFORMATION ABOUT BOT**__`)
-      .addField("<a:1_:729258591420153856>BOT NAME", `  SENPAI OP`)
+      .addField("> :PurpleFire:BOT NAME:PurpleFire:", `Zeyrox`)
       .addField(
-        "<a:1_:729258591420153856>BOT DEVELOPER ",
+        "> :PurpleFire:BOT DEVELOPER:PurpleFire: ",
         `
-<a:bluetick:742575729438490625> <@745235956700807189>
-<a:bluetick:742575729438490625> <@567704764813541376> `
+ <@551675716635328512> `
       )
       .addField(
-        "<a:1_:729258591420153856>TOTAL SERVER",
-        `${client.guilds.cache.size}`,
+        "> :PurpleFire:TOTAL SERVER:PurpleFire:",
+       `${client.guilds.cache.size}`,
         true
       )
       .addField(
-        "<a:1_:729258591420153856>TOTAL CHANNAL",
+         "> :PurpleFire:TOTAL CHANNAL:PurpleFire:",
         `${client.channels.cache.size}`
       )
       .addField(
-        "<a:1_:729258591420153856>TOTAL USER",
+        "> :PurpleFire:TOTAL USER:PurpleFire:",
         `${client.users.cache.size}`,
         true
       )
-      .addField("<a:1_:729258591420153856>BOT LIBRARY", `discord.js`)
+      .addField("> :PurpleFire:BOT LIBRARY:PurpleFire:", `discord.js`)
 
-      .setColor("RANDOM")
+      .setColor("#00FFFF")
       .setFooter(`information about bot`);
 
     message.channel.send(embed);
   }
 };
- 
