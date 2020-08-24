@@ -7,38 +7,41 @@ module.exports = {
   usage: "ban <@user> <reason>",
   run: async (client, message, args) => {
     
-    const target = message.mentions.members.first()
-    
-    const reason = args.slice(1).join(" ")
-    
-    if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply(`You don't have enough powers to ban someone`)
-    
-    if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply(`I don't have powers to ban someone`)
-    
-    if(!args[0]) return message.reply(`Please mention someone to ban`)
-    
-    if(!target) return message.reply(`I can't find that member`)
-    
-    if(target.roles.highest.position >= message.member.roles.highest.position || message.author.id !== message.guild.owner.id) {
-      return message.reply(`They have more power than you`)
+    if(!message.member.hasPermission("BAN_MEMBERS")) {
+      return message.channel.send(`**${message.author.username}**, You do not have perms to ban someone`)
     }
     
-    if(target.id === message.author.id) return message.reply(`I can't ban you as you are the Boss`)
-    
-    if(target.bannable) {
-      let embed = new discord.MessageEmbed()
-      .setColor("RANDOM")
-      .setDescription(`Banned \`${target}\` for \`${reason || "No Reason Provided"}\``)
-      
-      message.channel.send(embed)
-      
-      target.ban()
-      
-      message.delete()
-      
-    } else {
-      return message.reply(`I can't ban them, make sure that my role is above of theirs`)
+    if(!message.guild.me.hasPermission("BAN_MEMBERS")) {
+      return message.channel.send(`**${message.author.username}**, I am do not have perms to ban someone`)
     }
-    return undefined
+    
+    const target = message.mentions.members.first();
+    
+    if(!target) {
+      return message.channel.send(`**${message.author.username}**, Please mention the person who you want to ban.`)
+    }
+    
+    if(target.id === message.author.id) {
+      return message.channel.send(`**${message.author.username}**, You can not ban yourself!`)
+    }
+    
+   
+    
+   if(!args[1]) {
+     return message.channel.send(`**${message.author.username}**, Please Give Reason To ban Member`)
+   }
+    
+    let embed = new discord.MessageEmbed()
+    .setTitle("Action : Ban")
+    .setDescription(`Banned ${target} (${target.id})`)
+    .setColor("#ff2050")
+    .setThumbnail(target.avatarURL)
+    .setFooter(`Banned by ${message.author.tag}`);
+    
+    message.channel.send(embed)
+    target.ban(args[1])
+    
+    
+    
   }
-};
+}

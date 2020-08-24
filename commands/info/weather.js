@@ -20,12 +20,12 @@ let embed = new discord.MessageEmbed()
 .setTitle(`Weather - ${result[0].location.name}`)
 .setColor("#ff2050")
 .setDescription(" Temperature units can may be differ some time ")
-.addField("<a:check1:747293409701527592> Temperature <a:check1:747293409701527592>" , `${result[0].current.temperature} Celcius`, true)
-.addField("<a:check1:747293409701527592> Sky Text <a:check1:747293409701527592>", result[0].current.skytext, true)
-.addField("Humidity", result[0].current.humidity, true)
-.addField("Wind Speed", result[0].current.windspeed, true)//What about image
-.addField("Observation Time", result[0].current.observationtime, true)
-.addField("Wind Display", result[0].current.winddisplay, true)
+.addField("<a:check1:747293409701527592> Temperature " , `${result[0].current.temperature} Celcius`, true)
+.addField("<a:check1:747293409701527592> Sky Text ", result[0].current.skytext, true)
+.addField("<a:check1:747293409701527592> Humidity", result[0].current.humidity, true)
+.addField("<a:check1:747293409701527592> Wind Speed", result[0].current.windspeed, true)//What about image
+.addField("<a:check1:747293409701527592> Observation Time", result[0].current.observationtime, true)
+.addField("<a:check1:747293409701527592> Wind Display", result[0].current.winddisplay, true)
 .setThumbnail(result[0].current.imageUrl);
    message.channel.send(embed)
 } catch(err) {
