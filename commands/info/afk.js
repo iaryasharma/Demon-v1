@@ -1,38 +1,40 @@
-  
-module.exports = async ({ Constants: { Colors } }, { memberDocument, memberQueryDocument }, msg, commandData) => {
+module.exports = async ({ Constants: { Colors } }, msg, commandData) => {
 	if (msg.suffix) {
 		if (msg.suffix === ".") {
-			memberQueryDocument.set("afk_message", null);
+			msg.author.userDocument.query.set("afk_message", null);
 			msg.send({
 				embed: {
 					color: Colors.GREEN,
 					title: `Welcome back! 🎊`,
-					description: `I removed your AFK message in this server.`,
+					description: `I removed your global AFK message.`,
 					footer: {
-						text: `You can set a new one by using "${msg.guild.commandPrefix}${commandData.name} <message>"`,
+						text: `You can set a new one by running "${commandData.name} <message>"`,
 					},
 				},
 			});
 		} else {
-			memberQueryDocument.set("afk_message", msg.suffix);
+			msg.author.userDocument.query.set("afk_message", msg.suffix);
 			msg.send({
 				embed: {
 					color: Colors.GREEN,
-					description: `Alright, I will now show that message when you are mentioned in chat. 👌`,
+					description: `Alright, I'll show that when someone mentions you on a server. 👌`,
 					footer: {
-						text: `Use "${msg.guild.commandPrefix}${commandData.name} ." to remove it`,
+						text: `Use "${commandData.name} ." to remove it`,
 					},
 				},
 			});
 		}
-	} else if (memberDocument.afk_message) {
+		await msg.author.userDocument.save().catch(err => {
+			logger.verbose(`Failed to save user document for AFK message >.>\n`, err);
+		});
+	} else if (msg.author.userDocument.afk_message) {
 		msg.send({
 			embed: {
 				color: Colors.BLUE,
-				title: `Your current AFK message is:`,
-				description: `${memberDocument.afk_message}`,
+				title: `Your current global AFK message is:`,
+				description: `${msg.author.userDocument.afk_message}`,
 				footer: {
-					text: `Use "${msg.guild.commandPrefix}${commandData.name} <message>" to change it or "${msg.guild.commandPrefix}${commandData.name} ." to remove it.`,
+					text: `Use "${commandData.name} <message>" to change it or "${commandData.name} ." to remove it.`,
 				},
 			},
 		});
@@ -40,9 +42,9 @@ module.exports = async ({ Constants: { Colors } }, { memberDocument, memberQuery
 		msg.send({
 			embed: {
 				color: Colors.LIGHT_RED,
-				description: `You don't have an AFK message set right now! ⌨`,
+				description: `You don't have a global AFK message set right now! ⌨️`,
 				footer: {
-					text: `You can set one by using "${msg.guild.commandPrefix}${commandData.name} <message>"`,
+					text: `You can set one by running "${commandData.name} <message>"`,
 				},
 			},
 		});
