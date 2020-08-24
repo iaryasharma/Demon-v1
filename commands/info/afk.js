@@ -1,7 +1,7 @@
 module.exports = async ({ Constants: { Colors } }, msg, commandData) => {
 	if (msg.suffix) {
 		if (msg.suffix === ".") {
-			msg.author.userDocument.query.set("afk_message", null);
+			msg.author.userDocument.query.set("afk", null);
 			msg.send({
 				embed: {
 					color: Colors.GREEN,
