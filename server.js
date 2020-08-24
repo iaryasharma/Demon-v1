@@ -18,7 +18,9 @@ client.aliases = new discord.Collection();
 
 client.on("ready", () => {
   console.log(` ${client.user.username} is turned on`);
-  client.user.setActivity( `${client.users.cache.size} Members | +help`,{type:"WATCHING"});
+  client.user.setActivity(`${client.users.cache.size} Members | +help`, {
+    type: "WATCHING"
+  });
 });
 
 client.on("message", async message => {
