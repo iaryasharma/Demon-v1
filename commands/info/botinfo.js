@@ -22,7 +22,7 @@ module.exports = {
          "<a:firepurple:747318123643928677>TOTAL CHANNEL <a:firepurple:747318123643928677>",
         `${client.channels.cache.size}`
       )
-      .addField(
+       .addField(
         "> <a:firepurple:747318123643928677> TOTAL USER <a:firepurple:747318123643928677>",
         `${client.users.cache.size}`,
         true
