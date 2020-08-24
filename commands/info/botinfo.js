@@ -7,7 +7,7 @@ module.exports = {
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
       .setTitle(`__**INFORMATION ABOUT BOT**__`)
-      .addField("<a:1_:729258591420153856>BOT NAME", `PARAS BOT #0203`)
+      .addField("<a:1_:729258591420153856>BOT NAME", `  SENPAI OP`)
       .addField(
         "<a:1_:729258591420153856>BOT DEVELOPER ",
         `
