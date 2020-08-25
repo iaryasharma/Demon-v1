@@ -10,8 +10,8 @@ module.exports = {
       .addField("> :PurpleFire:BOT NAME:PurpleFire:", `Zeyrox`)
       .addField(
         "> <a:firepurple:747318123643928677>BOT DEVELOPER<a:firepurple:747318123643928677> ",
-        `
- <@747319827856621648>`
+        
+ `<@747319827856621648>`
       )
       .addField(
         "> <a:firepurple:747318123643928677> TOTAL SERVER <a:firepurple:747318123643928677>",

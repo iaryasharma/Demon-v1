@@ -23,6 +23,7 @@ dependencies:
   path: 0.12.7
   quick.db: 7.1.1
   react-anime: 3.0.3
+  reddit: 1.2.0
   request: 2.88.2
   request-promise-native: 1.0.9
   scrap: 0.1.0
@@ -844,6 +845,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
+  /debug/4.1.1:
+    dependencies:
+      ms: 2.1.2
+    dev: false
+    resolution:
+      integrity: sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==
   /decimal.js/10.2.0:
     dev: false
     resolution:
@@ -2121,6 +2128,13 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==
+  /reddit/1.2.0:
+    dependencies:
+      debug: 4.1.1
+      simple-get: 3.1.0
+    dev: false
+    resolution:
+      integrity: sha512-BJ3oIxH9EfsNVvvtNtWXqGXKAw5lhZXC2TPHPkl9SwpBzu9g8yL/sfHCx6crEij3pNCXtoZzEMjf2IgZucBtsg==
   /regenerator-runtime/0.13.7:
     dev: false
     resolution:
@@ -2710,6 +2724,7 @@ specifiers:
   path: ^0.12.7
   quick.db: ^7.1.1
   react-anime: ^3.0.3
+  reddit: ^1.2.0
   request: ^2.88.2
   request-promise-native: ^1.0.9
   scrap: ^0.1.0
