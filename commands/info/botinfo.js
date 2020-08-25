@@ -3,33 +3,33 @@ const discord = require("discord.js");
 module.exports = {
   name: "botinfo",
   category: "help",
-  description: "INVITE BOT",
+  description: "INVITE SENPAI",
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
       .setTitle(`__**INFORMATION ABOUT BOT**__`)
-      .addField("> :PurpleFire:BOT NAME:PurpleFire:", `Zeyrox`)
+      .addField("<a:1_:729258591420153856>BOT NAME", `SENPAI OP`)
       .addField(
-        "> <a:firepurple:747318123643928677>BOT DEVELOPER<a:firepurple:747318123643928677> ",
-        
- `<@747319827856621648>`
+        "<a:1_:729258591420153856>BOT DEVELOPER ",
+        `
+ <@745235956700807189> `
       )
       .addField(
-        "> <a:firepurple:747318123643928677> TOTAL SERVER <a:firepurple:747318123643928677>",
-       `${client.guilds.cache.size}`,
+        "<a:1_:729258591420153856>TOTAL SERVER",
+        `${client.guilds.cache.size}`,
         true
       )
       .addField(
-         "<a:firepurple:747318123643928677>TOTAL CHANNEL <a:firepurple:747318123643928677>",
+        "<a:1_:729258591420153856>TOTAL CHANNAL",
         `${client.channels.cache.size}`
       )
-       .addField(
-        "> <a:firepurple:747318123643928677> TOTAL USER <a:firepurple:747318123643928677>",
+      .addField(
+        "<a:1_:729258591420153856>TOTAL USER",
         `${client.users.cache.size}`,
         true
       )
-      .addField("> <a:firepurple:747318123643928677> BOT LIBRARY: <a:firepurple:747318123643928677>", `discord.js`)
+      .addField("<a:1_:729258591420153856>BOT LIBRARY", `discord.js`)
 
-      .setColor("#00FFFF")
+      .setColor("RANDOM")
       .setFooter(`information about bot`);
 
     message.channel.send(embed);
