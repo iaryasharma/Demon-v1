@@ -15,7 +15,7 @@ module.exports = {
 \`advice,suggest,ascii,cat,cry,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,slap\`<a:fun:746693872893165569>
 
 <a:arrowright:746687100178661396> __**INFORMATION COMMANDS**__ <a:larrow:746692948057522217>
-\`avatar,botinfo,serverinfo,hastebin,imdb,membercount,ping,pokemon,servericon,,whois,userinfo\`<a:info:746693700939153488>
+\`avatar,botinfo,serverinfo,hastebin,imdb,membercount,weather,ping,pokemon,servericon,,whois,userinfo\`<a:info:746693700939153488>
 
 <a:arrowright:746687100178661396> __**MUSIC COMMANDS**__ <a:larrow:746692948057522217>
 \`play,search,skip,stop,pause,resume,nowplaying,queue,volume\`<a:MusicDance:746694040669650964>
