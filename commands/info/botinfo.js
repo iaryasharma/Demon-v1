@@ -7,27 +7,27 @@ module.exports = {
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
       .setTitle(`__**INFORMATION ABOUT BOT**__`)
-      .addField("<a:1_:729258591420153856>BOT NAME", `SENPAI OP`)
+      .addField("<a:Arrow2:748013938314313808>BOT NAME", `SENPAI OP`)
       .addField(
-        "<a:1_:729258591420153856>BOT DEVELOPER ",
+        "<a:Arrow2:748013938314313808>BOT DEVELOPER ",
         `
  <@745235956700807189> `
       )
       .addField(
-        "<a:1_:729258591420153856>TOTAL SERVER",
+        "<a:Arrow2:748013938314313808>TOTAL SERVER",
         `${client.guilds.cache.size}`,
         true
       )
       .addField(
-        "<a:1_:729258591420153856>TOTAL CHANNAL",
+        "<a:Arrow2:748013938314313808>TOTAL CHANNAL",
         `${client.channels.cache.size}`
       )
       .addField(
-        "<a:1_:729258591420153856>TOTAL USER",
+        "<a:Arrow2:748013938314313808>TOTAL USER",
         `${client.users.cache.size}`,
         true
       )
-      .addField("<a:1_:729258591420153856>BOT LIBRARY", `discord.js`)
+      .addField("<a:Arrow2:748013938314313808>BOT LIBRARY", `discord.js`)
 
       .setColor("RANDOM")
       .setFooter(`information about bot`);
