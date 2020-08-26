@@ -9,7 +9,7 @@ module.exports = {
       .setTitle(`<a:mb:731368836846321694> SENPAI BOT  HELP MENU `)
       .setDescription(`
 <a:arrowright:746687100178661396> __**MODERATION COMMANDS**__ <a:larrow:746692948057522217>
-\`addrole,removerole,cleaer[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`<a:verified:746693603710992404>
+\`addrole,removerole,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`<a:verified:746693603710992404>
 
 <a:arrowright:746687100178661396> __**FUN COMMANDS**__ <a:larrow:746692948057522217>
 \`advice,suggest,ascii,cat,cry,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,slap\`<a:fun:746693872893165569>

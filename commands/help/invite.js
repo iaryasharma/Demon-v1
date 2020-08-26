@@ -7,7 +7,7 @@ module.exports = {
   run: async (client, message, args) => {
     
     let embed = new discord.MessageEmbed()
-    .setTitle(`<a:drl:730449009902223402>HERE INVITE LINK OF BOT<a:drl:730449009902223402>`)
+    .setTitle(`<a:Verified:748016470197534840>HERE INVITE LINK OF BOT<a:Verified:748016470197534840>`)
     .setDescription(`[CLICK HERE](https://discord.com/api/oauth2/authorize?client_id=746361678840725644&permissions=8&scope=bot)`)
     .setColor("RANDOM")
     .setFooter(`BOT MADE BY KANEKI`)
