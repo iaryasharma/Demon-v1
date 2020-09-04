@@ -12,7 +12,7 @@ module.exports = {
 \`addrole,removerole,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`<a:verified:746693603710992404>
 
 <a:arrowright:746687100178661396> __**FUN COMMANDS**__ <a:larrow:746692948057522217>
-\`advice,suggest,ascii,dog,fact,hug,joke,kpop,math,meme,mw,say\`<a:fun:746693872893165569>
+\`advice,suggest,ascii,dog,fact,hug,joke,kpop,math,meme,mw,say,slap,punch,cry\`<a:fun:746693872893165569>
 
 <a:arrowright:746687100178661396> __**INFORMATION COMMANDS**__ <a:larrow:746692948057522217>
 \`avatar,botinfo,serverinfo,hastebin,imdb,membercount,weather,ping,pokemon,servericon,,whois,userinfo\`<a:info:746693700939153488>
