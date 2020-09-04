@@ -19,7 +19,7 @@ module.exports = {
     if (message.guild.region === "singapore") message.guild.region = "🇸🇬 Singapore"
     if (message.guild.region === "hongkong") message.guild.region = "🇭🇰 Hong Kong"
     if (message.guild.region === "southafrica") message.guild.region = "🇿🇦 South Africa"
-    if (message.guild.region === "us-east") message.guild.region = "🇺🇸 US East"
+    if (message.guild.region === "us-east") message.guild.region = "🇺🇸 US East" 
     if (message.guild.region === "us-west") message.guild.region = "🇺🇸 US West"
     if (message.guild.region === "us-central") message.guild.region = "🇺🇸US Central"
     if (message.guild.region === "us-south") message.guild.region = "🇺🇸 US South"

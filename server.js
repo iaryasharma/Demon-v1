@@ -18,7 +18,7 @@ client.aliases = new discord.Collection();
 
 client.on("ready", () => {
   console.log(` ${client.user.username} is turned on`);
-  client.user.setActivity(`+help`, {
+  client.user.setActivity(`staus test`, {
     type: "WATCHING"
   });
 });
