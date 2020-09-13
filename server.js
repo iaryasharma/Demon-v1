@@ -18,7 +18,7 @@ client.aliases = new discord.Collection();
 
 client.on("ready", () => {
   console.log(` ${client.user.username} is turned on`);
-  client.user.setActivity(`staus test`, {
+  client.user.setActivity(`Never Give Up`, {
     type: "WATCHING"
   });
 });
@@ -26,7 +26,7 @@ client.on("ready", () => {
 client.on("message", async message => {
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
-    return message.reply(`ANY HELP JUST USE +HELP <a:mb:731368836846321694>`);
+    return message.reply(`ANY HELP JUST USE ,HELP <a:mb:731368836846321694>`);
   }
 
   if (message.author.bot) return; 
