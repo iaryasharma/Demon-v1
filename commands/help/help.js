@@ -6,7 +6,7 @@ module.exports = {
   description: "BOT GET SOON UPDATES ",
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
-      .setTitle(`<a:mb:731368836846321694> SENPAI BOT  HELP MENU `)
+      .setTitle(`SENPAI BOT  HELP MENU `)
       .setDescription(`
 <a:arrowright:746687100178661396> __**MODERATION COMMANDS**__ <a:larrow:746692948057522217>
 \`addrole,removerole,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`<a:verified:746693603710992404>
@@ -32,7 +32,7 @@ module.exports = {
 <a:arrowright:746687100178661396> __**CORONA COMMANDS**__ <a:larrow:746692948057522217>
 \`corona all, corona<country>\`
  
-NEW COMMAND SOON LIKE RANK SYSTEM,RADIO,GLOBAL CHAT,SOME COMMANDS ARE NOT WORKING 
+If any contact is not working contact the bot owner
 `)
 
       .setThumbnail(client.user.displayAvatarURL())
