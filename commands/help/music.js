@@ -17,7 +17,7 @@ __**MUSIC COMMAND**__
 \`P!pause\`:- pause the songo\P!resume\`:- resume the song
 <`P!nowplaying\` :-  now playing songs
 <`P!queue\` :- give list of queue songs
-<a:1_:729258591420153856>\`P!volume\` :- set volume 0 to 100
+<`P!volume\` :- set volume 0 to 100
 
 [Support Server]() 
 `
