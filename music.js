@@ -53,7 +53,7 @@ __**Commands List**__
 > \`nowplaying\`, \`queue\`, \`volume\``
       )
       .setFooter(
-        "©️ 2020 Zealcord Development",
+        "MUSIC COMMANDS",
         "https://app.zealcord.xyz/assets/Logo.png"
       );
     msg.channel.send(helpembed);
