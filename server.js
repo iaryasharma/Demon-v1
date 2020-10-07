@@ -26,7 +26,7 @@ client.on("ready", () => {
 client.on("message", async message => {
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
-    return message.reply(`ANY HELP JUST USE *HELP <a:mb:731368836846321694>`);
+    return message.reply(`ANY HELP JUST USE `);
   }
 
   if (message.author.bot) return; 
