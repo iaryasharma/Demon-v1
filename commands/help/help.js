@@ -8,28 +8,28 @@ module.exports = {
     let embed = new discord.MessageEmbed()
       .setTitle(`BOT  HELP MENU `)
       .setDescription(`
-__**MODERATION COMMANDS**__ <a:larrow:746692948057522217>
-\`addrole,removerole,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`<a:verified:746693603710992404>
+__**MODERATION COMMANDS**__ 
+\`addrole,removerole,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
 
-__**FUN COMMANDS**__ <a:larrow:746692948057522217>
-\`advice,suggest,ascii,dog,fact,hug,joke,kpop,math,meme,mw,say,slap,punch,cry\`<a:fun:746693872893165569>
+__**FUN COMMANDS**__ 
+\`advice,suggest,ascii,dog,fact,hug,joke,kpop,math,meme,mw,say,slap,punch,cry\`
 
-__**INFORMATION COMMANDS**__ <a:larrow:746692948057522217>
-\`avatar,botinfo,serverinfo,hastebin,imdb,membercount,weather,ping,pokemon,servericon,,whois,userinfo\`<a:info:746693700939153488>
+__**INFORMATION COMMANDS**__
+\`avatar,botinfo,serverinfo,hastebin,imdb,membercount,weather,ping,pokemon,servericon,,whois,userinfo\`
 
-__**MUSIC COMMANDS**__ <a:larrow:746692948057522217>
-\`play,search,skip,stop,pause,resume,nowplaying,queue,volume\`<a:MusicDance:746694040669650964>
+__**MUSIC COMMANDS**__ 
+\`play,search,skip,stop,pause,resume,nowplaying,queue,volume\`
 
-__**NSFW COMMANDS**__ <a:larrow:746692948057522217>
-\`nahi hai\`<a:Nikal_pehli_fursat:742237977278808114>
+__**NSFW COMMANDS**__
+\`nahi hai\`
 
-__**WELCOME COMMANDS**__ <a:larrow:746692948057522217>
-\`setwelcome,setmessage\`<a:Welcome:746694465560903781>
+__**WELCOME COMMANDS**__ 
+\`setwelcome,setmessage\`
 
-__**SPECIAL COMMANDS**__ <a:larrow:746692948057522217>
-\`giveaway,math,announce,emoji,weather \`<a:TheSquirtle:746694921486073894>
+__**SPECIAL COMMANDS**__ 
+\`giveaway,math,announce,emoji,weather \`
 
-__**CORONA COMMANDS**__ <a:larrow:746692948057522217>
+__**CORONA COMMANDS**__
 \`corona all, corona<country>\`
  
 If any contact is not working contact the bot owner
