@@ -34,37 +34,37 @@ module.exports = {
       .setTitle(message.guild)
       .setDescription(
         `
-<a:Arrow2:748013938314313808>**OWNER**
+**OWNER**
 ${message.guild.owner.user.tag}
 
-<a:Arrow2:748013938314313808>**SERVER ID**
+**SERVER ID**
 ${message.guild.id}
 
-<a:Arrow2:748013938314313808>**REGION**
+**REGION**
 ${message.guild.region}
 
-<a:Arrow2:748013938314313808>**TOTAL MEMBERS  **
+**TOTAL MEMBERS**
 ${message.guild.memberCount}
 
-<a:Arrow2:748013938314313808>**TOTAL CHANNELS **
- ${message.guild.channels.cache.size}
+**TOTAL CHANNELS **
+${message.guild.channels.cache.size}
 
-<a:Arrow2:748013938314313808>**TOTAL ROLES**
+**TOTAL ROLES**
 ${message.guild.roles.cache.size}
 
-<a:Arrow2:748013938314313808>**TOTAL EMOJI **
+**TOTAL EMOJI **
 ${message.guild.emojis.cache.size}
 
-<a:Arrow2:748013938314313808>**SERVER CREATED AT**
+**SERVER CREATED AT**
 ${message.guild.createdAt}
 
-<a:Arrow2:748013938314313808>**SERVER BOOST**
-${message.guild.premiumSubscriptionCount} <a:mars_nitroCrystal:746676320049692692>
+**SERVER BOOST**
+${message.guild.premiumSubscriptionCount}
 
-<a:Arrow2:748013938314313808>**BOOST LEVEL**
-${boostlevel} <a:mars_nitroCrystal:746676320049692692>
+**BOOST LEVEL**
+${boostlevel}
 
-<a:Arrow2:748013938314313808>**Security** 
+**Security** 
 ${message.guild.verificationLevel}
 `)
       .setThumbnail(message.guild.iconURL())

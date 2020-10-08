@@ -15,9 +15,9 @@ __**MUSIC COMMAND**__
 \`skip\`:- skip the song
 \`stop\` :- stop the song
 \`pause\`:- pause the song
-\P!resume\`:- resume the song
+\`resume\`:- resume the song
 \`nowplaying\` :-  now playing songs
-`queue\` :- give list of queue songs
+\`queue\` :- give list of queue songs
 \`volume\` :- set volume 0 to 100
 
 [Support Server]() 
