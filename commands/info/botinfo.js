@@ -14,24 +14,13 @@ module.exports = {
 
 <@672027578181353473>`
       )
-      .addField(
-        "<a:Arrow2:748013938314313808>TOTAL SERVER",
-        `${client.guilds.cache.size}`,
-        true
-      )
-      .addField(
-        "<a:Arrow2:748013938314313808>TOTAL CHANNAL",
-        `${client.channels.cache.size}`
-      )
-      .addField(
-        "<a:Arrow2:748013938314313808>TOTAL USER",
-        `${client.users.cache.size}`,
-        true
-      )
-      .addField("<a:Arrow2:748013938314313808>BOT LIBRARY", `discord.js`)
+      .addField("TOTAL SERVER", `${client.guilds.cache.size}`, true)
+      .addField("TOTAL CHANNAL", `${client.channels.cache.size}`)
+      .addField("TOTAL USER", `${client.users.cache.size}`, true)
+      .addField("BOT LIBRARY", `discord.js`)
 
       .setColor("RANDOM")
-      .setFooter(`information about bot`);
+      .setFooter(`Information About Bot`);
 
     message.channel.send(embed);
   }

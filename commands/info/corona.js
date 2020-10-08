@@ -20,7 +20,7 @@ module.exports = {
       let embed = new discord.MessageEmbed()
       .setTitle(`__Global Cases__`)
       .setColor("#ff2050")
-      .setDescription(`<:coronavirus:746680804683546675>Sometimes cases number may differ from small amount.<:coronavirus:746680804683546675>`)
+      .setDescription(`Sometimes cases number may differ from small amount.`)
       .addField("Total Cases", corona.cases, true )
       .addField("Total Deaths", corona.deaths, true)
       .addField("Total Recovered", corona.recovered, true)

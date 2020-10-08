@@ -7,7 +7,7 @@ module.exports = {
   run: async (client, message, args) => {
     
     let embed = new discord.MessageEmbed()
-    .setDescription(`<a:pikacool:742229545331195975> Pong - ${client.ws.ping}ms`)
+    .setDescription(`<a:pikacool:Pong - ${client.ws.ping}ms`)
     .setColor("RANDOM")
     .setFooter(`Requested by ${message.author.username}`)
     
