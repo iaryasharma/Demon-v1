@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "dm",
-
   description: "DM Mentioned User",
 
   run(message, args) {
