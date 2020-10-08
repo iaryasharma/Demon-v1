@@ -17,7 +17,7 @@ module.exports = {
       .addField("TOTAL SERVER", `${client.guilds.cache.size}`, true)
       .addField("TOTAL CHANNAL", `${client.channels.cache.size}`)
       .addField("TOTAL USER", `${client.users.cache.size}`, true)
-      .addField("BOT LIBRARY", `discord.js`)
+      .addField("BOT LIBRARY", `discord.py`)
 
       .setColor("RANDOM")
       .setFooter(`BOT CREDIT :- Shadow & Venom`);
