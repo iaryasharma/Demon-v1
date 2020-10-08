@@ -7,8 +7,8 @@ module.exports = {
   run: async (client, message, args) => {
     
     let embed = new discord.MessageEmbed()
-    .setTitle(`HERE INVITE LINK OF BOT <a:Hype_180_b:763742611856031766>`)
-    .setDescription(`[CLICK HERE](https://discord.com/api/oauth2/authorize?client_id=744196176504684554&permissions=8&scope=bot)`)
+    .setTitle(`HERE INVITE LINK OF BOT`)
+    .setDescription(`[CLICK HERE](https://discord.com/api/oauth2/authorize?client_id=760508772589371422&permissions=8&scope=bot)`)
     .setColor("RANDOM")
     .setFooter(`ShaDoW Op`)
     .setTimestamp(message.timestamp = Date.now())

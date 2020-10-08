@@ -18,7 +18,7 @@ client.aliases = new discord.Collection();
 
 client.on("ready", () => {
   console.log(` ${client.user.username} is turned on`);
-  client.user.setActivity(`ShaDoW Op ╏ /help for command list`, {
+  client.user.setActivity(`ShaDoW Op ╏ b!help for command list`, {
     type: "WATCHING"
   });
 });
@@ -26,7 +26,7 @@ client.on("ready", () => {
 client.on("message", async message => {
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
-    return message.reply(`ANY HELP JUST USE /help For Commands`);
+    return message.reply(`ANY HELP JUST USE b!help For Commands`);
   }
 
   if (message.author.bot) return; 
