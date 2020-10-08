@@ -8,16 +8,17 @@ module.exports = {
     let embed = new discord.MessageEmbed()
       .setTitle(`BOT WILL SOON NEW FEATURES `)
       .setDescription(
-        `
+   `
 __**MUSIC COMMAND**__
-\`P!play\` :- give name of song or link
-\`P!search\` :- give title of song
-\`P!skip\`:- skip the song
-\`P!stop\` :- stop the song
-\`P!pause\`:- pause the songo\P!resume\`:- resume the song
-<`P!nowplaying\` :-  now playing songs
-<`P!queue\` :- give list of queue songs
-<`P!volume\` :- set volume 0 to 100
+\`play\` :- give name of song or link
+\`search\` :- give title of song
+\`skip\`:- skip the song
+\`stop\` :- stop the song
+\`pause\`:- pause the song
+\P!resume\`:- resume the song
+\`nowplaying\` :-  now playing songs
+`queue\` :- give list of queue songs
+\`volume\` :- set volume 0 to 100
 
 [Support Server]() 
 `

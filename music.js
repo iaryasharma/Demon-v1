@@ -17,9 +17,7 @@ const queue = new Map();
 
 bot.on("warn", console.warn);
 bot.on("error", console.error);
-bot.on("ready", () =>
-  console.log(`${bot.user.tag} music is setup `)
-);
+bot.on("ready", () => console.log(`${bot.user.tag} music is setup `));
 bot.on("shardDisconnect", (event, id) =>
   console.log(
     `Shard ${id} disconnected (${event.code}) ${event}, trying to reconnect!`
@@ -52,10 +50,7 @@ __**Commands List**__
 > \`skip\`, \`stop\`,  \`pause\`, \`resume\`
 > \`nowplaying\`, \`queue\`, \`volume\``
       )
-      .setFooter(
-        "MUSIC COMMANDS",
-        "https://app.zealcord.xyz/assets/Logo.png"
-      );
+      .setFooter("MUSIC COMMANDS", "https://app.zealcord.xyz/assets/Logo.png");
     msg.channel.send(helpembed);
   }
   if (command === "play" || command === "p") {
