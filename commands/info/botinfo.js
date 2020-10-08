@@ -7,13 +7,12 @@ module.exports = {
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
       .setTitle(`__**INFORMATION ABOUT BOT**__`)
-      .addField("<a:Arrow2:748013938314313808>BOT NAME", `SENPAI OP`)
+      .addField("BOT NAME", ``)
       .addField(
-        "<a:Arrow2:748013938314313808>BOT DEVELOPER ",
+        "BOT DEVELOPER ",
         `
- <@745235956700807189>
- 
- <@712275566421606471>`
+
+<@672027578181353473>`
       )
       .addField(
         "<a:Arrow2:748013938314313808>TOTAL SERVER",
