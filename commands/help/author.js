@@ -7,11 +7,11 @@ module.exports = {
   run: async (client, message, args) => {
     
     let embed = new discord.MessageEmbed()
-    .setTitle(`ABOUT KANEKI`)
-    .setDescription(`<a:1_:729258591420153856>HI ＩＣＸ ॥乛KΛПΣKIᴰᴱᶻ ⏦#6063 IS THE CREATOR OF THE BOT 
-HE IS A PROFSSIONAL SERVER DESIGNER, MANAGER, BOT DEVELOPER. MAINLY HE USES JS TO CREATE BOT IF YOU WANT TO CONTACT HIM SEND A FRIEND REQUEST ON ＩＣＸ ॥乛KΛПΣKIᴰᴱᶻ ⏦#6063`)
+    .setTitle(`ABOUT SHADOW`)
+    .setDescription(``THE CREATOR OF THE BOT Is ShaDoW
+HE IS A PROFSSIONAL SERVER DESIGNER, MANAGER, BOT DEVELOPER. MAINLY HE USES JS TO CREATE BOT``)
     .setColor("RANDOM")
-    .setFooter(`BOT MADE BY KANEKI`)
+    .setFooter(`BOT MADE BY ShaDoW & Venom`)
     .setTimestamp(message.timestamp = Date.now())
     
     message.channel .send(embed)
