@@ -6,7 +6,7 @@ module.exports = {
   run: async (client, message, args) => {
     
     let embed = new discord.MessageEmbed()
-    .setTitle(`SUPPORT SERVER`)
+    .setTitle(`SUPPORT SERVER <a:Hype_180_b:763742611856031766>`)
     .setDescription(`[CLICK HERE](https://discord.gg/9MJdm24)`)
     .setColor("RANDOM")
     .setFooter(`ShaDoW Op`)
