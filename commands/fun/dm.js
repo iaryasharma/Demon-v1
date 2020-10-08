@@ -4,7 +4,7 @@ module.exports = {
   name: "dm",
   description: "DM Mentioned User",
 
-  run(message, args) {
+  async run(client, message, args) {
     const dmMsg = args.join(" ");
 
     message.delete().catch(err => console.log(err));
