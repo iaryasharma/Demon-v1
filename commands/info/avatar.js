@@ -16,7 +16,7 @@ module.exports = {
       target = message.author;
     }
 
-    let avatar = target.displayAvatarURL({ dynamic: true, size: 1024 });
+    let avatar = target.displayAvatarURL({ dynamic: true, size: 2048 });
 
     let embed = new discord.MessageEmbed();
 
