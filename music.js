@@ -287,7 +287,7 @@ async function handleVideo(video, msg, voiceChannel, playlist = false) {
     if (playlist) return;
     else
       return msg.channel.send(
-        `<:yes:591629527571234819>  **|** **\`${song.title}\`** has been added to the queue!`
+        `🎧 **|** **\`${song.title}\`** has been added to the queue!`
       );
   }
   return;
