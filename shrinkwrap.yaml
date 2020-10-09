@@ -1,27 +1,27 @@
 dependencies:
-  akaneko: 3.3.0
+  akaneko: 3.0.2
   animejs: 3.2.0
   ascii-table: 0.0.9
   canvas-senpai: 0.1.6
-  discord.js: 12.3.1
+  discord.js: 12.2.0
   dotenv: 8.2.0
   express: 4.17.1
   figlet: 1.5.0
   fs: 0.0.2
   hastebin-gen: 2.0.5
   imdb-api: 4.2.0
-  mathjs: 7.5.0
-  moment: 2.29.1
-  mongoose: 5.10.8
+  mathjs: 7.1.0
+  moment: 2.27.0
+  mongoose: 5.9.27
   ms: 2.1.2
   neko-love: 2.0.2
   neko-love-wrapper: 1.2.1
   nekos.life: 2.0.7
-  novelcovid: 3.0.0
+  novelcovid: 1.2.7
   opusscript: 0.0.7
   os: 0.1.1
   path: 0.12.7
-  quick.db: 7.1.2
+  quick.db: 7.1.1
   react-anime: 3.0.3
   reddit: 1.2.0
   request: 2.88.2
@@ -31,12 +31,8 @@ dependencies:
   snekfetch: 4.0.4
   something-random-on-discord: 0.0.1
   weather-js: 2.0.0
-  ytdl-core: 3.3.0
+  ytdl-core: 3.2.1
 packages:
-  /@aero/centra/1.0.6:
-    dev: false
-    resolution:
-      integrity: sha512-e7sUh/VjugT8LsHb4/hcbmhaVVi9deWWPQnlMnU0RAnF8+iCdGdCcKvoHnDNl/ELykwjpbKpBYbWPx0yKZaDpw==
   /@babel/runtime/7.11.2:
     dependencies:
       regenerator-runtime: 0.13.7
@@ -509,10 +505,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-4K0cK3L1hsqk9xIb2z9vs/XU+PGJZ9PNpJRDS9YLzmNdX6jmVPfamLvTJr0aDAusnHyCHO6MjzlkAsgtqp9teA==
-  /akaneko/3.3.0:
+  /akaneko/3.0.2:
     dev: false
     resolution:
-      integrity: sha512-68sHqlGTF/dZLHYoarmFAd4WJjJpokibQNw7xRNqpKLOt1gDqKcyhXWzxhUqKDyTN/ZHE4MrdGMJcVWkxpPy9A==
+      integrity: sha512-YUewYx1mX6M27VYnFPhjqIkq4o1vvlowHpp+Y1D7uCom+d4hJw9eDS5mxtWi7Xe/8qaAQ829L00AqzR3GIkL/w==
   /animejs/3.2.0:
     dev: false
     resolution:
@@ -621,21 +617,21 @@ packages:
     dev: false
     resolution:
       integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==
-  /bl/2.2.1:
+  /bl/2.2.0:
     dependencies:
       readable-stream: 2.3.7
       safe-buffer: 5.2.1
     dev: false
     resolution:
-      integrity: sha512-6Pesp1w0DEX1N550i/uGV/TqucVL4AM/pgThFSN/Qq9si1/DF9aIHs1BxD8V/QU0HoeHO6cQRTAuYnLPKq1e4g==
-  /bl/4.0.3:
+      integrity: sha512-wbgvOpqopSr7uq6fJrLH8EsvYMJf9gzfo2jCsL2eTy75qXPukA4pCgHamOQkZtY5vmfVtjB+P3LNlMHW5CEZXA==
+  /bl/4.0.2:
     dependencies:
       buffer: 5.6.0
       inherits: 2.0.4
       readable-stream: 3.6.0
     dev: false
     resolution:
-      integrity: sha512-fs4G6/Hu4/EE+F75J8DuN/0IpQqNjAdC7aEQv7Qt8MHGUH7Ckv2MwTEEeN9QehD0pfIDkMI1bkHYkKy7xHyKIg==
+      integrity: sha512-j4OH8f6Qg2bGuWfRiltT2HYGx0e1QcBTrK9KAHNMwMZdQnDZFk0ZSYIpADjYCB3U12nicC5tVJwSIhwOWjb4RQ==
   /bluebird/3.5.1:
     dev: false
     resolution:
@@ -672,12 +668,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==
-  /bson/1.1.5:
+  /bson/1.1.4:
     dev: false
     engines:
       node: '>=0.6.19'
     resolution:
-      integrity: sha512-kDuEzldR21lHciPQAIulLs1LZlCXdLziXI6Mb/TDkwXhb//UORJNPXgcRs2CuO4H0DcMkpfT3/ySsP3unoZjBg==
+      integrity: sha512-S/yKGU1syOMzO86+dGpg2qGoDL0zvzcb262G+gqEy6TgP6rt6z6qxSFX/8X6vLC91P7G7C3nLs0+bvDzmvBA3Q==
   /buffer-equal/0.0.1:
     dev: false
     engines:
@@ -855,10 +851,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==
-  /decimal.js/10.2.1:
+  /decimal.js/10.2.0:
     dev: false
     resolution:
-      integrity: sha512-KaL7+6Fw6i5A2XSnsbhm/6B+NuEA7TZ4vqxnd5tXz9sbKtrN9Srj8ab4vKVdK8YAqZO9P1kg45Y6YLoduPf+kw==
+      integrity: sha512-vDPw+rDgn3bZe1+F/pyEwb1oMG2XTlRVgAa6B4KccTEpYgF8w6eQllVbQcfIJnZyvzFtFpxnpGtx8dd7DJp/Rw==
   /decode-uri-component/0.2.0:
     dev: false
     engines:
@@ -912,12 +908,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
-  /discord.js/12.3.1:
+  /discord.js/12.2.0:
     dependencies:
       '@discordjs/collection': 0.1.6
       '@discordjs/form-data': 3.0.1
       abort-controller: 3.0.0
-      node-fetch: 2.6.1
+      node-fetch: 2.6.0
       prism-media: 1.2.2
       setimmediate: 1.0.5
       tweetnacl: 1.0.3
@@ -925,8 +921,15 @@ packages:
     dev: false
     engines:
       node: '>=12.0.0'
+    peerDependencies:
+      bufferutil: ^4.0.1
+      erlpack: discordapp/erlpack
+      libsodium-wrappers: ^0.7.6
+      sodium: ^3.0.2
+      utf-8-validate: ^5.0.2
+      zlib-sync: ^0.1.6
     resolution:
-      integrity: sha512-mSFyV/mbvzH12UXdS4zadmeUf8IMQOo/YdunubG1wWt1xjWvtaJz/s9CGsFD2B5pTw1W/LXxxUbrQjIZ/xlUdw==
+      integrity: sha512-Ueb/0SOsxXyqwvwFYFe0msMrGqH1OMqpp2Dpbplnlr4MzcRrFWwsBM9gKNZXPVBHWUKiQkwU8AihXBXIvTTSvg==
   /dom-walk/0.1.2:
     dev: false
     resolution:
@@ -1484,6 +1487,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-QVxEePK8wwEgwizhDtMib30+GOA=
+  /lodash/4.17.15:
+    dev: false
+    resolution:
+      integrity: sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
   /lodash/4.17.19:
     dev: false
     resolution:
@@ -1497,10 +1504,10 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-z6ldnAdhbuWOL6LmMkwptSZGzj+qbRytMKLTbNicwF/bJMjf9U9lqD57RNQUFecvWadEkzy6PDjcNJFFgi19uQ==
-  /mathjs/7.5.0:
+  /mathjs/7.1.0:
     dependencies:
       complex.js: 2.0.11
-      decimal.js: 10.2.1
+      decimal.js: 10.2.0
       escape-latex: 1.2.0
       fraction.js: 4.0.12
       javascript-natural-sort: 0.7.1
@@ -1512,7 +1519,7 @@ packages:
       node: '>= 10'
     hasBin: true
     resolution:
-      integrity: sha512-fSl/f4XmXSkc217jaExXBbl1qG792yH9X9d03jfJTMijPvA/C0slTymCCeOcLkKXOSzd0L5l60iY5kwTMExjMA==
+      integrity: sha512-Km6PO2UR+COs5mru5auKQKi84GKBryuL5JDdKeAxAi0QV8mH/qwpZKLnzrycxBacQ/X/4Z4Kn+gtYc5gEeWsDQ==
   /media-typer/0.3.0:
     dev: false
     engines:
@@ -1627,14 +1634,14 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
-  /moment/2.29.1:
+  /moment/2.27.0:
     dev: false
     resolution:
-      integrity: sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
-  /mongodb/3.6.2:
+      integrity: sha512-al0MUK7cpIcglMv3YF13qSgdAIqxHTO7brRtaz3DlSULbqfazqkc5kEjNrLDOM7fsjshoFIihnU8snrP7zUvhQ==
+  /mongodb/3.5.10:
     dependencies:
-      bl: 2.2.1
-      bson: 1.1.5
+      bl: 2.2.0
+      bson: 1.1.4
       denque: 1.4.1
       require_optional: 1.0.1
       safe-buffer: 5.2.1
@@ -1644,18 +1651,18 @@ packages:
     optionalDependencies:
       saslprep: 1.0.3
     resolution:
-      integrity: sha512-sSZOb04w3HcnrrXC82NEh/YGCmBuRgR+C1hZgmmv4L6dBz4BkRse6Y8/q/neXer9i95fKUBbFi4KgeceXmbsOA==
+      integrity: sha512-p/C48UvTU/dr/PQEDKfb9DsCVDJWXGmdJNFC+u5FPmTQVtog69X6D8vrWHz+sJx1zJnd96sjdh9ueo7bx2ILTw==
   /mongoose-legacy-pluralize/1.0.2:
     dev: false
     peerDependencies:
       mongoose: '*'
     resolution:
       integrity: sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
-  /mongoose/5.10.8:
+  /mongoose/5.9.27:
     dependencies:
-      bson: 1.1.5
+      bson: 1.1.4
       kareem: 2.3.1
-      mongodb: 3.6.2
+      mongodb: 3.5.10
       mongoose-legacy-pluralize: 1.0.2
       mpath: 0.7.0
       mquery: 3.2.2
@@ -1668,7 +1675,7 @@ packages:
     engines:
       node: '>=4.0.0'
     resolution:
-      integrity: sha512-hbpFhOU6rWkWPkekUeSJxqWwzsjVQZ9xPg4WmWA1HJ8YDvjyNye1xbp82fw67BpnyvcjHxyU3/YhujsOCx55yw==
+      integrity: sha512-N8zj4pj9J2xJ2BnQ4NiIHEtmjPldtbmbEZOMz4phLTQr3KFWPR0T0I6EzQxNioHwmDbHD4VFzbEd755oD2SJxA==
   /mpath/0.7.0:
     dev: false
     engines:
@@ -1743,24 +1750,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-kL5sYOqaDTIdVH40YVrtWQPX60bGK3Ri/j2jnHugZ86lxc4xIytUmGelspFwKAs4TOHDSZh4jiJGGL8dQ55HNA==
-  /node-abi/2.19.1:
+  /node-abi/2.18.0:
     dependencies:
       semver: 5.7.1
     dev: false
     resolution:
-      integrity: sha512-HbtmIuByq44yhAzK7b9j/FelKlHYISKQn0mtvcBrU5QBkhoCMp5bu8Hv5AI34DcKfOAcJBcOEMwLlwO62FFu9A==
+      integrity: sha512-yi05ZoiuNNEbyT/xXfSySZE+yVnQW6fxPZuFbLyS1s6b5Kw3HzV2PHOM4XR+nsjzkHxByK+2Wg+yCQbe35l8dw==
   /node-fetch/2.6.0:
     dev: false
     engines:
       node: 4.x || >=6.0.0
     resolution:
       integrity: sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
-  /node-fetch/2.6.1:
-    dev: false
-    engines:
-      node: 4.x || >=6.0.0
-    resolution:
-      integrity: sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
   /node-fetch/3.0.0-beta.7:
     dependencies:
       data-uri-to-buffer: 3.0.1
@@ -1798,12 +1799,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-CvaGwVMztSMJLOeXPrez7fyfObdZqNUK1cPAEzLHrTybIua9pMdmmPR5YwtfNftIOMv3DPUhFaxsZMNTQO20Kg==
-  /novelcovid/3.0.0:
+  /novelcovid/1.2.7:
     dependencies:
-      '@aero/centra': 1.0.6
+      node-fetch: 2.6.0
     dev: false
     resolution:
-      integrity: sha512-70LZiuOY52f3uIrcZ5dP1F0LFkbz8GuGRuiC/e+YjGv/jYrbq8WXll67GaCafWCvznFmgSEgDJcztDoXz4m+kg==
+      integrity: sha512-Kfu4pzlBNpLSU+W4tC5oO5fEYB8k//TAK0FZUL/d/YvaEziMgfTlJkgipV5Nr60CwBZbixzyJp/H+gvx1BAyZg==
   /npm-bundled/1.1.1:
     dependencies:
       npm-normalize-package-bin: 1.0.1
@@ -1973,7 +1974,7 @@ packages:
       minimist: 1.2.5
       mkdirp: 0.5.5
       napi-build-utils: 1.0.2
-      node-abi: 2.19.1
+      node-abi: 2.18.0
       noop-logger: 0.1.1
       npmlog: 4.1.2
       pump: 3.0.0
@@ -2061,13 +2062,13 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-RfoButmcK+yCta1+FuU8REvisx1oEzhMKwhLUNcepQTPGcNMp1sIqjnfCtfnvGSQZQEhaBHvccujtWoUV3TTbA==
-  /quick.db/7.1.2:
+  /quick.db/7.1.1:
     dependencies:
       better-sqlite3: 6.0.1
-      lodash: 4.17.19
+      lodash: 4.17.15
     dev: false
     resolution:
-      integrity: sha512-ItAgjP6CHlC8XN4AAc+K24jDxRmAkkIe5TQp6xyXF5QCCgFlpaknpA3OyLTQ4Dw0c7yq28bcD6SVc7ML/1T/DQ==
+      integrity: sha512-PziF96cxYNvHcgkZkEbZ3UzhR2bXcLff96n68J1DhE/2Q2ELeGnd/Z4jtqJqZz5rfiqXvzEbCznXV8wNsOTSww==
   /range-parser/1.2.1:
     dev: false
     engines:
@@ -2453,13 +2454,13 @@ packages:
       chownr: 1.1.4
       mkdirp-classic: 0.5.3
       pump: 3.0.0
-      tar-stream: 2.1.4
+      tar-stream: 2.1.3
     dev: false
     resolution:
       integrity: sha512-9uW5iDvrIMCVpvasdFHW0wJPez0K4JnMZtsuIeDI7HyMGJNxmDZDOCQROr7lXyS+iL/QMpj07qcjGYTSdRFXUg==
-  /tar-stream/2.1.4:
+  /tar-stream/2.1.3:
     dependencies:
-      bl: 4.0.3
+      bl: 4.0.2
       end-of-stream: 1.4.4
       fs-constants: 1.0.0
       inherits: 2.0.4
@@ -2468,7 +2469,7 @@ packages:
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-o3pS2zlG4gxr67GmFYBLlq+dM8gyRGUOvsrHclSkvtVtQbjV0s/+ZE8OpICbaj8clrX3tjeHngYGP7rweaBnuw==
+      integrity: sha512-Z9yri56Dih8IaK8gncVPx4Wqt86NDmQTSh49XLZgjWpGZL9GK9HKParS2scqHCC4w6X9Gh2jwaU45V47XTKwVA==
   /tar/4.4.10:
     dependencies:
       chownr: 1.1.4
@@ -2684,7 +2685,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==
-  /ytdl-core/3.3.0:
+  /ytdl-core/3.2.1:
     dependencies:
       html-entities: 1.3.1
       m3u8stream: 0.7.1
@@ -2694,34 +2695,34 @@ packages:
     engines:
       node: '>=10'
     resolution:
-      integrity: sha512-jesZn1BCKanWEtVymezoJTMUF0B0Z6OQuf8M61zy0QUoNQprR2SYwzwI6dTOZHURz7wk1ffPgbYLu6BZq0vUsQ==
+      integrity: sha512-e6vlLOc+yrdNGOqfbQvWuaI3XNx5Yp4sLGY2RPdP2gCiumhn1BDqrYjn1nUCze/LGZ8C3bFxEdUqKi2vS1aaXg==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  akaneko: ^3.3.0
+  akaneko: ^3.0.2
   animejs: ^3.2.0
   ascii-table: ^0.0.9
   canvas-senpai: ^0.1.6
-  discord.js: ^12.3.1
+  discord.js: ^12.2.0
   dotenv: ^8.2.0
   express: ^4.17.1
   figlet: ^1.5.0
   fs: ^0.0.2
   hastebin-gen: ^2.0.5
   imdb-api: ^4.2.0
-  mathjs: ^7.4.0
-  moment: ^2.29.1
-  mongoose: ^5.10.8
+  mathjs: ^7.1.0
+  moment: ^2.27.0
+  mongoose: ^5.9.27
   ms: ^2.1.2
   neko-love: ^2.0.2
   neko-love-wrapper: ^1.2.1
   nekos.life: ^2.0.7
-  novelcovid: ^3.0.0
+  novelcovid: ^1.2.6
   opusscript: ^0.0.7
   os: ^0.1.1
   path: ^0.12.7
-  quick.db: ^7.1.2
+  quick.db: ^7.1.1
   react-anime: ^3.0.3
   reddit: ^1.2.0
   request: ^2.88.2
@@ -2731,4 +2732,4 @@ specifiers:
   snekfetch: ^4.0.4
   something-random-on-discord: ^0.0.1
   weather-js: ^2.0.0
-  ytdl-core: ^3.2.2
+  ytdl-core: ^3.2.1
