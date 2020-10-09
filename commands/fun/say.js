@@ -1,10 +1,10 @@
 const { MessageFlags } = require("discord.js");
 
 module.exports = {
-    name: "say",
+    name: "reply",
     desciption: "say command",
     category: "fun",
-    usage: "say <message>",
+    usage: "reply <message>",
 
     async run (client, message, args) {
         let msg;

@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 module.exports = {
-  name: "tell",
+  name: "emb",
   desciption: "say command",
   category: "fun",
-  usage: "tell <message>",
+  usage: "emb <message>",
   async run(client, message, args) {
     const sayMessage = args.join(" ");
     message.delete().catch(err => console.log(err));
