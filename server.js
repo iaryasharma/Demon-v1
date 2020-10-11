@@ -15,12 +15,42 @@ client.aliases = new discord.Collection();
 ["command"].forEach(handler => {
   require(`./handlers/${handler}`)(client);
 });
+client.on("ready", async () => {
 
-client.on("ready", () => {
-  console.log(` ${client.user.username} is turned on`);
-  client.user.setActivity(`ShaDoW Op ╏ /help for commands`, {
-    type: "WATCHING"
-  });
+  try {
+
+    console.log(client.user.tag + " Has Logged In");
+
+    function pickStatus() {
+
+      let status = [
+
+        `${client.users.cache.size} users in ${client.guilds.cache.size} servers`,
+
+        "/help ╏ COOKIE OP",
+
+        "MADE BY :- SHADOW"
+
+      ];
+
+      let Status = Math.floor(Math.random() * status.length);
+
+      client.user.setActivity(status[Status], {
+
+        type: "WATCHING"
+
+      });
+
+    }
+
+    setInterval(pickStatus, 5000);
+
+  } catch (err) {
+
+    console.log(err);
+
+  }
+
 });
 
 client.on("message", async message => {
