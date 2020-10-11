@@ -27,7 +27,7 @@ client.on("ready", async () => {
 
         `${client.users.cache.size} users in ${client.guilds.cache.size} servers`,
 
-        "/help ╏ COOKIE OP",
+        "/help ╏ SGOD & NISHU OP",
 
         "MADE BY :- SHADOW"
 
