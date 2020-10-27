@@ -20,13 +20,7 @@ client.on("ready", async () => {
     console.log(client.user.tag + " Has Logged In");
 
     function pickStatus() {
-      let status = [
-        `${client.users.cache.size} users in ${client.guilds.cache.size} servers`,
-
-        "whelp ╏ WILD HOMETOWN OP ",
-
-        "MADE BY :- SHADOW"
-      ];
+      let status = ["ihelp ╏ Illusion OP", "MADE BY :- SHADOW"];
 
       let Status = Math.floor(Math.random() * status.length);
 
@@ -44,7 +38,7 @@ client.on("ready", async () => {
 client.on("message", async message => {
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
-    return message.reply(`ANY HELP JUST USE /help For Commands`);
+    return message.reply(`ANY HELP JUST USE ihelp For Commands`);
   }
 
   if (message.author.bot) return;
