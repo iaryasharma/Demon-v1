@@ -1,4 +1,5 @@
 const discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "avatar",
@@ -15,15 +16,18 @@ module.exports = {
     } else {
       target = message.author;
     }
+    message.delete();
 
     let avatar = target.displayAvatarURL({ dynamic: true, size: 2048 });
 
     let embed = new discord.MessageEmbed();
 
-    embed.setTitle(`🔸AVATAR🔹`)
+    embed.setTitle(
+      `<a:TNR_Loadbounce:764200903829356565> AVATAR of ${target.username} <a:TNR_Loadbounce:764200903829356565> `
+    );
     embed.setDescription(`[Download](${avatar})`);
     embed.setImage(avatar);
-    embed.setColor("RANDOM");
+    embed.setColor("#277ECD");
     embed.setFooter(`Requested by ${message.author.username}`);
     message.channel.send(embed);
   }

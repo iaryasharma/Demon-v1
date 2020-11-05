@@ -7,9 +7,10 @@ module.exports = {
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
       .setTitle(`BOT  HELP MENU `)
-      .setDescription(`
+      .setDescription(
+        `
 __**MODERATION COMMANDS**__ 🔧
-\`addrole,removerole,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
+\`iaddrole,iremoverole,iclear[ipurge],iban,ikick,ivoicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
 
 __**FUN COMMANDS**__ 🙃
 \`advice,suggest,ascii,dog,fact,hug,joke,kpop,math,meme,mw,slap,punch,cry\`
@@ -17,11 +18,8 @@ __**FUN COMMANDS**__ 🙃
 __**INFORMATION COMMANDS**__ 💬
 \`avatar,botinfo,serverinfo,hastebin,imdb,membercount,weather,ping,pokemon,servericon,,whois,userinfo\`
 
-__**MUSIC COMMANDS**__ 🎶
-\`play,search,skip,stop,pause,resume,nowplaying,queue,volume\`
-
 __**NSFW COMMANDS**__ ❌
-\`nahi hai\`
+\`no nsfw in the bot\`
 
 __**WELCOME COMMANDS**__ 🎉
 \`setwelcome,setmessage\`
@@ -33,7 +31,8 @@ __**CORONA COMMANDS**__ ⚠️
 \`corona all, corona<country>\`
  
 If any contact is not working contact the bot owner
-`)
+`
+      )
 
       .setThumbnail(client.user.displayAvatarURL())
       .setColor("#35CB31")
@@ -42,6 +41,6 @@ If any contact is not working contact the bot owner
 
     await message.channel.send(embed);
 
-    message.react("💬");
+    message.react("764200316156510218");
   }
 };
