@@ -2,6 +2,7 @@ const discord = require("discord.js");
 
 module.exports = {
   name: "help",
+  aliases: [""],
   category: "help",
   description: "BOT GET SOON UPDATES ",
   run: async (client, message, args) => {
@@ -10,7 +11,7 @@ module.exports = {
       .setDescription(
         `
 __**MODERATION COMMANDS**__ 🔧
-\`iaddrole,iremoverole,iclear[ipurge],iban,ikick,ivoicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
+\`addrole,removerole,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
 
 __**FUN COMMANDS**__ 🙃
 \`advice,suggest,ascii,dog,fact,hug,joke,kpop,math,meme,mw,slap,punch,cry\`

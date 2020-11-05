@@ -38,7 +38,32 @@ client.on("ready", async () => {
 client.on("message", async message => {
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
-    return message.reply(`ANY HELP JUST USE ihelp For Commands`);
+    return message.reply(`
+PREFIX FOR THE BOT IS = i
+
+__**MODERATION COMMANDS**__ 🔧
+\`addrole,removerole,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
+
+__**FUN COMMANDS**__ 🙃
+\`advice,suggest,ascii,dog,fact,hug,joke,kpop,math,meme,mw,slap,punch,cry\`
+
+__**INFORMATION COMMANDS**__ 💬
+\`avatar,botinfo,serverinfo,hastebin,imdb,membercount,weather,ping,pokemon,servericon,,whois,userinfo\`
+
+__**NSFW COMMANDS**__ ❌
+\`no nsfw in the bot\`
+
+__**WELCOME COMMANDS**__ 🎉
+\`setwelcome,setmessage\`
+
+__**SPECIAL COMMANDS**__ 👑
+\`giveaway,math,announce,emoji,weather \`
+
+__**CORONA COMMANDS**__ ⚠️
+\`corona all, corona<country>\`
+ 
+If any command is not working contact the bot owner
+`);
   }
 
   if (message.author.bot) return;
