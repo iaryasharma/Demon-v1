@@ -25,7 +25,7 @@ client.on("ready", async () => {
       let Status = Math.floor(Math.random() * status.length);
 
       client.user.setActivity(status[Status], {
-        type: "WATCHING"
+        type: "PLAYING"
       });
     }
 
