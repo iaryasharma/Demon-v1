@@ -14,7 +14,6 @@ module.exports = {
       .setImage(data)
       .setColor("RANDOM")
       .setFooter(`${message.author.username} slaps ${target.user.username}`)
-      .setTimestamp();
 
     message.channel.send(embed);
   }
