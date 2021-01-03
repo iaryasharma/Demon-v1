@@ -15,7 +15,7 @@ module.exports = {
 <@761929458503909388>`
       )
       .addField("TOTAL SERVER", `${client.guilds.cache.size}`, true)
-      .addField("TOTAL CHANNAL", `${client.channels.cache.size}`)
+      .addField("TOTAL CHANNEL", `${client.channels.cache.size}`)
       .addField("TOTAL USER", `${client.users.cache.size}`, true)
       .addField("BOT LIBRARY", `discord.js`)
 
