@@ -10,7 +10,7 @@ module.exports = {
     
     let target = message.mentions.members.first()
     
-    let data = await random.getAnimeImgURL("kiss");
+    let data = await random.getAnimeImgURL("kill");
     
     let embed = new discord.MessageEmbed()
     .setImage(data)

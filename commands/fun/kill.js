@@ -8,12 +8,14 @@ module.exports = {
   description: "kill with gif",
   run: async (client, message, args) => {
     
+    let target = message.mentions.members.first()
+    
     let data = await random.getAnimeImgURL("kill");
     
     let embed = new discord.MessageEmbed()
     .setImage(data)
     .setColor("RANDOM")
-    .setFooter(`Please talk with ${message.author.username} they are killing themselves`)
+    .setFooter(`${message.author.username} killed ${target.user.username}`)
  
     message.channel.send(embed);
   }
