@@ -8,7 +8,7 @@ module.exports = {
     let embed = new discord.MessageEmbed()
       .setTitle(`ABOUT Mr. Wow`)
       .setDescription(
-        `_THE CREATOR OF THE BOT Is **ARYA**
+        `_THE CREATOR OF THE BOT Is **Mr. Wow**
 HE IS A PROFSSIONAL SERVER DESIGNER,
 MANAGER_`
       )
