@@ -29,7 +29,6 @@ module.exports = {
           .setColor("RED")
           .addField("⏳ Mem Usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB`, true)
           .addField("⌚️ Uptime ", `${duration}`, true)
-          .addField("📁 Users", `${client.users.cache.size}`, false)
           .addField("📁 Servers", `${client.guilds.cache.size}`, true)
           .addField("📁 Channels ", `${client.channels.cache.size}`, true)
           .addField("👾 Discord.js", `v${version}`, true)
@@ -39,7 +38,7 @@ module.exports = {
           .addField("🤖 Arch", `\`${os.arch()}\``, true)
           .addField("💻 Platform", `\`\`${os.platform()}\`\``, true)
           .addField("API Latency", `${(client.ws.ping)}ms`)  
-          .addField("**Developer**", "**! 𝘿𝙓 ⋙ Guddu Pandit👑#6276** | <@761929458503909388>")
+          .addField("**Developer**", "**'- ᖴ乙│ Mr. Wow#0007** | <@761929458503909388>")
       message.channel.send(botinfo)
   });
   }
