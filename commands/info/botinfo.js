@@ -29,7 +29,7 @@ module.exports = {
           .setColor("RED")
           .addField("⏳ Mem Usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB`, true)
           .addField("⌚️ Uptime ", `${duration}`, true)
-          .addField("📁 Users", `${client.users.cache.size}`, true)
+          .addField("📁 Users", `${client.users.cache.size}`, false)
           .addField("📁 Servers", `${client.guilds.cache.size}`, true)
           .addField("📁 Channels ", `${client.channels.cache.size}`, true)
           .addField("👾 Discord.js", `v${version}`, true)
