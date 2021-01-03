@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 module.exports = {
-  name: "emb",
+  name: "tell",
   desciption: "say command",
   category: "fun",
   usage: "emb <message>",
