@@ -12,10 +12,10 @@ run: async (client, message, args, level) => {
 superagent.get('https://nekos.life/api/v2/img/meow')
     .end((err, response) => {
   const lewdembed = new Discord.MessageEmbed()
-  .setTitle("Random cat")
+  .setTitle("Cute Kitty")
   .setImage(response.body.url)
-  .setColor(`#000000`)
-  .setFooter(`Bot developed by - Mr. `)
+  .setColor(`RED`)
+  .setFooter(`Bot developed by - Mr. Wow`)
   .setURL(response.body.url);
 message.channel.send(lewdembed);
 })

@@ -13,10 +13,10 @@ run: async (client, message, args) => {
 superagent.get('https://nekos.life/api/v2/img/woof')
     .end((err, response) => {
   const lewdembed = new Discord.MessageEmbed()
-  .setTitle("<a:cooldoge:751281575198457866>")
+  .setTitle("Cute Puppy")
   .setImage(response.body.url)
-  .setColor(`#000000`)
-  .setFooter(`🤣WHAT A DOG🤣`)
+  .setColor(`RANDOM`)
+  .setFooter(`Bot Developed hy - Mr. Wow`)
   .setURL(response.body.url);
 message.channel.send(lewdembed);
 })

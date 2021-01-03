@@ -16,8 +16,7 @@ module.exports = {
     .setImage(data)
     .setColor("RANDOM")
     .setFooter(`${message.author.username} hugs ${target.user.username}`)
-    .setTimestamp()
-    
+ 
     message.channel.send(embed);
   }
 };

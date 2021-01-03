@@ -20,7 +20,7 @@ module.exports = {
     try {
       message.mentions.users.first().send(dm);
     } catch {
-      message.reply("Error Sending DM");
+      message.reply("Couldn'DM that person they have closed their dms of either have changed privacy settings.");
     }
   }
 };

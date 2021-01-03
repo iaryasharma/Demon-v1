@@ -14,8 +14,7 @@ module.exports = {
     .setImage(data)
     .setColor("RANDOM")
     .setFooter(`Please talk with ${message.author.username} they are killing themselves`)
-    .setTimestamp()
-    
+ 
     message.channel.send(embed);
   }
 };
