@@ -20,7 +20,7 @@ client.on("ready", async () => {
     console.log(client.user.tag + " Has Logged In");
 
     function pickStatus() {
-      let status = ["MADE BY :- ARYA"];
+      let status = ["MADE BY :- Mr. Wow"];
 
       let Status = Math.floor(Math.random() * status.length);
 

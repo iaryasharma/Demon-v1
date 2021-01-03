@@ -7,12 +7,12 @@ module.exports = {
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
       .setTitle(`__**INFORMATION ABOUT BOT**__`)
-      .addField("BOT NAME", `Vulture`)
+      .addField("BOT NAME", `Bebo`)
       .addField(
         "BOT DEVELOPER ",
         `
 
-<@730424922639302693>`
+<@761929458503909388>`
       )
       .addField("TOTAL SERVER", `${client.guilds.cache.size}`, true)
       .addField("TOTAL CHANNAL", `${client.channels.cache.size}`)
@@ -20,7 +20,7 @@ module.exports = {
       .addField("BOT LIBRARY", `discord.js`)
 
       .setColor("RANDOM")
-      .setFooter(`BOT CREDIT :- ARYA`);
+      .setFooter(`BOT CREDIT :- Mr. Wow`);
 
     message.channel.send(embed);
   }
