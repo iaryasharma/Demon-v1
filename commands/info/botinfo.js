@@ -7,12 +7,12 @@ module.exports = {
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
       .setTitle(`__**INFORMATION ABOUT BOT**__`)
-      .addField("BOT NAME", `ILLUSION ESPORTS`)
+      .addField("BOT NAME", `Vulture`)
       .addField(
         "BOT DEVELOPER ",
         `
 
-<@672027578181353473>`
+<@730424922639302693>`
       )
       .addField("TOTAL SERVER", `${client.guilds.cache.size}`, true)
       .addField("TOTAL CHANNAL", `${client.channels.cache.size}`)
