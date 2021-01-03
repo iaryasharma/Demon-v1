@@ -11,7 +11,7 @@ dependencies:
   hastebin-gen: 2.0.5
   imdb-api: 4.2.0
   mathjs: 7.1.0
-  moment: 2.27.0
+  moment: 2.29.1
   mongoose: 5.9.27
   ms: 2.1.2
   neko-love: 2.0.2
@@ -1634,10 +1634,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
-  /moment/2.27.0:
+  /moment/2.29.1:
     dev: false
     resolution:
-      integrity: sha512-al0MUK7cpIcglMv3YF13qSgdAIqxHTO7brRtaz3DlSULbqfazqkc5kEjNrLDOM7fsjshoFIihnU8snrP7zUvhQ==
+      integrity: sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
   /mongodb/3.5.10:
     dependencies:
       bl: 2.2.0
@@ -2712,7 +2712,7 @@ specifiers:
   hastebin-gen: ^2.0.5
   imdb-api: ^4.2.0
   mathjs: ^7.1.0
-  moment: ^2.27.0
+  moment: ^2.29.1
   mongoose: ^5.9.27
   ms: ^2.1.2
   neko-love: ^2.0.2
