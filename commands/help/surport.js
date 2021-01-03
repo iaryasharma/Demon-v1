@@ -9,7 +9,7 @@ module.exports = {
     .setTitle(`SUPPORT SERVER`)
     .setDescription(`[CLICK HERE](https://discord.gg/bu3TnUJkjw)`)
     .setColor("RANDOM")
-    .setFooter(`ShaDoW Op`)
+    .setFooter(`ARYA OP`)
     .setTimestamp(message.timestamp = Date.now())
     
     message.channel .send(embed)

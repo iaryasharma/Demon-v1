@@ -8,7 +8,7 @@ module.exports = {
     let embed = new discord.MessageEmbed()
       .setTitle(`HERE INVITE LINK OF BOT `)
       .setDescription(
-        `[CLICK HERE](https://discord.com/api/oauth2/authorize?client_id=758368489978462&permissions=21474836398&scope=bot)`
+        `[CLICK HERE](https://discord.com/api/oauth2/authorize?client_id=794942809387302943&permissions=8&scope=bot)`
       )
       .setColor("#00ff00")
       .setFooter(`ARYA OP`)
