@@ -23,11 +23,11 @@ module.exports = {
       );
     let prize = args.slice(2).join(" ");
     if (!prize) return message.channel.send(`No prize specified!`);
-    message.channel.send(`*Giveaway created in ${channel}*`);
+    message.channel.send(`*Giveaway created in* ${channel}`);
     let Embed = new MessageEmbed()
-      .setTitle(`New giveaway!`)
+      .setTitle(`Giveaway`)
       .setDescription(
-        `The user ${message.author} is hosting a giveaway for the prize of **${prize}**`
+        `Hosted by - ${message.author}\nPrize - **${prize}**`
       )
       .setTimestamp(Date.now() + ms(args[0]))
       .setColor(`BLUE`);
@@ -46,7 +46,7 @@ module.exports = {
         .users.cache.filter((u) => !u.bot)
         .random();
       channel.send(
-        `The winner of the giveaway for **${prize}** is... ${winner}`
+        `The winner of the giveaway for **${prize}** is ${winner}`
       );
     }, ms(args[0]));
   },

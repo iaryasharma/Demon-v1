@@ -12,7 +12,7 @@ name: "anime",
     
     
     if(!args.length) {
-      return message.channel.send("Please Give Anime Name")
+      return message.channel.send("Please provide an existing Anime name")
     }
     //DEFINE OPTIONS
     
