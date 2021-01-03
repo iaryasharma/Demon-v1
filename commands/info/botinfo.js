@@ -1,27 +1,47 @@
-const discord = require("discord.js");
+const Discord = require("discord.js")
+
+const { version } = require("discord.js");
+const moment = require("moment");
+const m = require("moment-duration-format");
+let os = require('os')
+let cpuStat = require("cpu-stat")
+const ms = require("ms")
+
+
+
 
 module.exports = {
-  name: "botinfo",
-  category: "help",
-  description: "INVITE SENPAI",
+    name: "botinfo",
+    category: "info",
+  description: "Sends detailed info about the client",
+  usage: "[command]",
   run: async (client, message, args) => {
-    let embed = new discord.MessageEmbed()
-      .setTitle(`__**INFORMATION ABOUT BOT**__`)
-      .addField("BOT NAME", `Bebo`)
-      .addField(
-        "BOT DEVELOPER ",
-        `
-
-<@761929458503909388>`
-      )
-      .addField("TOTAL SERVER", `${client.guilds.cache.size}`, true)
-      .addField("TOTAL CHANNEL", `${client.channels.cache.size}`)
-      .addField("TOTAL USER", `${client.users.cache.size}`, true)
-      .addField("BOT LIBRARY", `discord.js`)
-
-      .setColor("RANDOM")
-      .setFooter(`BOT CREDIT :- Mr. Wow`);
-
-    message.channel.send(embed);
+  //command
+  let cpuLol;
+  cpuStat.usagePercent(function(err, percent, seconds) {
+      if (err) {
+          return console.log(err);
+      }
+      const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
+      const botinfo = new Discord.MessageEmbed()
+          .setAuthor(client.user.username)
+          .setTitle("__**Stats:**__")
+          .setColor("RED")
+          .addField("⏳ Mem Usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB`, true)
+          .addField("⌚️ Uptime ", `${duration}`, true)
+          .addField("📁 Users", `${client.users.cache.size}`, true)
+          .addField("📁 Servers", `${client.guilds.cache.size}`, true)
+          .addField("📁 Channels ", `${client.channels.cache.size}`, true)
+          .addField("👾 Discord.js", `v${version}`, true)
+          .addField("🤖 Node", `${process.version}`, true)
+          .addField("🤖 CPU", `\`\`\`md\n${os.cpus().map(i => `${i.model}`)[0]}\`\`\``)
+          .addField("🤖 CPU usage", `\`${percent.toFixed(2)}%\``, true)
+          .addField("🤖 Arch", `\`${os.arch()}\``, true)
+          .addField("💻 Platform", `\`\`${os.platform()}\`\``, true)
+          .addField("API Latency", `${(client.ws.ping)}ms`)  
+          .addField("**Developer**", "**! 𝘿𝙓 ⋙ Guddu Pandit👑#6276** | <@761929458503909388>")
+      message.channel.send(botinfo)
+  });
   }
-};
+  };
+
