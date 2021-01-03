@@ -19,8 +19,8 @@ __**FUN COMMANDS**__ 🙃
 __**INFORMATION COMMANDS**__ 💬
 \`avatar,botinfo,serverinfo,hastebin,imdb,membercount,weather,ping,pokemon,servericon,,whois,userinfo\`
 
-__**NSFW COMMANDS**__ ❌
-\`no nsfw in the bot\`
+__**HELP COMMANDS**__ ℹ️
+\`announce,author,emoji,idp,invite,music,support\`
 
 __**WELCOME COMMANDS**__ 🎉
 \`setwelcome,setmessage\`
