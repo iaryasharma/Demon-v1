@@ -1,7 +1,7 @@
 const discord = require("discord.js")
 const { RichEmbed } = require("discord.js")
 const moment = require("moment")
-const { ownerid } = "";
+const { ownerid } = "612803327675334673";
 const hastebin = require('hastebin-gen');
 
 module.exports = {
