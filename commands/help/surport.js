@@ -7,7 +7,7 @@ module.exports = {
     
     let embed = new discord.MessageEmbed()
     .setTitle(`SUPPORT SERVER`)
-    .setDescription(`[CLICK HERE](https://discord.gg/Th6fPQu9Gj)`)
+    .setDescription(`[CLICK HERE](https://discord.gg/cfFyeMNKwx)`)
     .setColor("RANDOM")
     .setFooter(`Mr. Wow`)
     .setTimestamp(message.timestamp = Date.now())
