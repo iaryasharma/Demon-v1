@@ -14,7 +14,7 @@ __**MODERATION COMMANDS**__ 🔧
 \`addrole,removerole,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
 
 __**FUN COMMANDS**__ 🙃
-\`advice,anime,asci,cat,cry,joke,kpop,math,meme,mw,slap,punch,cry\`
+\`advice,anime,ascii,cat,cry,dm,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,say,slap,tell\`
 
 __**INFORMATION COMMANDS**__ 💬
 \`avatar,botinfo,serverinfo,hastebin,imdb,membercount,weather,ping,pokemon,servericon,,whois,userinfo\`
