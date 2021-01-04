@@ -2,6 +2,9 @@ const discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 
 module.exports = async ({ Constants: { Colors } }, msg, commandData) => {
+  name: "afk"
+  category: "info",
+  discription: "command for afk"
 	if (msg.suffix) {
 		if (msg.suffix === ".") {
 			msg.author.userDocument.query.set("afk", null);
