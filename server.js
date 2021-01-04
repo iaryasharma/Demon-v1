@@ -39,7 +39,7 @@ client.on("message", async message => {
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
     return message.reply(`
-PREFIX FOR THE BOT IS = i
+** PREFIX FOR THE BOT IS = * **
 
 __**MODERATION COMMANDS**__ 🔧
 \`addrole,removerole,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
