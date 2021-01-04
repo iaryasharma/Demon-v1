@@ -1,4 +1,10 @@
-module.exports = async ({ Constants: { Colors } }, msg, commandData) => {
+const discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+
+module.exports = {
+  name: "afk",
+  category: "info",
+ ync ({ Constants: { Colors } }, msg, commandData) => {
 	if (msg.suffix) {
 		if (msg.suffix === ".") {
 			msg.author.userDocument.query.set("afk", null);
@@ -49,4 +55,3 @@ module.exports = async ({ Constants: { Colors } }, msg, commandData) => {
 			},
 		});
 	}
-};

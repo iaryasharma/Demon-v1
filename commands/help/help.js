@@ -17,7 +17,7 @@ __**FUN COMMANDS**__ 🙃
 \`advice,anime,ascii,cat,cry,dm,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,say,slap,tell\`
 
 __**INFORMATION COMMANDS**__ 💬
-\`avatar,botinfo,serverinfo,hastebin,imdb,membercount,weather,ping,pokemon,servericon,,whois,userinfo\`
+\`avatar,botinfo,serverinfo,hastebin,imdb,membercount,weather,ping,pokemon,servericon,,whois\`
 
 __**HELP COMMANDS**__ ℹ️
 \`announce,author,emoji,idp,invite,music,support\`
