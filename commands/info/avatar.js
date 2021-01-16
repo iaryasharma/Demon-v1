@@ -23,7 +23,7 @@ module.exports = {
     let embed = new discord.MessageEmbed();
 
     embed.setTitle(
-      `<a:TNR_Loadbounce:764200903829356565> AVATAR of ${target.username} <a:TNR_Loadbounce:764200903829356565> `
+      ` AVATAR of ${target.username}  `
     );
     embed.setDescription(`[Download](${avatar})`);
     embed.setImage(avatar);
