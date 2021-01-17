@@ -20,7 +20,7 @@ client.on("ready", async () => {
     console.log(client.user.tag + " Has Logged In");
 
     function pickStatus() {
-      let status = ["Player Unknown Bakchodi Ground"];
+      let status = ["Arya ØP"];
 
       let Status = Math.floor(Math.random() * status.length);
 
@@ -39,7 +39,7 @@ client.on("message", async message => {
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
     return message.reply(`
-** PREFIX FOR THE BOT IS = * **
+** PREFIX FOR THE BOT IS = !! **
 
 `);
   }

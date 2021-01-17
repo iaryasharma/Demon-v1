@@ -8,10 +8,10 @@ module.exports = {
     let embed = new discord.MessageEmbed()
       .setTitle(`HERE INVITE LINK OF BOT `)
       .setDescription(
-        `[INVITE BOT](https://discord.com/oauth2/authorize?client_id=794975227221901322&scope=bot&permissions=2146827775)`
+        `[INVITE BOT](https://discord.com/oauth2/authorize?client_id=795487199197528095&scope=bot&permissions=821159039)`
       )
       .setColor("#00ff00")
-      .setFooter(` Mr. Wow`)
+      .setFooter(`Arya ØP`)
       .setTimestamp((message.timestamp = Date.now()));
 
     message.channel.send(embed);

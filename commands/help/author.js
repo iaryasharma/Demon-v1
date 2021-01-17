@@ -6,10 +6,10 @@ module.exports = {
   description: "KNOW ABOUT THE CREATOR OF BOT",
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
-      .setTitle(`ABOUT Mr. Wow`)
-      .setDescription(`_THE CREATOR OF THE BOT Is **Mr. Wow** HE IS A PROFSSIONAL SERVER DESIGNER,MANAGER_`)
+      .setTitle(`ABOUT Arya ØP`)
+      .setDescription(`_THE CREATOR OF THE BOT Is **Arya ØP, Adii** HE IS A PROFSSIONAL SERVER DESIGNER,MANAGER_`)
       .setColor("RANDOM")
-      .setFooter(`BOT MADE BY Mr. Wow`)
+      .setFooter(`BOT MADE BY Arya ØP`)
       .setTimestamp((message.timestamp = Date.now()));
 
     message.channel.send(embed);

@@ -38,7 +38,7 @@ module.exports = {
           .addField("🤖 Arch", `\`${os.arch()}\``, true)
           .addField("💻 Platform", `\`\`${os.platform()}\`\``, true)
           .addField("API Latency", `${(client.ws.ping)}ms`)  
-          .addField("**Developer**", "**'- ᖴ乙│ Mr. Wow#0007** | <@761929458503909388>")
+          .addField("**Developer**", "**S Σ・Arya_ØP🔥#0007** | <@730424922639302693>")
       message.channel.send(botinfo)
   });
   }
