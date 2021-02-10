@@ -38,7 +38,7 @@ module.exports = {
           .addField("🤖 Arch", `\`${os.arch()}\``, true)
           .addField("💻 Platform", `\`\`${os.platform()}\`\``, true)
           .addField("API Latency", `${(client.ws.ping)}ms`)  
-          .addField("**Developer**", "**S Σ・Arya_ØP🔥#0007, _Hyper_Adii_#8970** | <@730424922639302693> <@770889739397103646>")
+          .addField("**Developer**", "**S Σ・Mr. Frag Nite𒂟🔥#0007** | <@730424922639302693>")
       message.channel.send(botinfo)
   });
   }
