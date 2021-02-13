@@ -129,7 +129,7 @@ __**Commands List**__
         await handleVideo(video2, msg, voiceChannel, true); // eslint-disable-line no-await-in-loop
       }
       return msg.channel.send(
-        `<a:GC_tick_right:809989370705739787>  **|**  Playlist: **\`${playlist.title}\`** has been added to the queue!`
+        `<a:GC_right:810000945562910761>  **|**  Playlist: **\`${playlist.title}\`** has been added to the queue!`
       );
     } else {
       try {

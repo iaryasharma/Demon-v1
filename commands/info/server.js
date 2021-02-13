@@ -34,34 +34,34 @@ module.exports = {
       .setTitle(message.guild)
       .setDescription(
         `
-**OWNER**
+**<a:GC_arrowY:810015608011620402> OWNER**
 ${message.guild.owner.user.tag}
 
-**SERVER ID**
+**<a:GC_arrowY:810015608011620402> SERVER ID**
 ${message.guild.id}
 
-**REGION**
+**<a:GC_arrowY:810015608011620402> REGION**
 ${message.guild.region}
 
-**TOTAL MEMBERS**
+**<a:GC_arrowY:810015608011620402> TOTAL MEMBERS**
 ${message.guild.memberCount}
 
-**TOTAL CHANNELS **
+**<a:GC_arrowY:810015608011620402> TOTAL CHANNELS **
 ${message.guild.channels.cache.size}
 
-**TOTAL ROLES**
+**<a:GC_arrowY:810015608011620402> TOTAL ROLES**
 ${message.guild.roles.cache.size}
 
-**TOTAL EMOJI **
+**<a:GC_arrowY:810015608011620402> TOTAL EMOJI **
 ${message.guild.emojis.cache.size}
 
-**SERVER CREATED AT**
+**<a:GC_arrowY:810015608011620402> SERVER CREATED AT**
 ${message.guild.createdAt}
 
-**SERVER BOOST**
+**<a:GC_arrowY:810015608011620402> SERVER BOOST**
 ${message.guild.premiumSubscriptionCount}
 
-**BOOST LEVEL**
+**<a:GC_arrowY:810015608011620402> BOOST LEVEL**
 ${boostlevel}
 
 **Security** 
