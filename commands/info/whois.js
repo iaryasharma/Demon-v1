@@ -18,10 +18,10 @@ module.exports = {
         target = message.author
       }
     
-    if (target.presence.status === "dnd") target.presence.status = "Do Not Disturb <:dnd:746684327177486396>";
-    if (target.presence.status === "idle") target.presence.status = "Idle <:idle:746684759157243994>";
-    if (target.presence.status === "online") target.presence.status = "Online <:Online:746685017681559622>";
-    if (target.presence.status === "offline") target.presence.status = "Offline <:offline:746685581702201364>";
+    if (target.presence.status === "dnd") target.presence.status = "Do Not Disturb <:GC_dnd:809988528905650176>";
+    if (target.presence.status === "idle") target.presence.status = "Idle <:GC_idle:809987685216550943>";
+    if (target.presence.status === "online") target.presence.status = "Online <:GC_online:809987738761297920>";
+    if (target.presence.status === "offline") target.presence.status = "Offline <:GC_offline:809988078067253280>";
     
     function game() {
       let game;
