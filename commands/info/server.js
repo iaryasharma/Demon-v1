@@ -34,41 +34,29 @@ module.exports = {
       .setTitle(message.guild)
       .setDescription(
         `
-**<a:GC_arrowY:810015608011620402> OWNER**
-${message.guild.owner.user.tag}
+**<a:GC_arrowY:810015608011620402> OWNER :** ${message.guild.owner.user.tag}
 
-**<a:GC_arrowY:810015608011620402> SERVER ID**
-${message.guild.id}
+**<a:GC_arrowY:810015608011620402> SERVER ID :** ${message.guild.id}
 
-**<a:GC_arrowY:810015608011620402> REGION**
-${message.guild.region}
+**<a:GC_arrowY:810015608011620402> REGION :** ${message.guild.region}
 
-**<a:GC_arrowY:810015608011620402> TOTAL MEMBERS**
-${message.guild.memberCount}
+**<a:GC_arrowY:810015608011620402> TOTAL MEMBERS :** ${message.guild.memberCount}
 
-**<a:GC_arrowY:810015608011620402> TOTAL CHANNELS **
-${message.guild.channels.cache.size}
+**<a:GC_arrowY:810015608011620402> TOTAL CHANNELS :** ${message.guild.channels.cache.size}
 
-**<a:GC_arrowY:810015608011620402> TOTAL ROLES**
-${message.guild.roles.cache.size}
+**<a:GC_arrowY:810015608011620402> TOTAL ROLES :** ${message.guild.roles.cache.size}
 
-**<a:GC_arrowY:810015608011620402> TOTAL EMOJI **
-${message.guild.emojis.cache.size}
+**<a:GC_arrowY:810015608011620402> TOTAL EMOJI :** ${message.guild.emojis.cache.size}
 
-**<a:GC_arrowY:810015608011620402> SERVER CREATED AT**
-${message.guild.createdAt}
+**<a:GC_arrowY:810015608011620402> SERVER CREATED AT :** ${message.guild.createdAt}
 
-**<a:GC_arrowY:810015608011620402> SERVER BOOST**
-${message.guild.premiumSubscriptionCount}
+**<a:GC_arrowY:810015608011620402> SERVER BOOST :** ${message.guild.premiumSubscriptionCount}
 
-**<a:GC_arrowY:810015608011620402> BOOST LEVEL**
-${boostlevel}
+**<a:GC_arrowY:810015608011620402> BOOST LEVEL :** ${boostlevel}
 
-**Security** 
-${message.guild.verificationLevel}
+**<a:GC_arrowY:810015608011620402> Security :** ${message.guild.verificationLevel}
 `)
       .setThumbnail(message.guild.iconURL())
-      .setImage(message.guild.iconURL({dynamic: true, size: 1024}))
       .setColor("RANDOM")
       .setFooter(message.guild)
 
