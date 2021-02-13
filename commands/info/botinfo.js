@@ -36,7 +36,7 @@ module.exports = {
           .addField("🤖 CPU", `\`\`\`md\n${os.cpus().map(i => `${i.model}`)[0]}\`\`\``)
           .addField("🤖 CPU usage", `\`${percent.toFixed(2)}%\``, true)
           .addField("🤖 Arch", `\`${os.arch()}\``, true)
-          .addField("💻 Platform", `\`\`${os.platform()}\`\``, true)
+          .addField("<:GC_Computer:810137312646004736> Platform", `\`\`${os.platform()}\`\``, true)
           .addField("API Latency", `${(client.ws.ping)}ms`)  
           .addField("**Developer**", "<@730424922639302693>")
       message.channel.send(botinfo)
