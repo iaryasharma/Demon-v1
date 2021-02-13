@@ -40,6 +40,7 @@ module.exports = {
           .addField("API Latency", `${(client.ws.ping)}ms`)  
           .addField("**Developer**", "<@730424922639302693>")
       message.channel.send(botinfo)
+    message.react("<a:GC_right:810000945562910761>")
   });
   }
   };
