@@ -40,6 +40,6 @@ module.exports = {
 
     await message.channel.send(embed);
 
-    message.react("764200316156510218");
+    message.react("<a:GC_right:810000945562910761>");
   }
 };
