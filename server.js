@@ -94,7 +94,7 @@ client.on("guildMemberAdd", async member => {
   const msg = m1
     .replace("{member}", member.user)
     .replace("{member.guild}", member.guild)
-    .replace("(:HEART)", `<a:BH:731369456634429493>`);
+    .replace("(:HEART)", `<a:GC_BLUE_heart:808969053208313876>`);
 
   let url = db.get(`url_${member.guild.id}`);
   if (url === null) url = default_url;

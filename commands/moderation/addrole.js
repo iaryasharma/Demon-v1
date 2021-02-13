@@ -26,7 +26,7 @@ module.exports = {
       const embed = new MessageEmbed()
       
       .setColor("RANDOM")
-      .setDescription(`<a:ok_:731369076315652167>changed role for ${target.user.username} added ${arole}`)
+      .setDescription(`<a:GC_tick_right:809989370705739787>changed role for ${target.user.username} added ${arole}`)
       
       await message.channel.send(embed)
       
