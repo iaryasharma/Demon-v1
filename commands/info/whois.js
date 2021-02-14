@@ -50,23 +50,23 @@ module.exports = {
     .setThumbnail(avatar)
     .setDescription(
       `
-**<a:GC_arrow:810003254485450802> Name:** ${target.username}
+**<a:GC_check:810001170734120990> Name:** ${target.username}
 
-**<a:GC_arrow:810003254485450802> ID:** ${target.id}
+**<a:GC_check:810001170734120990> ID:** ${target.id}
 
-**<a:GC_arrow:810003254485450802> Nickname:** ${nickname}
+**<a:GC_check:810001170734120990> Nickname:** ${nickname}
 
-**<a:GC_arrow:810003254485450802> Account Creation:** ${createdate} | ${created} day(s) ago
+**<a:GC_check:810001170734120990> Account Creation:** ${createdate} | ${created} day(s) ago
 
-**<a:GC_arrow:810003254485450802> Server Joined At:** ${joindate} | ${joined} day(s) ago
+**<a:GC_check:810001170734120990> Server Joined At:** ${joindate} | ${joined} day(s) ago
 
-**<a:GC_arrow:810003254485450802> Status:** ${status}
+**<a:GC_check:810001170734120990> Status:** ${status}
 
-**<a:GC_arrow:810003254485450802> Game:** ${game()}
+**<a:GC_check:810001170734120990> Game:** ${game()}
 
-**<a:GC_arrow:810003254485450802> Badges:** ${flags}
+**<a:GC_check:810001170734120990> Badges:** ${flags}
 
-**<a:GC_arrow:810003254485450802> Roles:** <@&${member._roles.join('> <@&')}>`)
+**<a:GC_check:810001170734120990> Roles:** <@&${member._roles.join('> <@&')}>`)
     .setColor("RANDOM")
     .setFooter(`Asked by ${message.author.username}`, aicon  )
     .setTimestamp()
