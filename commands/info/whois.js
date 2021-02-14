@@ -22,7 +22,7 @@ module.exports = {
     if (target.presence.status === "idle") target.presence.status = "Idle <a:GC_idle1:810010145622982656>";
     if (target.presence.status === "online") target.presence.status = "Online <a:GC_online1:810010059446812683>";
     if (target.presence.status === "offline") target.presence.status = "Offline <a:GC_offline1:810010019084107787>";
-    if (target.flags.toArray() === "HOUSE_BRILLIANCE") target.flags.toArray = "Brilliance <:brilliance:810581344077348915>";
+    if (target.flags.toArray === "HOUSE_BRILLIANCE") target.flags.toArray = "Brilliance <:brilliance:810581344077348915>";
     
     function game() {
       let game;
