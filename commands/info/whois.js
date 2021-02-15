@@ -1,14 +1,45 @@
 const { MessageEmbed } = require("discord.js");
 const moment = require("moment");
+const Badges = require('./badges');
 
 module.exports = {
   name: "whois",
   aliases: ["userinfo"],
   category: "info",
   description: "Get info of any user",
-  run: async (user, client, message, args) => {
+  run: async (client, message, args) => {
     let target;
+    let Flags;
 
+		let flags;
+
+		if (!user) {
+
+			throw new Error('No user is provided.');
+
+		}
+
+		if (user.flags === null) {
+
+			throw new Error('The provided user doesn\'t have any Discord Badge.');
+
+		} else {
+
+			Flags = user.flags.toArray();
+
+			flags = Flags.filter(b => !!Badges[b]).map(m => Badges[m]);
+
+			if (user.avatar && user.avatar.startsWith('a_')) {
+
+				flags.push(Badges['DISCORD_NITRO']);
+
+			}
+
+			return flags;
+
+		}
+
+	
     if (message.mentions.users.first()) {
       target = message.mentions.users.first();
     } else if (args[0]) {
@@ -51,36 +82,10 @@ module.exports = {
     let aicon = message.author.avatarURL({ dynamic: true, size: 2048 });
     let createdate = moment.utc(target.createdAt).format("ddd, Do MMMM YYYY");
     let joindate = moment.utc(target.joinedAt).format("ddd, Do MMMM YYYY");
-    let flags;
+    let flags = target.flags.toArray();
+    if (target.flags.toArray() < 1) flags = "None";
 
-		if (!user) {
-
-			throw new Error('No user is provided.');
-
-		}
-
-		if (user.flags === null) {
-
-			throw new Error('The provided user doesn\'t have any Discord Badge.');
-
-		} else {
-
-			Flags = user.flags.toArray();
-
-			flags = Flags.filter(b => !!Badges[b]).map(m => Badges[m]);
-
-			if (user.avatar && user.avatar.startsWith('a_')) {
-
-				flags.push(Badges['DISCORD_NITRO']);
-
-			}
-
-			return flags;
-
-		}
-}
-	
-  const embed = new MessageEmbed()
+    const embed = new MessageEmbed()
       .setAuthor(target.tag, avatar)
       .setThumbnail(avatar)
       .setDescription(
