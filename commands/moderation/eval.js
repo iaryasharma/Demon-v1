@@ -12,7 +12,7 @@ module.exports = {
 
   run: async (client, message, args) => {   
 
-  let embed = new Discord.RichEmbed()
+  let embed = new Discord.MessageEmbed()
 
     .setColor(0x00ffff);
 
