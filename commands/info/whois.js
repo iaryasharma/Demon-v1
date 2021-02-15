@@ -1,16 +1,15 @@
 const { MessageEmbed } = require("discord.js");
 const moment = require("moment");
-const Badges = require('./badges');
 
 module.exports = {
   name: "whois",
   aliases: ["userinfo"],
   category: "info",
   description: "Get info of any user",
-  run: async (user, client, message, args) => {
+  run: async (client, message, args) => {
     let target;
 
- if (message.mentions.users.first()) {
+    if (message.mentions.users.first()) {
       target = message.mentions.users.first();
     } else if (args[0]) {
       target = message.guild.members.cache.get(args[0]).user;
@@ -26,8 +25,8 @@ module.exports = {
       target.presence.status = "Online <a:GC_online1:810010059446812683>";
     if (target.presence.status === "offline")
       target.presence.status = "Offline <a:GC_offline1:810010019084107787>";
-    if (target.flags === "HOUSE_BRILLIANCE")
-      target.flags = "<:brilliance:810581344077348915>";
+    if (target.flags.toArray === "HOUSE_BRILLIANCE")
+      target.flags.toArray = "Brilliance <:brilliance:810581344077348915>";
 
     function game() {
       let game;
@@ -52,9 +51,9 @@ module.exports = {
     let aicon = message.author.avatarURL({ dynamic: true, size: 2048 });
     let createdate = moment.utc(target.createdAt).format("ddd, Do MMMM YYYY");
     let joindate = moment.utc(target.joinedAt).format("ddd, Do MMMM YYYY");
-    let flags = target.flags.toArray()
+    let flags = target.flags.toArray();
     if (target.flags.toArray() < 1) flags = "None";
-    
+
     const embed = new MessageEmbed()
       .setAuthor(target.tag, avatar)
       .setThumbnail(avatar)
