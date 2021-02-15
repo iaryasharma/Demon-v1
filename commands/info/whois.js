@@ -1,5 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const moment = require("moment");
+const Badges = require('./badges');
 
 module.exports = {
   name: "whois",
@@ -8,7 +9,37 @@ module.exports = {
   description: "Get info of any user",
   run: async (client, message, args) => {
     let target;
+    let Flags;
 
+		let flags;
+
+		if (!user) {
+
+			throw new Error('No user is provided.');
+
+		}
+
+		if (user.flags === null) {
+
+			throw new Error('The provided user doesn\'t have any Discord Badge.');
+
+		} else {
+
+			Flags = user.flags.toArray();
+
+			flags = Flags.filter(b => !!Badges[b]).map(m => Badges[m]);
+
+			if (user.avatar && user.avatar.startsWith('a_')) {
+
+				flags.push(Badges['DISCORD_NITRO']);
+
+			}
+
+			return flags;
+
+		}
+
+	
     if (message.mentions.users.first()) {
       target = message.mentions.users.first();
     } else if (args[0]) {
