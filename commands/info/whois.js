@@ -26,6 +26,8 @@ module.exports = {
       target.presence.status = "Online <a:GC_online1:810010059446812683>";
     if (target.presence.status === "offline")
       target.presence.status = "Offline <a:GC_offline1:810010019084107787>";
+    if (target.flags === "HOUSE_BRILLIANCE")
+      target.flags = "<:brilliance:810581344077348915>";
 
     function game() {
       let game;
@@ -50,10 +52,9 @@ module.exports = {
     let aicon = message.author.avatarURL({ dynamic: true, size: 2048 });
     let createdate = moment.utc(target.createdAt).format("ddd, Do MMMM YYYY");
     let joindate = moment.utc(target.joinedAt).format("ddd, Do MMMM YYYY");
-    let flags = (await target.user.fetchFlags())
-            .toArray();
-    if (target.user.flags.toArray() < 1) flags = "None";
-
+    let flags = target.flags.toArray()
+    if (target.flags.toArray() < 1) flags = "None";
+    
     const embed = new MessageEmbed()
       .setAuthor(target.tag, avatar)
       .setThumbnail(avatar)
