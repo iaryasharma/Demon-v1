@@ -1,18 +1,8 @@
 const Discord = require('discord.js');
 
-module.exports = {
+module.exports.run = async (client, message, args) => {   
 
-  name: "eval",
-
-  category: "moderation",
-
-  discription: "code evaluation command",
-
-  usage: "<prefix>eval code",
-
-  run: async (client, message, args) => {   
-
-  let embed = new Discord.MessageEmbed()
+  let embed = new Discord.RichEmbed()
 
     .setColor(0x00ffff);
 
@@ -75,5 +65,17 @@ module.exports = {
       
 
   evaluate(code);
-    }
+
+};
+s
+module.exports = {
+
+  name: "eval",
+
+  category: "Debug",
+
+  description: "Evaluate code.",
+
+  usage: ",eval <code>"
+
 };
