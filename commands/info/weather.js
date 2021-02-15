@@ -28,6 +28,7 @@ let embed = new discord.MessageEmbed()
 .addField("<a:GC_Hype3:810100012079775774>  Wind Display", result[0].current.winddisplay, true)
 .setThumbnail(result[0].current.imageUrl);
    message.channel.send(embed)
+  message.react("<a:GC_right:810000945562910761>");
 } catch(err) {
   return message.channel.send("Unable To Get the data of Given location")
 }

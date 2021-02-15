@@ -82,5 +82,6 @@ module.exports = {
       .setTimestamp();
 
     message.channel.send(embed);
+    message.react("<a:GC_right:810000945562910761>");
   }
 };

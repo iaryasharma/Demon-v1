@@ -16,6 +16,7 @@ module.exports = {
         if (!animated[0]) animated = ['None'];
         if (!notAnimated[0]) notAnimated = ['None'];
         message.channel.send('**__ANIMATED  :__**\n' + animated.join(' ') + '\n**__NORMAL:__**\n' + notAnimated.join(' '), {split:true});
+      message.react("<a:GC_right:810000945562910761>");
       } catch (err) {
         message.channel.send('Their was an error!\n' + err).catch();
       }

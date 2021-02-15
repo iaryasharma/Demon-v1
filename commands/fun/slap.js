@@ -16,5 +16,6 @@ module.exports = {
       .setFooter(`${message.author.username} slaps ${target.user.username}`)
 
     message.channel.send(embed);
+    message.react("<a:GC_right:810000945562910761>");
   }
 };

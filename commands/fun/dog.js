@@ -19,6 +19,7 @@ superagent.get('https://nekos.life/api/v2/img/woof')
   .setFooter(`Bot Developed hy - Mr. Wow`)
   .setURL(response.body.url);
 message.channel.send(lewdembed);
+  message.react("<a:GC_right:810000945562910761>");
 })
 }
 };
