@@ -6,7 +6,7 @@ module.exports = {
   aliases: ["userinfo"],
   category: "info",
   description: "Get info of any user",
-  run: async (client, message, args) => {
+  async badges(user, client, message, args) {
     let target;
 
     if (message.mentions.users.first()) {
