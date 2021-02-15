@@ -1,11 +1,4 @@
 {
-  "prefix": "!!"
-}
-module.exportsb = {
-  owner: {
-
-		id: "XXXXXXXXXXX", // The ID of the bot's owner
-
-		name: "Androz#2091" // And the name of the bot's owner
-
-	},
+  "prefix": "!!",
+  "owner": "612803327675334673"
+  }
