@@ -19,16 +19,16 @@ client.on("ready", async () => {
     console.log(client.user.tag + " Has Logged In");
 
     function pickStatus() {
-      let status = ["Twitch With Arya ØP"];
+      let status = ["Arya ØP Having Sex" , "Frag Nite OP", "!! help "];
 
       let Status = Math.floor(Math.random() * status.length);
 
       client.user.setActivity(status[Status], {
-        type: "STREAMING"
+        type: "WATCHING"
       });
     }
 
-    setInterval(pickStatus, 5000);
+    setInterval(pickStatus, 3500);
   } catch (err) {
     console.log(err);
   }
