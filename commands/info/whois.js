@@ -49,15 +49,11 @@ module.exports = {
     let createdate = moment.utc(target.createdAt).format("ddd, Do MMMM YYYY");
     let joindate = moment.utc(target.joinedAt).format("ddd, Do MMMM YYYY");
     let flags = (await target.user.fetchFlags())
-
         .toArray()
-
         .map((flag) => badges[flag])
-
         .join(" ");
 
-    Badges:** ${ ${flags}.length > 0 ? ${flags}: "None"});
-    
+Badges: ${ ${flags}.length > 0 ? ${flags}: "None"});
     const embed = new MessageEmbed()
       .setAuthor(target.tag, avatar)
       .setThumbnail(avatar)
