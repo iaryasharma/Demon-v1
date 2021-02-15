@@ -34,9 +34,9 @@ module.exports = {
       .setTitle(message.guild)
       .setDescription(
         `
-**<a:GC_arrowY:810015608011620402> OWNER :** ${message.guild.owner.user.tag}
+**<a:GC_check:810001170734120990><a:GC_arrowY:810015608011620402> OWNER :** ${message.guild.owner.user.tag}
 
-**<a:GC_arrowY:810015608011620402> SERVER ID :** ${message.guild.id}
+**<a:GC_check:810001170734120990> SERVER ID :** ${message.guild.id}
 
 **<a:GC_arrowY:810015608011620402> REGION :** ${message.guild.region}
 
