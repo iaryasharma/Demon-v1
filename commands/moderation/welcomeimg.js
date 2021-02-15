@@ -1,4 +1,3 @@
-  
 const db = require("quick.db")
 const { url } = require("../../server.js")
 

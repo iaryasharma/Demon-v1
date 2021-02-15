@@ -77,7 +77,7 @@ module.exports = {
 
 **<a:GC_check:810001170734120990> Roles:** <@&${member._roles.join("> <@&")}>`
       )
-      .setColor("RANDOM")
+      .setColor("#ff00b5")
       .setFooter(`Asked by ${message.author.username}`, aicon)
       .setTimestamp();
 
