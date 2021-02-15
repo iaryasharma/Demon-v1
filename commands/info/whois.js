@@ -82,8 +82,17 @@ module.exports = {
     let aicon = message.author.avatarURL({ dynamic: true, size: 2048 });
     let createdate = moment.utc(target.createdAt).format("ddd, Do MMMM YYYY");
     let joindate = moment.utc(target.joinedAt).format("ddd, Do MMMM YYYY");
-    let flags = target.flags.toArray();
-    if (target.flags.toArray() < 1) flags = "None";
+    Flags = user.flags.toArray();
+
+			flags = Flags.filter(b => !!Badges[b]).map(m => Badges[m]);
+
+			if (user.avatar && user.avatar.startsWith('a_')) {
+
+				flags.push(Badges['DISCORD_NITRO']);
+
+			}
+
+			return flags;
 
     const embed = new MessageEmbed()
       .setAuthor(target.tag, avatar)
