@@ -19,12 +19,12 @@ client.on("ready", async () => {
     console.log(client.user.tag + " Has Logged In");
 
     function pickStatus() {
-      let status = ["Arya ØP"];
+      let status = ["Twitch With Arya ØP"];
 
       let Status = Math.floor(Math.random() * status.length);
 
       client.user.setActivity(status[Status], {
-        type: "WATCHING"
+        type: "STREAMING"
       });
     }
 
