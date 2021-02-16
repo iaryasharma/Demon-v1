@@ -1,5 +1,7 @@
 const { prefix } = require("./config.json");
 const { config } = require("dotenv");
+const { Random } = require("something-random-on-discord") 
+const random = new Random();
 const db = require("quick.db");
 const { CanvasSenpai } = require("canvas-senpai");
 const canva = new CanvasSenpai();
@@ -19,7 +21,7 @@ client.on("ready", async () => {
     console.log(client.user.tag + " Has Logged In");
 
     function pickStatus() {
-      let status = ["Arya ØP Having Sex" , "Frag Nite OP", "!! help "];
+      let status = ["Frag Nite ØP", "!! help "];
 
       let Status = Math.floor(Math.random() * status.length);
 
