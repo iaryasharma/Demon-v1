@@ -8,7 +8,6 @@ module.exports = {
   run: async (client, message, args) => {
     
     let data = await random.getMeme()
-    message.channel.send(data)
-    message.react("🤣");
+    message.channel.send(data);
   }
 }
