@@ -1,5 +1,7 @@
+const discord = require("discord.js");
+const client = new discord.Client()
 const { Random } = require("something-random-on-discord")
-const random = new Random(
+const random = new Random();
 
 module.exports = {
   name: "meme",
