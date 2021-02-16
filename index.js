@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+const discord = require("discord.js")
 
 const client = new discord.Client()
 
@@ -20,7 +20,7 @@ client.on("ready", () => {
 
 client.on("message", async message => {
 
-  if(message.content === "!!meme") {
+  if(message.content === "!meme") {
 
     let data = await random.getMeme()
 
@@ -34,4 +34,4 @@ client.on("message", async message => {
 
  
 
-client.login(process.env.TOKEN)
+client.login("TOKEN")
