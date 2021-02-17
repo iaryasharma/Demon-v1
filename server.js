@@ -21,7 +21,7 @@ client.on("ready", async () => {
     console.log(client.user.tag + " Has Logged In");
 
     function pickStatus() {
-      let status = ["Arya ØP", "Frag Nite ØP", "!! help "];
+      let status = ["Frag Nite ØP", "!! help "];
 
       let Status = Math.floor(Math.random() * status.length);
 
