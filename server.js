@@ -1,6 +1,6 @@
 const { prefix } = require("./config.json");
 const { config } = require("dotenv");
-const { Random } = require("srod-v2") 
+const { Random } = require("something-random-on-discord") 
 
 const db = require("quick.db");
 const { CanvasSenpai } = require("canvas-senpai");

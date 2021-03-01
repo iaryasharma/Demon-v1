@@ -9,6 +9,6 @@ module.exports = {
     
     let data = await random.getAdvice()
     message.channel.send(data)
-    message.react("<a:GC_right:810000945562910761>");
+    
   }
 }
