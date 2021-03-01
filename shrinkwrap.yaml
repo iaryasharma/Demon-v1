@@ -31,7 +31,7 @@ dependencies:
   scrap: 0.1.0
   simple-youtube-api: 5.2.1
   snekfetch: 4.0.4
-  something-random-on-discord: 0.0.1
+  srod-v2: 0.0.1
   weather-js: 2.0.0
   ytdl-core: 3.4.2
 packages:
@@ -1940,6 +1940,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
+  /one-liner-joke/1.2.0:
+    dev: false
+    engines:
+      node: '>=6.0.0'
+    resolution:
+      integrity: sha512-cyqGnIRKCe25ZERjlyKtpQp4BfN+iV22nC6rLtTMkJh+w300DK+9UitFzJZfilMdFKImKQO+w/G/E1sUSYBsrw==
   /opusscript/0.0.7:
     dev: false
     resolution:
@@ -2396,12 +2402,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-dyycG9fvwtSJqKPfMVOpXt+60qvMGe7vWLwOJDiSJaiAx+hs2EnFChG2bXCWn7ulz+zGzrHdN9/yeEb0YqEPww==
-  /something-random-on-discord/0.0.1:
-    dependencies:
-      node-fetch: 2.6.1
-    dev: false
-    resolution:
-      integrity: sha512-2MLnlryu0VlINo+MNcDANR4vfWdFFDdi4Dkuk1rKjtc+MIO0JCFW/iRj4a1J+iAOyEx581OqBG9dn2jx2j4tKg==
   /sparse-bitfield/3.0.3:
     dependencies:
       memory-pager: 1.5.0
@@ -2415,6 +2415,14 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==
+  /srod-v2/0.0.1:
+    dependencies:
+      discord.js: 12.5.1
+      node-fetch: 2.6.1
+      one-liner-joke: 1.2.0
+    dev: false
+    resolution:
+      integrity: sha512-AuiR3NPhPGl6WRiJ8QL+zAbmj2oR+pvumNhQ59aWcytRwuSeJCyDP4seeX5ZHI45PltLGfWb9GUkBuS3MMFVlQ==
   /sshpk/1.16.1:
     dependencies:
       asn1: 0.2.4
@@ -2797,6 +2805,6 @@ specifiers:
   scrap: ^0.1.0
   simple-youtube-api: ^5.2.1
   snekfetch: ^4.0.4
-  something-random-on-discord: ^0.0.1
+  srod-v2: ^0.0.1
   weather-js: ^2.0.0
   ytdl-core: ^3.2.1

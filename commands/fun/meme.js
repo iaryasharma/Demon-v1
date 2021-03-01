@@ -1,4 +1,4 @@
-const { Random } = require("something-random-on-discord")
+const { Random } = require("srod-v2")
 const random = new Random();
 
 module.exports = {
