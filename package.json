@@ -36,6 +36,7 @@
     "os": "^0.1.1",
     "path": "^0.12.7",
     "quick.db": "^7.1.1",
+    "random-puppy": "^1.1.0",
     "react-anime": "^3.0.3",
     "reddit": "^1.2.0",
     "request": "^2.88.2",
