@@ -29,7 +29,7 @@ module.exports = {
           .setColor("#7cfff5")
           .addField("⏳ Mem Usage", `\`${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB\``, true)
           .addField("⌚️ Uptime ", `\`${duration}\``, true)
-          .addField("📁 Servers", `\`${client.guilds.cache.size}\``, true)
+          .addField("<:GC_Servers:818346467327868949> Servers", `\`${client.guilds.cache.size}\``, true)
           .addField("📁 Channels ", `\`${client.channels.cache.size}\``, true)
           .addField("👾 Discord.js", `v${version}`, true)
           .addField("<:GC_Bot:818337997179191327> Node", `\`${process.version}\``, true)
