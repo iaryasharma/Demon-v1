@@ -2,47 +2,48 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "mute",
-  description: "mute someone",
-  catagory: "moderation",
-  usage: "mute <@mention> <reason>",
+  aliases: [],
+  description: "Mute A User!",
+  usage: "Mute <Mention User> | <Reason>",
   run: async (client, message, args) => {
-    if (!message.member.hasPermission("MANAGE_ROLES")) {
-      return message.channel.send("sorry you need permission to mute someone");
+    //Start
+    message.delete();
+
+    let Member =
+      message.mentions.members.first() ||
+      message.guild.members.cache.get(args[0]);
+
+    if (!Member) return message.channel.send(`Please Mention A User!`);
+
+    let Role = message.guild.roles.cache.find(role => role.name === "Muted").id;
+
+    if (!Role)
+      return message.channel.send(
+        `Please Create Mute Role | Role Name : Muted`
+      );
+
+    if (Member.roles.cache.has(Role)) {
+      return message.channel.send(`Member Is Already Muted!`);
     }
-    if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
-      return message.channel.send("I do not have permission to mute");
+
+    let Reason = args.slice(1).join(" ");
+
+    let Embed = new MessageEmbed()
+      .setColor("#ff0000")
+      .setTitle(`Member Muted!`)
+      .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
+      .addField(`Muted Member`, `${Member.user.tag} (${Member.user.id})`)
+      .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
+      .setFooter(`Requested by ${message.author.username}`)
+      .setTimestamp();
+
+    if (Role && !Member.roles.cache.has(Role)) {
+      Member.roles.add([Role]);
+      return message.channel.send(Embed);
+    } else {
+      return message.channel.send(`Something Went Wrong, Try Again Later!`);
     }
 
-    const user = message.mentions.members.first();
-
-    if (!user) {
-      return message.channel.send("\```please mention the members for mute\```");
-    }
-    if (user.id === message.author.id) {
-      return message.channel.send("I can't mute you because you are message author");
-    }
-    let reason = args.slice(1).join("");
-
-    if (!reason) {
-      return message.channel.send(" \``` please give some  reason for mute\``` ");
-    }
-
-    const vrole = user.roles.cache
-
-    let muterole = message.guild.roles.cache.find(x => x.name === "muted");
-
-    if (!muterole) {
-      return message.channel.send("\```please create role name with muted \``` ");
-    }
-    
-    await user.roles.remove(vrole);
-    await user.roles.add(muterole);
-
-    await message.channel.send(
-      `you muted ${message.mentions.users.first().username} for ${reason}`
-    );
-
-    user.send(`You get muted in ${message.guild} for ${reason}`
-    );
+    //End
   }
 };
