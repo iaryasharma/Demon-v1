@@ -53,9 +53,9 @@ module.exports = {
 
         `
 
-:cetick: **MEMBER USERNAME :-** __**${message.author.tag}**__
+<a:cetick:764199790640365609> **MEMBER USERNAME :-** __**${message.author.tag}**__
 
-:cetick: **MEMBER COUNT :-** **__${message.guild.memberCount}__**
+<a:cetick:764199790640365609> **MEMBER COUNT :-** **__${message.guild.memberCount}__**
 
 `
       )
@@ -65,7 +65,7 @@ module.exports = {
 
         `
 
-:emoji_24: **THANKS FOR JOINING ${message.guild}** :emoji_24:`
+<a:emoji_24:764200718344126546> **THANKS FOR JOINING ${message.guild}** <a:emoji_24:764200718344126546>`
       )
 
       .setAuthor(message.guild)
