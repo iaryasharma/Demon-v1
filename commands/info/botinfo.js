@@ -33,7 +33,7 @@ module.exports = {
           .addField("📁 Channels ", `${client.channels.cache.size}`, true)
           .addField("👾 Discord.js", `v${version}`, true)
           .addField("<:GC_Bot:818337997179191327> Node", `${process.version}`, true)
-          .addField("<:GC_Bot:818337997179191327> CPU", `\`\`\`md\n${os.cpus().map(i => `${i.model}`)[0]}\`\`\``)
+          .addField("<:GC_CPU:818341919137464330> CPU", `\`\`\`md\n${os.cpus().map(i => `${i.model}`)[0]}\`\`\``)
           .addField("<:GC_Bot:818337997179191327> CPU usage", `\`${percent.toFixed(2)}%\``, true)
           .addField("<:GC_Bot:818337997179191327> Arch", `\`${os.arch()}\``, true)
           .addField("<:GC_Computer:810137312646004736> Platform", `\`\`${os.platform()}\`\``, true)
