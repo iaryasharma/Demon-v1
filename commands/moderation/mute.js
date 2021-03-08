@@ -34,7 +34,7 @@ module.exports = {
       .addField(`Moderator`, `<@${message.author.id}>`)
       .addField(`Muted Member`, `<@${Member.user.id}>`)
       .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
-      .setThumbnail(`${message.guild.iconURL}`)
+      .setThumbnail (guild.iconURL())
       .setFooter(`Requested by ${message.guild.name}`)
       .setTimestamp();
 
