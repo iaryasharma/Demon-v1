@@ -45,9 +45,9 @@ module.exports = {
 
         `
 
-<a:cetick:764199790640365609> **MEMBER USERNAME :-** __**${message.author.tag}**__
+<a:GC_check:810001170734120990> **MEMBER USERNAME :-** __**${message.author.tag}**__
 
-<a:cetick:764199790640365609> **MEMBER COUNT :-** **__${message.guild.memberCount}__**
+<a:GC_check:810001170734120990> **MEMBER COUNT :-** **__${message.guild.memberCount}__**
 
 `
       )
