@@ -46,7 +46,7 @@ module.exports = {
 
       //   )
 
-      .setColor("RANDOM")
+      .setColor("GREEN")
 
       .addField(
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",

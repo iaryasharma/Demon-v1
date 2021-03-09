@@ -47,7 +47,7 @@ client.on("guildDelete", async guild => {
     .addField("Server Name", `${guild.name}`)
     .addField("Server Owner", `${owner.username}`)
     .addField("Member Count", guild.memberCount)
-    .setColor("BLACK")
+    .setColor("#ff0000")
     .setFooter("Left A Guild")
     .setTimestamp()
     .setThumbnail(guild.iconURL());
