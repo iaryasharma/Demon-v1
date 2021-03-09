@@ -1,7 +1,7 @@
 const { prefix } = require("./config.json");
 const { config } = require("dotenv");
 const { Random } = require("something-random-on-discord") 
-
+const { GiveawaysManager } = require("discord-giveaways");
 const db = require("quick.db");
 const { CanvasSenpai } = require("canvas-senpai");
 const canva = new CanvasSenpai();
@@ -9,6 +9,7 @@ const discord = require("discord.js");
 const client = new discord.Client({
   disableEveryone: false
 });
+const moment = require("moment");
 require("./uptime.js");
 client.commands = new discord.Collection();
 client.aliases = new discord.Collection();
@@ -62,7 +63,7 @@ client.on("ready", async () => {
     console.log(client.user.tag + " Has Logged In");
 
     function pickStatus() {
-      let status = ["Frag Nite ØP", "!! help "];
+     let status = ["Frag Nite ØP", "!! help "];
 
       let Status = Math.floor(Math.random() * status.length);
 
@@ -81,7 +82,7 @@ client.on("message", async message => {
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
     return message.reply(`
-** PREFIX FOR THE BOT IS = !! **
+** PREFIX FOR THE BOT IS = T **
 
 `);
   }
@@ -112,50 +113,79 @@ client.on("guildMemberAdd", async member => {
     return;
   }
 
-  let default_url = `https://cdn.discordapp.com/attachments/696417925418057789/716197399336583178/giphy.gif`;
+  let default_url = `https://cdn.discordapp.com/attachments/758912722821185557/814740225732640778/tenor.gif`;
 
-  let default_msg = `━━━━━━━━━━━━━━━━━━━━━━━━
-  | WELCOME ${member} TO ${member.guild}
-        
-━━━━━━━━━━━━━━━━━━━━━━━━
- | BE SURE THAT YOU HAVE READ    
-           | 
-━━━━━━━━━━━━━━━━━━━━━━━━
- | username ${member.username}  
-|your rank is ${member.member_count}  ━━━━━━━━━━━━━━━━━━━━━━━━
- | YOU CAN ENJOY IN  CHATTING 
-━━━━━━━━━━━━━━━━━━━━━━━━
-            THANKS FOR JOINING US
-`;
+  let default_msg = `<a:rainbowleft:764200797629186049> **WELCOME ${member} TO THE ${member.guild}**
+  
+**━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
+
+<a:op2_:764200161793540106> **MAKE SURE TO READ** <#756411418554794084> 
+
+<a:op2_:764200161793540106> **TAKE** <#756411420836495501> 
+
+<a:op2_:764200161793540106> **ENJOY YOUR STAY HERE**
+
+**━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
+
+<a:cetick:764199790640365609> **MEMBER USERNAME :-** __**${member.user.tag}**__
+
+<a:cetick:764199790640365609> **MEMBER COUNT :-** **__${member.guild.memberCount}__**
+
+**━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
+
+<a:emoji_24:764200718344126546> **THANKS FOR JOINING US** <a:emoji_24:764200718344126546>`;
 
   let m1 = db.get(`msg_${member.guild.id}`);
   if (!m1) m1 = default_msg;
   const msg = m1
     .replace("{member}", member.user)
     .replace("{member.guild}", member.guild)
-    .replace("(:HEART)", `<a:GC_BLUE_heart:810001444035231775>`);
+    .replace("{member.user.tag}", member.user.tag)
+    .replace("{member.user.usercount}", member.user.usercount);
+
+  // let data = await canva.welcome(member, {
+  //   link: "https://wallpapercave.com/wp/wp5128415.jpg"
+  // });
 
   let url = db.get(`url_${member.guild.id}`);
   if (url === null) url = default_url;
+  let createdate = moment.utc(member.createdAt).format("ddd, Do MMMM YYYY");
 
-  let data = await canva.welcome(member, {
-    link: "https://wallpapercave.com/wp/wp5128415.jpg"
-  });
+  // let link = db.get(`link_${member.guild.id}`);
+  //if (link === null) link = link;
 
-  const attachment = new discord.MessageAttachment(data, "welcome-image.png");
+  //const attachment = new discord.MessageAttachment(data, "welcome-image.png");
 
   let wembed = new discord.MessageEmbed()
-    .setAuthor(
-      member.user.username,
-      member.user.avatarURL({ dynamic: true, size: 2048 })
-    )
-    .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
+    .setAuthor(member.guild)
+    .setTitle("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    // .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
     .setColor("RANDOM")
-    .setImage()
-    .setDescription(msg);
+    .setImage(url)
+    .setTimestamp()
+    .setDescription(msg)
+    .setFooter(member.user.tag, member.user.displayAvatarURL())
+    .addField(
+      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      `
+
+<a:cetick:764199790640365609> **MEMBER USERNAME :-** __**${member.user.tag}**__
+
+<a:cetick:764199790640365609> **MEMBER JOINED AT :-** __**${createdate}**__
+
+<a:cetick:764199790640365609> **MEMBER COUNT :-** **__${member.guild.memberCount}__**
+
+`
+    )
+    .addField(
+      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      `
+
+<a:emoji_24:764200718344126546> **THANKS FOR JOINING ${member.guild}** <a:emoji_24:764200718344126546>`
+    );
 
   client.channels.cache.get(chx).send(wembed);
-  client.channels.cache.get(chx).send(attachment);
+  //  client.channels.cache.get(chx).send(attachment);
 });
 
 const GiveawayManagerWithOwnDatabase = class extends GiveawaysManager {
@@ -234,4 +264,6 @@ client.giveawaysManager.on(
     );
   }
 );
+
+
 client.login(process.env.TOKEN);

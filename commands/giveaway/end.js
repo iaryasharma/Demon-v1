@@ -15,14 +15,14 @@ module.exports = {
       !message.member.roles.cache.some(r => r.name === "Giveaways")
     ) {
       return message.channel.send(
-        "<:marvel_cross:814596854436069376> You need to have the manage messages permissions to reroll giveaways."
+        "<a:GC_wrong:810000635113635840> You need to have the manage messages permissions to reroll giveaways."
       );
     }
 
     // If no message ID or giveaway name is specified
     if (!args[0]) {
       return message.channel.send(
-        "<:marvel_cross:814596854436069376> You have to specify a valid message ID!"
+        "<a:GC_wrong:810000635113635840> You have to specify a valid message ID!"
       );
     }
 
@@ -36,7 +36,7 @@ module.exports = {
     // If no giveaway was found
     if (!giveaway) {
       return message.channel.send(
-        "<:marvel_cross:814596854436069376> Unable to find a giveaway for `" +
+        "<a:GC_wrong:810000635113635840> Unable to find a giveaway for `" +
           args.join(" ") +
           "`."
       );
@@ -51,7 +51,7 @@ module.exports = {
       .then(() => {
         // Success message
         message.channel.send(
-          "<:marvel_party:815337878857973760> Giveaway will end in less than " +
+          "<a:GC_welcome:810118157967949895> Giveaway will end in less than " +
             client.giveawaysManager.options.updateCountdownEvery / 1000 +
             " seconds..."
         );
@@ -63,12 +63,12 @@ module.exports = {
           )
         ) {
           message.channel.send(
-            "<:marvel_cross:814596854436069376> This giveaway is already ended!"
+            "<a:GC_wrong:810000635113635840> This giveaway is already ended!"
           );
         } else {
           console.error(e);
           message.channel.send(
-            "<:marvel_cross:814596854436069376> An error occured..."
+            "<a:GC_wrong:810000635113635840> An error occured..."
           );
         }
       });
