@@ -113,17 +113,17 @@ client.on("guildMemberAdd", async member => {
     return;
   }
 
-  let default_url = `https://cdn.discordapp.com/attachments/758912722821185557/814740225732640778/tenor.gif`;
+  let default_url = `https://tenor.com/view/welcome-gif-10939070`;
 
   let default_msg = `<a:GC_arrow:810003254485450802> **WELCOME ${member} TO THE ${member.guild}**
   
 **━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
 
-<a:op2_:764200161793540106> **MAKE SURE TO READ** <#756411418554794084> 
+<a:GC_Pin:818795895856037898> **MAKE SURE TO READ RULES FROM ** <#808929196684345345>
 
-<a:op2_:764200161793540106> **TAKE** <#756411420836495501> 
+<a:GC_Pin:818795895856037898> **TAKE ROLES FROM** <#808929201159667733> 
 
-<a:op2_:764200161793540106> **ENJOY YOUR STAY HERE**
+<a:GC_Golden_Heart:818793534533926953> **ENJOY YOUR STAY HERE**
 
 **━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
 
@@ -169,11 +169,11 @@ client.on("guildMemberAdd", async member => {
       "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
       `
 
-<a:cetick:764199790640365609> **MEMBER USERNAME :-** __**${member.user.tag}**__
+<a:GC_check:810001170734120990> **MEMBER USERNAME :-** __**${member.user.tag}**__
 
-<a:cetick:764199790640365609> **MEMBER JOINED AT :-** __**${createdate}**__
+<a:GC_check:810001170734120990> **MEMBER JOINED AT :-** __**${createdate}**__
 
-<a:cetick:764199790640365609> **MEMBER COUNT :-** **__${member.guild.memberCount}__**
+<a:GC_check:810001170734120990> **MEMBER COUNT :-** **__${member.guild.memberCount}__**
 
 `
     )
