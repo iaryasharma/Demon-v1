@@ -1,23 +1,45 @@
-const discord = require("discord.js");
-const { Random } = require("something-random-on-discord");
-const random = new Random();
+const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+const superagent = require("superagent");
 
 module.exports = {
   name: "hug",
-  category: "fun",
-  description: "Hug someone",
-  run: async (client, message, args) => {
-    
-    let target = message.mentions.members.first()
-    
-    let data = await random.getAnimeImgURL("hug");
-    
-    let embed = new discord.MessageEmbed()
-    .setImage(data)
-    .setColor("RANDOM")
-    .setFooter(`${message.author.username} hugs ${target.user.username}`)
- 
+  //    noalias: [""],
+  category: "emojis",
+  description: "Shows random baka image",
+  usage: "",
+
+  //   accessableby: "everyone"
+
+  async run(client, message, args) {
+    let victim =
+      message.mentions.users.first() ||
+      (args.length > 0
+        ? message.users.cache
+            .filter(e =>
+              e.username.toLowerCase().includes(args.join(" ").toLowerCase())
+            )
+            .first()
+        : message.author) ||
+      message.author;
+
+    const { body } = await superagent.get("https://nekos.life/api/v2/img/hug");
+
+    const embed = new MessageEmbed()
+
+      .setColor("RED")
+      .setTitle("HUG")
+      .setDescription(`${message.author} hugs ${victim}`)
+      .setImage(body.url)
+      .setTimestamp()
+      .setFooter(
+        "Requested By :-" + message.author.tag,
+
+        message.author.displayAvatarURL()
+      )
+
+      .setTimestamp((message.timestamp = Date.now()));
+
     message.channel.send(embed);
-    message.react("<a:GC_right:810000945562910761>");
   }
 };

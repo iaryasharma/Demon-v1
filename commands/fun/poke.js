@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 const superagent = require("superagent");
 
 module.exports = {
-  name: "slap",
+  name: "poke",
   //    noalias: [""],
   category: "emojis",
   description: "Shows random baka image",
@@ -23,13 +23,13 @@ module.exports = {
         : message.author) ||
       message.author;
 
-    const { body } = await superagent.get("https://nekos.life/api/v2/img/slap");
+    const { body } = await superagent.get("https://nekos.life/api/v2/img/poke");
 
     const embed = new MessageEmbed()
 
       .setColor("RED")
-      .setTitle("SLAP")
-      .setDescription(`${message.author} slaps ${victim}`)
+      .setTitle("POKE")
+      .setDescription(`${message.author} pokes ${victim}`)
       .setImage(body.url)
       .setTimestamp()
       .setFooter(

@@ -1,14 +1,17 @@
-const { Random } = require("something-random-on-discord")
-const random = new Random();
+const { MessageEmbed } = require("discord.js");
+const Random = require("srod-v2");
 
 module.exports = {
+  //    config: {
   name: "joke",
   category: "fun",
-  description: "Get some fun jokes",
+  noalias: [""],
+  description: "Sending random joke",
+  usage: "[text]",
+  //      accessableby: "everyone"
+  //    },
   run: async (client, message, args) => {
-    
-    let data = await random.getJoke()
-    message.channel.send(data)
-    message.react("<a:GC_right:810000945562910761>");
+    let Joke = await Random.GetJoke("RED");
+    message.channel.send(Joke);
   }
-}
+};
