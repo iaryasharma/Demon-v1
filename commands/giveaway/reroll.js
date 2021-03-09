@@ -49,7 +49,7 @@ module.exports = {
       .then(() => {
         // Success message
         message.channel.send(
-          "<:marvel_tick:814596834814197781> Giveaway rerolled!"
+          "<a:GC_right:810000945562910761> Giveaway rerolled!"
         );
       })
       .catch(e => {

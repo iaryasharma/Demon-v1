@@ -1,9 +1,6 @@
 const db = require("quick.db");
-
 const { prefix } = require("../../config.json");
-
 const { msg } = require("../../server.js");
-
 const discord = require("discord.js");
 
 module.exports = {
@@ -33,21 +30,16 @@ module.exports = {
     db.set(`msg_${message.guild.id}`, `${msg}`);
 
     let embed = new discord.MessageEmbed()
-
       .setAuthor(
         message.author.username,
-
         message.author.avatarURL({ dynamic: true, size: 2048 })
       )
 
       //    .setThumbnail(
-
       //      message.author.displayAvatarURL({ dynamic: true, size: 2048 })
-
       //   )
 
-      .setColor("GREEN")
-
+      .setColor("RANDOM")
       .addField(
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
 
@@ -69,19 +61,12 @@ module.exports = {
       )
 
       .setAuthor(message.guild)
-
       .setTitle("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-
       // .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
-
       .setColor("RANDOM")
-
       //   .setImage(url)
-
       .setTimestamp()
-
       .setDescription(msg)
-
       .setFooter(message.author.tag, message.author.displayAvatarURL());
 
     message.channel.send(embed);

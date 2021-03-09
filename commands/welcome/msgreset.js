@@ -3,9 +3,9 @@ const db = require("quick.db");
 const { url } = require("../../server.js");
 
 module.exports = {
-  name: "rsetwelcomeimg",
+  name: "rsetwelcomemsg",
 
-  aliases: ["rsetwimage", "rsetwimg", "resetwelcomeimage"],
+  aliases: ["rsetwmessage", "rsetwmsg", "resetwelcomemessage"],
 
   category: "moderation",
 
@@ -17,13 +17,11 @@ module.exports = {
     //PERMISSION
 
     if (!message.member.hasPermission("ADMINISTRATOR")) {
-      return message.channel.send(
-        "You are not allowed or do not have permission to change prefix"
-      );
+      return message.channel.send("You don't enough powers");
     }
 
-    db.delete(`url_${message.guild.id}`);
+    db.delete(`msg_${message.guild.id}`);
 
-    return await message.channel.send("Reseted Welcome Image ✅");
+    return await message.channel.send("Reseted Welcome Message ✅");
   }
 };
