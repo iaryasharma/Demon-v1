@@ -65,7 +65,7 @@ module.exports = {
 
         let edit = new Discord.MessageEmbed()
 
-          .setColor("RANDOM")
+          .setColor("00ff35")
 
           .setDescription(
             paginated.items.map(g => `${g.name} - ${g.memberCount} (${g.id})`)
