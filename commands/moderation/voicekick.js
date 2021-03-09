@@ -19,7 +19,7 @@ module.exports = {
       message.guild.members.cache.get(args[0]);
     if (!target) return message.channel.send(`Usage: ${this.usage}`);
 
-    let { channel } = message.mentions.members.first().voice;
+    let { channel } = message.mentions.members.first().voice.kick();
     if (!channel)
       return message.channel.send(`User Is Not In Any Voice Channel!`);
     if (target.id === `${owner}`)
@@ -29,3 +29,4 @@ module.exports = {
     message.channel.send(`User Has Been Kicked From Voice Channel!`);
   }
 };
+
