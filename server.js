@@ -115,7 +115,7 @@ client.on("guildMemberAdd", async member => {
 
   let default_url = `https://cdn.discordapp.com/attachments/758912722821185557/814740225732640778/tenor.gif`;
 
-  let default_msg = `<a:rainbowleft:764200797629186049> **WELCOME ${member} TO THE ${member.guild}**
+  let default_msg = `<a:GC_arrow:810003254485450802> **WELCOME ${member} TO THE ${member.guild}**
   
 **━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
 
@@ -127,13 +127,13 @@ client.on("guildMemberAdd", async member => {
 
 **━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
 
-<a:cetick:764199790640365609> **MEMBER USERNAME :-** __**${member.user.tag}**__
+<a:GC_check:810001170734120990> **MEMBER USERNAME :-** __**${member.user.tag}**__
 
-<a:cetick:764199790640365609> **MEMBER COUNT :-** **__${member.guild.memberCount}__**
+<a:GC_check:810001170734120990> **MEMBER COUNT :-** **__${member.guild.memberCount}__**
 
 **━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
 
-<a:emoji_24:764200718344126546> **THANKS FOR JOINING US** <a:emoji_24:764200718344126546>`;
+<a:GC_Golden_Heart:818793534533926953> **THANKS FOR JOINING US** <a:GC_Golden_Heart:818793534533926953>`;
 
   let m1 = db.get(`msg_${member.guild.id}`);
   if (!m1) m1 = default_msg;
@@ -181,7 +181,7 @@ client.on("guildMemberAdd", async member => {
       "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
       `
 
-<a:emoji_24:764200718344126546> **THANKS FOR JOINING ${member.guild}** <a:emoji_24:764200718344126546>`
+<a:GC_Golden_Heart:818793534533926953> **THANKS FOR JOINING ${member.guild}** <a:GC_Golden_Heart:818793534533926953>`
     );
 
   client.channels.cache.get(chx).send(wembed);

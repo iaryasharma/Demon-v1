@@ -57,7 +57,7 @@ module.exports = {
 
         `
 
-<a:emoji_24:764200718344126546> **THANKS FOR JOINING ${message.guild}** <a:emoji_24:764200718344126546>`
+<a:GC_Golden_Heart:818793534533926953> **THANKS FOR JOINING ${message.guild}** <a:GC_Golden_Heart:818793534533926953>`
       )
 
       .setAuthor(message.guild)
