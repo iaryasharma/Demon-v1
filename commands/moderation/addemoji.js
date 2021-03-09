@@ -41,7 +41,7 @@ module.exports = {
       const Added = new Discord.MessageEmbed()
 
         .setTitle(`Emoji Added`)
-        .setColor(`RANDOM`)
+        .setColor(`#11ff01`)
 
         .setDescription(
           `Emoji Has Been Added! | Name: ${name ||

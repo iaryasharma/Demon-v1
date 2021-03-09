@@ -11,13 +11,13 @@ module.exports = {
       .setDescription(
         `
 <a:GC_Mod:810120702966759454> __**MODERATION COMMANDS**__ 
-\`addrole,removerole,emoji,whois,announce,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
+\`addrole,removerole,addemoji,enlarge,whois,announce,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
 
 <a:GC_Fun:810120996953522177> __**FUN COMMANDS**__ 
 \`advice,anime,ascii,cat,cry,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,say,slap,tell\`
 
 <a:GC_welcome:810118157967949895> __**WELCOME COMMANDS**__  
-\`setwelcome <#channel>,setwmessage,rsetwmessage(resets\`
+\`setwelcome <#channel>,setwmessage,rsetwmessage(resets welcome message),wexample(welcome example)\`
 
 <a:GC_crown:810111773108862987> __**UTILITY COMMANDS**__ 
 \`giveaway,math,weather,amongus,idp,avatar,serverinfo,hastebin,imdb,membercount,weather,ping,pokemon,servericon\`
@@ -30,6 +30,8 @@ module.exports = {
 
 <a:GC_Discord:810133251767009320> __**BOT INFO**__
 \`botinfo,support,invite,author\`
+
+Please Note Some Fun Commands are not working they will be updated soon and some new features would also be added 
 `
       )
 
