@@ -14,7 +14,7 @@ module.exports = {
   run: async (client, message, args) => {
     let member = message.mentions.users.first() || message.author;
 
-    let default_url = `https://cdn.discordapp.com/attachments/758912722821185557/814740225732640778/tenor.gif`; //default msg mtt change krna yeh hyper ke liye lagaye hai ek baar custom msg shi ho gaya toh isko bhi shi kr denge
+    let default_url = `https://media0.giphy.com/media/xUPGGDNsLvqsBOhuU0/200.gif`; //default msg mtt change krna yeh hyper ke liye lagaye hai ek baar custom msg shi ho gaya toh isko bhi shi kr denge
 
     let default_msg = `
     You Can Change This By Using \n\n${prefix}setwelcomemessage <msg> or ${prefix}setwmsg <msg> \n\nUse ${prefix}setwimg <url> to change default image \n\nall other things except these cannot be changed.
@@ -39,7 +39,7 @@ module.exports = {
       //      message.author.displayAvatarURL({ dynamic: true, size: 2048 })
       //   )
 
-      .setColor("RANDOM")
+      .setColor("#11ff01")
       .addField(
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
 
@@ -63,7 +63,7 @@ module.exports = {
       .setAuthor(message.guild)
       .setTitle("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
       // .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
-      .setColor("RANDOM")
+      .setColor("#11ff01")
       .setImage(url)
       .setTimestamp()
       .setDescription(msg)

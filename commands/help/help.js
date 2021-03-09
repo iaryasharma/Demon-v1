@@ -17,7 +17,7 @@ module.exports = {
 \`advice,anime,ascii,cat,cry,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,say,slap,tell\`
 
 <a:GC_welcome:810118157967949895> __**WELCOME COMMANDS**__  
-\`setwelcome,setmessage\`
+\`setwelcome <#channel>,setwmessage,rsetwmessage(resets\`
 
 <a:GC_crown:810111773108862987> __**UTILITY COMMANDS**__ 
 \`giveaway,math,weather,amongus,idp,avatar,serverinfo,hastebin,imdb,membercount,weather,ping,pokemon,servericon\`
