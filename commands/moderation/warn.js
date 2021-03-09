@@ -1,5 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const db = require("quick.db");
+const { prefix, owner } = require("../../config.json");
 
 module.exports = {
   name: "warn",
@@ -28,12 +29,16 @@ module.exports = {
     if (message.author.id === user.id) {
       return message.channel.send("You can not warn yourself");
     }
+    
 
     if (user.id === message.guild.owner.id) {
       return message.channel.send(
         "You jerk, how you can warn server owner -_-"
       );
     }
+     if (user.id === `${owner}`)
+      return message.channel.send(`You Can't warn Owner Of BOT!`);
+    let Reason = args.slice(1).join(" ");
 
     const reason = args.slice(1).join(" ");
 
