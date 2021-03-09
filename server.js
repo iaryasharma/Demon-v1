@@ -12,6 +12,47 @@ const client = new discord.Client({
 require("./uptime.js");
 client.commands = new discord.Collection();
 client.aliases = new discord.Collection();
+["command"].forEach(handler => {
+  require(`./handlers/${handler}`)(client);
+});
+
+client.on("guildCreate", async guild => {
+  let Invite = await guild.channels.cache
+    .find(c => c.type === "text")
+    .createInvite({
+      maxAge: 0,
+      maxUser: 0
+    });
+  const owner = client.users.cache.get(guild.ownerID);
+  const joinchannel = client.channels.cache.get("812164778171564083");
+  const joinembed = new discord.MessageEmbed()
+    .setTitle("NEW SERVER")
+    .addField("Server Name", `${guild.name}`)
+    .addField("Server Owner", `${owner.username}`)
+    .addField("Member Count", guild.memberCount)
+    .addField("Invite Link", `[Invite](${Invite})`)
+    .setColor("GREEN")
+    .setFooter("Joined A New Guild")
+    .setTimestamp()
+    .setThumbnail(guild.iconURL());
+  joinchannel.send(joinembed);
+});
+
+client.on("guildDelete", async guild => {
+  const owner = client.users.cache.get(guild.ownerID);
+  const lchannel = client.channels.cache.get("818749862539427901");
+  const lembed = new discord.MessageEmbed()
+
+    .setTitle("SERVER LEFT")
+    .addField("Server Name", `${guild.name}`)
+    .addField("Server Owner", `${owner.username}`)
+    .addField("Member Count", guild.memberCount)
+    .setColor("BLACK")
+    .setFooter("Left A Guild")
+    .setTimestamp()
+    .setThumbnail(guild.iconURL());
+  lchannel.send(lembed);
+});
 
 ["command"].forEach(handler => {
   require(`./handlers/${handler}`)(client);
