@@ -8,13 +8,13 @@ module.exports = {
   run: async (client, message, args) => {
     //Start
     message.delete();
-
+    
     let Member =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
 
     if (!Member) return message.channel.send(`Please Mention A User!`);
-
+      
     let Role = message.guild.roles.cache.find(role => role.name === "Muted").id;
 
     if (!Role)
