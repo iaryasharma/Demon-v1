@@ -1,4 +1,5 @@
 const discord = require("discord.js");
+const { prefix, owner } = require("../../config.json");
 
 module.exports = {
   name: "ban",
@@ -30,8 +31,9 @@ module.exports = {
       return message.channel.send(`Please Don't Ban Me ;-;`);
 
     if (Member.id === message.guild.owner.user.id)
-      return message.channel.send(`You Can't Ban Owner Of Server!`);
-
+      return message.channel.send(`You Can't Ban Owner Of Server`);
+    if (Member.id === `${owner}`)
+      return message.channel.send(`You Can't Ban Owner Of BOT!`);
     let Reason = args.slice(1).join(" ");
 
     let User = message.guild.member(Member);
@@ -46,8 +48,8 @@ module.exports = {
       let embed = new discord.MessageEmbed()
         .setColor("#ff0000")
         .setTitle(`Member Banned!`)
-        .addField(`Moderator`, `<@${message.author.id}>`)
-        .addField(`Banned Member`, `<@${Member.id}>`)
+        .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
+        .addField(`Banned Member`, `${Member.tag} (${Member.id})`)
         .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
         .setFooter(`Requested by ${message.author.username}`)
         .setTimestamp();
