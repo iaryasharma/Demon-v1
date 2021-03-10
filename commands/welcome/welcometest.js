@@ -14,7 +14,7 @@ module.exports = {
   run: async (client, message, args) => {
     let member = message.mentions.users.first() || message.author;
 
-    let default_url = `https://media0.giphy.com/media/xUPGGDNsLvqsBOhuU0/200.gif`; //default msg mtt change krna yeh hyper ke liye lagaye hai ek baar custom msg shi ho gaya toh isko bhi shi kr denge
+    let default_url = `https://media.discordapp.net/attachments/596216470397255690/818195770124795945/mOZpPGs.gif`; //default msg mtt change krna yeh hyper ke liye lagaye hai ek baar custom msg shi ho gaya toh isko bhi shi kr denge
 
     let default_msg = `
     You Can Change This By Using \n\n${prefix}setwelcomemessage <msg> or ${prefix}setwmsg <msg> \n\nUse ${prefix}setwimg <url> to change default image \n\nall other things except these cannot be changed.

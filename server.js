@@ -119,7 +119,7 @@ client.on("guildMemberAdd", async member => {
     return;
   }
 
-  let default_url = `https://media0.giphy.com/media/xUPGGDNsLvqsBOhuU0/200.gif`;
+  let default_url = `https://media.discordapp.net/attachments/596216470397255690/818195770124795945/mOZpPGs.gif`;
 
   let default_msg = `<a:GC_arrow:810003254485450802> **WELCOME ${member} TO THE ${member.guild}**
   
