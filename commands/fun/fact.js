@@ -21,7 +21,7 @@ module.exports = {
       const embed = new discord.MessageEmbed()
         .setTitle("Here's An Amazing Fact")
         .setDescription(owo.fact)
-        .setColor("RED")
+        .setColor("#ff0000")
         .setThumbnail(client.user.displayAvatarURL())
         .setFooter(
           "Requested By :-" + message.author.tag,
