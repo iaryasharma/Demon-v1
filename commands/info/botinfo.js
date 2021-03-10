@@ -7,9 +7,6 @@ let os = require('os')
 let cpuStat = require("cpu-stat")
 const ms = require("ms")
 
-
-
-
 module.exports = {
     name: "botinfo",
     category: "info",
