@@ -16,7 +16,6 @@ module.exports = {
         .setTimestamp();
 
       message.channel.send(embed);
-      message.react("<a:GC_right:810000945562910761>");
     } catch (error) {
       message.channel.send(`Please Give Me Valid Equation | Try Again Later!`).then(() => console.log(error));
     }
