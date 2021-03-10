@@ -1,5 +1,4 @@
 const discord = require("discord.js");
-
 module.exports = {
   name: "invite",
   category: "help",
