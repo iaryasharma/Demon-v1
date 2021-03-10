@@ -58,7 +58,13 @@ client.on("guildDelete", async guild => {
 ["command"].forEach(handler => {
   require(`./handlers/${handler}`)(client);
 });
+
 client.on("ready", async () => {
+  const channel = client.channels.cache.get("811294182823428116");
+  channel.join().then(connection => {
+    connection.voice.setSelfDeaf(true);
+  });
+
   try {
     console.log(client.user.tag + " Has Logged In");
 
