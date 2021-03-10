@@ -11,7 +11,7 @@ module.exports = {
 
     let embed = new discord.MessageEmbed()
       .setImage(data)
-      .setColor("RANDOM")
+      .setColor("#6cffbd")
       .setFooter(`Please someone talk to ${message.author.username} they are crying`);
 
     message.channel.send(embed);

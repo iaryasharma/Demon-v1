@@ -27,7 +27,7 @@ module.exports = {
 
     const embed = new MessageEmbed()
 
-      .setColor("RED")
+      .setColor("#6cffbd")
       .setTitle("SLAP")
       .setDescription(`${message.author} slaps ${victim}`)
       .setImage(body.url)
@@ -41,5 +41,6 @@ module.exports = {
       .setTimestamp((message.timestamp = Date.now()));
 
     message.channel.send(embed);
+    message.react("<a:GC_right:810000945562910761>");
   }
 };

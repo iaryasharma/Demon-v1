@@ -27,7 +27,7 @@ module.exports = {
 
     const embed = new MessageEmbed()
 
-      .setColor("RED")
+      .setColor("#6cffbd")
       .setTitle("POKE")
       .setDescription(`${message.author} pokes ${victim}`)
       .setImage(body.url)

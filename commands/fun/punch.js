@@ -1,23 +1,41 @@
+const client = require("nekos.life");
 const discord = require("discord.js");
-const { Random } = require("something-random-on-discord");
-const random = new Random();
+const { Discord, richEmbed } = require("discord.js");
+
+const neko = new client();
 
 module.exports = {
-  name: "punch",
+  name: "fact",
+
   category: "fun",
-  description: "Punch someone",
+
+  description: "sends a cool fact",
+
+  usage: "[command]",
+
   run: async (client, message, args) => {
-    
-    let target = message.mentions.members.first()
-    
-    let data = await random.getAnimeImgURL("punch");
-    
-    let embed = new discord.MessageEmbed()
-    .setImage(data)
-    .setColor("RANDOM")
-    .setFooter(`${message.author.username} punches ${target.user.username}`)
-    
-    message.channel.send(embed);
-    message.react("<a:GC_right:810000945562910761>");
+    //command
+
+    async function work() {
+      let owo = await neko.sfw.fact();
+      const embed = new discord.MessageEmbed()
+        .setTitle("Here's An Amazing Fact")
+        .setDescription(owo.fact)
+        .setColor("RED")
+        .setThumbnail(client.user.displayAvatarURL())
+        .setFooter(
+          "Requested By :-" + message.author.tag,
+          message.author.displayAvatarURL()
+        )
+        .setTimestamp((message.timestamp = Date.now()));
+      
+      message.channel.send(embed).catch(error => {
+        console.error(error);
+      });
+
+      //message.delete();
+    }
+
+    work();
   }
 };
