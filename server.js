@@ -160,7 +160,7 @@ client.on("guildMemberAdd", async member => {
     .setAuthor(member.guild)
     .setTitle("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     // .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
-    .setColor("RANDOM")
+    .setColor("#01ff21")
     .setImage(url)
     .setTimestamp()
     .setDescription(msg)

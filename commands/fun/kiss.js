@@ -27,7 +27,7 @@ module.exports = {
 
     const embed = new MessageEmbed()
 
-      .setColor("RED")
+      .setColor("#6cffbd")
       .setTitle("KISS")
       .setDescription(`${message.author} kisses ${victim}`)
       .setImage(body.url)

@@ -14,7 +14,7 @@ superagent.get('https://nekos.life/api/v2/img/meow')
   const lewdembed = new Discord.MessageEmbed()
   .setTitle("Cute Kitty")
   .setImage(response.body.url)
-  .setColor(`RED`)
+  .setColor(`ff0000`)
   .setFooter(`Bot developed by - Mr. Wow`)
   .setURL(response.body.url);
 message.channel.send(lewdembed);

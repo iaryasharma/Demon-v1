@@ -11,7 +11,7 @@ module.exports = {
   //      accessableby: "everyone"
   //    },
   run: async (client, message, args) => {
-    let Joke = await Random.GetJoke("RED");
+    let Joke = await Random.GetJoke("ff0000");
     message.channel.send(Joke);
   }
 };

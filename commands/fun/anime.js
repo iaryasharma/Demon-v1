@@ -33,7 +33,7 @@ name: "anime",
        try {
         let embed = new MessageEmbed()
         .setTitle(body.data[0].attributes.titles.en)
-        .setColor("RED")
+        .setColor("ff0000")
         .setDescription(body.data[0].attributes.synopsis)
         .setThumbnail(body.data[0].attributes.posterImage.original)
         .addField("Ratings", body.data[0].attributes.averageRating)

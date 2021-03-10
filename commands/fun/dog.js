@@ -15,7 +15,7 @@ superagent.get('https://nekos.life/api/v2/img/woof')
   const lewdembed = new Discord.MessageEmbed()
   .setTitle("Cute Puppy")
   .setImage(response.body.url)
-  .setColor(`RANDOM`)
+  .setColor(`ff0000`)
   .setFooter(`Bot Developed hy - Mr. Wow`)
   .setURL(response.body.url);
 message.channel.send(lewdembed);
