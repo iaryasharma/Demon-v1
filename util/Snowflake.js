@@ -9,7 +9,7 @@ let INCREMENT = 0;
 /**
 
  * A container for useful snowflake-related methods.
-
+   
  */
 
 class SnowflakeUtil {
