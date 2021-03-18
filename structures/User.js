@@ -1,14 +1,14 @@
-'use strict';
+"use strict";
 
-const Base = require('./Base');
+const Base = require("./Base");
 
-const TextBasedChannel = require('./interfaces/TextBasedChannel');
+const TextBasedChannel = require("./interfaces/TextBasedChannel");
 
-const { Error } = require('../errors');
+const { Error } = require("../errors");
 
-const Snowflake = require('../util/Snowflake');
+const Snowflake = require("../util/Snowflake");
 
-const UserFlags = require('../util/UserFlags');
+const UserFlags = require("../util/UserFlags");
 
 let Structures;
 
@@ -23,7 +23,6 @@ let Structures;
  */
 
 class User extends Base {
-
   /**
 
    * @param {Client} client The instantiating client
@@ -33,7 +32,6 @@ class User extends Base {
    */
 
   constructor(client, data) {
-
     super(client);
 
     /**
@@ -53,13 +51,10 @@ class User extends Base {
     this.flags = null;
 
     this._patch(data);
-
   }
 
   _patch(data) {
-
-    if ('username' in data) {
-
+    if ("username" in data) {
       /**
 
        * The username of the user
@@ -69,15 +64,11 @@ class User extends Base {
        */
 
       this.username = data.username;
-
-    } else if (typeof this.username !== 'string') {
-
+    } else if (typeof this.username !== "string") {
       this.username = null;
-
     }
 
-    if ('bot' in data || typeof this.bot !== 'boolean') {
-
+    if ("bot" in data || typeof this.bot !== "boolean") {
       /**
 
        * Whether or not the user is a bot
@@ -87,11 +78,9 @@ class User extends Base {
        */
 
       this.bot = Boolean(data.bot);
-
     }
 
-    if ('discriminator' in data) {
-
+    if ("discriminator" in data) {
       /**
 
        * A discriminator based on username for the user
@@ -101,15 +90,11 @@ class User extends Base {
        */
 
       this.discriminator = data.discriminator;
-
-    } else if (typeof this.discriminator !== 'string') {
-
+    } else if (typeof this.discriminator !== "string") {
       this.discriminator = null;
-
     }
 
-    if ('avatar' in data) {
-
+    if ("avatar" in data) {
       /**
 
        * The ID of the user's avatar
@@ -119,15 +104,11 @@ class User extends Base {
        */
 
       this.avatar = data.avatar;
-
-    } else if (typeof this.avatar !== 'string') {
-
+    } else if (typeof this.avatar !== "string") {
       this.avatar = null;
-
     }
 
-    if ('system' in data) {
-
+    if ("system" in data) {
       /**
 
        * Whether the user is an Official Discord System user (part of the urgent message system)
@@ -137,11 +118,9 @@ class User extends Base {
        */
 
       this.system = Boolean(data.system);
-
     }
 
-    if ('locale' in data) {
-
+    if ("locale" in data) {
       /**
 
        * The locale of the user's client (ISO 639-1)
@@ -151,11 +130,9 @@ class User extends Base {
        */
 
       this.locale = data.locale;
-
     }
 
-    if ('public_flags' in data) {
-
+    if ("public_flags" in data) {
       /**
 
        * The flags for this user
@@ -165,7 +142,6 @@ class User extends Base {
        */
 
       this.flags = new UserFlags(data.public_flags);
-
     }
 
     /**
@@ -187,7 +163,6 @@ class User extends Base {
      */
 
     this.lastMessageChannelID = null;
-
   }
 
   /**
@@ -201,9 +176,7 @@ class User extends Base {
    */
 
   get partial() {
-
-    return typeof this.username !== 'string';
-
+    return typeof this.username !== "string";
   }
 
   /**
@@ -217,9 +190,7 @@ class User extends Base {
    */
 
   get createdTimestamp() {
-
     return Snowflake.deconstruct(this.id).timestamp;
-
   }
 
   /**
@@ -233,9 +204,7 @@ class User extends Base {
    */
 
   get createdAt() {
-
     return new Date(this.createdTimestamp);
-
   }
 
   /**
@@ -249,11 +218,9 @@ class User extends Base {
    */
 
   get lastMessage() {
-
     const channel = this.client.channels.cache.get(this.lastMessageChannelID);
 
     return (channel && channel.messages.cache.get(this.lastMessageID)) || null;
-
   }
 
   /**
@@ -267,19 +234,16 @@ class User extends Base {
    */
 
   get presence() {
-
     for (const guild of this.client.guilds.cache.values()) {
-
-      if (guild.presences.cache.has(this.id)) return guild.presences.cache.get(this.id);
-
+      if (guild.presences.cache.has(this.id))
+        return guild.presences.cache.get(this.id);
     }
 
-    if (!Structures) Structures = require('../util/Structures');
+    if (!Structures) Structures = require("../util/Structures");
 
-    const Presence = Structures.get('Presence');
+    const Presence = Structures.get("Presence");
 
     return new Presence(this.client, { user: { id: this.id } });
-
   }
 
   /**
@@ -293,11 +257,15 @@ class User extends Base {
    */
 
   avatarURL({ format, size, dynamic } = {}) {
-
     if (!this.avatar) return null;
 
-    return this.client.rest.cdn.Avatar(this.id, this.avatar, format, size, dynamic);
-
+    return this.client.rest.cdn.Avatar(
+      this.id,
+      this.avatar,
+      format,
+      size,
+      dynamic
+    );
   }
 
   /**
@@ -311,9 +279,7 @@ class User extends Base {
    */
 
   get defaultAvatarURL() {
-
     return this.client.rest.cdn.DefaultAvatar(this.discriminator % 5);
-
   }
 
   /**
@@ -329,9 +295,7 @@ class User extends Base {
    */
 
   displayAvatarURL(options) {
-
     return this.avatarURL(options) || this.defaultAvatarURL;
-
   }
 
   /**
@@ -345,9 +309,9 @@ class User extends Base {
    */
 
   get tag() {
-
-    return typeof this.username === 'string' ? `${this.username}#${this.discriminator}` : null;
-
+    return typeof this.username === "string"
+      ? `${this.username}#${this.discriminator}`
+      : null;
   }
 
   /**
@@ -361,11 +325,9 @@ class User extends Base {
    */
 
   typingIn(channel) {
-
     channel = this.client.channels.resolve(channel);
 
     return channel._typing.has(this.id);
-
   }
 
   /**
@@ -379,11 +341,11 @@ class User extends Base {
    */
 
   typingSinceIn(channel) {
-
     channel = this.client.channels.resolve(channel);
 
-    return channel._typing.has(this.id) ? new Date(channel._typing.get(this.id).since) : null;
-
+    return channel._typing.has(this.id)
+      ? new Date(channel._typing.get(this.id).since)
+      : null;
   }
 
   /**
@@ -397,11 +359,11 @@ class User extends Base {
    */
 
   typingDurationIn(channel) {
-
     channel = this.client.channels.resolve(channel);
 
-    return channel._typing.has(this.id) ? channel._typing.get(this.id).elapsedTime : -1;
-
+    return channel._typing.has(this.id)
+      ? channel._typing.get(this.id).elapsedTime
+      : -1;
   }
 
   /**
@@ -415,9 +377,11 @@ class User extends Base {
    */
 
   get dmChannel() {
-
-    return this.client.channels.cache.find(c => c.type === 'dm' && c.recipient.id === this.id) || null;
-
+    return (
+      this.client.channels.cache.find(
+        c => c.type === "dm" && c.recipient.id === this.id
+      ) || null
+    );
   }
 
   /**
@@ -431,27 +395,21 @@ class User extends Base {
    */
 
   async createDM(force = false) {
-
     if (!force) {
-
       const { dmChannel } = this;
 
       if (dmChannel && !dmChannel.partial) return dmChannel;
-
     }
 
-    const data = await this.client.api.users(this.client.user.id).channels.post({
-
-      data: {
-
-        recipient_id: this.id,
-
-      },
-
-    });
+    const data = await this.client.api
+      .users(this.client.user.id)
+      .channels.post({
+        data: {
+          recipient_id: this.id
+        }
+      });
 
     return this.client.actions.ChannelCreate.handle(data).channel;
-
   }
 
   /**
@@ -463,15 +421,13 @@ class User extends Base {
    */
 
   async deleteDM() {
-
     const { dmChannel } = this;
 
-    if (!dmChannel) throw new Error('USER_NO_DMCHANNEL');
+    if (!dmChannel) throw new Error("USER_NO_DMCHANNEL");
 
     const data = await this.client.api.channels(dmChannel.id).delete();
 
     return this.client.actions.ChannelDelete.handle(data).channel;
-
   }
 
   /**
@@ -487,21 +443,14 @@ class User extends Base {
    */
 
   equals(user) {
-
     let equal =
-
       user &&
-
       this.id === user.id &&
-
       this.username === user.username &&
-
       this.discriminator === user.discriminator &&
-
       this.avatar === user.avatar;
 
     return equal;
-
   }
 
   /**
@@ -515,7 +464,6 @@ class User extends Base {
    */
 
   async fetchFlags(force = false) {
-
     if (this.flags && !force) return this.flags;
 
     const data = await this.client.api.users(this.id).get();
@@ -523,7 +471,6 @@ class User extends Base {
     this._patch(data);
 
     return this.flags;
-
   }
 
   /**
@@ -537,9 +484,7 @@ class User extends Base {
    */
 
   fetch(force = false) {
-
     return this.client.users.fetch(this.id, true, force);
-
   }
 
   /**
@@ -557,17 +502,12 @@ class User extends Base {
    */
 
   toString() {
-
     return `<@${this.id}>`;
-
   }
 
   toJSON(...props) {
-
     const json = super.toJSON(
-
       {
-
         createdTimestamp: true,
 
         defaultAvatarURL: true,
@@ -576,12 +516,10 @@ class User extends Base {
 
         lastMessage: false,
 
-        lastMessageID: false,
-
+        lastMessageID: false
       },
 
-      ...props,
-
+      ...props
     );
 
     json.avatarURL = this.avatarURL();
@@ -589,7 +527,6 @@ class User extends Base {
     json.displayAvatarURL = this.displayAvatarURL();
 
     return json;
-
   }
 
   // These are here only for documentation purposes - they are implemented by TextBasedChannel
@@ -597,10 +534,8 @@ class User extends Base {
   /* eslint-disable no-empty-function */
 
   send() {}
-
 }
 
 TextBasedChannel.applyToClass(User);
 
 module.exports = User;
-

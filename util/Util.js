@@ -1,15 +1,14 @@
+const { parse } = require("path");
 
-const { parse } = require('path');
+const fetch = require("node-fetch");
 
-const fetch = require('node-fetch');
+const { Colors, DefaultOptions, Endpoints } = require("./Constants");
 
-const { Colors, DefaultOptions, Endpoints } = require('./Constants');
-
-const { Error: DiscordError, RangeError, TypeError } = require('../errors');
+const { Error: DiscordError, RangeError, TypeError } = require("../errors");
 
 const has = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
 
-const isObject = d => typeof d === 'object' && d !== null;
+const isObject = d => typeof d === "object" && d !== null;
 
 /**
 
@@ -18,11 +17,10 @@ const isObject = d => typeof d === 'object' && d !== null;
  */
 
 class Util {
-
   constructor() {
-
-    throw new Error(`The ${this.constructor.name} class may not be instantiated.`);
-
+    throw new Error(
+      `The ${this.constructor.name} class may not be instantiated.`
+    );
   }
 
   /**
@@ -38,21 +36,21 @@ class Util {
    */
 
   static flatten(obj, ...props) {
-
     if (!isObject(obj)) return obj;
 
     const objProps = Object.keys(obj)
 
-      .filter(k => !k.startsWith('_'))
+      .filter(k => !k.startsWith("_"))
 
       .map(k => ({ [k]: true }));
 
-    props = objProps.length ? Object.assign(...objProps, ...props) : Object.assign({}, ...props);
+    props = objProps.length
+      ? Object.assign(...objProps, ...props)
+      : Object.assign({}, ...props);
 
     const out = {};
 
     for (let [prop, newProp] of Object.entries(props)) {
-
       if (!newProp) continue;
 
       newProp = newProp === true ? prop : newProp;
@@ -61,32 +59,28 @@ class Util {
 
       const elemIsObj = isObject(element);
 
-      const valueOf = elemIsObj && typeof element.valueOf === 'function' ? element.valueOf() : null;
+      const valueOf =
+        elemIsObj && typeof element.valueOf === "function"
+          ? element.valueOf()
+          : null;
 
       // If it's a Collection, make the array of keys
 
-      if (element instanceof require('./Collection')) out[newProp] = Array.from(element.keys());
-
+      if (element instanceof require("./Collection"))
+        out[newProp] = Array.from(element.keys());
       // If the valueOf is a Collection, use its array of keys
-
-      else if (valueOf instanceof require('./Collection')) out[newProp] = Array.from(valueOf.keys());
-
+      else if (valueOf instanceof require("./Collection"))
+        out[newProp] = Array.from(valueOf.keys());
       // If it's an array, flatten each element
-
-      else if (Array.isArray(element)) out[newProp] = element.map(e => Util.flatten(e));
-
+      else if (Array.isArray(element))
+        out[newProp] = element.map(e => Util.flatten(e));
       // If it's an object with a primitive `valueOf`, use that value
-
-      else if (typeof valueOf !== 'object') out[newProp] = valueOf;
-
+      else if (typeof valueOf !== "object") out[newProp] = valueOf;
       // If it's a primitive
-
       else if (!elemIsObj) out[newProp] = element;
-
     }
 
     return out;
-
   }
 
   /**
@@ -101,36 +95,34 @@ class Util {
 
    */
 
-  static splitMessage(text, { maxLength = 2000, char = '\n', prepend = '', append = '' } = {}) {
-
+  static splitMessage(
+    text,
+    { maxLength = 2000, char = "\n", prepend = "", append = "" } = {}
+  ) {
     text = Util.resolveString(text);
 
     if (text.length <= maxLength) return [text];
 
     const splitText = text.split(char);
 
-    if (splitText.some(chunk => chunk.length > maxLength)) throw new RangeError('SPLIT_MAX_LEN');
+    if (splitText.some(chunk => chunk.length > maxLength))
+      throw new RangeError("SPLIT_MAX_LEN");
 
     const messages = [];
 
-    let msg = '';
+    let msg = "";
 
     for (const chunk of splitText) {
-
       if (msg && (msg + char + chunk + append).length > maxLength) {
-
         messages.push(msg + append);
 
         msg = prepend;
-
       }
 
-      msg += (msg && msg !== prepend ? char : '') + chunk;
-
+      msg += (msg && msg !== prepend ? char : "") + chunk;
     }
 
     return messages.concat(msg).filter(m => m);
-
   }
 
   /**
@@ -164,11 +156,9 @@ class Util {
    */
 
   static escapeMarkdown(
-
     text,
 
     {
-
       codeBlock = true,
 
       inlineCode = true,
@@ -185,24 +175,18 @@ class Util {
 
       codeBlockContent = true,
 
-      inlineCodeContent = true,
-
-    } = {},
-
+      inlineCodeContent = true
+    } = {}
   ) {
-
     if (!codeBlockContent) {
-
       return text
 
-        .split('```')
+        .split("```")
 
         .map((subString, index, array) => {
-
           if (index % 2 && index !== array.length - 1) return subString;
 
           return Util.escapeMarkdown(subString, {
-
             inlineCode,
 
             bold,
@@ -215,28 +199,22 @@ class Util {
 
             spoiler,
 
-            inlineCodeContent,
-
+            inlineCodeContent
           });
-
         })
 
-        .join(codeBlock ? '\\`\\`\\`' : '```');
-
+        .join(codeBlock ? "\\`\\`\\`" : "```");
     }
 
     if (!inlineCodeContent) {
-
       return text
 
         .split(/(?<=^|[^`])`(?=[^`]|$)/g)
 
         .map((subString, index, array) => {
-
           if (index % 2 && index !== array.length - 1) return subString;
 
           return Util.escapeMarkdown(subString, {
-
             codeBlock,
 
             bold,
@@ -247,14 +225,11 @@ class Util {
 
             strikethrough,
 
-            spoiler,
-
+            spoiler
           });
-
         })
 
-        .join(inlineCode ? '\\`' : '`');
-
+        .join(inlineCode ? "\\`" : "`");
     }
 
     if (inlineCode) text = Util.escapeInlineCode(text);
@@ -272,7 +247,6 @@ class Util {
     if (spoiler) text = Util.escapeSpoiler(text);
 
     return text;
-
   }
 
   /**
@@ -286,9 +260,7 @@ class Util {
    */
 
   static escapeCodeBlock(text) {
-
-    return text.replace(/```/g, '\\`\\`\\`');
-
+    return text.replace(/```/g, "\\`\\`\\`");
   }
 
   /**
@@ -302,9 +274,7 @@ class Util {
    */
 
   static escapeInlineCode(text) {
-
-    return text.replace(/(?<=^|[^`])`(?=[^`]|$)/g, '\\`');
-
+    return text.replace(/(?<=^|[^`])`(?=[^`]|$)/g, "\\`");
   }
 
   /**
@@ -318,27 +288,21 @@ class Util {
    */
 
   static escapeItalic(text) {
-
     let i = 0;
 
     text = text.replace(/(?<=^|[^*])\*([^*]|\*\*|$)/g, (_, match) => {
-
-      if (match === '**') return ++i % 2 ? `\\*${match}` : `${match}\\*`;
+      if (match === "**") return ++i % 2 ? `\\*${match}` : `${match}\\*`;
 
       return `\\*${match}`;
-
     });
 
     i = 0;
 
     return text.replace(/(?<=^|[^_])_([^_]|__|$)/g, (_, match) => {
-
-      if (match === '__') return ++i % 2 ? `\\_${match}` : `${match}\\_`;
+      if (match === "__") return ++i % 2 ? `\\_${match}` : `${match}\\_`;
 
       return `\\_${match}`;
-
     });
-
   }
 
   /**
@@ -352,17 +316,13 @@ class Util {
    */
 
   static escapeBold(text) {
-
     let i = 0;
 
     return text.replace(/\*\*(\*)?/g, (_, match) => {
-
       if (match) return ++i % 2 ? `${match}\\*\\*` : `\\*\\*${match}`;
 
-      return '\\*\\*';
-
+      return "\\*\\*";
     });
-
   }
 
   /**
@@ -376,17 +336,13 @@ class Util {
    */
 
   static escapeUnderline(text) {
-
     let i = 0;
 
     return text.replace(/__(_)?/g, (_, match) => {
-
       if (match) return ++i % 2 ? `${match}\\_\\_` : `\\_\\_${match}`;
 
-      return '\\_\\_';
-
+      return "\\_\\_";
     });
-
   }
 
   /**
@@ -400,9 +356,7 @@ class Util {
    */
 
   static escapeStrikethrough(text) {
-
-    return text.replace(/~~/g, '\\~\\~');
-
+    return text.replace(/~~/g, "\\~\\~");
   }
 
   /**
@@ -416,9 +370,7 @@ class Util {
    */
 
   static escapeSpoiler(text) {
-
-    return text.replace(/\|\|/g, '\\|\\|');
-
+    return text.replace(/\|\|/g, "\\|\\|");
   }
 
   /**
@@ -434,29 +386,25 @@ class Util {
    */
 
   static fetchRecommendedShards(token, guildsPerShard = 1000) {
+    if (!token) throw new DiscordError("TOKEN_MISSING");
 
-    if (!token) throw new DiscordError('TOKEN_MISSING');
+    return fetch(
+      `${DefaultOptions.http.api}/v${DefaultOptions.http.version}${Endpoints.botGateway}`,
+      {
+        method: "GET",
 
-    return fetch(`${DefaultOptions.http.api}/v${DefaultOptions.http.version}${Endpoints.botGateway}`, {
-
-      method: 'GET',
-
-      headers: { Authorization: `Bot ${token.replace(/^Bot\s*/i, '')}` },
-
-    })
-
+        headers: { Authorization: `Bot ${token.replace(/^Bot\s*/i, "")}` }
+      }
+    )
       .then(res => {
-
         if (res.ok) return res.json();
 
-        if (res.status === 401) throw new DiscordError('TOKEN_INVALID');
+        if (res.status === 401) throw new DiscordError("TOKEN_INVALID");
 
         throw res;
-
       })
 
       .then(data => data.shards * (1000 / guildsPerShard));
-
   }
 
   /**
@@ -478,17 +426,15 @@ class Util {
    */
 
   static parseEmoji(text) {
+    if (text.includes("%")) text = decodeURIComponent(text);
 
-    if (text.includes('%')) text = decodeURIComponent(text);
-
-    if (!text.includes(':')) return { animated: false, name: text, id: null };
+    if (!text.includes(":")) return { animated: false, name: text, id: null };
 
     const m = text.match(/<?(?:(a):)?(\w{2,32}):(\d{17,19})?>?/);
 
     if (!m) return null;
 
     return { animated: Boolean(m[1]), name: m[2], id: m[3] || null };
-
   }
 
   /**
@@ -504,9 +450,7 @@ class Util {
    */
 
   static cloneObject(obj) {
-
     return Object.assign(Object.create(obj), obj);
-
   }
 
   /**
@@ -524,25 +468,17 @@ class Util {
    */
 
   static mergeDefault(def, given) {
-
     if (!given) return def;
 
     for (const key in def) {
-
       if (!has(given, key) || given[key] === undefined) {
-
         given[key] = def[key];
-
       } else if (given[key] === Object(given[key])) {
-
         given[key] = Util.mergeDefault(def[key], given[key]);
-
       }
-
     }
 
     return given;
-
   }
 
   /**
@@ -558,11 +494,9 @@ class Util {
    */
 
   static convertToBuffer(ab) {
-
-    if (typeof ab === 'string') ab = Util.str2ab(ab);
+    if (typeof ab === "string") ab = Util.str2ab(ab);
 
     return Buffer.from(ab);
-
   }
 
   /**
@@ -578,15 +512,14 @@ class Util {
    */
 
   static str2ab(str) {
-
     const buffer = new ArrayBuffer(str.length * 2);
 
     const view = new Uint16Array(buffer);
 
-    for (var i = 0, strLen = str.length; i < strLen; i++) view[i] = str.charCodeAt(i);
+    for (var i = 0, strLen = str.length; i < strLen; i++)
+      view[i] = str.charCodeAt(i);
 
     return buffer;
-
   }
 
   /**
@@ -608,7 +541,6 @@ class Util {
    */
 
   static makeError(obj) {
-
     const err = new Error(obj.message);
 
     err.name = obj.name;
@@ -616,7 +548,6 @@ class Util {
     err.stack = obj.stack;
 
     return err;
-
   }
 
   /**
@@ -632,17 +563,13 @@ class Util {
    */
 
   static makePlainError(err) {
-
     return {
-
       name: err.name,
 
       message: err.message,
 
-      stack: err.stack,
-
+      stack: err.stack
     };
-
   }
 
   /**
@@ -664,21 +591,17 @@ class Util {
    */
 
   static moveElementInArray(array, element, newIndex, offset = false) {
-
     const index = array.indexOf(element);
 
     newIndex = (offset ? index : 0) + newIndex;
 
     if (newIndex > -1 && newIndex < array.length) {
-
       const removedElement = array.splice(index, 1)[0];
 
       array.splice(newIndex, 0, removedElement);
-
     }
 
     return array.indexOf(element);
-
   }
 
   /**
@@ -706,13 +629,11 @@ class Util {
    */
 
   static resolveString(data) {
+    if (typeof data === "string") return data;
 
-    if (typeof data === 'string') return data;
-
-    if (Array.isArray(data)) return data.join('\n');
+    if (Array.isArray(data)) return data.join("\n");
 
     return String(data);
-
   }
 
   /**
@@ -802,27 +723,20 @@ class Util {
    */
 
   static resolveColor(color) {
+    if (typeof color === "string") {
+      if (color === "RANDOM") return Math.floor(Math.random() * (0xffffff + 1));
 
-    if (typeof color === 'string') {
+      if (color === "DEFAULT") return 0;
 
-      if (color === 'RANDOM') return Math.floor(Math.random() * (0xffffff + 1));
-
-      if (color === 'DEFAULT') return 0;
-
-      color = Colors[color] || parseInt(color.replace('#', ''), 16);
-
+      color = Colors[color] || parseInt(color.replace("#", ""), 16);
     } else if (Array.isArray(color)) {
-
       color = (color[0] << 16) + (color[1] << 8) + color[2];
-
     }
 
-    if (color < 0 || color > 0xffffff) throw new RangeError('COLOR_RANGE');
-
-    else if (color && isNaN(color)) throw new TypeError('COLOR_CONVERT');
+    if (color < 0 || color > 0xffffff) throw new RangeError("COLOR_RANGE");
+    else if (color && isNaN(color)) throw new TypeError("COLOR_CONVERT");
 
     return color;
-
   }
 
   /**
@@ -836,19 +750,12 @@ class Util {
    */
 
   static discordSort(collection) {
-
     return collection.sorted(
-
       (a, b) =>
-
         a.rawPosition - b.rawPosition ||
-
         parseInt(b.id.slice(0, -10)) - parseInt(a.id.slice(0, -10)) ||
-
-        parseInt(b.id.slice(10)) - parseInt(a.id.slice(10)),
-
+        parseInt(b.id.slice(10)) - parseInt(a.id.slice(10))
     );
-
   }
 
   /**
@@ -874,7 +781,6 @@ class Util {
    */
 
   static setPosition(item, position, relative, sorted, route, reason) {
-
     let updatedItems = sorted.array();
 
     Util.moveElementInArray(updatedItems, item, position, relative);
@@ -882,7 +788,6 @@ class Util {
     updatedItems = updatedItems.map((r, i) => ({ id: r.id, position: i }));
 
     return route.patch({ data: updatedItems, reason }).then(() => updatedItems);
-
   }
 
   /**
@@ -900,11 +805,9 @@ class Util {
    */
 
   static basename(path, ext) {
-
     let res = parse(path);
 
-    return ext && res.ext.startsWith(ext) ? res.name : res.base.split('?')[0];
-
+    return ext && res.ext.startsWith(ext) ? res.name : res.base.split("?")[0];
   }
 
   /**
@@ -920,31 +823,25 @@ class Util {
    */
 
   static idToBinary(num) {
-
-    let bin = '';
+    let bin = "";
 
     let high = parseInt(num.slice(0, -10)) || 0;
 
     let low = parseInt(num.slice(-10));
 
     while (low > 0 || high > 0) {
-
       bin = String(low & 1) + bin;
 
       low = Math.floor(low / 2);
 
       if (high > 0) {
-
         low += 5000000000 * (high % 2);
 
         high = Math.floor(high / 2);
-
       }
-
     }
 
     return bin;
-
   }
 
   /**
@@ -960,11 +857,9 @@ class Util {
    */
 
   static binaryToID(num) {
-
-    let dec = '';
+    let dec = "";
 
     while (num.length > 50) {
-
       const high = parseInt(num.slice(0, -32), 2);
 
       const low = parseInt((high % 10).toString(2) + num.slice(-32), 2);
@@ -972,29 +867,23 @@ class Util {
       dec = (low % 10).toString() + dec;
 
       num =
-
         Math.floor(high / 10).toString(2) +
-
         Math.floor(low / 10)
 
           .toString(2)
 
-          .padStart(32, '0');
-
+          .padStart(32, "0");
     }
 
     num = parseInt(num, 2);
 
     while (num > 0) {
-
       dec = (num % 10).toString() + dec;
 
       num = Math.floor(num / 10);
-
     }
 
     return dec;
-
   }
 
   /**
@@ -1008,9 +897,7 @@ class Util {
    */
 
   static removeMentions(str) {
-
-    return str.replace(/@/g, '@\u200b');
-
+    return str.replace(/@/g, "@\u200b");
   }
 
   /**
@@ -1026,83 +913,61 @@ class Util {
    */
 
   static cleanContent(str, message) {
-
     str = str
 
       .replace(/<@!?[0-9]+>/g, input => {
+        const id = input.replace(/<|!|>|@/g, "");
 
-        const id = input.replace(/<|!|>|@/g, '');
-
-        if (message.channel.type === 'dm') {
-
+        if (message.channel.type === "dm") {
           const user = message.client.users.cache.get(id);
 
           return user ? Util.removeMentions(`@${user.username}`) : input;
-
         }
 
         const member = message.channel.guild.members.cache.get(id);
 
         if (member) {
-
           return Util.removeMentions(`@${member.displayName}`);
-
         } else {
-
           const user = message.client.users.cache.get(id);
 
           return user ? Util.removeMentions(`@${user.username}`) : input;
-
         }
-
       })
 
       .replace(/<#[0-9]+>/g, input => {
-
-        const channel = message.client.channels.cache.get(input.replace(/<|#|>/g, ''));
+        const channel = message.client.channels.cache.get(
+          input.replace(/<|#|>/g, "")
+        );
 
         return channel ? `#${channel.name}` : input;
-
       })
 
       .replace(/<@&[0-9]+>/g, input => {
+        if (message.channel.type === "dm") return input;
 
-        if (message.channel.type === 'dm') return input;
-
-        const role = message.guild.roles.cache.get(input.replace(/<|@|>|&/g, ''));
+        const role = message.guild.roles.cache.get(
+          input.replace(/<|@|>|&/g, "")
+        );
 
         return role ? `@${role.name}` : input;
-
       });
 
-    if (message.client.options.disableMentions === 'everyone') {
-
+    if (message.client.options.disableMentions === "everyone") {
       str = str.replace(/@([^<>@ ]*)/gmsu, (match, target) => {
-
         if (target.match(/^[&!]?\d+$/)) {
-
           return `@${target}`;
-
         } else {
-
           return `@\u200b${target}`;
-
         }
-
       });
-
     }
 
-    if (message.client.options.disableMentions === 'all') {
-
+    if (message.client.options.disableMentions === "all") {
       return Util.removeMentions(str);
-
     } else {
-
       return str;
-
     }
-
   }
 
   /**
@@ -1116,9 +981,7 @@ class Util {
    */
 
   static cleanCodeBlockContent(text) {
-
-    return text.replace(/```/g, '`\u200b``');
-
+    return text.replace(/```/g, "`\u200b``");
   }
 
   /**
@@ -1134,16 +997,10 @@ class Util {
    */
 
   static delayFor(ms) {
-
     return new Promise(resolve => {
-
       setTimeout(resolve, ms);
-
     });
-
   }
-
 }
 
 module.exports = Util;
-
