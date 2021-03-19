@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
+
 
 module.exports = {
   name: "warn",
@@ -26,7 +26,7 @@ module.exports = {
     );
 
     let embed = new MessageEmbed()
-      .setColor(Color)
+      .setColor('#ff0000')
       .setTitle(`Member Warned!`)
       .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
       .addField(`Warned Member`, `${Member.user.tag} (${Member.user.id})`)
