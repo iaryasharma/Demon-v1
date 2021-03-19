@@ -11,6 +11,7 @@ const client = new discord.Client({
 });
 const moment = require("moment");
 require("./uptime.js");
+client.db = require("quick.db");
 client.commands = new discord.Collection();
 client.aliases = new discord.Collection();
 ["command"].forEach(handler => {
