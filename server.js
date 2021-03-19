@@ -74,20 +74,50 @@ client.on("ready", async () => {
     .catch(error => console.log(error));
 });
 
-
 client.on("message", async message => {
-  const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
-  if (message.content.match(prefixMention)) {
-    return message.reply(`
-** PREFIX FOR THE BOT IS = !! **
+      const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
 
-`);
-  }
-  if (!message.content.startsWith(prefix)) return;
+      if (message.content.match(prefixMention)) {
+        let mention = new discord.MessageEmbed()
+          .setTitle(
+            ` ${client.user.username} `
+          )
+          .addField(
+            "➡️ PREFIX",
+            `\`${prefix}\``
+          )
+          .addField(
+            "🛠️ USAGE",
+            "`" +
+              prefix +
+              "help` - **for bots help menu** \n" +
+              "`" +
+              prefix +
+              "support` - **for bots support** \n" +
+              "`" +
+              prefix +
+              "invite` - **to invite the bot in youre server** \n" +
+              "`" +
+              prefix +
+              "author` **to get the details about bot developer** \n"
+          )
+          .setColor("#ff0000")
+          .setThumbnail(client.user.displayAvatarURL())
+          .setFooter(
+            "Requested By : " + message.author.tag,
+            message.author.displayAvatarURL()
+          )
+          .setTimestamp((message.timestamp = Date.now()));
+        message.channel.send(mention);
+        return;
+      }
 
-  if (!message.member)
-    message.member = await message.guild.fetchMember(message);
+      if (message.author.bot) return;
+      if (!message.guild) return;
+      if (!message.content.startsWith(prefix)) return;
 
+      if (!message.member)
+        message.member = await message.guild.fetchMember(message);
   const args = message.content
     .slice(prefix.length)
     .trim()
