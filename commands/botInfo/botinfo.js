@@ -36,6 +36,10 @@ module.exports = {
           .addField("<:GC_Computer:810137312646004736> Platform", `\`\`${os.platform()}\`\``, true)
           .addField("API Latency", `\`${(client.ws.ping)}ms\``)  
           .addField("**Developer**", "**ARYA** | <@730424922639302693>")
+       .setFooter("Requested By :-" + message.author.tag,
+        message.author.displayAvatarURL())
+      .setTimestamp((message.timestamp = Date.now()));
+
       message.channel.send(botinfo)
     message.react("<a:GC_right:810000945562910761>")
   });
