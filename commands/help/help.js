@@ -7,7 +7,7 @@ module.exports = {
   description: "BOT GET SOON UPDATES ",
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
-      .setTitle(`BOT  HELP MENU `)
+      .setTitle(`<:Demon_2:822458701037174834> BOT  HELP MENU <:Demon_2:822458701037174834>`)
       .setDescription(
         `
 <a:GC_Mod:810120702966759454> __**MODERATION COMMANDS**__ 
