@@ -79,7 +79,7 @@ client.on("message", async message => {
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
     return message.reply(`
-** PREFIX FOR THE BOT IS = T **
+** PREFIX FOR THE BOT IS = !! **
 
 `);
   }
