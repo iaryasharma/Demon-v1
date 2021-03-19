@@ -10,28 +10,31 @@ module.exports = {
     let embed = new discord.MessageEmbed()
 
       .setTitle(
-        `<:marvel_bot:814481094732415026> ABOUT BOT DEVELOPER <:marvel_bot:814481094732415026>`
+        `<:Demon_2:822458701037174834> ABOUT BOT DEVELOPER <:Demon_2:822458701037174834>`
       )
       .addField(
-        "<:marvel_bot_dev:815466828028969000> TAG",
+        "<:GC_Botdev:822463194286784562> TAG",
         "```" + client.users.cache.get(owner).tag + "```"
       )
-      .addField("<:marvel_bot_dev:815466828028969000> Id", owner)
+      .addField("<:GC_Botdev:822463194286784562> Id", owner)
+    
+      .addField("<:GC_Botdev:822463194286784562> Mention", "<@730424922639302693>" )
       //   .addField(
       //      "<:marvel_discord:814792681157820416> Discord Server",
       //      "[SUPPORT SERVER](https://discord.gg/wXemeVm)"
       //    )
       .addField(
-        "<:marvel_instagram:814792972289310735> Instagram",
-        "[_hyper_arya_(https://www.instagram.com/_hyper_arya_/)"
+        "<:GC_insta:822462878849826856> Instagram",
+        "[_hyper_arya_](https://www.instagram.com/_hyper_arya_/)"
       )
-      .addField("<:marvel_js:814806752184631317> Code Library", "discord.js")
+      .addField("<:GC_Js:822461547850629151> Code Library", "discord.js")
       //   .setThumbnail(
       //      "https://cdn.discordapp.com/avatars/672027578181353473/33f98d80d3825b6cdea4ffa66259bc5b.png?size=1024"
       //     )
       //     .setImage(
       //       "https://cdn.discordapp.com/attachments/799624878109622312/814801800531542036/20210226_154023.jpg"
       //     )
+    
       .setColor("RED")
       .setFooter(
         "Requested By :-" + message.author.tag,
