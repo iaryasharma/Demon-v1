@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-const { bowner } = require("../../config.json");
+const { owner } = require("../../config.json");
 module.exports = {
   name: "author",
   aliases: ["botdev", "dev"],
@@ -14,7 +14,7 @@ module.exports = {
       )
       .addField(
         "<:marvel_bot_dev:815466828028969000> TAG",
-        "```" + client.users.cache.get(bowner).tag + "```"
+        "```" + client.users.cache.get(owner).tag + "```"
       )
       .addField("<:marvel_bot_dev:815466828028969000> Id", owner)
       //   .addField(
@@ -23,7 +23,7 @@ module.exports = {
       //    )
       .addField(
         "<:marvel_instagram:814792972289310735> Instagram",
-        "[__hyper__arya__](https://instagram.com/kool_damon?igshid=19ucgccojy4cp)"
+        "[_hyper_arya_(https://www.instagram.com/_hyper_arya_/)"
       )
       .addField("<:marvel_js:814806752184631317> Code Library", "discord.js")
       //   .setThumbnail(
