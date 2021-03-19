@@ -21,7 +21,7 @@ module.exports = {
       }
       const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
       const botinfo = new Discord.MessageEmbed()
-          .setAuthor("client.user.username")
+          .setAuthor(client.user.username)
           .setTitle("__**Stats:**__")
           .setColor("#7cfff5")
           .addField("⏳ Mem Usage", `\`${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB\``, true)

@@ -34,7 +34,7 @@ HE IS A PROFSSIONAL SERVER DESIGNER, MANAGER\`` )
       )
       .setTimestamp((message.timestamp = Date.now()));
     message.react("815466828028969000");
-
+    message.react("<a:GC_right:810000945562910761>")
     message.channel.send(embed);
   }
 };
