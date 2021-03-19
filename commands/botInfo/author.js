@@ -19,6 +19,9 @@ module.exports = {
       .addField("<:GC_Botdev:822463194286784562> Id", owner)
     
       .addField("<:GC_Botdev:822463194286784562> Mention", "<@730424922639302693>" )
+    
+      .addField("<:GC_Botdev:822463194286784562> About",  `_THE CREATOR OF THE BOT Is **Frag Nite(ARYA)** 
+      HE IS A PROFSSIONAL SERVER DESIGNER,MANAGER_` )
       //   .addField(
       //      "<:marvel_discord:814792681157820416> Discord Server",
       //      "[SUPPORT SERVER](https://discord.gg/wXemeVm)"
