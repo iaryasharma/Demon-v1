@@ -27,7 +27,7 @@ HE IS A PROFSSIONAL SERVER DESIGNER, MANAGER\`` )
         "[_hyper_arya_](https://www.instagram.com/_hyper_arya_/)"
       )
       .addField("<:GC_Js:822461547850629151> Code Library", "discord.js")
-      .setColor("RED")
+      .setColor("#7cfff5")
       .setFooter(
         "Requested By :-" + message.author.tag,
         message.author.displayAvatarURL()

@@ -9,8 +9,9 @@ module.exports = {
       .setDescription(
         `[INVITE BOT](https://discord.com/oauth2/authorize?client_id=795487199197528095&scope=bot&permissions=1933049087)`
       )
-      .setColor("#00ff00")
-      .setFooter(`Arya ØP`)
+      .setColor("#7cfff5")
+      .setFooter("Requested By :-" + message.author.tag,
+        message.author.displayAvatarURL())
       .setTimestamp((message.timestamp = Date.now()));
 
     message.channel.send(embed);
