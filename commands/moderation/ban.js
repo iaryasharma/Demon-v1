@@ -31,9 +31,9 @@ module.exports = {
       return message.channel.send(`Please Don't Ban Me ;-;`);
 
     if (Member.id === message.guild.owner.user.id)
-      return message.channel.send(`You Can't Ban Owner Of Server`);
+      return message.channel.send(`You Can't Ban Server Owner!`);
     if (Member.id === `${owner}`)
-      return message.channel.send(`You Can't Ban Owner Of BOT!`);
+      return message.channel.send(`You Can't Ban My Owner!`);
     let Reason = args.slice(1).join(" ");
 
     let User = message.guild.member(Member);

@@ -32,9 +32,9 @@ module.exports = {
       return message.channel.send(`Please Don't Kick Me ;-;`);
 
     if (Member.id === message.guild.owner.user.id)
-      return message.channel.send(`You Can't Kick Owner Of Server!`);
+      return message.channel.send(`You Can't Kick Server Owner!`);
     if (Member.id === `${owner}`)
-      return message.channel.send(`You Can't Kick Owner Of BOT!`);
+      return message.channel.send(`You Can't Kick My Owner!`);
     let Reason = args.slice(1).join(" ");
     let User = message.guild.member(Member);
 

@@ -26,9 +26,9 @@ module.exports = {
         `Please Create Mute Role | Role Name : Muted`
       );
     if (Member.id === message.guild.owner.user.id)
-      return message.channel.send(`You Can't Mute Owner Of Server`);
+      return message.channel.send(`You Can't Mute Server Owner!`);
     if (Member.id === `${owner}`)
-      return message.channel.send(`You Can't Mute Owner Of BOT!`);
+      return message.channel.send(`You Can't Mute My Owner!`);
 
     if (Member.roles.cache.has(Role)) {
       return message.channel.send(`Member Is Already Muted!`);

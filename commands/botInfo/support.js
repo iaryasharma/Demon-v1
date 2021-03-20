@@ -9,10 +9,11 @@ module.exports = {
     .setTitle(`SUPPORT SERVER`)
     .setDescription(`[CLICK HERE](https://discord.gg/pvXGuZz5Qa)`)
     .setColor("#7cfff5")
-    .setFooter(`Arya ØP`)
-    .setTimestamp(message.timestamp = Date.now())
-    
-    message.channel .send(embed)
+    .setFooter("Requested By :-" + message.author.tag,
+        message.author.displayAvatarURL())
+      .setTimestamp((message.timestamp = Date.now()));
+
+    message.channel.send(embed);
     message.react("<a:GC_right:810000945562910761>");
   }
 }

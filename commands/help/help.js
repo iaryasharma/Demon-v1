@@ -11,7 +11,7 @@ module.exports = {
       .setDescription(
         `
 <a:GC_Mod:810120702966759454> __**MODERATION COMMANDS**__ 
-\`addrole,removerole,addemoji,enlarge,whois,announce,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
+\`addrole(give role to member),removerole(remove role from member,addemoji,enlarge,whois,announce,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
 
 <a:GC_Fun:810120996953522177> __**FUN COMMANDS**__ 
 \`advice,anime,ascii,cat,cry,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,say,slap,tell\`

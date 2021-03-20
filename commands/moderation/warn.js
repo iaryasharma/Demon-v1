@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-
+const { prefix, owner } = require("../../config.json");
 
 module.exports = {
   name: "warn",
@@ -15,7 +15,10 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
 
-    if (!Member) return message.channel.send(`Please Mention A User!`);
+    if (Member.id === message.guild.owner.user.id)
+      return message.channel.send(`You Can't Warn Server Owner!`);
+    if (Member.id === `${owner}`)
+      return message.channel.send(`You Can't Warn My Owner!`);
 
     let Reason = args.slice(1).join(" ");
 
