@@ -30,8 +30,6 @@ module.exports = {
 
 <a:GC_Discord:810133251767009320> __**BOT INFO**__
 \`botinfo,support,invite,author,ping\`
-
-Please Note Some Fun Commands are not working they will be updated soon and some new features would also be added 
 `
       )
 
