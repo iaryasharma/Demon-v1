@@ -1,5 +1,6 @@
 const discord = require("discord.js");
 const { prefix, owner } = require("../../config.json");
+const { cowner } = require("../../config.json");
 
 module.exports = {
   name: "ban",
@@ -34,6 +35,9 @@ module.exports = {
       return message.channel.send(`You Can't Ban Server Owner!`);
     if (Member.id === `${owner}`)
       return message.channel.send(`You Can't Ban My Owner!`);
+    if (Member.id === `${cowner}`)
+      return message.channel.send(`You Can't Ban Management Team Member!`);
+    
     let Reason = args.slice(1).join(" ");
 
     let User = message.guild.member(Member);
