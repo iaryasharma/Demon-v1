@@ -7,6 +7,14 @@ module.exports = {
     usage: "say <message>",
 
     async run (client, message, args) {
+      if (!message.guild.me.permissions.has("MANAGE_MESSAGES"))
+      return message.channel.send(
+        "I Don't Have Permission To Use This Command! Manage Messages"
+      );
+    if (!message.member.permissions.has("MANAGE_MESSAGES"))
+      return message.channel.send(
+        `You Don't Have Permission To Use This Command! Manage `
+      );
         let msg;
         let textChannel = message.mentions.channels.first()
         message.delete()

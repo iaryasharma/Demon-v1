@@ -11,10 +11,10 @@ module.exports = {
       .setDescription(
         `
 <a:GC_Mod:810120702966759454> __**MODERATION COMMANDS**__ 
-\`addrole(give role to member),removerole(remove role from member,addemoji,enlarge,whois,announce,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings,resetwarns\`
+\`addrole(give role to member),removerole(remove role from member),createrole(crole),createchannel(cchannel),addemoji,enlarge,whois,announce,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings\`
 
 <a:GC_Fun:810120996953522177> __**FUN COMMANDS**__ 
-\`advice,anime,ascii,cat,cry,dog,fact,hug,joke,kiss,kpop,math,meme,mw,neko,pat,punch,say,slap,tell\`
+\`advice,anime,ascii,cat,cry,dog,fact,hug,joke,kiss,dicksize(pp),howgay,kpop,math,meme,mw,neko,pat,punch,say,slap,\`
 
 <a:GC_welcome:810118157967949895> __**WELCOME COMMANDS**__  
 \`setwelcome <#channel>,setwmessage,rsetwmessage(resets welcome message),wexample(welcome example)\`
