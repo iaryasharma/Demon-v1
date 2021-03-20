@@ -8,8 +8,7 @@ module.exports = {
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
       .setTitle(`<:Demon_2:822458701037174834> BOT  HELP MENU <:Demon_2:822458701037174834>`)
-      .setDescription(
-        `
+      .setDescription( `
 <a:GC_Mod:810120702966759454> __**MODERATION COMMANDS**__ 
 \`addrole(give role to member),removerole(remove role from member),createrole(crole),createchannel(cchannel),addemoji,enlarge,whois,say,announce,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings\`
 
@@ -30,8 +29,7 @@ module.exports = {
 
 <a:GC_Discord:810133251767009320> __**BOT INFO**__
 \`botinfo,support,invite,author,ping\`
-`
-      )
+`)
 
       .setThumbnail(client.user.displayAvatarURL())
       .setColor("#7cfff5")
