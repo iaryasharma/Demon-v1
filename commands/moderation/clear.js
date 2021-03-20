@@ -1,7 +1,7 @@
 module.exports = {
   name: "purge",
 
-  aliases: ["clear", "purge"],
+  aliases: ["clear", "clean", "purge"],
 
   description: "Deletes Given Number Of Messages",
 

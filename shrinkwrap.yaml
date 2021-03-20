@@ -3,6 +3,7 @@ dependencies:
   animejs: 3.2.1
   ascii-table: 0.0.9
   canvas-senpai: 0.1.6
+  colornames: 1.1.1
   cpu-stat: 2.0.1
   discord-giveaways: 4.4.3
   discord.js: 12.5.1
@@ -789,6 +790,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
+  /colornames/1.1.1:
+    dev: false
+    resolution:
+      integrity: sha1-+IiQMGhcfE/54qVZ9Qd+t2qBb5Y=
   /combined-stream/1.0.8:
     dependencies:
       delayed-stream: 1.0.0
@@ -3043,6 +3048,7 @@ specifiers:
   animejs: ^3.2.0
   ascii-table: ^0.0.9
   canvas-senpai: ^0.1.6
+  colornames: ^1.1.1
   cpu-stat: ^2.0.1
   discord-giveaways: ^4.4.3
   discord.js: ^12.2.0
