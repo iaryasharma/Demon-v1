@@ -1,4 +1,7 @@
-const { prefix } = require("./config.json");
+const {
+  prefix,
+  owner,
+} = require("./config.json");
 const { config } = require("dotenv");
 const { Random } = require("something-random-on-discord") 
 const { GiveawaysManager } = require("discord-giveaways");
@@ -32,7 +35,7 @@ client.on("guildCreate", async guild => {
     .addField("Server Name", `${guild.name}`)
     .addField("Server Owner", `${owner.username}`)
     .addField("Member Count", guild.memberCount)
-    .addField("Invite Link", `[Invite](${Invite})`)
+    .addField("Invite Link", `[CLICK TO JOIN](${Invite})`)
     .setColor("GREEN")
     .setFooter("Joined A New Guild")
     .setTimestamp()
@@ -75,16 +78,16 @@ client.on("ready", async () => {
 });
 
 
-    //  client.on("message", async message => {
-    //     let prefix;
-    //
-    //     try {
-    //       if (
-    //         message.mentions.has(bowner) &&
-    //         !message.mentions.has(message.guild.id)
-    //      ) {
-    //         return message.react("815466828028969000");
-    //       }
+      client.on("message", async message => {
+         let prefix;
+    
+         try {
+           if (
+             message.mentions.has(owner) &&
+             !message.mentions.has(message.guild.id)
+          ) {
+             return message.react("<a:Gc_Botdeveloper:823261796278075434>");
+           }
          } catch {
            return;
         }
