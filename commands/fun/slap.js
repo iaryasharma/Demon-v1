@@ -27,7 +27,7 @@ module.exports = {
 
     const embed = new MessageEmbed()
 
-      .setColor("#6cffbd")
+      .setColor("#ff0000")
       .setTitle("SLAP")
       .setDescription(`${message.author} slaps ${victim}`)
       .setImage(body.url)
