@@ -65,14 +65,17 @@ client.on("ready", async () => {
   channel.join().then(connection => {
     connection.voice.setSelfDeaf(true);
   });
+    try {
+    console.log(client.user.tag + " Has Logged In");
+    client.user.setActivity(` ${prefix}botinfo | ${prefix}help `, {
+      type: "LISTENING"
+    });
+    //setInterval(pickStatus, 5000);
+  } catch (err) {
+    console.log(err);
+  }
+  
   });
-
-  client.on("ready", async () => {
-  console.log(client.user.tag + " Has Logged In");
-  client.user
-    .setActivity(`Servers : ${await client.guilds.cache.size} | Users : ${await client.users.cache.size}`, { type: "WATCHING" })
-    .catch(error => console.log(error));
-});
 
 client.on("message", async message => {
       const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
