@@ -142,9 +142,9 @@ client.on("guildMemberAdd", async member => {
 
   let default_url = `https://media.discordapp.net/attachments/596216470397255690/818195770124795945/mOZpPGs.gif`;
 
-  let default_msg = `<a:GC_arrow:810003254485450802> **WELCOME ${member} TO THE ${member.guild}**
+  let default_msg = `<a:GC_star:810009286129876992> **WELCOME ${member} <a:GC_star:810009286129876992> **
   
-**━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
+**━━━━━━━━━━━━━━━━━━━━━━**
 
 <a:GC_Pin:818795895856037898> **MAKE SURE TO READ RULES** 
 
@@ -177,15 +177,15 @@ client.on("guildMemberAdd", async member => {
 
   let wembed = new discord.MessageEmbed()
     .setAuthor(member.guild)
-    .setTitle("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    .setTitle("━━━━━━━━━━━━━━━━━━━━━━")
     .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
-    .setColor("RANDOM")
+    .setColor("#ff0073")
     .setImage(url)
     .setTimestamp()
     .setDescription(msg)
     .setFooter(member.user.tag, member.user.displayAvatarURL())
     .addField(
-      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "━━━━━━━━━━━━━━━━━━━━━━",
       `
 
 <a:GC_check:810001170734120990> **MEMBER USERNAME :-** __**${member.user.tag}**__
@@ -197,7 +197,7 @@ client.on("guildMemberAdd", async member => {
 `
     )
     .addField(
-      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "━━━━━━━━━━━━━━━━━━━━━━",
       `
 
 <a:GC_Golden_Heart:818793534533926953> **THANKS FOR JOINING ${member.guild}** <a:GC_Golden_Heart:818793534533926953>`

@@ -63,7 +63,7 @@ module.exports = {
       .setAuthor(message.guild)
       .setTitle("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
       // .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
-      .setColor("RANDOM")
+      .setColor("#ff0073")
       //   .setImage(url)
       .setTimestamp()
       .setDescription(msg)
