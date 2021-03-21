@@ -47,12 +47,14 @@ module.exports = {
       setTimeout(function() {
         User.kick({ reason: `${Reason || "No Reason Provided!"}` });
       }, 2000);
+      var serverIcon = message.guild.iconURL();
       let embed = new Discord.MessageEmbed()
         .setColor(Color)
         .setTitle(`Member Kicked!`)
         .addField(`Moderator`, `${message.author.tag} <@${message.author.id}>`)
         .addField(`Kicked Member`, `${Member.tag} <@${Member.id}>`)
         .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
+        .setThumbnail (serverIcon)
         .setFooter(`Requested by ${message.author.username}`)
         .setTimestamp();
       if (User && Member.bot === false)

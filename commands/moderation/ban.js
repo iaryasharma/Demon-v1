@@ -50,12 +50,14 @@ module.exports = {
       setTimeout(function() {
         User.ban({ reason: `${Reason || "No Reason Provided!"}` });
       }, 2000);
+      var serverIcon = message.guild.iconURL();
       let embed = new Discord.MessageEmbed()
         .setColor(Color)
         .setTitle(`Member Banned!`)
         .addField(`Moderator`, ` <@${message.author.id}> (${message.author.id})`)
         .addField(`Banned Member`, `<@${Member.id}> (${Member.id})`)
         .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
+        .setThumbnail (serverIcon)
         .setFooter(`Requested by ${message.author.username}`)
         .setTimestamp();
       if (User && Member.bot === false)

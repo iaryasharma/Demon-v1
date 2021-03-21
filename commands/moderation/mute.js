@@ -36,15 +36,15 @@ module.exports = {
     }
 
     let Reason = args.slice(1).join(" ");
-var serverIcon = message.guild.iconURL();
+    var serverIcon = message.guild.iconURL();
     let Embed = new MessageEmbed()
       .setColor("#ff0000")
       .setTitle(`Member Muted!`)
-      .addField(`Moderator`, `${message.author.tag} <@${message.author.id}>`)
-      .addField(`MUTED Member`, `${Member.user.tag} <@${Member.user.id}>`)
+      .addField(`Moderator`, `<@${message.author.id}> (${message.author.id})`)
+      .addField(`MUTED Member`, `<@${Member.user.id}> (${Member.user.id})`)
       .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
       .setThumbnail (serverIcon)
-      .setFooter(`In server ${message.guild.name}`)
+      .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 
     if (Role && !Member.roles.cache.has(Role)) {

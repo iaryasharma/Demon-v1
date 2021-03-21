@@ -36,6 +36,7 @@ module.exports = {
       .addField(`Warned Member`, `${Member.user.tag} <@${Member.user.id}>`)
       .addField(`Now Member Warnings`, Warnings)
       .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
+    .setThumbnail (serverIcon)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
     
