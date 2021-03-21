@@ -62,7 +62,7 @@ module.exports = {
         );
       message.channel.send(embed);
       console.log(
-        `User: ${Member.tag} (${Member.id}) Just Got Kicked From ${
+        `User: ${Member.user.tag} (${Member.id}) Just Got Kicked From ${
           message.guild.name
         } For ${Reason || "No Reason Provided!"}`
       );
