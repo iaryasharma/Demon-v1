@@ -10,7 +10,7 @@ module.exports = {
     let embed = new discord.MessageEmbed()
 
       .setTitle(
-        `<:Demon_2:822458701037174834> ABOUT DEVELOPER Frag Nite <:Demon_2:822458701037174834>`
+        `<:Demon_2:822458701037174834> ABOUT DEVELOPER FRAG NITE <:Demon_2:822458701037174834>`
       )
       .addField(
         "<:GC_Botdev:822463194286784562> TAG",
@@ -24,7 +24,7 @@ module.exports = {
 HE IS A PROFSSIONAL SERVER DESIGNER, MANAGER\`` )
       .addField(
         "<:GC_insta:822462878849826856> Instagram",
-        "[_hyper_arya_](https://www.instagram.com/_hyper_arya_/)"
+        "[Arya.s_007](https://www.instagram.com/arya.s_007/)"
       )
       .addField("<:GC_Js:822461547850629151> Code Library", "discord.js")
       .setColor("#7cfff5")
