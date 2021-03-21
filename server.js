@@ -74,6 +74,21 @@ client.on("ready", async () => {
     .catch(error => console.log(error));
 });
 
+
+    //  client.on("message", async message => {
+    //     let prefix;
+    //
+    //     try {
+    //       if (
+    //         message.mentions.has(bowner) &&
+    //         !message.mentions.has(message.guild.id)
+    //      ) {
+    //         return message.react("815466828028969000");
+    //       }
+         } catch {
+           return;
+        }
+      });
     client.on("message", async message => {
       const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
 
