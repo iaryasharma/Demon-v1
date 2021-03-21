@@ -11,7 +11,7 @@ module.exports = {
     //Start
     message.delete();
     let sizes = [
-      "He Doesn't have a Dick",
+      "Sorry But He Doesn't have a Dick",
       "8D",
       "8=D",
       "8==D",
