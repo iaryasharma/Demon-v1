@@ -34,10 +34,9 @@ module.exports = {
         message.author.username,
         message.author.avatarURL({ dynamic: true, size: 2048 })
       )
-
-      //    .setThumbnail(
-      //      message.author.displayAvatarURL({ dynamic: true, size: 2048 })
-      //   )
+      .setThumbnail(
+      message.author.displayAvatarURL({ dynamic: true, size: 2048 })
+      )
 
       .setColor("#11ff01")
       .addField(
@@ -67,7 +66,7 @@ module.exports = {
       .setImage(url)
       .setTimestamp()
       .setDescription(msg)
-      .setFooter(message.author.tag, message.author.displayAvatarURL());
+      .setFooter(message.guild, message.guild.iconURL())
 
     message.channel.send(embed);
   }

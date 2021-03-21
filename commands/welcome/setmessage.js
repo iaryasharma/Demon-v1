@@ -39,9 +39,9 @@ module.exports = {
       //      message.author.displayAvatarURL({ dynamic: true, size: 2048 })
       //   )
 
-      .setColor("RANDOM")
+      .setColor("#ff0073")
       .addField(
-        "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+        "━━━━━━━━━━━━━━━━━━━━",
 
         `
 
@@ -53,7 +53,7 @@ module.exports = {
       )
 
       .addField(
-        "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+        "━━━━━━━━━━━━━━━━━━━━",
 
         `
 
@@ -67,7 +67,7 @@ module.exports = {
       //   .setImage(url)
       .setTimestamp()
       .setDescription(msg)
-      .setFooter(message.author.tag, message.author.displayAvatarURL());
+      .setFooter(message.guild, message.guild.iconURL());
 
     message.channel.send(embed);
   }
