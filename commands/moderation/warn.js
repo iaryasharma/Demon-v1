@@ -37,6 +37,7 @@ module.exports = {
       .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
+    
 
     message.channel.send(embed);
 

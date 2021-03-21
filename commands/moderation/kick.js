@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const { prefix, owner } = require("../../config.json");
+const { Color } = require("../../config.json");
 
 module.exports = {
   name: "kick",
@@ -32,10 +32,10 @@ module.exports = {
       return message.channel.send(`Please Don't Kick Me ;-;`);
 
     if (Member.id === message.guild.owner.user.id)
-      return message.channel.send(`You Can't Kick Server Owner!`);
-    if (Member.id === `${owner}`)
-      return message.channel.send(`You Can't Kick My Owner!`);
+      return message.channel.send(`You Can't Kick Owner Of Server!`);
+
     let Reason = args.slice(1).join(" ");
+
     let User = message.guild.member(Member);
 
     if (!User.kickable)
@@ -48,10 +48,10 @@ module.exports = {
         User.kick({ reason: `${Reason || "No Reason Provided!"}` });
       }, 2000);
       let embed = new Discord.MessageEmbed()
-        .setColor("#ff0000")
+        .setColor(Color)
         .setTitle(`Member Kicked!`)
         .addField(`Moderator`, `${message.author.tag} <@${message.author.id}>`)
-        .addField(`Kicked Member`, `${Member.user.tag} <@${Member.user.id}>`)
+        .addField(`Kicked Member`, `${Member.tag} <@${Member.id}>`)
         .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
         .setFooter(`Requested by ${message.author.username}`)
         .setTimestamp();
@@ -62,7 +62,7 @@ module.exports = {
         );
       message.channel.send(embed);
       console.log(
-        `User: ${Member.user.tag} (${Member.id}) Just Got Kicked From ${
+        `User: ${Member.tag} (${Member.id}) Just Got Kicked From ${
           message.guild.name
         } For ${Reason || "No Reason Provided!"}`
       );
