@@ -67,8 +67,8 @@ client.on("ready", async () => {
   });
     try {
     console.log(client.user.tag + " Has Logged In");
-    client.user.setActivity(` ${prefix}botinfo | ${prefix}help `, {
-      type: "LISTENING"
+    client.user.setActivity(`Servers : ${await client.guilds.cache.size} | Users : ${await client.users.cache.size}`,` ${prefix}botinfo | ${prefix}help `, {
+      type: "WATCHING"
     });
     //setInterval(pickStatus, 5000);
   } catch (err) {
