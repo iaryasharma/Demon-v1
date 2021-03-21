@@ -29,7 +29,7 @@ module.exports = {
       return message.channel.send(`You Can't Mute Server Owner!`);
     
     if (Member.id === `${owner}`)
-      return message.channel.send(`You Can't Mute My Owner!`);
+      return message.channel.send(`You Can't Mute BOT Owner!`);
 
     if (Member.roles.cache.has(Role)) {
       return message.channel.send(`Member Is Already Muted!`);

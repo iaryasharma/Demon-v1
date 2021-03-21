@@ -17,8 +17,9 @@ module.exports = {
 
     if (Member.id === message.guild.owner.user.id)
       return message.channel.send(`You Can't Warn Server Owner!`);
+    
     if (Member.id === `${owner}`)
-      return message.channel.send(`You Can't Warn My Owner!`);
+      return message.channel.send(`You Can't Warn Bot Owner!`);
 
     let Reason = args.slice(1).join(" ");
 

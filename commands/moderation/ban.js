@@ -1,6 +1,7 @@
-const discord = require("discord.js");
+const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+const { Color } = require("../../config.json");
 const { prefix, owner } = require("../../config.json");
-const { cowner } = require("../../config.json");
 
 module.exports = {
   name: "ban",
@@ -32,12 +33,12 @@ module.exports = {
       return message.channel.send(`Please Don't Ban Me ;-;`);
 
     if (Member.id === message.guild.owner.user.id)
-      return message.channel.send(`You Can't Ban Server Owner!`);
-    if (Member.id === `${owner}`)
-      return message.channel.send(`You Can't Ban My Owner!`);
-    if (Member.id === `${cowner}`)
-      return message.channel.send(`You Can't Ban Management Team Member!`);
+      return message.channel.send(`You Can't Ban Owner Of Server!`);
     
+    if (Member.id === `${owner}`)
+      return message.channel.send(`You Can't Mute BOT Owner!`);
+
+
     let Reason = args.slice(1).join(" ");
 
     let User = message.guild.member(Member);
@@ -49,11 +50,11 @@ module.exports = {
       setTimeout(function() {
         User.ban({ reason: `${Reason || "No Reason Provided!"}` });
       }, 2000);
-      let embed = new discord.MessageEmbed()
-        .setColor("#ff0000")
+      let embed = new Discord.MessageEmbed()
+        .setColor(Color)
         .setTitle(`Member Banned!`)
-        .addField(`Moderator`, `${message.author.tag} <@${message.author.id}>`)
-        .addField(`Banned Member`, `${Member.user.tag} <@${Member.user.id}>`)
+        .addField(`Moderator`, ` <@${message.author.id}> (${message.author.id})`)
+        .addField(`Banned Member`, `<@${Member.id}> (${Member.id})`)
         .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
         .setFooter(`Requested by ${message.author.username}`)
         .setTimestamp();
