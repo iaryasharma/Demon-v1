@@ -10,7 +10,7 @@ module.exports = {
     let embed = new discord.MessageEmbed()
 
       .setTitle(
-        `<:Demon_2:822458701037174834> ABOUT BOT DEVELOPER <:Demon_2:822458701037174834>`
+        `<:Demon_2:822458701037174834> ABOUT DEVELOPER Frag Nite <:Demon_2:822458701037174834>`
       )
       .addField(
         "<:GC_Botdev:822463194286784562> TAG",
