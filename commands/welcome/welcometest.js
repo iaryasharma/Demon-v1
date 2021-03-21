@@ -41,7 +41,7 @@ module.exports = {
 
       .setColor("#11ff01")
       .addField(
-        "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+        "━━━━━━━━━━━━━━━━━━━━━",
 
         `
 
@@ -53,7 +53,7 @@ module.exports = {
       )
 
       .addField(
-        "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+        "━━━━━━━━━━━━━━━━━━━━━",
 
         `
 
@@ -61,7 +61,7 @@ module.exports = {
       )
 
       .setAuthor(message.guild)
-      .setTitle("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+      .setTitle("━━━━━━━━━━━━━━━━━━━━━")
       // .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
       .setColor("#ff0073")
       .setImage(url)
