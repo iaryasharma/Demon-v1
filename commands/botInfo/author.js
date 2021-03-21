@@ -27,6 +27,9 @@ HE IS A PROFSSIONAL SERVER DESIGNER, MANAGER\`` )
         "[Arya.s_007](https://www.instagram.com/arya.s_007/)"
       )
       .addField("<:GC_Js:822461547850629151> Code Library", "discord.js")
+      .setThumbnail(
+          `https://media.discordapp.net/attachments/770893036556779543/823087152568860672/FragNite_2.png?width=400&height=400`
+        )
       .setColor("#7cfff5")
       .setFooter(
         "Requested By :-" + message.author.tag,
