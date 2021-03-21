@@ -27,6 +27,7 @@ module.exports = {
       );
     if (Member.id === message.guild.owner.user.id)
       return message.channel.send(`You Can't Mute Server Owner!`);
+    
     if (Member.id === `${owner}`)
       return message.channel.send(`You Can't Mute My Owner!`);
 
