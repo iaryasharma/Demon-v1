@@ -74,8 +74,7 @@ client.on("ready", async () => {
     .catch(error => console.log(error));
 });
 
-
-client.on("message", async message => {
+    client.on("message", async message => {
       const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
 
       if (message.content.match(prefixMention)) {
@@ -91,16 +90,16 @@ client.on("message", async message => {
             "🛠️ USAGE",
             "`" +
               prefix +
-              "help` - **for bots help menu** \n" +
+              "help` - for bots help menu \n" +
               "`" +
               prefix +
-              "support` - **for bots support** \n" +
+              "support` - for bots support \n" +
               "`" +
               prefix +
-              "invite` - **to invite the bot in youre server** \n" +
+              "invite` - to invite the bot in youre server \n" +
               "`" +
               prefix +
-              "author` **to get the details about bot developer** \n"
+              "author` to get the details about bot developer \n"
           )
           .setColor("#ff0000")
           .setThumbnail(client.user.displayAvatarURL())
