@@ -140,27 +140,15 @@ client.on("guildMemberAdd", async member => {
     return;
   }
 
-  let default_url = `https://media.discordapp.net/attachments/596216470397255690/818195770124795945/mOZpPGs.gif`;
+  let default_url = `https://cdn.discordapp.com/attachments/758912722821185557/814740225732640778/tenor.gif`;
 
-  let default_msg = `<a:GC_arrow:810003254485450802> **WELCOME ${member} TO THE ${member.guild}**
-  
-**━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
+  let default_msg = `<a:op2_:764200161793540106> **MAKE SURE TO READ RULES**
 
-<a:GC_Pin:818795895856037898> **MAKE SURE TO READ RULES FROM ** <#808929196684345345>
+<a:op2_:764200161793540106> **TAKE SELF ROLES**
 
-<a:GC_Pin:818795895856037898> **TAKE ROLES FROM** <#808929201159667733> 
+<a:op2_:764200161793540106> **ENJOY YOUR STAY HERE**
 
-<a:GC_Golden_Heart:818793534533926953> **ENJOY YOUR STAY HERE**
-
-**━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
-
-<a:GC_check:810001170734120990> **MEMBER USERNAME :-** __**${member.user.tag}**__
-
-<a:GC_check:810001170734120990> **MEMBER COUNT :-** **__${member.guild.memberCount}__**
-
-**━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
-
-<a:GC_Golden_Heart:818793534533926953> **THANKS FOR JOINING US** <a:GC_Golden_Heart:818793534533926953>`;
+`;
 
   let m1 = db.get(`msg_${member.guild.id}`);
   if (!m1) m1 = default_msg;
@@ -187,7 +175,7 @@ client.on("guildMemberAdd", async member => {
     .setAuthor(member.guild)
     .setTitle("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     // .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
-    .setColor("#01ff21")
+    .setColor("RANDOM")
     .setImage(url)
     .setTimestamp()
     .setDescription(msg)
@@ -196,11 +184,11 @@ client.on("guildMemberAdd", async member => {
       "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
       `
 
-<a:GC_check:810001170734120990> **MEMBER USERNAME :-** __**${member.user.tag}**__
+<a:cetick:764199790640365609> **MEMBER USERNAME :-** __**${member.user.tag}**__
 
-<a:GC_check:810001170734120990> **MEMBER JOINED AT :-** __**${createdate}**__
+<a:cetick:764199790640365609> **MEMBER JOINED AT :-** __**${createdate}**__
 
-<a:GC_check:810001170734120990> **MEMBER COUNT :-** **__${member.guild.memberCount}__**
+<a:cetick:764199790640365609> **MEMBER COUNT :-** **__${member.guild.memberCount}__**
 
 `
     )
@@ -208,12 +196,13 @@ client.on("guildMemberAdd", async member => {
       "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
       `
 
-<a:GC_Golden_Heart:818793534533926953> **THANKS FOR JOINING ${member.guild}** <a:GC_Golden_Heart:818793534533926953>`
+<a:emoji_24:764200718344126546> **THANKS FOR JOINING ${member.guild}** <a:emoji_24:764200718344126546>`
     );
 
   client.channels.cache.get(chx).send(wembed);
   //  client.channels.cache.get(chx).send(attachment);
 });
+
 
 const GiveawayManagerWithOwnDatabase = class extends GiveawaysManager {
   // This function is called when the manager needs to get all the giveaway stored in the database.

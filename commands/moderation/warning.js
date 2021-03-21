@@ -19,11 +19,13 @@ module.exports = {
     let Warnings = client.db.get(
       `Warnings_${message.guild.id}_${Member.user.id}`
     );
-
+    
+    var serverIcon = message.guild.iconURL();
     let embed = new MessageEmbed()
       .setColor('#ff0000')
       .setTitle(`Member Warnings!`)
       .setDescription(`${Member.user.username} Has ${Warnings || "0"} Warnings!`)
+      .setThumbnail (serverIcon)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 

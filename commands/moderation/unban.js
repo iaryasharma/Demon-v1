@@ -52,16 +52,18 @@ module.exports = {
       message.guild.members.unban(Member.user.id, Reason);
     } catch (error) {
       return message.channel.send(
-        `I Can't Unban That Member Maybe Member Is Not Banned Or Some Error!`
+        `I Can't Unban That Member Maybe Member Is Not Banned From Server Or Some Error!`
       );
     }
-
+    
+    var serverIcon = message.guild.iconURL();
     let embed = new discord.MessageEmbed()
       .setColor("#ff0000")
       .setTitle(`Member Unbanned!`)
       .addField(`Moderator`, `${message.author.tag} <@${message.author.id}>`)
       .addField(`Unbanned Member`, `${Member.user.tag} <@${Member.user.id}>`)
       .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
+      .setThumbnail (serverIcon)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 

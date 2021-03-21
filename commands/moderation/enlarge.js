@@ -14,21 +14,21 @@ module.exports = {
   usage: `\`${prefix}enlarge <Emoji>\``,
 
   run: async (client, message, args) => {
-    //   if (!message.guild.me.permissions.has("MANAGE_EMOJIS"))
+     if (!message.guild.me.permissions.has("MANAGE_EMOJIS"))
 
-    //    return message.channel.send(
+    return message.channel.send(
 
-    //       `I Don't Have Permission To Use This Command! Manage Emojis`
+      `I Don't Have Permission To Use This Command! Manage Emojis`
 
-    //      );
+    );
 
-    //    if (!message.member.permissions.has(`MANAGE_EMOJIS`))
+    if (!message.member.permissions.has(`MANAGE_EMOJIS`))
 
-    //     return message.channel.send(
+    return message.channel.send(
 
-    //       `You Don't Have Permission To Use This Command! Manage Emojis`
+    `You Don't Have Permission To Use This Command! Manage Emojis`
 
-    //      );
+    );
 
     const emoji = args[0];
 

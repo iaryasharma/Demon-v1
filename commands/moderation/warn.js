@@ -28,7 +28,8 @@ module.exports = {
     let Warnings = client.db.get(
       `Warnings_${message.guild.id}_${Member.user.id}`
     );
-
+    
+    var serverIcon = message.guild.iconURL();
     let embed = new MessageEmbed()
       .setColor('#ff0000')
       .setTitle(`Member Warned!`)
@@ -36,7 +37,7 @@ module.exports = {
       .addField(`Warned Member`, `${Member.user.tag} <@${Member.user.id}>`)
       .addField(`Now Member Warnings`, Warnings)
       .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
-    .setThumbnail (serverIcon)
+      .setThumbnail (serverIcon)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
     
