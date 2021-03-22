@@ -77,21 +77,21 @@ client.on("ready", async () => {
     .catch(error => console.log(error));
 });
 
+    //   client.on("message", async message => {
+    //      let prefix;
+    // 
+    //      try {
+    //        if (
+    //          message.mentions.has(owner) &&
+    //          !message.mentions.has(message.guild.id)
+    //       ) {
+    //          return message.react("<a:Gc_Botdeveloper:823261796278075434>");
+    //        }
+    //      } catch {
+    //       return;
+    //     }
+    //   });
 
-      client.on("message", async message => {
-         let prefix;
-    
-         try {
-           if (
-             message.mentions.has(owner) &&
-             !message.mentions.has(message.guild.id)
-          ) {
-             return message.react("<a:Gc_Botdeveloper:823261796278075434>");
-           }
-         } catch {
-           return;
-        }
-      });
     client.on("message", async message => {
       const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
 
@@ -293,6 +293,5 @@ client.giveawaysManager.on(
     );
   }
 );
-
 
 client.login(process.env.TOKEN);
