@@ -9,7 +9,7 @@ const ms = require("ms")
 
 module.exports = {
     name: "botinfo",
-    category: "info",
+    category: "botinfo",
   description: "Sends detailed info about the client",
   usage: "[command]",
   run: async (client, message, args) => {

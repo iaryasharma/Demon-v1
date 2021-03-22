@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 module.exports = {
   name: "invite",
-  category: "help",
+  category: "botinfo",
   description: "INVITE BOT",
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()

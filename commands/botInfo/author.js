@@ -3,7 +3,7 @@ const { owner } = require("../../config.json");
 module.exports = {
   name: "author",
   aliases: ["botdev", "dev"],
-  category: "help",
+  category: "botinfo",
   description: "KNOW ABOUT THE CREATOR OF BOT",
 
   run: async (client, message, args) => {
