@@ -12,7 +12,7 @@ module.exports = {
       return message.channel.send(
         `I Don't Have Permission To Use This Command! Manage Channels`
       );
-    if (!message.member.permissions.has("MANAGE_CHANNELS"))
+    if (!message.member.permissions.has("ADMINISTRATOR"))
       return message.channel.send(
         `You Don't Have Permission To Use This Command! Manage Channels`
       );
