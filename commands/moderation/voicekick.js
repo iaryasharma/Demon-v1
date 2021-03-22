@@ -1,4 +1,5 @@
 const { prefix, owner } = require("../../config.json");
+const { cowner } = require("../../config.json");
 
 module.exports = {
   name: "voicekick",
@@ -23,8 +24,16 @@ module.exports = {
     let { channel } = message.mentions.members.first().voice;
     if (!channel)
       return message.channel.send(`User Has Been Kicked From Voice Channel!`);
+    
+    if (target.id === message.guild.owner.user.id)
+      return message.channel.send(`I can't voicekick Server Owner!`);
+    
     if (target.id === `${owner}`)
-      return message.channel.send(`I Cannot Voicekick My Owner!`);
+      return message.channel.send(`I can't voicekick Bot Owner!`);
+    
+    if (target.id === `${cowner}`)
+      return message.channel.send(`I can't voicekick  Management Team Member!`);
+    
     target.voice.kick();
 
     message.channel.send(`User Has Been Kicked From Voice Channel!`);
