@@ -9,7 +9,7 @@ module.exports = {
   run: async (client, message, args) => {
     if (!message.member.hasPermission("ADMINISTRATOR")) {
       return message.channel.send(
-        "Yopu should have admin perms to use this command"
+        "You should have admin perms to use this command"
       );
     }
 
