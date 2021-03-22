@@ -23,7 +23,7 @@ dependencies:
   neko-love-wrapper: 1.2.1
   nekos.life: 2.0.7
   node-fetch: 2.6.1
-  novelcovid: 3.0.0
+  novelcovid: 1.2.7
   opusscript: 0.0.8
   os: 0.1.1
   path: 0.12.7
@@ -43,10 +43,6 @@ dependencies:
   weather-js: 2.0.0
   ytdl-core: 4.5.0
 packages:
-  /@aero/centra/1.0.6:
-    dev: false
-    resolution:
-      integrity: sha512-e7sUh/VjugT8LsHb4/hcbmhaVVi9deWWPQnlMnU0RAnF8+iCdGdCcKvoHnDNl/ELykwjpbKpBYbWPx0yKZaDpw==
   /@babel/runtime/7.13.10:
     dependencies:
       regenerator-runtime: 0.13.7
@@ -2038,12 +2034,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-CvaGwVMztSMJLOeXPrez7fyfObdZqNUK1cPAEzLHrTybIua9pMdmmPR5YwtfNftIOMv3DPUhFaxsZMNTQO20Kg==
-  /novelcovid/3.0.0:
+  /novelcovid/1.2.7:
     dependencies:
-      '@aero/centra': 1.0.6
+      node-fetch: 2.6.1
     dev: false
     resolution:
-      integrity: sha512-70LZiuOY52f3uIrcZ5dP1F0LFkbz8GuGRuiC/e+YjGv/jYrbq8WXll67GaCafWCvznFmgSEgDJcztDoXz4m+kg==
+      integrity: sha512-Kfu4pzlBNpLSU+W4tC5oO5fEYB8k//TAK0FZUL/d/YvaEziMgfTlJkgipV5Nr60CwBZbixzyJp/H+gvx1BAyZg==
   /npm-bundled/1.1.1:
     dependencies:
       npm-normalize-package-bin: 1.0.1
@@ -3057,7 +3053,7 @@ specifiers:
   neko-love-wrapper: ^1.2.1
   nekos.life: ^2.0.7
   node-fetch: ^2.6.1
-  novelcovid: ^3.0.0
+  novelcovid: ^1.2.6
   opusscript: ^0.0.8
   os: ^0.1.1
   path: ^0.12.7
