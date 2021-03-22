@@ -13,6 +13,7 @@
     "akaneko": "^4.5.3",
     "animejs": "^3.2.1",
     "srod-v2": "^1.0.2",
+    "fs": "0.0.1-security",
     "ascii-table": "^0.0.9",
     "canvas-senpai": "^1.0.0",
     "colornames": "^1.1.1",
