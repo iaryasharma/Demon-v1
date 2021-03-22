@@ -1,5 +1,7 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
+const { prefix, owner } = require("../../config.json");
+const { cowner } = require("../../config.json");
 const { Color } = require("../../config.json");
 
 module.exports = {
@@ -32,8 +34,14 @@ module.exports = {
       return message.channel.send(`Please Don't Kick Me ;-;`);
 
     if (Member.id === message.guild.owner.user.id)
-      return message.channel.send(`You Can't Kick Owner Of Server!`);
-
+      return message.channel.send(`You Can't Kick Server Owner!`);
+    
+    if (Member.id === `${owner}`)
+      return message.channel.send(`You Can't Kick Bot Owner!`);
+    
+    if (Member.id === `${cowner}`)
+      return message.channel.send(`You Can't Kick Management Team Member!`);
+    
     let Reason = args.slice(1).join(" ");
 
     let User = message.guild.member(Member);

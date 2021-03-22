@@ -1,5 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const { prefix, owner } = require("../../config.json");
+const { cowner } = require("../../config.json");
 
 module.exports = {
   name: "mute",
@@ -25,11 +26,16 @@ module.exports = {
       return message.channel.send(
         `Please Create Mute Role | Role Name : Muted`
       );
+
     if (Member.id === message.guild.owner.user.id)
       return message.channel.send(`You Can't Mute Server Owner!`);
     
     if (Member.id === `${owner}`)
-      return message.channel.send(`You Can't Mute BOT Owner!`);
+      return message.channel.send(`You Can't Mute Bot Owner!`);
+    
+    if (Member.id === `${cowner}`)
+      return message.channel.send(`You Can't Mute Management Team Member!`);
+    
 
     if (Member.roles.cache.has(Role)) {
       return message.channel.send(`Member Is Already Muted!`);
