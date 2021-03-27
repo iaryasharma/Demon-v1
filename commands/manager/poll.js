@@ -14,14 +14,14 @@ name:"poll",
     if(!pollChannel) return message.reply("Please provide a channel!")
     if(!pollDescription) return message.reply("Please provide the question!")
     const Discord = require('discord.js')
-    let embedP = new Discord.RichEmbed()
-    .setColor('RED')
+    let embed = new Discord.MessageEmbed()
+    .setColor('#ff0000')
     .setTitle("Poll")
     .addField("**Content**", pollDescription, true)
     
     message.channel.send(`Poll Created inside ${pollChannel}`)
     pollChannel.send("**NEW POLL!!!**")
-    let msg = await pollChannel.send(embedP)
+    let msg = await pollChannel.send(embed)
     await msg.react('👍')
     await msg.react('👎')
     }
