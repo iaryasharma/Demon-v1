@@ -13,7 +13,7 @@ module.exports = {
 \`addrole(give role to member),removerole(remove role from member),createrole(crole),createchannel(cchannel),addemoji,enlarge,whois,say,announce,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings\`
 
 <a:GC_Fun:810120996953522177> __**FUN COMMANDS**__ 
-\`advice,anime,ascii,cat,cry,dog,fact,hug,joke,kiss,dicksize(pp),howgay,kpop,math,meme,mw,neko,pat,punch,say,slap,\`
+\`advice,anime,ascii,cat,cry,dog,fact,hug,joke,kiss,dicksize(pp),howgay,meme,pat,punch,slap,say\`
 
 <a:GC_welcome:810118157967949895> __**WELCOME COMMANDS**__  
 \`setwelcome <#channel>,setwmessage,rsetwmessage(resets welcome message),wexample(welcome example)\`
@@ -25,7 +25,7 @@ module.exports = {
 \`corona all, corona<country>\`
  
 <a:GC_Music:810003729553555486> __**MUSIC COMMANDS**__
-\`music,play,leave,loop,lyrics,pause,resume,queue,skip,skipto <number>,volume <amount>\`
+\`music(for all music commands),play,leave,loop,lyrics,pause,resume,queue,skip,skipto <number>,volume <amount>\`
 
 <a:GC_Discord:810133251767009320> __**BOT INFO**__
 \`botinfo,support,invite,author,ping\`
