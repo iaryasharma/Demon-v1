@@ -17,7 +17,7 @@ exports.run = function(client, message, args) {
   const afk = new Discord.MessageEmbed()
   .setColor('GREEN')
   .setAuthor(message.author.username, message.author.avatarURL)
-  .setDescription(`Başarıyla ${REASON} Sebebiyle \`Afk\` Moduna Başarıyla Girildi.`)
+  .setDescription(`Successfully ${REASON} Because of \`Afk\` Mode Entered Successfully.`)
   message.channel.send(afk)
  
 };
@@ -31,6 +31,6 @@ exports.conf = {
  
 exports.help = {
   name: 'afk',
-  description: 'afk komutu',
+  description: 'afk command',
   usage: 'afk'
 };
