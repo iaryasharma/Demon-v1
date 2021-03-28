@@ -33,7 +33,7 @@ module.exports = {
     
  .addField(
         "<:Demon_2:822458701037174834> Dashboard",
-        "[Dashboard](https://demon-dashboar.glitch.me)")
+        "[Dashboard](https://demon-dashboard.glitch.me)")
       .setThumbnail(client.user.displayAvatarURL())
       .setColor("#7cfff5")
       .setFooter(`HELP MENU`)
