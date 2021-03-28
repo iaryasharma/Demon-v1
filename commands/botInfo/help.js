@@ -30,7 +30,9 @@ module.exports = {
 <a:GC_Discord:810133251767009320> __**BOT INFO**__
 \`botinfo,support,invite,author,ping\`
 `)
-
+ .addField(
+        "Dashboard",
+        "[Server](https://www.instagram.com/arya.s_007/)")
       .setThumbnail(client.user.displayAvatarURL())
       .setColor("#7cfff5")
       .setFooter(`HELP MENU`)
