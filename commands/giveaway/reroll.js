@@ -16,14 +16,14 @@ module.exports = {
       !message.member.roles.cache.some(r => r.name === "Giveaways")
     ) {
       return message.channel.send(
-        "<a:GC_wrong:810000635113635840> You need to have the manage messages permissions to reroll giveaways."
+        "❌ You need to have the manage messages permissions to reroll giveaways."
       );
     }
 
     // If no message ID or giveaway name is specified
     if (!args[0]) {
       return message.channel.send(
-        "<a:GC_wrong:810000635113635840> You have to specify a valid message ID!"
+        "❌ You have to specify a valid message ID!"
       );
     }
 
@@ -37,7 +37,7 @@ module.exports = {
     // If no giveaway was found
     if (!giveaway) {
       return message.channel.send(
-        "<a:GC_wrong:810000635113635840> Unable to find a giveaway for `" +
+        "❌ Unable to find a giveaway for `" +
           args.join(" ") +
           "`."
       );
@@ -49,7 +49,7 @@ module.exports = {
       .then(() => {
         // Success message
         message.channel.send(
-          "<a:GC_right:810000945562910761> Giveaway rerolled!"
+          "✔ Giveaway rerolled!"
         );
       })
       .catch(e => {
@@ -59,12 +59,12 @@ module.exports = {
           )
         ) {
           message.channel.send(
-            "<a:GC_wrong:810000635113635840> This giveaway is not ended!"
+            "❌ This giveaway is not ended!"
           );
         } else {
           console.error(e);
           message.channel.send(
-            "<a:GC_wrong:810000635113635840> An error occured..."
+            "❌ An error occured..."
           );
         }
       });
