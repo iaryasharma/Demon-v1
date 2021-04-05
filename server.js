@@ -108,7 +108,7 @@ client.on("ready", async () => {
             "🛠️ USAGE",
             "`" +
               prefix +
-              "help` - for bots help menu \n" 
+              "help` - for bot help menu \n" 
           )
           .setColor("#ff0000")
           .setThumbnail(client.user.displayAvatarURL())
