@@ -59,23 +59,23 @@ module.exports = {
       .setThumbnail(avatar)
       .setDescription(
         `
-**<a:GC_check:810001170734120990> Name:** ${target.username}
+**𒍡・ Name:** ${target.username}
 
-**<a:GC_check:810001170734120990> ID:** ${target.id}
+**𒍡・ ID:** ${target.id}
 
-**<a:GC_check:810001170734120990> Nickname:** ${nickname}
+**𒍡・ Nickname:** ${nickname}
 
-**<a:GC_check:810001170734120990> Account Creation:** ${createdate} | ${created} day(s) ago
+**𒍡・ Account Creation:** ${createdate} | ${created} day(s) ago
 
-**<a:GC_check:810001170734120990> Server Joined At:** ${joindate} | ${joined} day(s) ago
+**𒍡・ Server Joined At:** ${joindate} | ${joined} day(s) ago
 
-**<a:GC_check:810001170734120990> Status:** ${status}
+**<𒍡・ Status:** ${status}
 
-**<a:GC_check:810001170734120990> Game:** ${game()}
+**𒍡・ Game:** ${game()}
 
-**<a:GC_check:810001170734120990> Badges:** ${flags}
+**𒍡・ Badges:** ${flags}
 
-**<a:GC_check:810001170734120990> Roles:** <@&${member._roles.join("> <@&")}>`
+**𒍡・ Roles:** <@&${member._roles.join("> <@&")}>`
       )
       .setColor("#ff00b5")
       .setFooter(`Asked by ${message.author.username}`, aicon)

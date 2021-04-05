@@ -9,25 +9,25 @@ module.exports = {
     let embed = new discord.MessageEmbed()
       .setTitle(`<:Demon_2:822458701037174834> BOT  HELP MENU <:Demon_2:822458701037174834>`)
       .setDescription( `
-<a:GC_Mod:810120702966759454> __**MODERATION COMMANDS**__ 
+<:Demon_Moderation:828621978558529586> __**MODERATION COMMANDS**__ 
 \`addrole(give role to member),removerole(remove role from member),createrole(crole),createchannel(cchannel),addemoji,enlarge,whois,say,announce,clear[purge],ban,kick,voicekick,mute,unmute,slowmode,warn,warnings\`
 
-<a:GC_Fun:810120996953522177> __**FUN COMMANDS**__ 
+<:Demon_Fun:828621911701323816> __**FUN COMMANDS**__ 
 \`advice,anime,ascii,cat,cry,dog,fact,hug,joke,kiss,dicksize(pp),howgay,meme,pat,punch,slap,say\`
 
-<a:GC_welcome:810118157967949895> __**WELCOME COMMANDS**__  
+<:Demon_Welcome:828622867796328470> __**WELCOME COMMANDS**__  
 \`setwelcome <#channel>,setwmessage,rsetwmessage(resets welcome message),wexample(welcome example)\`
 
-<a:GC_crown:810111773108862987> __**UTILITY COMMANDS**__ 
+<:Demon_Image:828622138260979802> __**UTILITY COMMANDS**__ 
 \`giveaway,math,weather,amongus,idp,avatar,serverinfo,hastebin,imdb,membercount,weather,pokemon,servericon\`
 
-<a:GC_Alert:810118383454257152> __**CORONA COMMANDS**__ 
+<:Demon_Others:828622145483178034> __**CORONA COMMANDS**__ 
 \`corona all, corona<country>\`
  
-<a:GC_Music:810003729553555486> __**MUSIC COMMANDS**__
+<:Demon_Music1:828621262627799060> __**MUSIC COMMANDS**__
 \`music(for all music commands),play,leave,loop,lyrics,pause,resume,queue,skip,skipto <number>,volume <amount>\`
 
-<a:GC_Discord:810133251767009320> __**BOT INFO**__
+<:Demon_Discord:828622083675914261> __**BOT INFO**__
 \`botinfo,support,invite,author,ping\`
 `)
     
@@ -35,7 +35,7 @@ module.exports = {
         "<:Demon_2:822458701037174834> Dashboard",
         "[Dashboard](https://demon-dashboard.glitch.me)")
       .setThumbnail(client.user.displayAvatarURL())
-      .setColor("#7cfff5")
+      .setColor("#ff0000")
       .setFooter(`HELP MENU`)
       .setTimestamp((message.timestamp = Date.now()));
 

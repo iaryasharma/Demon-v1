@@ -23,7 +23,7 @@ module.exports = {
       const botinfo = new Discord.MessageEmbed()
           .setAuthor(client.user.username)
           .setTitle("__**Stats:**__")
-          .setColor("#7cfff5")
+          .setColor("#ff0000")
           .addField("⏳ Mem Usage", `\`${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB\``, true)
           .addField("⌚️ Uptime ", `\`${duration}\``, true)
           .addField("<:GC_Servers:818346467327868949> Servers", `\`${client.guilds.cache.size}\``, true)

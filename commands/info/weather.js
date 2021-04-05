@@ -20,12 +20,12 @@ let embed = new discord.MessageEmbed()
 .setTitle(`Weather - ${result[0].location.name}`)
 .setColor("#ff2050")
 .setDescription(" Temperature units can may be differ some time ")
-.addField("<a:GC_Hype1:810099772471115777>  Temperature " , `${result[0].current.temperature} Celcius`, true)
-.addField("<a:GC_Hype2:810099967023906826>  Sky Text ", result[0].current.skytext, true)
-.addField("<a:GC_Hype3:810100012079775774>  Humidity", result[0].current.humidity, true)
-.addField("<a:GC_Hype1:810099772471115777>  Wind Speed", result[0].current.windspeed, true)//What about image
-.addField("<a:GC_Hype2:810099967023906826>  Observation Time", result[0].current.observationtime, true)
-.addField("<a:GC_Hype3:810100012079775774>  Wind Display", result[0].current.winddisplay, true)
+.addField("🌡  Temperature " , `${result[0].current.temperature} Celcius`, true)
+.addField("☁  Sky Text ", result[0].current.skytext, true)
+.addField("🌦  Humidity", result[0].current.humidity, true)
+.addField("🌪  Wind Speed", result[0].current.windspeed, true)//What about image
+.addField("☁  Observation Time", result[0].current.observationtime, true)
+.addField("🌪  Wind Display", result[0].current.winddisplay, true)
 .setThumbnail(result[0].current.imageUrl);
    message.channel.send(embed)
   message.react("<a:GC_right:810000945562910761>");
