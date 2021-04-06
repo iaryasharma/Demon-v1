@@ -27,6 +27,8 @@ module.exports = {
 <:Demon_Image:828622138260979802> __**UTILITY COMMANDS**__ 
 \`giveaway, math, weather, amongus, idp, avatar, serverinfo, imdb, membercount, pokemon, servericon\`
 
+<:Demon_Giveaways:828623704464162826>
+
 <:Demon_Others:828622145483178034> __**CORONA COMMANDS**__ 
 \`corona all, corona<country>\`
  
