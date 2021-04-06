@@ -61,11 +61,11 @@ module.exports = {
         "use {member} in your description for mentioning the new member"
       )
       .addField(
-        "<:marvel_image:814798025066020884> Image",
+        "<:Demon_Image:828622138260979802> Image",
         "Below Is An Image Of What Things Can Be Changed"
       )
       .setImage(
-        "https://cdn.discordapp.com/attachments/799624878109622312/814738236869836830/20210226_112833.jpg"
+        "https://cdn.glitch.com/f6bb0bab-55e9-472b-a59a-465c25d21937%2FScreenshot_3.png?v=1617712919457"
       )
       .setColor("RED")
       .setThumbnail(client.user.avatarURL())
