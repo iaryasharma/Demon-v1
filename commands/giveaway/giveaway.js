@@ -61,8 +61,8 @@ module.exports = {
       hostedBy: message.author,
       // Messages
       messages: {
-        giveaway: "🎉🎉 **GIVEAWAY** 🎉🎉",
-        giveawayEnded: "🎉🎉 **GIVEAWAY ENDED** 🎉🎉",
+        giveaway: "🎉 **GIVEAWAY** 🎉",
+        giveawayEnded: "🎉 **GIVEAWAY ENDED** 🎉",
         timeRemaining: "Time remaining: **{duration}**!",
         inviteToParticipate: "React with 🎉 to participate!",
         winMessage: "Congratulations, {winners}! You won **{prize}**!",
