@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "warnings",
-  aliases: ["warning"],
+  aliases: ["warnings"],
   description: "Show User Warnings!",
   usage: "Warnings <Mention User>",
   run: async (client, message, args) => {
