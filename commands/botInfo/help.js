@@ -25,9 +25,10 @@ module.exports = {
 \`setwelcome <#channel>, setwmessage, rsetwmessage(resets welcome message), wexample(welcome example)\`
 
 <:Demon_Image:828622138260979802> __**UTILITY COMMANDS**__ 
-\`giveaway, math, weather, amongus, idp, avatar, serverinfo, imdb, membercount, pokemon, servericon\`
+\`math, weather, amongus, idp, avatar, serverinfo, imdb, membercount, pokemon, servericon\`
 
-<:Demon_Giveaways:828623704464162826>
+<:Demon_Giveaways:828623704464162826> __**Giveaway COMMANDS**__ 
+\`ghelp(for all giveaway commands and usage), giveaway, reroll, end\`
 
 <:Demon_Others:828622145483178034> __**CORONA COMMANDS**__ 
 \`corona all, corona<country>\`
@@ -37,6 +38,8 @@ module.exports = {
 
 <:Demon_Discord:828622083675914261> __**BOT INFO**__
 \`botinfo,support,invite,author,ping\`
+
+\`Note: Pokemon command works only for certain pokemons(will be updated soon)\`
 `)
     
  .addField(
