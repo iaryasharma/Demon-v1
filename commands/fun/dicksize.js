@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.json");
+const { Red } = require("../../color.json");
 
 module.exports = {
   name: "dicksize",
@@ -40,7 +40,7 @@ module.exports = {
     let Result = sizes[Math.floor(Math.random() * sizes.length)];
 
     let embed = new MessageEmbed()
-      .setColor(Color)
+      .setColor(Red)
       .setTitle(`Pp v2 Machine`)
       .setDescription(`${Member.user.username} pp Size Is\n${Result}`)
       .setFooter(`Requested by ${message.author.username}`)
