@@ -29,7 +29,7 @@ client.on("guildCreate", async guild => {
       maxUser: 0
     });
   const owner = client.users.cache.get(guild.ownerID);
-  const joinchannel = client.channels.cache.get("812164778171564083");
+  const joinchannel = client.channels.cache.get("822783895224975370");
   const joinembed = new discord.MessageEmbed()
     .setTitle("NEW SERVER")
     .addField("Server Name", `${guild.name}`)
@@ -45,7 +45,7 @@ client.on("guildCreate", async guild => {
 
 client.on("guildDelete", async guild => {
   const owner = client.users.cache.get(guild.ownerID);
-  const lchannel = client.channels.cache.get("818749862539427901");
+  const lchannel = client.channels.cache.get("822783895224975370");
   const lembed = new discord.MessageEmbed()
 
     .setTitle("SERVER LEFT")
@@ -73,7 +73,7 @@ client.on("ready", async () => {
   client.on("ready", async () => {
   console.log(client.user.tag + " Has Logged In");
   client.user
-    .setActivity(`Servers : ${await client.guilds.cache.size} | Users : ${await client.users.cache.size}`, { type: "WATCHING" })
+    .setActivity(`FRAG CHAMPION LEAGUE`, { type: "WATCHING" })
     .catch(error => console.log(error));
 });
 
