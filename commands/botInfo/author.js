@@ -13,20 +13,20 @@ module.exports = {
         `<:Demon_2:822458701037174834> ABOUT DEVELOPER FRAG NITE <:Demon_2:822458701037174834>`
       )
       .addField(
-        "<:GC_Botdev:822463194286784562> TAG",
+        "<:Demon_BotDev:828622854589382656> TAG",
         "```" + client.users.cache.get(owner).tag + "```"
       )
-      .addField("<:GC_Botdev:822463194286784562> Id", owner)
+      .addField("<:Demon_BotDev:828622854589382656> Id", owner)
     
-      .addField("<:GC_Botdev:822463194286784562> Mention", "<@730424922639302693>" )
+      .addField("<:Demon_BotDev:828622854589382656> Mention", "<@730424922639302693>" )
     
-      .addField("<:GC_Botdev:822463194286784562> About",  `\`THE CREATOR OF THE BOT Is Frag Nite (ARYA) 
+      .addField("<:Demon_BotDev:828622854589382656> About",  `\`THE CREATOR OF THE BOT Is Frag Nite (ARYA) 
 HE IS A PROFSSIONAL SERVER DESIGNER, MANAGER\`` )
       .addField(
-        "<:GC_insta:822462878849826856> Instagram",
+        "<:Demon_Insta:829028303728803860> Instagram",
         "[Arya.s_007](https://www.instagram.com/arya.s_007/)"
       )
-      .addField("<:GC_Js:822461547850629151> Code Library", "discord.js")
+      .addField("<:Demon_Js:829028138045669403> Code Library", "discord.js")
       .setThumbnail(
           `https://media.discordapp.net/attachments/770893036556779543/823087152568860672/FragNite_2.png?width=400&height=400`
         )

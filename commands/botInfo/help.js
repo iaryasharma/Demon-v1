@@ -37,8 +37,8 @@ module.exports = {
 `)
     
  .addField(
-        "<:Demon_2:822458701037174834> You can Invite our Main bot Too",
-        "[DEMOП](https://discord.com/oauth2/authorize?client_id=795487199197528095&scope=bot&permissions=2134240511")
+"<:Demon_2:822458701037174834> You Can Invite Our Main Bot Too",
+        "[DEMOП](https://discord.com/oauth2/authorize?client_id=795487199197528095&scope=bot&permissions=2134240511)")
       .setThumbnail(client.user.displayAvatarURL())
       .setColor("#ff0000")
       .setFooter(`HELP MENU`)
