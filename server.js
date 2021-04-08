@@ -29,7 +29,7 @@ client.on("guildCreate", async guild => {
       maxUser: 0
     });
   const owner = client.users.cache.get(guild.ownerID);
-  const joinchannel = client.channels.cache.get("822783895224975370");
+  const joinchannel = client.channels.cache.get("829666756612194355");
   const joinembed = new discord.MessageEmbed()
     .setTitle("NEW SERVER")
     .addField("Server Name", `${guild.name}`)
@@ -45,7 +45,7 @@ client.on("guildCreate", async guild => {
 
 client.on("guildDelete", async guild => {
   const owner = client.users.cache.get(guild.ownerID);
-  const lchannel = client.channels.cache.get("822783895224975370");
+  const lchannel = client.channels.cache.get("829666854586810369");
   const lembed = new discord.MessageEmbed()
 
     .setTitle("SERVER LEFT")
@@ -64,7 +64,7 @@ client.on("guildDelete", async guild => {
 });
 
 client.on("ready", async () => {
-  const channel = client.channels.cache.get("811294182823428116");
+  const channel = client.channels.cache.get("829579251547635723");
   channel.join().then(connection => {
     connection.voice.setSelfDeaf(true);
   });
