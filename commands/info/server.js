@@ -43,7 +43,7 @@ module.exports = {
       .setTitle(message.guild)
       .setDescription(
         `
-**<a:GC_check:810001170734120990> OWNER :** ${message.guild.owner.user.tag}
+**𒍡・ OWNER :** ${message.guild.owner.user.tag}
 
 **<a:GC_check:810001170734120990> SERVER ID :** ${message.guild.id}
 

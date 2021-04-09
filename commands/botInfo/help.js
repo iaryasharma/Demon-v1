@@ -30,15 +30,21 @@ module.exports = {
 <:Demon_Giveaways:828623704464162826> __**Giveaway COMMANDS**__ 
 \`ghelp(for all giveaway commands and usage), giveaway, reroll, end\`
 
-<:Demon_Others:828622145483178034> __**CORONA COMMANDS**__ 
+<:Demon_Corona:829028658034507787>  __**CORONA COMMANDS**__ 
 \`corona all, corona<country>\`
+ 
+<:Demon_Music1:828621262627799060> __**MUSIC COMMANDS**__
+\`music(for all music commands), play, leave, loop, lyrics, pause, resume, queue, skip, skipto <number>, volume <amount>\`
+
+<:Demon_Discord:828622083675914261> __**BOT INFO**__
+\`botinfo,support,invite,author,ping\`
 
 \`Note: Pokemon command works only for certain pokemons(will be updated soon)\`
 `)
     
  .addField(
-"<:Demon_2:822458701037174834> You Can Invite Our Main Bot Too",
-        "[DEMOП](https://discord.com/oauth2/authorize?client_id=795487199197528095&scope=bot&permissions=2134240511)")
+        "<:Demon_2:822458701037174834> Dashboard",
+        "[Dashboard](https://demon-dashboard.glitch.me)")
       .setThumbnail(client.user.displayAvatarURL())
       .setColor("#ff0000")
       .setFooter(`HELP MENU`)
