@@ -45,25 +45,25 @@ module.exports = {
         `
 **𒍡・ OWNER :** ${message.guild.owner.user.tag}
 
-**<a:GC_check:810001170734120990> SERVER ID :** ${message.guild.id}
+**𒍡・ SERVER ID :** ${message.guild.id}
 
-**<a:GC_check:810001170734120990> REGION :** ${message.guild.region}
+**𒍡・ REGION :** ${message.guild.region}
 
-**<a:GC_check:810001170734120990> TOTAL MEMBERS :** ${message.guild.memberCount}
+**𒍡・ TOTAL MEMBERS :** ${message.guild.memberCount}
 
-**<a:GC_check:810001170734120990> TOTAL CHANNELS :** ${message.guild.channels.cache.size}
+**𒍡・ TOTAL CHANNELS :** ${message.guild.channels.cache.size}
 
-**<a:GC_check:810001170734120990> TOTAL ROLES :** ${message.guild.roles.cache.size}
+**𒍡・ TOTAL ROLES :** ${message.guild.roles.cache.size}
 
-**<a:GC_check:810001170734120990> TOTAL EMOJI :** ${message.guild.emojis.cache.size}
+**𒍡・ TOTAL EMOJI :** ${message.guild.emojis.cache.size}
 
-**<a:GC_check:810001170734120990> SERVER CREATED AT :** ${message.guild.createdAt}
+**𒍡・ SERVER CREATED AT :** ${message.guild.createdAt}
 
-**<a:GC_check:810001170734120990> SERVER BOOST :** ${message.guild.premiumSubscriptionCount}
+**𒍡・ SERVER BOOST :** ${message.guild.premiumSubscriptionCount}
 
-**<a:GC_check:810001170734120990> BOOST LEVEL :** ${boostlevel}
+**𒍡・ BOOST LEVEL :** ${boostlevel}
 
-**<a:GC_check:810001170734120990> Security :** ${message.guild.verificationLevel}
+**𒍡・ Security :** ${message.guild.verificationLevel}
 `
       )
       .setThumbnail(message.guild.iconURL())
