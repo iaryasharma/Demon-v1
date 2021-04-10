@@ -18,6 +18,9 @@ module.exports = {
 <:Demon_Manager:828622080621805578> __**MANAGER COMMANDS**__
 \`hide<channel name>, unhide<channel name>, lock<channel name>, unlock<channel name> \`
 
+<:Demon_Voice:829767809465974807> __**VOICEMOD COMMANDS**__
+\`voicemod (for all voicemod commands and usage), voicemove, fmute, funmute, fdeafen, fundeafen, muteall, unmuteall\`
+
 <:Demon_Fun:828621911701323816> __**FUN COMMANDS**__ 
 \`advice, anime, ascii, cat, cry, dog, fact, hug, joke, kiss, dicksize(pp), howgay, meme, pat, punch, slap\`
 
