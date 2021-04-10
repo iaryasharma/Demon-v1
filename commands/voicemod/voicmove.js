@@ -1,12 +1,12 @@
 const { MessageEmbed } = require('discord.js');
 const { Color } = require("../../config.json");
 module.exports = {
-  name: "moveall",
+  name: "voicemove",
   aliases: ["moveall"],
   description: "Moves member from VC",
   run: async(client,message,args) => {
     if (!message.member.permissions.any(["MOVE_MEMBERS"])) {
-        return message.reply("<a:GC_right:810000945562910761> You don't have `Move_Members or Administrator` power to use this command.");
+        return message.reply("<a:GC_wrong:810000635113635840> You don't have `Move_Members or Administrator` power to use this command.");
       }
     let channel = message.member.voice.channel;
     if (!channel) return message.channel.send("You Have To Be In A Voice Channel To Use This Command");
@@ -14,7 +14,7 @@ module.exports = {
         channel.join().then((connection) => {
             message.guild.me.voice.setSelfDeaf(true);
             const move = new MessageEmbed()
-            .setDescription('** Move me and I\'ll drag users to a new voice channel.**')
+            .setDescription('**<:Demon_Voice:829767809465974807> Move me and I\'ll drag users to a new voice channel.**')
             .setColor(Color)
             message.channel.send(move)
 

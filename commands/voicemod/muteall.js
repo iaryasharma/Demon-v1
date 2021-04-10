@@ -13,7 +13,7 @@ module.exports = {
   for (let memberi of channel.members) {
     await memberi[1].voice.setMute(true);
   }
-  message.channel.send("Muted! Enjoy your game!!").then((msg) => {
+  message.channel.send("<:Demon_VcMuted:829768691154681928> Muted! Enjoy your game!!").then((msg) => {
     b = msg.id;
   });
   await message.channel.messages.fetch(a).then(msg => msg.delete({ timeout: 1000 }));

@@ -20,7 +20,7 @@ module.exports = {
   }
   if (found == 1) {
     await user.voice.setMute(false);
-    message.channel.send(`${user} unmuted ${message.author} mic`);
+    message.channel.send(`<:Demon_VcUnmute:829767930451329085> ${user} unmuted ${message.author} mic`);
     message.channel.messages.fetch(a).then(msg => msg.delete({ timeout: 1000 }));
   }
   else {

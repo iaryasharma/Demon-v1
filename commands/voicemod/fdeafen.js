@@ -20,7 +20,7 @@ module.exports = {
   }
   if (found == 1) {
     await user.voice.setDeaf(true);
-    message.channel.send(`${user} deafened by ${message.author}`);
+    message.channel.send(`<:Demon_VcDeafen:829768372484571197> ${user} deafened by ${message.author}`);
     message.channel.messages.fetch(a).then(msg => msg.delete({ timeout: 1000 }));
   }
   else {

@@ -20,7 +20,7 @@ module.exports = {
   }
   if (found == 1) {
     await user.voice.setDeaf(false);
-    message.channel.send(`${user} undeafened by ${message.author}`);
+    message.channel.send(`<:Demon_Music2:828621971163971634> ${user} undeafened by ${message.author}`);
     message.channel.messages.fetch(a).then(msg => msg.delete({ timeout: 1000 }));
   }
   else {

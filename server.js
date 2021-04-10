@@ -64,7 +64,7 @@ client.on("guildDelete", async guild => {
 });
 
 client.on("ready", async () => {
-  const channel = client.channels.cache.get("829579251547635723");
+  const channel = client.channels.cache.get("811294182823428116");
   channel.join().then(connection => {
     connection.voice.setSelfDeaf(true);
   });
