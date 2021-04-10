@@ -27,7 +27,7 @@ module.exports = {
       )
       .addField(
         "<:Demon_Arrow:828621113025363988>  End Giveaway",
-        "`" + prefix + "rsetwelcomeimg` to reset welcome image"
+        "`" + prefix + "end <giveaway id>` " + "To end giveaway before timing"
       )
       .addField(
         "<:Demon_Image:828622138260979802> Image",
