@@ -1,10 +1,10 @@
 const { prefix } = require("../../config.json");
 
 module.exports = {
-  name: "private",
+  name: "privatechannel",
   aliases: ["pr"],
   description: "Creates A Private Channel",
-  usage: `\`${prefix}private <Name>\``,
+  usage: `\`${prefix}privatechannel <Name>\``,
   run(client, message, args) {
     if (!message.guild.me.permissions.has("MANAGE_CHANNELS"))
       return message.channel.send(
