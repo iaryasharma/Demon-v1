@@ -28,7 +28,7 @@ module.exports = {
 \`setwelcome <#channel>, setwmessage, rsetwmessage(resets welcome message), wexample(welcome example)\`
 
 <:Demon_Image:828622138260979802> __**UTILITY COMMANDS**__ 
-\`math, weather, amongus, idp, avatar, serverinfo, imdb, membercount, pokemon, servericon\`
+\`weather, amongus, idp, avatar, serverinfo, imdb, membercount, pokemon, servericon\`
 
 <:Demon_Giveaways:828623704464162826> __**Giveaway COMMANDS**__ 
 \`ghelp(for all giveaway commands and usage), giveaway, reroll, end\`
