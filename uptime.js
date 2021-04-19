@@ -1,3 +1,4 @@
+const fetch = require('node-fetch')
 var express = require("express");
 var http = require("http");
 var app = express();
@@ -13,6 +14,9 @@ app.get("/", function(request, response) {
 var listener = app.listen(process.env.PORT, function() {
   console.log("Your app is listening on port " + listener.address().port);
 });
-setInterval(() => {
+/*setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 270000);
+}, 270000);*/
+setInterval(async () => {
+await fetch('https://op-demon-bot.glitch.me').then(console.log('Okay Boss I have Pinged me'))
+}, 240000)
