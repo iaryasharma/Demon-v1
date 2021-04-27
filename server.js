@@ -324,9 +324,9 @@ client.on("message", async message => {
         let webhook = webhooks.first();
         if (webhook === undefined || null || !webhook) {
           let Created = channel
-            .createWebhook("SLAYER NITRO", {
+            .createWebhook("DEMOП NITRO", {
               avatar:
-                "https://cdn.discordapp.com/avatars/820213678493663262/09ff4d519159ee3f90472ce0604d9774.webp?size=2048"
+                "https://cdn.discordapp.com/avatars/795487199197528095/daacd6130496c158e861b4d6fa117a8f.webp?size=2048"
             })
             .then(async webhook => {
               const emoji =
