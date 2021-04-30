@@ -21,14 +21,14 @@ client.aliases = new discord.Collection();
   require(`./handlers/${handler}`)(client);
 });
 
-client.on("guildCreate", guild => {
+/*client.on("guildCreate", guild => {
     const min = "15"
 
   if(guild.memberCount < min) {
   guild.leave()
   client.channels.cache.get('818749862539427901').send(`**I Left ${guild.name} Because It Had Only ${guild.memberCount} Members! Which Is Less Than ${min}!**`)
 }
-});
+}); */
 
 client.on("guildCreate", async guild => {
   let Invite = await guild.channels.cache
