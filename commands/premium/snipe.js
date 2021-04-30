@@ -1,56 +1,38 @@
-const Discord = require("discord.js");
-const db = require("quick.db");
-
+const { MessageEmbed } = require("discord.js");
+const Discord = require("discord.js")
+const ms = require("ms");
 module.exports = {
-info:{
   name: "snipe",
-  aliases: ["awm"], 
-  usage: "snipe",
-  description: "get deleted messages",
-}, 
-run: async function (client, message, args) {
-    const msg = client.snipe.get(message.channel.id);
-    if (!msg)
-      return message.channel
-        .send("There are no deleted messages in this channel!")
-        .then(m => {
-          m.react("🔁");
-        });
-    const embed = new Discord.MessageEmbed()
-      .setTitle("📋 Snipe Message Delete 📋")
-      //  .setAuthor(msg.author)
-      .setDescription(
-        `=> Author: \`\`\`
-${msg.author}
-\`\`\`
- => Message Deleted: 
-\`\`\`
-${msg.content || "UNABLE TO SNIPE EMBEDDED MESSAGE"}
-\`\`\`
-Click :x: to delete this snipe`
-      )
-      .setTimestamp()
-      .setColor("GREEN");
-    if (msg.image) embed.setImage(msg.image);
-    message.channel.send(embed).then(m => {
-      m.react("❌");
-     // m.react("❄️");
-    const filter = (reaction, user) => {
-            return (
-                ["❌", ].includes(reaction.emoji.name) &&
-                user.id === message.author.id
-            );
-        };
-
-        m.awaitReactions(filter, { max: 1, time: 300000, errors: ["time"] }).then(collected => {
-        const reaction = collected.array()[collected.size - 1]
-
-            if (!reaction.message.guild) return; // If the user was reacting something but not in the guild/server, ignore them.
-
-        if (reaction.emoji.name === "❌") {
-          m.delete();
-        }
-      })})}};
-      // message.channel.send("If there is a new delete message, you can use this command").then(m=>m.delete({timeout:12000}).catch(e=>{}))
-
-      // }})}})
+  allow:"all",
+  description: "Get a snipe of your choice in the channel",
+  category: "fun",
+  cooldown: 3,
+  run: async (client, message, args,touse) => {
+      const snipes = client.snipes.get(message.channel.id) || [];
+      let em = new Discord.MessageEmbed()
+          .setColor("RANDOM")
+          .setDescription(":x: | **There is no deleted message in this channel!**")
+      if(snipes == null ||snipes.length ==0)return message.channel.send(em);
+      const msg = snipes[args[0] - 1 || 0];
+      if (!msg) {
+        let embed = new Discord.MessageEmbed()
+          .setColor("RANDOM")
+          .setDescription(`:x: | **That is not a valid snipe format!**`)
+        message.channel.send(embed)
+      }
+      try {
+        const Embed = new MessageEmbed()
+        .setColor(`RANDOM`)
+          .setDescription(msg.content)
+          .setFooter(`Date: ${msg.date} | ${args[0] || 1}/${snipes.length}`);
+        if (msg.attachment) Embed.setImage(msg.attachment);
+        Embed.setAuthor(
+          msg.author.tag,
+          msg.author.displayAvatarURL({ dynamic: true, size: 256 })
+        )
+        message.channel.send(Embed);
+      } catch (error) {
+        return;
+    }
+  },
+};
