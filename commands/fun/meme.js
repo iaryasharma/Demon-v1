@@ -1,48 +1,27 @@
-const got = require("got");
+const Color = "GREY", Fetch = require("node-fetch");
 const Discord = require("discord.js");
 
 module.exports = {
-    name: 'meme',
-    aliases: ['memes'],
-    cooldown: 5,
-    description: 'sends meme',
-    run: async(client, message, args) => {   
+  name: "meme",
+  aliases: ["mm"],
+  category: "Fun",
+  group: "fun",
+  description: "Return A Random Meme!",
+  usage: "Meme",
+  run: async (client, message, args) => {
 
-const subReddits = [
-    "meme",
-    "me_irl",
-    "dankmeme",
-    "AdviceAnimals",
-    "dankmemes",
-    "MemeEconomy",
-    "ComedyCemetery",
-    "memes",
-    "PrequelMemes",
-    "terriblefacebookmemes",
-    "funny",
-    "teenagers",
-  ];
-  const random = subReddits[Math.floor(Math.random() * subReddits.length)];
+    const Response = await Fetch("https://api.darkboy.me/getmeme");
+    const Json = await Response.json();
 
-  const embed = new Discord.MessageEmbed();
-  got(`https://www.reddit.com/r/${random}/random/.json`).then((response) => {
-    let content = JSON.parse(response.body);
-    let permalink = content[0].data.children[0].data.permalink;
-    let memeUrl = `https://reddit.com${permalink}`;
-    let memeImage = content[0].data.children[0].data.url;
-    let memeTitle = content[0].data.children[0].data.title;
-    let memeUpvotes = content[0].data.children[0].data.ups;
-    let memeDownvotes = content[0].data.children[0].data.downs;
-    let memeNumComments = content[0].data.children[0].data.num_comments;
-    embed.setTitle(`${memeTitle}`);
-    embed.setURL(`${memeUrl}`);
-    embed.setImage(memeImage);
-    embed.setColor("#ffc256")
-    embed.setFooter(
-      `👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments}`
-    );
-    message.channel.send(embed);
-   });
+    if (!Json.title) return message.channel.send("Your Life Lmafao");
+
+    const Embed = new Discord.MessageEmbed()
+    .setColor(Color)
+    .setTitle(Json.title)
+    .setImage(Json.image)
+    .setFooter(`${Json.up} 👍 | ${Json.comments} 💬`)
+    .setTimestamp();
+
+    return message.channel.send(Embed);
   }
-}
-  
+};

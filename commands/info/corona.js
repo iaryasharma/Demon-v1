@@ -1,73 +1,58 @@
-const discord = require("discord.js");
-
-const { NovelCovid } = require("novelcovid");
-
-const track = new NovelCovid();
-
+const {MessageEmbed} = require("discord.js");
+const fetch = require("node-fetch");
 module.exports = {
-  name: "corona",
+    name: "covid",
+    description: "Get Covid Stats",
+    usage: "<channel id> <msg>",
+    cooldown: 5,
+    run: async (client, message, args) => {
+const baseUrl = 'https://corona.lmao.ninja/v2';
 
-  category: "info",
+    let url, response, corona;
 
-  description: "Get the stats of corona",
-
-  usage: "corona all or corona <country>",
-
-  aliases: ["covid", "covid19"],
-
-  run: async (client, message, args) => {
-    if (!args.length) {
-      return message.channel.send("Please give the name of country");
+    try {
+        url = args[0] ? `${baseUrl}/countries/${args[0]}` : `${baseUrl}/all`;
+        response = await fetch(url).then(res => res.json());
+        corona = response;
+    }
+    catch (error) {
+        return message.channel.send('An error occured, please try again!');
     }
 
-    if (args.join(" ") === "all") {
-      let corona = await track.all(); //it will give global cases
+    try{
+        const embed = new MessageEmbed()
+            .setTitle(args[0] ? `Coronavirus (COVID-19) Information - ${(args[0])}` : 'Coronavirus (COVID-19) Information - Worldwide')
+            .setDescription('[Find out more info from the WHO here](https://www.who.int/emergencies/diseases/novel-coronavirus-2019)')
+            .setColor('#ffc256')
+            .setThumbnail(args[0] ? corona.countryInfo.flag : 'https://i.giphy.com/YPbrUhP9Ryhgi2psz3.gif')
+            .setFooter(`Requested by ${message.author.tag}`)
+            .setTimestamp()
+            .addFields(
+                { name: 'Confirmed Cases', value: `\`\`\`${corona.cases.toLocaleString()}\`\`\``, inline: true },
+                { name: 'Cases Today', value: `\`\`\`${corona.todayCases.toLocaleString()}\`\`\``, inline: true },
+                { name: 'Total Deaths', value: `\`\`\`${corona.deaths.toLocaleString()}\`\`\``, inline: true },
+                { name: 'Death Today', value: `\`\`\`${corona.todayDeaths.toLocaleString()}\`\`\``, inline: true },
+                { name: 'Total Recovered', value: `\`\`\`${corona.recovered.toLocaleString()}\`\`\``, inline: true },
+                { name: 'Critical Cases', value: `\`\`\`${corona.critical.toLocaleString()}\`\`\``, inline: true },
+                { name: 'Active Cases', value: `\`\`\`${corona.active.toLocaleString()}\`\`\``, inline: true },
+                { name: 'Total Tested', value: `\`\`\`${corona.tests.toLocaleString()}\`\`\``, inline: true },
+                { name: 'Cases per million', value: `\`\`\`${corona.casesPerOneMillion.toLocaleString()}\`\`\``, inline: true },
+                { name: 'Death per million', value: `\`\`\`${corona.deathsPerOneMillion.toLocaleString()}\`\`\``, inline: true },
+                { name: 'Tested per million', value: `\`\`\`${corona.testsPerOneMillion.toLocaleString()}\`\`\``, inline: true },
+                { name: 'Current Fatality Rate', value: `\`\`\`${(corona.deaths / corona.cases * 100).toFixed(1)}%\`\`\``, inline: true },
+                { name: 'Current Recovery Rate', value: `\`\`\`${(corona.recovered / corona.cases * 100).toFixed(1)}%\`\`\``, inline: true },
+                { name: 'Positive Test Pecentage', value: `\`\`\`${(corona.cases / corona.tests * 100).toFixed(1)}%\`\`\``, inline: true },
+                { name: 'Negative Test Pecentage', value: `\`\`\`${100 - (corona.cases / corona.tests * 100).toFixed(1)}%\`\`\``, inline: true },
+            );
 
-      let embed = new discord.MessageEmbed()
-
-        .setTitle(`__Global Cases__`)
-
-        .setColor("#ff2050")
-
-        .setDescription(`Sometimes cases number may differ from small amount.`)
-
-        .addField("Total Cases", corona.cases, true)
-
-        .addField("Total Deaths", corona.deaths, true)
-
-        .addField("Total Recovered", corona.recovered, true)
-
-        .addField("Today's Cases", corona.todayCases, true)
-
-        .addField("Today's Deaths", corona.todayDeaths, true)
-
-        .addField("Active Cases", corona.active, true);
-
-      return message.channel.send(embed);
-    } else {
-      let corona = await track.countries(args.join(" ")); //change it to countries
-
-      let embed = new discord.MessageEmbed()
-
-        .setTitle(`__${corona.country}__`)
-
-        .setColor("#ff2050")
-
-        .setDescription(`Sometimes cases number may differ from small amount.`)
-
-        .addField("Total Cases", corona.cases, true)
-
-        .addField("Total Deaths", corona.deaths, true)
-
-        .addField("Total Recovered", corona.recovered, true)
-
-        .addField("Today's Cases", corona.todayCases, true)
-
-        .addField("Today's Deaths", corona.todayDeaths, true)
-
-        .addField("Active Cases", corona.active, true);
-
-      return message.channel.send(embed);
+        await message.channel.send(embed);
     }
-  }
-};
+    catch (e) {
+        return message.channel.send(
+            new MessageEmbed()
+            .setColor('BLACK')
+            .setDescription('Please provide a valid country.')
+        );
+    }
+}
+}
