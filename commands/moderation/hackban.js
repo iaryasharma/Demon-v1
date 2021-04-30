@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'ban',
+  name: 'hackban',
   aliases: [],
   guildOnly: true,
   permissions: [ 'BAN_MEMBERS' ],
