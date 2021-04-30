@@ -1,31 +1,48 @@
-const { MessageEmbed } = require("discord.js");
-const randomPuppy = require("random-puppy");
+const got = require("got");
+const Discord = require("discord.js");
 
 module.exports = {
-  //    config: {
-  name: "meme",
-  category: "fun",
-  noalias: "No Aliases",
-  usage: " ",
-  description: "Sends an epic meme",
-  //       accessableby: "everyone"
-  //    },
-  run: async (client, message, args) => {
-    const subReddits = ["dankmeme", "meme", "me_irl"];
-    const random = subReddits[Math.floor(Math.random() * subReddits.length)];
+    name: 'meme',
+    aliases: ['memes'],
+    cooldown: 5,
+    description: 'sends meme',
+    run: async(client, message, args) => {   
 
-    const img = await randomPuppy(random);
-    const embed = new MessageEmbed()
-      .setColor("#ff0000")
-      .setImage(img)
-      .setTitle("RANDOM MEME!")
-      .setURL(`https://reddit.com/r/${random}`)
-      .setFooter(
-        "Requested By :-" + message.author.tag,
-        message.author.displayAvatarURL()
-      )
-      .setTimestamp((message.timestamp = Date.now()));
+const subReddits = [
+    "meme",
+    "me_irl",
+    "dankmeme",
+    "AdviceAnimals",
+    "dankmemes",
+    "MemeEconomy",
+    "ComedyCemetery",
+    "memes",
+    "PrequelMemes",
+    "terriblefacebookmemes",
+    "funny",
+    "teenagers",
+  ];
+  const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
+  const embed = new Discord.MessageEmbed();
+  got(`https://www.reddit.com/r/${random}/random/.json`).then((response) => {
+    let content = JSON.parse(response.body);
+    let permalink = content[0].data.children[0].data.permalink;
+    let memeUrl = `https://reddit.com${permalink}`;
+    let memeImage = content[0].data.children[0].data.url;
+    let memeTitle = content[0].data.children[0].data.title;
+    let memeUpvotes = content[0].data.children[0].data.ups;
+    let memeDownvotes = content[0].data.children[0].data.downs;
+    let memeNumComments = content[0].data.children[0].data.num_comments;
+    embed.setTitle(`${memeTitle}`);
+    embed.setURL(`${memeUrl}`);
+    embed.setImage(memeImage);
+    embed.setColor("#ffc256")
+    embed.setFooter(
+      `👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments}`
+    );
     message.channel.send(embed);
+   });
   }
-};
+}
+  
