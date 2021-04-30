@@ -1,44 +1,20 @@
-const Discord = require("discord.js");
-const fetch = require("node-fetch");
-
+const fetch = require('node-fetch');
+const Discord = require("discord.js")
 module.exports = {
-  //    config: {
-  name: "tweet",
-  noalias: [""],
-  category: "image",
-  description: "Sends A Tweet",
-  usage: "[username] <text>",
-  accessableby: "everyone",
-  //   },
-  run: async (client, message, args) => {
-    let user = args[0];
-    let text = args.slice(1).join(" ");
-
-    let m = await message.channel.send("**Please wait...**");
-
-    if (!user) {
-      return m.edit("**You Have To Enter Someone's Twitter Nickname!**");
+    name:"tweet",
+    group: "fun",
+    async run (client, message, args) {
+        let text = args.slice(0).join(" ");
+        if(!text) return message.channel.send("you need some text there")
+        fetch(`https://nekobot.xyz/api/imagegen?type=trumptweet&text=${text}`)
+        .then((res) => res.json())
+        .then((body) => {
+            let embed = new Discord.MessageEmbed()
+            .setTitle("Trump tweeted!")
+            .setURL(body.message)
+            .setImage(body.message)
+            .setColor("GREY")
+            message.channel.send(embed)
+        })
     }
-
-    if (!text) {
-      return m.edit("**You must enter a message!**");
-    }
-
-    try {
-      let res = await fetch(
-        encodeURI(
-          `https://nekobot.xyz/api/imagegen?type=tweet&username=${user}&text=${text}`
-        )
-      );
-      let json = await res.json();
-      let attachment = new Discord.MessageAttachment(json.message, "tweet.png");
-      await message.channel.send(
-        `**New tweet published by ${user}**`,
-        attachment
-      );
-      m.delete({ timeout: 5000 });
-    } catch (e) {
-      m.edit("Error, Try Again! Mention Someone");
-    }
-  }
-};
+}
