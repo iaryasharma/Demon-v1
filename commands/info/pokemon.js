@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "pokemon",
   description: "<:Demon_Pokeball:829732417728151554> Get any pokemon description <:Demon_Pokeball:829732417728151554>",
-  aliases: ["pokemon"],
+  aliases: ["pokedex"],
   usage: "pokemon <name>",
   run(client, message, args) {
     message.delete();

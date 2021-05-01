@@ -11,7 +11,7 @@ module.exports = {
   run: async (client, message, [user = '', ...reason] ) => {
 
     if (!user.match(/\d{17,19}/)){
-      return message.channel.send(`<:cancel:767062250279927818> | ${message.author}, Please provide the ID of the user to ban.`);
+      return message.channel.send(`<:Demon_Cross:829767735025467445> | ${message.author}, Please provide the ID of the user to ban.`);
     };
 
     user = await client.users
@@ -19,11 +19,11 @@ module.exports = {
     .catch(() => null);
 
     if (!user){
-      return message.channel.send(`<:cancel:767062250279927818> | ${message.author}, User could not be found! Please ensure the supplied ID is valid.`);
+      return message.channel.send(`<:Demon_Cross:829767735025467445>  | ${message.author}, User could not be found! Please ensure the supplied ID is valid.`);
     };
 
     if (user.id === message.guild.ownerID){
-      return message.channel.send(`<:cancel:767062250279927818> | ${message.author}, You cannot ban a server owner!`);
+      return message.channel.send(`<:Demon_Cross:829767735025467445>  | ${message.author}, You cannot ban a server owner!`);
     };
 
     member = await message.guild.members
@@ -31,7 +31,7 @@ module.exports = {
     .catch(() => false);
 
     if (!!member){
-      return message.channel.send(`<:cancel:767062250279927818> | ${message.author}, Hackban will skip a role validation check! Please use \`ban\` command instead if the user is in your server.`);
+      return message.channel.send(`<:Demon_Cross:829767735025467445>  | ${message.author}, Hackban will skip a role validation check! Please use \`ban\` command instead if the user is in your server.`);
     };
 
     if (user.id === message.author.id){
