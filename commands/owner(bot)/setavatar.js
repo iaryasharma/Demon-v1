@@ -13,7 +13,7 @@ const Discord = require('discord.js');
     return message.reply('You haven\'t enough permission.');
     const sayMessage = args.join(` `);
     client.user.setAvatar(sayMessage);
-  const avatarEmbedOther = new Discord.MessageEmbed()
+  const avatarEmbedOther = new Discord.RichEmbed()
   .setTitle(`New avatar`)
   .setURL(sayMessage)
   .setImage(sayMessage)
