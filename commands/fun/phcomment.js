@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "pornhubcomment",
-  aliases: ["phubcomment", "pc"],
+  aliases: ["phcomment", "pc"],
   category: "Image",
   group: "fun",
   description: "Return A Pornhub Comment Image!",
