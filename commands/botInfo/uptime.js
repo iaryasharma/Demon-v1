@@ -6,7 +6,7 @@ module.exports = {
     aliases: [],
     category: "Fun",
     group: "bot",
-    description: "Shows Kei/s uptime",
+    description: "Shows Demon's uptime",
     usage: "uptime",
     run: async (client, message, args) => {
         
@@ -17,11 +17,10 @@ module.exports = {
     const seconds = (d.seconds() == 1) ? `${d.seconds()} second` : `${d.seconds()} seconds`;
     const date = moment().subtract(d, 'ms').format('dddd, MMMM Do YYYY');
     const embed = new MessageEmbed()
-      .setTitle('Kei\'s Uptime')
+      .setTitle('Demon\'s Uptime')
       .setThumbnail('https://cdn.discordapp.com/avatars/795487199197528095/daacd6130496c158e861b4d6fa117a8f.png?size=4096')
       .setDescription(`\`\`\`\n${days}, ${hours}, ${minutes}, and ${seconds}\`\`\``)
-      .addField('Date Launched', date) 
-      .setFooter(`Uptime | \©️${new Date().getFullYear()} Kei`)
+      .setFooter(`Uptime | \©️${new Date().getFullYear()} Demon`)
       .setTimestamp()
       .setColor(message.guild.me.displayHexColor);
     message.channel.send(embed);

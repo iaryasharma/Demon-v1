@@ -23,7 +23,7 @@ module.exports = {
       .setColor('GREY')
       .setAuthor(`${data.category} Joke`)
       .setThumbnail('https://i.imgur.com/KOZUjcc.gif')
-      .setFooter(`Joke | \©️${new Date().getFullYear()} Kei`)
+      .setFooter(`Joke | \©️${new Date().getFullYear()} Demon`)
       .setDescription(data.type === 'twopart' ? `${data.setup}\n\n||${data.delivery}||` : data.joke)
     );
   }

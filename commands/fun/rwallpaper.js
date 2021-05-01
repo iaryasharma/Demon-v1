@@ -25,7 +25,7 @@ module.exports = {
         .setTitle("Here's your Random Wallpaper 🤗")
         .setImage(body.url)
         .setTimestamp()
-        .setFooter(`RWallpaper | \©️${new Date().getFullYear()} Kei`);
+        .setFooter(`RWallpaper | \©️${new Date().getFullYear()} Demon`);
          message.channel.send(embed);
     }
 }

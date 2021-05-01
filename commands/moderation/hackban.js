@@ -35,15 +35,15 @@ module.exports = {
     };
 
     if (user.id === message.author.id){
-      return message.channel.send(`<:cancel:767062250279927818> | ${message.author}, You cannot ban yourself!`);
+      return message.channel.send(`<:Demon_Cross:829767735025467445> | ${message.author}, You cannot ban yourself!`);
     };
 
     if (user.id === client.user.id){
-      return message.channel.send(`<:cancel:767062250279927818> | ${message.author}, Please don't ban me!`);
+      return message.channel.send(`<:Demon_Cross:829767735025467445> | ${message.author}, Please don't ban me!`);
     };
 
     if (client.config.owners.includes(user.id)){
-      return message.channel.send(`<:cancel:767062250279927818> | ${message.author}, No, you can't ban my developers through me!`)
+      return message.channel.send(`<:Demon_Cross:829767735025467445> | ${message.author}, No, you can't ban my developers through me!`)
     };
 
     await message.channel.send(`Are you sure you want to ban **${user.tag}** from this server? (y/n)`)
@@ -56,10 +56,10 @@ module.exports = {
     .catch(() => false);
 
     if (!proceed){
-      return message.channel.send(`<:cancel:767062250279927818> | ${message.author}, cancelled the hackban command!`);
+      return message.channel.send(`<:Demon_Cross:829767735025467445> | ${message.author}, cancelled the hackban command!`);
     };
 
-    return message.guild.members.ban(user, { reason: `Kei Hackban Command: ${message.author.tag}: ${reason.join(' ') || 'Unspecified'}`})
+    return message.guild.members.ban(user, { reason: `Demon's Hackban Command: ${message.author.tag}: ${reason.join(' ') || 'Unspecified'}`})
     .then(_user => message.channel.send(`Successfully banned **${_user.tag}** from this server!`))
     .catch(() => message.channel.send(`Failed to ban **${user.tag}**!`));
   }

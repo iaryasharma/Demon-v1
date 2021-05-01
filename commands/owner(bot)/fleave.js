@@ -5,7 +5,7 @@ module.exports = {
   aliases: [ 'forceleave', 'leaveguild', 'removeguild', 'leaveserver' ],
   ownerOnly: true,
   group: 'owner',
-  description: 'Force Kei to leave a server',
+  description: 'Force Demon to leave a server',
   parameters: [ 'server ID', 'Reason' ],
   get examples(){ [ this.name, ...this.aliases ].map(x => x + ' 12345678901234567890')},
   run: async (client, message, [id = '', ...reason]) => {

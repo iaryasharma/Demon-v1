@@ -15,12 +15,12 @@ module.exports = {
 
     if (!args.length){
       client.commands.cooldowns.get(this.name).users.delete(message.author.id);
-      return message.channel.send(`<:cancel:767062250279927818> | ${message.author}, Please add an issue to your message!`).then(()=>  message.react("💢"));
+      return message.channel.send(`<:Demon_Cross:829767735025467445>  | ${message.author}, Please add an issue to your message!`).then(()=>  message.react("💢"));
     };
 
     if (args.join(' ').length > 1000){
       client.commands.cooldowns.get(this.name).users.delete(message.author.id);
-      return message.channel.send(`<:cancel:767062250279927818> | ${message.author}, Please make your report brief and short! (MAX 1000 characters!)`).then(()=>  message.react("💢"));
+      return message.channel.send(`<:Demon_Cross:829767735025467445>  | ${message.author}, Please make your report brief and short! (MAX 1000 characters!)`).then(()=>  message.react("💢"));
     };
 
     const owner = await client.users.fetch('730424922639302693').catch(() => null);
@@ -46,12 +46,12 @@ module.exports = {
         value: [
           '```js',
           '// REPLY TO USER',
-          `Kei eval message.client.users.fetch('${message.author.id}').then(u => {`,
+          `Demon eval message.client.users.fetch('${message.author.id}').then(u => {`,
           `  u.send(\`YOUR MESSAGE HERE\`)`,
           `})`,
           '\n',
           '// REPLY TO CHANNEL',
-          `Kei eval message.client.channels.cache.get('${message.channel.id}').send(\`YOUR MESSAGE HERE\`)`,
+          `Demon eval message.client.channels.cache.get('${message.channel.id}').send(\`YOUR MESSAGE HERE\`)`,
           '```'
         ].join('\n')
       })
