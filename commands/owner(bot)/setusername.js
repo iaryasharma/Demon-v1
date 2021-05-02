@@ -3,7 +3,7 @@ const Discord = require('discord.js');
   module.exports = {
  name: 'setusername',
     category: "owner",
-  description: 'Sets new username for bot.',
+  description: 'Sets new Username for bot.',
     enabled: true,
   guildOnly: false,
   aliases: [],
@@ -12,12 +12,12 @@ const Discord = require('discord.js');
     if (message.author.id !== '730424922639302693') 
     return message.reply('You haven\'t enough permission.');
     const sayMessage = args.join(` `);
-    client.user.setAvatar(sayMessage);
-  const avatarEmbedOther = new Discord.RichEmbed()
-  .setTitle(`New avatar`)
-  .setURL(sayMessage)
-  .setImage(sayMessage)
-  message.channel.sendEmbed(avatarEmbedOther);
+    client.user.setUsername(sayMessage);
+  const usernameEmbedOther = new Discord.MessageEmbed()
+  .setTitle(`New Username`)
+  .setDescription(sayMessage)
+  .setColor("#ff00b5")
+  message.channel.send(usernameEmbedOther);
   return;
       
   //}
