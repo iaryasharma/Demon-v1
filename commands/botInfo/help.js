@@ -34,7 +34,7 @@ module.exports = {
 \`ghelp(for all giveaway commands and usage), giveaway, reroll, end\`
 
 <:Demon_Corona:829028658034507787>  __**CORONA COMMANDS**__ 
-\`corona all, corona<country>\`
+\`covid, covid <country>\`
  
 <:Demon_Music1:828621262627799060> __**MUSIC COMMANDS**__
 \`music(for all music commands), play, leave, loop, lyrics, pause, resume, queue, skip, skipto <number>, volume <amount>\`
