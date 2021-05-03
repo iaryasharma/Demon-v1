@@ -1,4 +1,4 @@
-const html2md = require('html2markdown');
+/*const html2md = require('html2markdown');
 const { MessageEmbed } = require('discord.js');
 const { decode } = require('he');
 const fetch = require('node-fetch');
@@ -69,3 +69,4 @@ module.exports = {
     );
   }
 };
+*/
