@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+/*const Discord = require("discord.js");
 const ownerid = ["730424922639302693"];
 const ownerid2 = ["612803327675334673"];
 
@@ -136,4 +136,4 @@ module.exports = {
       return;
     }
   }
-};
+};*/
