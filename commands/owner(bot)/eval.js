@@ -1,4 +1,4 @@
-const Discord = require("discord.js"),
+/*const Discord = require("discord.js"),
       { owners } = require("../../config.json"),
       { post } = require("node-superfetch");
 
@@ -89,4 +89,4 @@ await msg.edit(embed)
     .replace(/@/g, "@" + String.fromCharCode(8203))
   } else {
     return string;
-  }}
+  }}*/
