@@ -1,5 +1,7 @@
 //const { default_prefix, token } = require('../config.json');
 const Discord = require('discord.js');
+const { owners } = require("../../config.json")
+
   module.exports = {
  name: 'setusername',
     category: "owner",
@@ -9,8 +11,7 @@ const Discord = require('discord.js');
   aliases: [],
   permLevel: 4,
     run: async  (client, message, args) => {
-    if (message.author.id !== '730424922639302693') 
-    return message.reply('You haven\'t enough permission.');
+    if (message.author.id !== '730424922639302693') return;
     const sayMessage = args.join(` `);
     client.user.setUsername(sayMessage);
   const usernameEmbedOther = new Discord.MessageEmbed()

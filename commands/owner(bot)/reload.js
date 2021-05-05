@@ -1,3 +1,4 @@
+const { owners } = require("../../config.json")
 module.exports = {
   name: 'reload',
   aliases: [],
@@ -7,6 +8,8 @@ module.exports = {
   parameters: [ 'command name/alias' ],
   examples: [ 'reload anime' ],
   run: (client, message, [command] ) => {
+    
+     if (message.author.id !== '730424922639302693') return;
 
     if (!command){
       return message.channel.send('Please enter a command name');

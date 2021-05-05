@@ -1,3 +1,4 @@
+const { owners } = require("../../config.json")
 
 module.exports = {
     name: "restart",
