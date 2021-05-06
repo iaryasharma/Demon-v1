@@ -7,6 +7,7 @@ module.exports = {
   description: "Set the welcome channel",
 
   run: async (client, message, args) => {
+    
     if (!args[0])
       return new discord.MessageEmbed({
           description: "Give a reason for your afk",

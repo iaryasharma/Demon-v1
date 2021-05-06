@@ -9,7 +9,6 @@ const db = require("quick.db");
 const { CanvasSenpai } = require("canvas-senpai");
 const canva = new CanvasSenpai();
 const discord = require("discord.js");
-const {member.id} === `${owner}`)
 const client = new discord.Client({
   disableEveryone: false
 });
@@ -307,6 +306,7 @@ client.giveawaysManager.on(
 client.on("message", async message => {
   try {
     message.mentions.members.forEach(member => {
+      
       const auser = db.get(`afkUser_${message.guild.id + member.id}`);
       const afkmsg = db.get(`afkMsg_${message.guild.id + member.id}`);
       if (auser === true) {
