@@ -315,7 +315,7 @@ client.on("message", async message => {
           "```" + message.author.tag + " :```** " + message.content + "**"
         );
         message.lineReply(
-          message.channel.send(message.channel.send("Error Sending DM"))
+          message.channel.send("```" + member.user.tag + "``` is afk\nReason : " + afkmsg,)
         );
       }
     });
@@ -339,10 +339,14 @@ client.on("message", async message => {
     db.delete(`afkUser_${message.guild.id + message.author.id}`);
     db.delete(`afkMsg_${message.guild.id + message.author.id}`);
 
-    if (messages === undefined) {
+if (messages === undefined) {
       return message
         .lineReply(
-          message.channel.send("Welcome back i removed your afk.\nYou recieved 0 mentions")
+          new discord.MessageEmbed({
+            description:
+              "Welcome back i removed your afk.\nYou recieved 0 mentions",
+            color: "#ff0000"
+          })
         )
         .then(m => m.delete({ timeout: 7000 }));
     } else {
@@ -373,4 +377,4 @@ client.on("message", async message => {
   }
 });
 
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN)
