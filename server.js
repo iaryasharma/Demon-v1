@@ -349,16 +349,9 @@ client.on("message", async message => {
           })
         .then(m => m.delete({ timeout: 7000 }));
     } else {
-      message
-        .lineReply(
-          new discord.MessageEmbed({
-            description:
-              "Welcome back i removed your afk.\nYou recieved " +
+      message.channel.send("**Welcome back i removed your afk.\nYou recieved " +
               mentions +
-              " mentions\nCheck your dm",
-            color: "GOLD"
-          })
-        )
+              " mentions\nCheck your dm**",)
         .then(m => m.delete({ timeout: 7000 }));
       try {
         await message.author.send(
