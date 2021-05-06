@@ -303,5 +303,74 @@ client.giveawaysManager.on(
   }
 );
 
+client.on("message", async message => {
+  try {
+    message.mentions.members.forEach(member => {
+      const auser = db.get(`afkUser_${message.guild.id + member.id}`);
+      const afkmsg = db.get(`afkMsg_${message.guild.id + member.id}`);
+      if (auser === true) {
+        db.add(`afkMention_${message.guild.id + member.id}`, 1);
+        db.push(
+          `afkMentions.msg_${message.guild.id + member.id}`,
+          "```" + message.author.tag + " :```** " + message.content + "**"
+        );
+        message.lineReply(
+          message.channel.send(message.channel.send("Error Sending DM"))
+        );
+      }
+    });
+  } catch (e) {
+    console.log(e.message);
+  }
+
+  const afkUser = db.get(`afkUser_${message.guild.id + message.author.id}`);
+  if (afkUser !== true) {
+    return;
+  } else {
+    const messages = db.get(
+      `afkMentions.msg_${message.guild.id + message.author.id}`
+    );
+    const mentions = db.get(
+      `afkMention_${message.guild.id + message.author.id}`
+    );
+
+    db.delete(`afkMention_${message.guild.id + message.author.id}`);
+    db.delete(`afkMentions.msg_${message.guild.id + message.author.id}`);
+    db.delete(`afkUser_${message.guild.id + message.author.id}`);
+    db.delete(`afkMsg_${message.guild.id + message.author.id}`);
+
+    if (messages === undefined) {
+      return message
+        .lineReply(
+          message.channel.send("Welcome back i removed your afk.\nYou recieved 0 mentions")
+        )
+        .then(m => m.delete({ timeout: 7000 }));
+    } else {
+      message
+        .lineReply(
+          message.channel.send("**Welcome back i removed your afk.\nYou recieved " +
+              mentions +
+              " mentions\nCheck your dm**",)
+        )
+        .then(m => m.delete({ timeout: 7000 }));
+      try {
+        await message.author.send(
+          new discord.MessageEmbed({
+            description:
+              "You were mentioned in " +
+              message.guild.name +
+              " when you were afk \n" +
+              messages,
+            color: "GOLD"
+          })
+        );
+      } catch (e) {
+        message
+          .reply("Your dm is off")
+          .then(reply => reply.delete({ timeout: 5000 }));
+      }
+    }
+  }
+});
 
 client.login(process.env.TOKEN);
