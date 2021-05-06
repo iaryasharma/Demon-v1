@@ -314,9 +314,11 @@ client.on("message", async message => {
           `afkMentions.msg_${message.guild.id + member.id}`,
           "```" + message.author.tag + " :```** " + message.content + "**"
         );
-        message.lineReply(
-          message.channel.send("```" + member.user.tag + "``` is afk\nReason : " + afkmsg,)
-        );
+           new discord.MessageEmbed({
+            description:
+              "```" + member.user.tag + "``` is afk\nReason : " + afkmsg,
+            color: "#ff0000"
+          })
       }
     });
   } catch (e) {
@@ -339,22 +341,23 @@ client.on("message", async message => {
     db.delete(`afkUser_${message.guild.id + message.author.id}`);
     db.delete(`afkMsg_${message.guild.id + message.author.id}`);
 
-if (messages === undefined) {
-      return message
-        .lineReply(
-          new discord.MessageEmbed({
+    if (messages === undefined) {
+      new discord.MessageEmbed({
             description:
               "Welcome back i removed your afk.\nYou recieved 0 mentions",
             color: "#ff0000"
           })
-        )
         .then(m => m.delete({ timeout: 7000 }));
     } else {
       message
         .lineReply(
-          message.channel.send("**Welcome back i removed your afk.\nYou recieved " +
+          new discord.MessageEmbed({
+            description:
+              "Welcome back i removed your afk.\nYou recieved " +
               mentions +
-              " mentions\nCheck your dm**",)
+              " mentions\nCheck your dm",
+            color: "GOLD"
+          })
         )
         .then(m => m.delete({ timeout: 7000 }));
       try {

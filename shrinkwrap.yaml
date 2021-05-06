@@ -6,7 +6,7 @@ dependencies:
   colornames: 1.1.1
   cpu-stat: 2.0.1
   discord-giveaways: 4.4.3
-  discord.js: 12.5.1
+  discord.js: 12.5.3
   discord.js-commando: 0.12.2
   dotenv: 8.2.0
   express: 4.17.1
@@ -83,7 +83,7 @@ packages:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
-      mime-types: 2.1.29
+      mime-types: 2.1.30
     dev: false
     engines:
       node: '>= 6'
@@ -1276,7 +1276,7 @@ packages:
       node: '>=12.0.0'
     resolution:
       integrity: sha512-3C3VpVVi/GJDImhQ9TKJhhHdK00XVzqbX722Zti6LEs5oA1zydjH89+tgIUkSF7bvaLpZKOfFy0MIeNWv+uL9g==
-  /discord.js/12.5.1:
+  /discord.js/12.5.3:
     dependencies:
       '@discordjs/collection': 0.1.6
       '@discordjs/form-data': 3.0.1
@@ -1285,12 +1285,12 @@ packages:
       prism-media: 1.2.9
       setimmediate: 1.0.5
       tweetnacl: 1.0.3
-      ws: 7.4.4
+      ws: 7.4.5
     dev: false
     engines:
       node: '>=12.0.0'
     resolution:
-      integrity: sha512-VwZkVaUAIOB9mKdca0I5MefPMTQJTNg0qdgi1huF3iwsFwJ0L5s/Y69AQe+iPmjuV6j9rtKoG0Ta0n9vgEIL6w==
+      integrity: sha512-D3nkOa/pCkNyn6jLZnAiJApw2N9XrIsXUAdThf01i7yrEuqUmDGc7/CexVWwEcgbQR97XQ+mcnqJpmJ/92B4Aw==
   /doctrine/3.0.0:
     dependencies:
       esutils: 2.0.3
@@ -2555,6 +2555,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-svXaP8UQRZ5K7or+ZmfNhg2xX3yKDMUzqadsSqi4NCH/KomcH75MAMYAGVlvXn4+b/xOPhS3I2uHKRUzvjY7BQ==
+  /mime-db/1.47.0:
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha512-QBmA/G2y+IfeS4oktet3qRZ+P5kPhCKRXxXnQEudYqUaEioAU1/Lq2us3D/t1Jfo4hE9REQPrbB7K5sOczJVIw==
   /mime-types/2.1.28:
     dependencies:
       mime-db: 1.45.0
@@ -2571,6 +2577,14 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-Y/jMt/S5sR9OaqteJtslsFZKWOIIqMACsJSiHghlCAyhf7jfVYjKBmLiX8OgpWeW+fjJ2b+Az69aPFPkUOY6xQ==
+  /mime-types/2.1.30:
+    dependencies:
+      mime-db: 1.47.0
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha512-crmjA4bLtR8m9qLpHvgxSChT+XoSlZi8J4n/aIdn3z92e/U47Z0V/yl+Wh9W046GgFVAmoNR/fmdbZYcSSIUeg==
   /mime/1.6.0:
     dev: false
     engines:
@@ -4089,7 +4103,7 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-/lg70HAjtkUgWPVZhZcm+T4hkL8Zbtp1nFNOn3lRrxnlv50SRBv7cR7RqR+GMsd3hUXy9hWBo4CHTbFTcOYwig==
-  /ws/7.4.4:
+  /ws/7.4.5:
     dev: false
     engines:
       node: '>=8.3.0'
@@ -4097,7 +4111,7 @@ packages:
       bufferutil: ^4.0.1
       utf-8-validate: ^5.0.2
     resolution:
-      integrity: sha512-Qm8k8ojNQIMx7S+Zp8u/uHOx7Qazv3Yv4q68MiWWWOJhiwG5W3x7iqmRtJo8xxrciZUY4vRxUTJCKuRnF28ZZw==
+      integrity: sha512-xzyu3hFvomRfXKH8vOFMU3OguG6oOvhXMo3xsGy3xWExqaM2dxBbVxuD99O7m3ZUFMvvscsZDqxfgMaRr/Nr1g==
   /wumpfetch/0.3.1:
     dev: false
     resolution:
@@ -4165,7 +4179,7 @@ specifiers:
   colornames: ^1.1.1
   cpu-stat: ^2.0.1
   discord-giveaways: ^4.4.3
-  discord.js: ^12.5.1
+  discord.js: ^12.5.2
   discord.js-commando: ^0.12.1
   dotenv: ^8.2.0
   express: ^4.17.1

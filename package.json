@@ -20,7 +20,7 @@
     "colornames": "^1.1.1",
     "node-fetch": "^2.6.1",
     "cpu-stat": "^2.0.1",
-    "discord.js": "^12.5.1",
+    "discord.js": "^12.5.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "figlet": "^1.5.0",
