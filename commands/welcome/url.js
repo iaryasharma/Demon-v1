@@ -9,7 +9,7 @@ module.exports = {
   description: "Change the guild prefix",
   run: async (client, message, args) => {
     //PERMISSION
-    if (!message.member.hasPermission("ADMINISTRATOR")) {
+    if (!message.member.hasPermission("MANAGE_GUILD")) {
       return message.channel.send("You don't have enough powers");
     }
 

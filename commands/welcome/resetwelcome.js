@@ -16,7 +16,7 @@ module.exports = {
   run: async (client, message, args) => {
     //PERMISSION
 
-    if (!message.member.hasPermission("ADMINISTRATOR")) {
+    if (!message.member.hasPermission("MANAGE_GUILD")) {
       return message.channel.send(
         "You are not allowed or do not have permission to change Welcome Image"
       );

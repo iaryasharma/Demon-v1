@@ -160,7 +160,7 @@ client.on("guildMemberAdd", async member => {
 
   let default_url = `https://media.discordapp.net/attachments/596216470397255690/818195770124795945/mOZpPGs.gif`;
 
-  let default_msg = `<a:GC_star:810009286129876992> **WELCOME ${member} <a:GC_star:810009286129876992> **
+  let default_msg = `<a:GC_star:810009286129876992> **WELCOME ${member} &{member.guild}**<a:GC_star:810009286129876992> 
   
 **━━━━━━━━━━━━━━━━━━━━━**
 
