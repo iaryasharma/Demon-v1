@@ -7,7 +7,7 @@ dependencies:
   cpu-stat: 2.0.1
   discord-giveaways: 4.4.3
   discord.js: 12.5.3
-  discord.js-commando: 0.12.2
+  discord.js-commando: 0.12.3
   dotenv: 8.2.0
   express: 4.17.1
   figlet: 1.5.0
@@ -1265,7 +1265,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-/IgXWLA6p0bk348/xIrXsHeNQGZW5688fC6DTz5whC5hEAebjoY0usOSq/74iCQ99oQfIHsl6gx4j06UZcIc1w==
-  /discord.js-commando/0.12.2:
+  /discord.js-commando/0.12.3:
     dependencies:
       common-tags: 1.8.0
       emoji-regex: 9.2.2
@@ -1275,7 +1275,7 @@ packages:
     engines:
       node: '>=12.0.0'
     resolution:
-      integrity: sha512-3C3VpVVi/GJDImhQ9TKJhhHdK00XVzqbX722Zti6LEs5oA1zydjH89+tgIUkSF7bvaLpZKOfFy0MIeNWv+uL9g==
+      integrity: sha512-BNLhTnyFuNsF1TOd9JOu8tRoV1wi3G4AG3WWMc8qtfur8W0fYQ2jmi5CklKU4Q6JqFYjHkLeRMeZv3rAfDOKjQ==
   /discord.js/12.5.3:
     dependencies:
       '@discordjs/collection': 0.1.6
@@ -4180,7 +4180,7 @@ specifiers:
   cpu-stat: ^2.0.1
   discord-giveaways: ^4.4.3
   discord.js: ^12.5.2
-  discord.js-commando: ^0.12.1
+  discord.js-commando: ^0.12.3
   dotenv: ^8.2.0
   express: ^4.17.1
   figlet: ^1.5.0
