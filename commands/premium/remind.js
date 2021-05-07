@@ -1,41 +1,48 @@
-const Discord = require("discord.js");
-const ms = require("ms");
-module.exports = {
-  name: "remind",
-  category: "fun",
-  description: "Remind You ;)!",
-  usage: "Remind <Time> | <Reason>",
-  run: async (client, message, args) => {
-    const Array = ["d", "h", "m", "s"];
+exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+	var time = args[0];
+	var reminder = args.splice(1).join(' ');
 
-    if (
-      !args[0] ||
-      args[0].length < 2 ||
-      !Array.find((e) => args[0].endsWith(e))
-    )
-      return message.channel.send(`Please Give Valid Time - 1d , 1h , 1m , 1s`);
+	if (!time) return message.reply('Can\'t remind you if I don\'t know when to do so...');
+	if (!reminder) return message.reply('You forgot the reminder');
 
-    const Last = args[0].slice(0, -1);
+	// This will not work if the bot is restarted or stopped
 
-    if (Last < 1 || isNaN(Last))
-      return message.channel.send(`Please Give Valid Time - 1d , 1h , 1m , 1s`);
+	time = await time.toString();
 
-    const Reason = args.slice(1).join(" ") || "None";
+	if (time.indexOf('s') !== -1) { // Seconds
+		var timesec = await time.replace(/s.*/, '');
+		var timems = await timesec * 1000;
+	} else if (time.indexOf('m') !== -1) { // Minutes
+		var timemin = await time.replace(/m.*/, '');
+		timems = await timemin * 60 * 1000;
+	} else if (time.indexOf('h') !== -1) { // Hours
+		var timehour = await time.replace(/h.*/, '');
+		timems = await timehour * 60 * 60 * 1000;
+	} else if (time.indexOf('d') !== -1) { // Days
+		var timeday = await time.replace(/d.*/, '');
+		timems = await timeday * 60 * 60 * 24 * 1000;
+	}	else {
+		return message.reply('The time must be in the format of <number>[s/m/h/d]');
+	}
 
-    message.channel.send(
-      `Ok I Will Remind You After ${args[0]}!`
-    );
+	message.reply(`I will remind you in \`${time}\` about \`${reminder}\``);
 
-    setTimeout(async () => {
-      message
-        .reply(
-          `Your Reminder :D${Reason !== "None" ? `\n\nReason: ${Reason}` : ""}`
-        )
-        .catch((err) =>
-          message.channel.send(
-            `I Can't Dm ${message.author.username} For Reminder!`
-          )
-        );
-    }, ms(args[0]));
-  },
+	setTimeout(function () {
+		message.reply(`You asked me \`${time}\` ago to remind you about \`${reminder}\``);
+	}, parseInt(timems));
+
+};
+
+exports.conf = {
+	enabled: true,
+	guildOnly: false,
+	aliases: ['remind', 'reminder'],
+	permLevel: 0
+};
+
+exports.help = {
+	name: 'remindme',
+	category: 'Utilities',
+	description: 'For when you need to remember something',
+	usage: 'remindme [s/m/h/d] [reminder]'
 };
