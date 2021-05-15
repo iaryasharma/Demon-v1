@@ -7,7 +7,7 @@ module.exports = {
     
     let embed = new discord.MessageEmbed()
     .setTitle(`SUPPORT SERVER`)
-    .setDescription(`[SUPPORT SERVER](https://discord.gg/u9gfupyu2v)`)
+    .setDescription(`[SUPPORT SERVER](https://discord.gg/zvynSK7Crk)`)
     .setColor("#7cfff5")
     .setFooter("Requested By :-" + message.author.tag,
         message.author.displayAvatarURL())
