@@ -19,10 +19,10 @@ module.exports = {
     let filter;
     switch (args[0].toLowerCase()) {
       case `on`:
-        message.react("<a:GC_right:810000945562910761>").then(() => message.react("<a:GC_wrong:810000635113635840>"));
+        message.react("✅").then(() => message.react("❌"));
         filter = (reaction, user) => {
           return (
-            ["<a:GC_right:810000945562910761>", "<a:GC_wrong:810000635113635840>"].includes(reaction.emoji.name) &&
+            ["✅", "❌"].includes(reaction.emoji.name) &&
             user.id === message.author.id
           );
         };
@@ -30,7 +30,7 @@ module.exports = {
           .awaitReactions(filter, { max: 1, time: 60000, errors: ["time"] })
           .then(collected => {
             const reaction = collected.first();
-            if (reaction.emoji.name === "<a:GC_right:810000945562910761>") {
+            if (reaction.emoji.name === "✅") {
               message.guild.channels.cache.forEach(ch => {
                 ch.updateOverwrite(ch.guild.roles.everyone, {
                   VIEW_CHANNEL: false
@@ -80,10 +80,10 @@ module.exports = {
           return message.channel.send(
             `You Don't Have Permission To Use This Command! Administrator`
           );
-        message.react("<a:GC_right:810000945562910761>").then(() => message.react("<a:GC_wrong:810000635113635840>"));
+        message.react("✅").then(() => message.react("❌"));
         filter = (reaction, user) => {
           return (
-            ["<a:GC_right:810000945562910761>", "<a:GC_wrong:810000635113635840>"].includes(reaction.emoji.name) &&
+            ["✅", "❌"].includes(reaction.emoji.name) &&
             user.id === message.author.id
           );
         };
@@ -92,7 +92,7 @@ module.exports = {
           .then(collected => {
             const reaction = collected.first();
 
-            if (reaction.emoji.name === "<a:GC_right:810000945562910761>") {
+            if (reaction.emoji.name === "✅") {
               message.guild.channels.cache.forEach(ch => {
                 ch.updateOverwrite(ch.guild.roles.everyone, {
                   VIEW_CHANNEL: true
