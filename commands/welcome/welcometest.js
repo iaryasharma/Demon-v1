@@ -17,7 +17,15 @@ module.exports = {
     let default_url = `https://media.discordapp.net/attachments/596216470397255690/818195770124795945/mOZpPGs.gif`; //default msg mtt change krna yeh hyper ke liye lagaye hai ek baar custom msg shi ho gaya toh isko bhi shi kr denge
 
     let default_msg = `
-    You Can Change This By Using \n\n${prefix}setwelcomemessage <msg> or ${prefix}setwmsg <msg> \n\nUse ${prefix}setwimg <url> to change default image \n\nall other things except these cannot be changed.
+    You Can Change This By Using \n${prefix}setwelcomemessage <msg> or ${prefix}setwmsg <msg> \nUse ${prefix}setwimg <url> to change default image \nall other things except these cannot be changed
+
+For Example:- 
+━━━━━━━━━━━━━━━━━━━━━
+**WELCOME {member} TO {member.guild}**
+━━━━━━━━━━━━━━━━━━━━━
+**<emoji> MAKE SURE TO READ RULES FROM <channel>
+<emoji> TAKE SELF ROLES FROM <channel
+<emoji> ENJOY YOUR STAY HERE**
 `;
 
     let msg = db.get(`msg_${member.guild}`);
@@ -45,7 +53,6 @@ module.exports = {
         `
 
 <a:GC_check:810001170734120990> **MEMBER USERNAME :-** __**${message.author.tag}**__
-
 <a:GC_check:810001170734120990> **MEMBER COUNT :-** **__${message.guild.memberCount}__**
 
 `
@@ -60,7 +67,7 @@ module.exports = {
       )
 
       .setAuthor(message.guild)
-      .setTitle("━━━━━━━━━━━━━━━━━━━━━")
+      .setTitle("━━━━━━━━━━━━━━━━━━")
       // .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
       .setColor("#ff0073")
       .setImage(url)
