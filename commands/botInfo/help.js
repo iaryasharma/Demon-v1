@@ -35,9 +35,6 @@ module.exports = {
 
 <:Demon_Corona:829028658034507787>  __**CORONA COMMANDS**__ 
 \`covid, covid <country>\`
- 
-<:Demon_Music1:828621262627799060> __**MUSIC COMMANDS**__
-\`music(for all music commands), play, leave, loop, lyrics, pause, resume, queue, skip, skipto <number>, volume <amount>\`
 
 <:Demon_Discord:828622083675914261> __**BOT INFO**__
 \`botinfo,support,invite,author,ping\`
