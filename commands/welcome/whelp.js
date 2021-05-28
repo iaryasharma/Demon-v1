@@ -65,9 +65,9 @@ module.exports = {
         "Below Is An Image Of What Things Can Be Changed"
       )
       .setImage(
-        "https://cdn.glitch.com/f6bb0bab-55e9-472b-a59a-465c25d21937%2FScreenshot_3.png?v=1617712919457"
+        "https://media.discordapp.net/attachments/838849558590259261/847798233840746536/Screenshot_25.png?width=295&height=392"
       )
-      .setColor("RED")
+      .setColor("#ff0073")
       .setThumbnail(client.user.avatarURL())
       .setFooter(
         "Requested By :-" + message.author.tag,
