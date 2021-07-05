@@ -24,9 +24,6 @@ module.exports = {
 <:Demon_Fun:828621911701323816> __**FUN COMMANDS**__ 
 \`advice, anime, ascii, cat, cry, dog, fact, hug, joke, kiss, dicksize(pp), howgay, meme, pat, punch, slap\`
 
-<:Demon_Welcome:828622867796328470> __**WELCOME COMMANDS**__  
-\`setwelcome <#channel>, setwmessage, rsetwmessage(resets welcome message), wexample(welcome example)\`
-
 <:Demon_Image:828622138260979802> __**UTILITY COMMANDS**__ 
 \`weather, amongus, idp, avatar, serverinfo, imdb, membercount, pokemon, servericon\`
 
@@ -37,7 +34,7 @@ module.exports = {
 \`covid, covid <country>\`
 
 <:Demon_Discord:828622083675914261> __**BOT INFO**__
-\`botinfo,support,invite,author,ping\`
+\`botinfo,support,invite,botdev,ping\`
 
 \`Note: Pokemon command works only for certain pokemons(will be updated soon)\`
 `)
