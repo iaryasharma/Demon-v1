@@ -1,4 +1,4 @@
-const db = require("quick.db");
+/*const db = require("quick.db");
 const { prefix } = require("../../config.json");
 const { msg } = require("../../server.js");
 const discord = require("discord.js");
@@ -72,3 +72,4 @@ module.exports = {
     message.channel.send(embed);
   }
 };
+*/

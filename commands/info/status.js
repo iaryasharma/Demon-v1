@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+/*const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "status",
@@ -104,3 +104,4 @@ module.exports = {
     });
   },
 };
+*/

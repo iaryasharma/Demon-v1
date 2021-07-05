@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+/*const Discord = require("discord.js");
 const db = require("quick.db");
 
 module.exports = {
@@ -21,3 +21,4 @@ module.exports = {
     message.channel.send(`Embed Welcomer Disabled`);
   }
 };
+*/

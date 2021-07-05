@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+/*const discord = require("discord.js");
 const { prefix } = require("../../config.json");
 const db = require("quick.db");
 
@@ -78,3 +78,4 @@ For Example:-
     message.channel.send(embed);
   }
 };
+*/

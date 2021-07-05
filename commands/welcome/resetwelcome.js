@@ -1,4 +1,4 @@
-const db = require("quick.db");
+/*const db = require("quick.db");
 
 const { url } = require("../../server.js");
 
@@ -27,3 +27,4 @@ module.exports = {
     return await message.channel.send("Reseted Welcome Image ✅");
   }
 };
+*/

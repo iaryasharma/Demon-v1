@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+/*const discord = require("discord.js");
 const { prefix } = require("../../config.json");
 
 module.exports = {
@@ -80,3 +80,4 @@ module.exports = {
     message.channel.send(embed);
   }
 };
+*/
