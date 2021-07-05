@@ -18,7 +18,7 @@ module.exports = {
         new Discord.MessageEmbed()
         .setTitle(`Embed Setup | 1/7`)
         .setDescription('What channel do you want your embed to be in?\nYou can cancel the setup at any time by saying \`cancel\`.')
-                      .setColor("RANDOM")
+                      .setColor("#ff0073")
         );
       await startMessageCollectors(client, message, args);
       function startMessageCollectors(client, message, args) {
@@ -41,7 +41,7 @@ module.exports = {
               new Discord.MessageEmbed()
               .setTitle(`Embed Setup | 2/7`)
               .setDescription(`The embed will be in ${channel.toString()}. What title do you want for the embed?`)
-                      .setColor("RANDOM")
+                      .setColor("#ff0073")
             )
             channelCollector.stop();
           }
@@ -61,7 +61,7 @@ module.exports = {
                   msg.channel.send(
                       new Discord.MessageEmbed()
                       .setTitle(`Embed Setup | 3/7`)
-                      .setColor("RANDOM")
+                      .setColor("#ff0073")
                       .setDescription(`Thats's a nice title! now what color do you want?`)
                   )
                   titleCollector.stop()
@@ -77,7 +77,7 @@ module.exports = {
             } else {
               msg.channel.send(
                 new Discord.MessageEmbed()
-                      .setColor("RANDOM")
+                      .setColor("#ff0073")
                 .setTitle(`Embed Setup | 4/7`)
                 .setDescription(`The color will be ${duration}, now what do you want the description to be?`)
                 );
@@ -95,7 +95,7 @@ module.exports = {
             } else {
               msg.channel.send(
                 new Discord.MessageEmbed()
-                      .setColor("RANDOM")
+                      .setColor("#ff0073")
                 .setTitle(`Embed Setup | 5/7`)
                 .setDescription(`OH what a nice description! Now, what do you want the footer to be?`)
                 )
@@ -117,7 +117,7 @@ module.exports = {
             } else {
               msg.channel.send(
                 new Discord.MessageEmbed()
-                      .setColor("RANDOM")
+                      .setColor("#ff0073")
                 .setTitle(`Embed Setup | 6/7`)
                 .setDescription(`What a cool footer! Do you want a timestamp? Type \`yes\` if you do, and type \`no\` if you don't.`)
                 );
@@ -134,7 +134,7 @@ module.exports = {
                   if (msg.content.toLowerCase() === "yes") {
                     await msg.channel.send(
                         new Discord.MessageEmbed()
-                      .setColor("RANDOM")
+                      .setColor("#ff0073")
                         .setTitle(`DONE!`)
                         .setDescription(`There will be a timestamp. The embed has been sent in ${channel.toString()}.`)
                     )
@@ -149,7 +149,7 @@ module.exports = {
                   } else if(msg.content.toLowerCase() === "no"){
                     msg.channel.send(
                       new Discord.MessageEmbed()
-                      .setColor("RANDOM")
+                      .setColor("#ff0073")
                       .setTitle("DONE!")
                       .setDescription(`There will be no timestamp. The embed has been sent in ${channel.toString()}.`)
                       );
