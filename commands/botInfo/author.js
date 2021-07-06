@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+/*const discord = require("discord.js");
 const { owner } = require("../../config.json");
 const { cowner } = require("../../config.json");
 module.exports = {
@@ -46,3 +46,4 @@ HE IS A PROFSSIONAL SERVER DESIGNER, MANAGER\`` )
     message.channel.send(embed);
   }
 };
+*/
