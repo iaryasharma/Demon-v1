@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+/*const discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
@@ -31,4 +31,4 @@ module.exports = {
     embed.setFooter(`Requested by ${message.author.username}`);
     message.channel.send(embed);
   }
-};
+};*/
