@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+/*const discord = require("discord.js");
 
 module.exports = {
   name: "unban",
@@ -71,4 +71,4 @@ module.exports = {
 
     //End
   }
-};
+};*/

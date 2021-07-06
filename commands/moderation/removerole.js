@@ -1,4 +1,4 @@
-//const { defprefix } = require('../botconfig.json');
+/*//const { defprefix } = require('../botconfig.json');
 
 const Discord = require("discord.js");
 
@@ -150,3 +150,4 @@ module.exports = {
     }
   }
 };
+*/
