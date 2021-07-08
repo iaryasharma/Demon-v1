@@ -1,4 +1,5 @@
 const { prefix } = require("../../config.json");
+const Discord = require("discord.js");
 
 module.exports = {
   name: "create-chanel",
@@ -26,5 +27,15 @@ module.exports = {
         }
       ]
     });
+    let embed = new Discord.MessageEmbed()
+      .setAuthor(
+        `${message.author.username} - (${message.author.id})`,
+        message.author.displayAvatarURL()
+      )
+      .setColor("RANDOM").setDescription(`
+Channel:  ${channelName.channel}
+By:  ${message.member}
+      `);
+    message.channel.send(embed);
   }
 };
