@@ -10,7 +10,7 @@ module.exports = {
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
     .setTitle(
-        `:Demon_2: LATEST BOT UPDATES :Demon_2:`)
+        `<:TDemon:829773215638749245>  LATEST BOT UPDATES <:TDemon:829773215638749245> `)
     .addField(
         "<:Demon_Arrow:828621113025363988> Update 1",
         `\`Due to Bot's Verification  it needs to be whitelisted in privilleged intents and this takes a lot of time due to which some of the bot commands are not working they are:- 
@@ -24,7 +24,7 @@ these commands would be temporarily disabled until bot is whitelisted for intent
       `\`We have permanently removed music from our bot and noww we only have Gaara as our music bot\``)
     .addField(
     "<:Demon_Arrow:828621113025363988> Invite Gaara", 
-    "[Gaara](https://discord.com/oauth2/authorize?client_id=768058720621821954&permissions=70282305&scope=bot)")
+    "[Gaara Invite](https://discord.com/oauth2/authorize?client_id=768058720621821954&permissions=70282305&scope=bot)")
     .addField(
     "<:Demon_Arrow:828621113025363988> Update 3",
     `\`Added some featured image and info commands that can be seen by help2 command\``)
