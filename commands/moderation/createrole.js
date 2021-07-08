@@ -6,7 +6,7 @@ module.exports = {
   name: "createrole",
   aliases: ["cr", "createrole", "crole"],
   description: "Creates A New Role in the Server",
-  usage: `\`${prefix}rainbow <role> <time>\``,
+  usage: `\`${prefix}createrole rainbow <role>\``,
   async run(client, message, args) {
     if (!message.guild.me.permissions.has("MANAGE_ROLES"))
       return message.reply(
@@ -39,7 +39,6 @@ module.exports = {
       .setColor("RANDOM").setDescription(`
 Role:  ${name}
 Role Color:  ${args[0]}
-Channel:  ${message.channel}
 By:  ${message.member}
       `);
     message.channel.send(embed);
