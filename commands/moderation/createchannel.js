@@ -23,7 +23,7 @@ module.exports = {
       permissionOverwrites: [
         {
           id: message.guild.id
-          //    deny: ["SEND_MESSAGES", "VIEW_CHANNEL"]
+          //deny: ["SEND_MESSAGES", "VIEW_CHANNEL"]
         }
       ]
     });
