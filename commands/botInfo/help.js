@@ -10,7 +10,7 @@ module.exports = {
       .setTitle(`<:Demon_2:822458701037174834> BOT  HELP MENU <:Demon_2:822458701037174834>`)
       .setDescription( `
 <:Demon_Moderation:828621978558529586> __**MODERATION COMMANDS**__ 
-\`addrole(give role to member), removerole(remove role from member), createrole(crole), createchannel(cchannel), addnote<note>, notes, clearnotes, addemoji, enlarge, whois, say, announce, clear(purge), ban, kick, voicekick, mute, unmute, slowmode, warn, warnings\`
+\`addrole(give role to member), removerole(remove role from member), createrole(crole), createchannel(cchannel), addnote<note>, notes, clearnotes, addemoji, enlarge, whois, say, announce, clear(purge), voicekick, slowmode\`
 
 <:Demon_Admin:828622876789702656> __**ADMINISTRATOR COMMANDS**__
 \`mmode<on/off>, Privatechannel<channel name> \`
@@ -34,14 +34,14 @@ module.exports = {
 \`covid, covid <country>\`
 
 <:Demon_Discord:828622083675914261> __**BOT INFO**__
-\`botinfo,support,invite,botdev,ping\`
+\`botinfo,support,invite,botdev,ping,botupdates\`
 
 \`Note: Pokemon command works only for certain pokemons(will be updated soon)\`
+
+\`Note: Some comamnds are not working that can be seen through botupdates command\`
+
 `)
-    
- .addField(
-        "<:Demon_2:822458701037174834> Dashboard",
-        "[Dashboard](https://demon-dashboard.glitch.me)")
+ 
       .setThumbnail(client.user.displayAvatarURL())
       .setColor("#ff0000")
       .setFooter(`HELP MENU`)

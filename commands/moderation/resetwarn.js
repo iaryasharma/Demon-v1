@@ -1,4 +1,4 @@
-const db = require("quick.db");
+/*const db = require("quick.db");
 
 module.exports = {
   name: "resetwarns",
@@ -41,4 +41,4 @@ module.exports = {
       `Reseted all warnings of ${message.mentions.users.first().username}`
     );
   }
-};
+};*/
