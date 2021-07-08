@@ -10,15 +10,15 @@ module.exports = {
   run: async (client, message, args) => {
     let embed = new discord.MessageEmbed()
     .setTitle(
-        `<:Demon_2:822458701037174834> LATEST BOT UPDATES <:Demon_2:822458701037174834>`)
+        `:Demon_2: LATEST BOT UPDATES :Demon_2:`)
     .addField(
         "<:Demon_Arrow:828621113025363988> Update 1",
-        "Due to Bot's Verification  it needs to be whitelisted in privilleged intents and this takes a lot of time due to which some of the bot commands are not working they are:-", 
-        "moderation commands: kick, ban, unban, mute, unmute, warn",
-        "all welcome commands",
-        "Info commands:- status",
-        
-        "these commands would be temporarily disabled until bot is whitelisted for intents")
+        `\`Due to Bot's Verification  it needs to be whitelisted in privilleged intents and this takes a lot of time due to which some of the bot commands are not working they are:- 
+
+moderation commands: kick, ban, unban, mute, unmute, warn
+all welcome commands
+Info commands:- status
+these commands would be temporarily disabled until bot is whitelisted for intents\``)
     .addField(
     "<:Demon_Arrow:828621113025363988> Update 2",
       `\`We have permanently removed music from our bot and noww we only have Gaara as our music bot\``)
@@ -40,7 +40,7 @@ module.exports = {
       )
       .setTimestamp((message.timestamp = Date.now()));
     message.react("815466828028969000");
-    message.react("<a:GC_right:810000945562910761>")
+    message.react(":GC_right:")
     message.channel.send(embed);   
   }
   
