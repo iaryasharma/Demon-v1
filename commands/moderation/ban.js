@@ -1,4 +1,4 @@
-/*const Discord = require("discord.js");
+const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 const { prefix, owner } = require("../../config.json");
 const { cowner } = require("../../config.json");
@@ -85,4 +85,3 @@ module.exports = {
     //End
   }
 };
-*/
