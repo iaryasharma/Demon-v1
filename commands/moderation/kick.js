@@ -11,7 +11,6 @@ module.exports = {
   usage: "Kick <Mention Member>",
   run: async (client, message, args) => {
     //Start
-    message.delete();
     if (!message.member.hasPermission("KICK_MEMBERS"))
       return message.channel.send(
         `You Don't Have Permission To Use This Command!`
