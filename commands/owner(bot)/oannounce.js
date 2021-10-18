@@ -8,7 +8,7 @@ category: "Utility",
 usage: "embed <text to say>",
 description: "Returns provided text in Embed form.",
 run: async(client, message, args) => {
-  if (message.author.id !== '730424922639302693') return;
+  if (message.author.id !== '852612839629127711') return;
  await message.delete()
   let say = message.content.split(" ").slice(1).join(" ")
   if(!say) return message.channel.send(`❌ | `+"I Cannot Repeat Blank Message")

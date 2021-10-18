@@ -10,7 +10,7 @@ module.exports = {
   get examples(){ [ this.name, ...this.aliases ].map(x => x + ' 12345678901234567890')},
   run: async (client, message, [id = '', ...reason]) => {
     
-     if (message.author.id !== '730424922639302693') return;
+     if (message.author.id !== '852612839629127711') return;
 
     if (!id.match(/\d{17,19}/)){
       return message.channel.send(`\\❌| ${message.author}, Please provide the ID of the server you want me to leave from.`);

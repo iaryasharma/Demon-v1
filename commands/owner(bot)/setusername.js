@@ -11,7 +11,7 @@ const { owners } = require("../../config.json")
   aliases: [],
   permLevel: 4,
     run: async  (client, message, args) => {
-    if (message.author.id !== '730424922639302693') return;
+    if (message.author.id !== '852612839629127711') return;
     const sayMessage = args.join(` `);
     client.user.setUsername(sayMessage);
   const usernameEmbedOther = new Discord.MessageEmbed()

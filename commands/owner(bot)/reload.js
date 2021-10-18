@@ -9,7 +9,7 @@ module.exports = {
   examples: [ 'reload anime' ],
   run: (client, message, [command] ) => {
     
-     if (message.author.id !== '730424922639302693') return;
+     if (message.author.id !== '852612839629127711') return;
 
     if (!command){
       return message.channel.send('Please enter a command name');

@@ -6,7 +6,7 @@ module.exports = {
     category: "owner",
   aliases: ["reb"],
     run: async (client, message, args) => {
-        if (message.author.id !== '730424922639302693') {
+        if (message.author.id !== '852612839629127711') {
             return message.channel.send('Only The Destroyer can use this command.')
         } else {
     const msg = await message.channel.send("<a:loading:781998413167460382> Loading...");
