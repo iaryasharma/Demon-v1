@@ -5,7 +5,9 @@ dependencies:
   canvas-senpai: 1.0.0
   colornames: 1.1.1
   cpu-stat: 2.0.1
+  discord-buttons: 4.0.0
   discord-giveaways: 4.4.3
+  discord-reply: 0.1.2
   discord.js: 12.5.3
   discord.js-commando: 0.12.3
   dotenv: 8.2.0
@@ -83,7 +85,7 @@ packages:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
-      mime-types: 2.1.30
+      mime-types: 2.1.33
     dev: false
     engines:
       node: '>= 6'
@@ -1259,12 +1261,22 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
+  /discord-buttons/4.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-E/eQX4Ktj7nKwNDsTfCezBNCu73FtPWJfQcpKohfl0jct/ucMUO+7uhL2MhGsZr4SCfojk7OzccAznuntB564w==
   /discord-giveaways/4.4.3:
     dependencies:
       deepmerge: 4.2.2
     dev: false
     resolution:
       integrity: sha512-/IgXWLA6p0bk348/xIrXsHeNQGZW5688fC6DTz5whC5hEAebjoY0usOSq/74iCQ99oQfIHsl6gx4j06UZcIc1w==
+  /discord-reply/0.1.2:
+    dependencies:
+      discord.js: 12.5.3
+    dev: false
+    resolution:
+      integrity: sha512-4XAFjJrhrmxsnDSPOQPqtjH534tx92KNFOW1uGZvxlKnPHcdCvbkrd8U/9vm/JQl5xDcbQQFUNoXs2k8kC8BKg==
   /discord.js-commando/0.12.3:
     dependencies:
       common-tags: 1.8.0
@@ -1281,11 +1293,12 @@ packages:
       '@discordjs/collection': 0.1.6
       '@discordjs/form-data': 3.0.1
       abort-controller: 3.0.0
-      node-fetch: 2.6.1
-      prism-media: 1.2.9
+      node-fetch: 2.6.5
+      prism-media: 1.3.2
       setimmediate: 1.0.5
       tweetnacl: 1.0.3
-      ws: 7.4.5
+      ws: 7.5.5
+    deprecated: no longer supported
     dev: false
     engines:
       node: '>=12.0.0'
@@ -2555,12 +2568,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-svXaP8UQRZ5K7or+ZmfNhg2xX3yKDMUzqadsSqi4NCH/KomcH75MAMYAGVlvXn4+b/xOPhS3I2uHKRUzvjY7BQ==
-  /mime-db/1.47.0:
+  /mime-db/1.50.0:
     dev: false
     engines:
       node: '>= 0.6'
     resolution:
-      integrity: sha512-QBmA/G2y+IfeS4oktet3qRZ+P5kPhCKRXxXnQEudYqUaEioAU1/Lq2us3D/t1Jfo4hE9REQPrbB7K5sOczJVIw==
+      integrity: sha512-9tMZCDlYHqeERXEHO9f/hKfNXhre5dK2eE/krIvUjZbS2KPcqGDfNShIWS1uW9XOTKQKqK6qbeOci18rbfW77A==
   /mime-types/2.1.28:
     dependencies:
       mime-db: 1.45.0
@@ -2577,14 +2590,14 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-Y/jMt/S5sR9OaqteJtslsFZKWOIIqMACsJSiHghlCAyhf7jfVYjKBmLiX8OgpWeW+fjJ2b+Az69aPFPkUOY6xQ==
-  /mime-types/2.1.30:
+  /mime-types/2.1.33:
     dependencies:
-      mime-db: 1.47.0
+      mime-db: 1.50.0
     dev: false
     engines:
       node: '>= 0.6'
     resolution:
-      integrity: sha512-crmjA4bLtR8m9qLpHvgxSChT+XoSlZi8J4n/aIdn3z92e/U47Z0V/yl+Wh9W046GgFVAmoNR/fmdbZYcSSIUeg==
+      integrity: sha512-plLElXp7pRDd0bNZHw+nMd52vRYjLwQjygaNg7ddJ2uJtTlmnTCjWuPKxVu6//AdaRuME84SvLW91sIkBqGT0g==
   /mime/1.6.0:
     dev: false
     engines:
@@ -2850,6 +2863,14 @@ packages:
       node: 4.x || >=6.0.0
     resolution:
       integrity: sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
+  /node-fetch/2.6.5:
+    dependencies:
+      whatwg-url: 5.0.0
+    dev: false
+    engines:
+      node: 4.x || >=6.0.0
+    resolution:
+      integrity: sha512-mmlIVHJEu5rnIxgEgez6b9GgWXbkZj5YZ7fx+2r94a2E+Uirsp6HsPTPlomfdHtpt/B0cdKviwkoaM6pyvUOpQ==
   /node-fetch/3.0.0-beta.9:
     dependencies:
       data-uri-to-buffer: 3.0.1
@@ -3162,7 +3183,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
-  /prism-media/1.2.9:
+  /prism-media/1.3.2:
     dev: false
     peerDependencies:
       '@discordjs/opus': ^0.5.0
@@ -3170,7 +3191,7 @@ packages:
       node-opus: ^0.3.3
       opusscript: ^0.0.8
     resolution:
-      integrity: sha512-UHCYuqHipbTR1ZsXr5eg4JUmHER8Ss4YEb9Azn+9zzJ7/jlTtD1h0lc4g6tNx3eMlB8Mp6bfll0LPMAV4R6r3Q==
+      integrity: sha512-L6UsGHcT6i4wrQhFF1aPK+MNYgjRqR2tUoIqEY+CG1NqVkMjPRKzS37j9f8GiYPlD6wG9ruBj+q5Ax+bH8Ik1g==
   /process-nextick-args/2.0.1:
     dev: false
     resolution:
@@ -3911,6 +3932,10 @@ packages:
       node: '>=0.8'
     resolution:
       integrity: sha512-nlLsUzgm1kfLXSXfRZMc1KLAugd4hqJHDTvc2hDIwS3mZAfMEuMbc03SujMF+GEcpaX/qboeycw6iO8JwVv2+g==
+  /tr46/0.0.3:
+    dev: false
+    resolution:
+      integrity: sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=
   /tslib/1.14.1:
     dev: false
     resolution:
@@ -4058,6 +4083,17 @@ packages:
     dev: false
     resolution:
       integrity: sha1-DZvNsFpPhNBrm585kAKKYB6kofw=
+  /webidl-conversions/3.0.1:
+    dev: false
+    resolution:
+      integrity: sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=
+  /whatwg-url/5.0.0:
+    dependencies:
+      tr46: 0.0.3
+      webidl-conversions: 3.0.1
+    dev: false
+    resolution:
+      integrity: sha1-lmRU6HZUYuN2RNNib2dCzotwll0=
   /which-pm-runs/1.0.0:
     dev: false
     resolution:
@@ -4103,7 +4139,7 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-/lg70HAjtkUgWPVZhZcm+T4hkL8Zbtp1nFNOn3lRrxnlv50SRBv7cR7RqR+GMsd3hUXy9hWBo4CHTbFTcOYwig==
-  /ws/7.4.5:
+  /ws/7.5.5:
     dev: false
     engines:
       node: '>=8.3.0'
@@ -4111,7 +4147,7 @@ packages:
       bufferutil: ^4.0.1
       utf-8-validate: ^5.0.2
     resolution:
-      integrity: sha512-xzyu3hFvomRfXKH8vOFMU3OguG6oOvhXMo3xsGy3xWExqaM2dxBbVxuD99O7m3ZUFMvvscsZDqxfgMaRr/Nr1g==
+      integrity: sha512-BAkMFcAzl8as1G/hArkxOxq3G7pjUqQ3gzYbLL0/5zNkph70e+lCoxBGnm6AW1+/aiNeV4fnKqZ8m4GZewmH2w==
   /wumpfetch/0.3.1:
     dev: false
     resolution:
@@ -4178,8 +4214,10 @@ specifiers:
   canvas-senpai: ^1.0.0
   colornames: ^1.1.1
   cpu-stat: ^2.0.1
+  discord-buttons: ^4.0.0
   discord-giveaways: ^4.4.3
-  discord.js: ^12.5.2
+  discord-reply: ^0.1.0
+  discord.js: ^12.5.3
   discord.js-commando: ^0.12.3
   dotenv: ^8.2.0
   express: ^4.17.1

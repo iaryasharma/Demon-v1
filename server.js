@@ -5,13 +5,18 @@ const {
 const { config } = require("dotenv");
 const { Random } = require("something-random-on-discord") 
 const { GiveawaysManager } = require("discord-giveaways");
-const db = require("quick.db");
 const { CanvasSenpai } = require("canvas-senpai");
 const canva = new CanvasSenpai();
 const discord = require("discord.js");
 const client = new discord.Client({
   disableEveryone: false
 });
+const db = require("quick.db");
+const disbut = require("discord-buttons");
+disbut(client);
+
+require("./uptime.js");
+require("discord-reply");
 const moment = require("moment");
 require("./uptime.js");
 client.db = require("quick.db");
