@@ -1,9 +1,6 @@
-const {
-  prefix,
-  owner,
-} = require("./config.json");
+const { prefix, owner } = require("./config.json");
 const { config } = require("dotenv");
-const { Random } = require("something-random-on-discord") 
+const { Random } = require("something-random-on-discord");
 const { GiveawaysManager } = require("discord-giveaways");
 const { CanvasSenpai } = require("canvas-senpai");
 const canva = new CanvasSenpai();
@@ -61,7 +58,6 @@ client.on("guildDelete", async guild => {
   const owner = client.users.cache.get(guild.ownerID);
   const lchannel = client.channels.cache.get("818749862539427901");
   const lembed = new discord.MessageEmbed()
-
     .setTitle("SERVER LEFT")
     .addField("Server Name", `${guild.name}`)
     .addField("Server Owner", `${owner.username}`)
@@ -82,65 +78,59 @@ client.on("ready", async () => {
   channel.join().then(connection => {
     connection.voice.setSelfDeaf(true);
   });
-  });
+});
 
-  client.on("ready", async () => {
+client.on("ready", async () => {
   console.log(client.user.tag + " Has Logged In");
   client.user
-    .setActivity(`Servers : ${await client.guilds.cache.size} | Users : ${await client.users.cache.size}`, { type: "WATCHING" })
+    .setActivity(
+      `Servers : ${await client.guilds.cache.size} | Users : ${await client
+        .users.cache.size}`,
+      { type: "WATCHING" }
+    )
     .catch(error => console.log(error));
 });
 
-    //   client.on("message", async message => {
-    //      let prefix;
-    // 
-    //      try {
-    //        if (
-    //          message.mentions.has(owner) &&
-    //          !message.mentions.has(message.guild.id)
-    //       ) {
-    //          return message.react("<a:Gc_Botdeveloper:823261796278075434>");
-    //        }
-    //      } catch {
-    //       return;
-    //     }
-    //   });
+//   client.on("message", async message => {
+//      let prefix;
+//
+//      try {
+//        if (
+//          message.mentions.has(owner) &&
+//          !message.mentions.has(message.guild.id)
+//       ) {
+//          return message.react("<a:Gc_Botdeveloper:823261796278075434>");
+//        }
+//      } catch {
+//       return;
+//     }
+//   });
 
-    client.on("message", async message => {
-      const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
+client.on("message", async message => {
+  const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
 
-      if (message.content.match(prefixMention)) {
-        let mention = new discord.MessageEmbed()
-          .setTitle(
-            ` ${client.user.username} `
-          )
-          .addField(
-            "➡️ PREFIX",
-            `\`${prefix}\``
-          )
-          .addField(
-            "🛠️ USAGE",
-            "`" +
-              prefix +
-              "help` - for bot help menu \n" 
-          )
-          .setColor("#ff0000")
-          .setThumbnail(client.user.displayAvatarURL())
-          .setFooter(
-            "Requested By : " + message.author.tag,
-            message.author.displayAvatarURL()
-          )
-          .setTimestamp((message.timestamp = Date.now()));
-        message.channel.send(mention);
-        return;
-      }
+  if (message.content.match(prefixMention)) {
+    let mention = new discord.MessageEmbed()
+      .setTitle(` ${client.user.username} `)
+      .addField("➡️ PREFIX", `\`${prefix}\``)
+      .addField("🛠️ USAGE", "`" + prefix + "help` - for bot help menu \n")
+      .setColor("#ff0000")
+      .setThumbnail(client.user.displayAvatarURL())
+      .setFooter(
+        "Requested By : " + message.author.tag,
+        message.author.displayAvatarURL()
+      )
+      .setTimestamp((message.timestamp = Date.now()));
+    message.channel.send(mention);
+    return;
+  }
 
-      if (message.author.bot) return;
-      if (!message.guild) return;
-      if (!message.content.startsWith(prefix)) return;
+  if (message.author.bot) return;
+  if (!message.guild) return;
+  if (!message.content.startsWith(prefix)) return;
 
-      if (!message.member)
-        message.member = await message.guild.fetchMember(message);
+  if (!message.member)
+    message.member = await message.guild.fetchMember(message);
   const args = message.content
     .slice(prefix.length)
     .trim()
@@ -230,7 +220,6 @@ client.on("guildMemberAdd", async member => {
   //  client.channels.cache.get(chx).send(attachment);
 });
 
-
 const GiveawayManagerWithOwnDatabase = class extends GiveawaysManager {
   // This function is called when the manager needs to get all the giveaway stored in the database.
   async getAllGiveaways() {
@@ -308,5 +297,4 @@ client.giveawaysManager.on(
   }
 );
 
-
-client.login(process.env.TOKEN)
+client.login(process.env.TOKEN);

@@ -9,46 +9,38 @@ module.exports = {
 
   run: async (client, message, args) => {
     if (message.author.id !== owner) return;
-
     if (!args[0]) return message.reply("Provide Id  First");
+    const gg = client.guilds.cache.get(args[0]);
 
-    const guild = client.guilds.cache.get(args[0]);
-
-    if (!guild) {
+    if (!gg) {
       return message.channel.send(
         `\\❌ | ${message.author}, guild **${
           args[0]
         }** does not exist on your cache`
       );
     }
-    const channel = guild.channels.cache.find(
+    const cha = gg.channels.cache.find(
       channel =>
         channel.type === "text" &&
         channel
-          .permissionsFor(guild.me)
-          .has(["VIEW_CHANNEL", "SEND_MESSAGES"])
-
-          .send(
-            new MessageEmbed()
-              .setColor("RED")
-              .setTitle(
-                `👋 My developer has requested that I leave ${guild.name}!`
-              )
-              .setDescription(
-                `Reason:\n${args.slice(1).join
-
-|| "No Reason Specified"}`
-              )
-          )
-          .then(() => guild.leave())
-          .then(() =>
-            message.channel.send(
-              `\\✔️ Sucessfully left the guild **${guild.name}**`
-            )
-          )
-          .catch(() =>
-            message.channel.send(`\\❗ Could not perform the operation.`)
-          )
+          .permissionsFor(gg.me)
+          .has(["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"])
     );
+    cha
+      .send(
+        new MessageEmbed()
+          .setColor("RED")
+          .setTitle(`👋 My developer has requested that I leave ${gg.name}!`)
+          .setDescription(
+            `Reason:\n${args.slice(1).join(" ") || "No Reason Specified"}`
+          )
+      )
+      .then(() => gg.leave())
+      .then(() =>
+        message.channel.send(`\\✔️ Sucessfully left the guild **${gg.name}**`)
+      )
+      .catch(() =>
+        message.channel.send(`\\❗ Could not perform the operation.`)
+      );
   }
 };
