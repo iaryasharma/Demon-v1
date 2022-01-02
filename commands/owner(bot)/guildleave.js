@@ -4,10 +4,8 @@ module.exports = {
     group: "utility",
     description: "Leaves the server",
     run: async (client, message, args) => {
-        if (message.author.id !== '852612839629127711') {
-            return message.channel.send(`You cannot use this command!`)
-        }
-        await message.channel.send(`Rleaving guild...`)
+        if (message.author.id !== owner) return;
+        await message.channel.send(`Leaving guild...`)
       message.guild.leave();
     }
           }

@@ -1,6 +1,5 @@
-/*const discord = require("discord.js");
+const discord = require("discord.js");
 const { owner } = require("../../config.json");
-const { cowner } = require("../../config.json");
 module.exports = {
   name: "author",
   aliases: ["botdev", "dev"],
@@ -17,13 +16,9 @@ module.exports = {
         "<:Demon_BotDev:828622854589382656> TAG",
         "```" + client.users.cache.get(owner).tag + "```"
       )
-      .addField(
-        "<:Demon_BotDev:828622854589382656> TAG 2",
-        "```" + client.users.cache.get(cowner).tag + "```"
-      )
       .addField("<:Demon_BotDev:828622854589382656> Id", owner)
     
-      .addField("<:Demon_BotDev:828622854589382656> Mention", "<@730424922639302693> || <@852612839629127711>" )
+      .addField("<:Demon_BotDev:828622854589382656> Mention", "<@919296005378281472>" )
     
       .addField("<:Demon_BotDev:828622854589382656> About",  `\`THE CREATOR OF THE BOT Is Frag Nite (ARYA) 
 HE IS A PROFSSIONAL SERVER DESIGNER, MANAGER\`` )
@@ -32,9 +27,9 @@ HE IS A PROFSSIONAL SERVER DESIGNER, MANAGER\`` )
         "[Arya.s_007](https://www.instagram.com/arya.s_007/)"
       )
       .addField("<:Demon_Js:829028138045669403> Code Library", "discord.js")
-      .setThumbnail(
+      /*.setThumbnail(
           `https://media.discordapp.net/attachments/770893036556779543/823087152568860672/FragNite_2.png?width=400&height=400`
-        )
+        )*/
       .setColor("#7cfff5")
       .setFooter(
         "Requested By :-" + message.author.tag,
@@ -46,4 +41,3 @@ HE IS A PROFSSIONAL SERVER DESIGNER, MANAGER\`` )
     message.channel.send(embed);
   }
 };
-*/

@@ -7,9 +7,8 @@ module.exports = {
     category: "owner",
   aliases: ["reb"],
     run: async (client, message, args) => {
-        if (message.author.id !== '852612839629127711') {
-            return message.channel.send('Only The Destroyer can use this command.')
-        } else {
+        if (message.author.id !== owner) return;
+      else {
     const msg = await message.channel.send("<a:loading:781998413167460382> Loading...");
 msg.edit("I rebooted Check the log to see if I\'m active! <a:checkmarkanimated:781998352732258324> ");
 // you can do whatever you want with the msg variable; it returns the normal message object.
