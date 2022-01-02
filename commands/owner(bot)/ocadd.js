@@ -1,5 +1,5 @@
-const { prefix } = require("../../config.json");
 const Discord = require("discord.js");
+const { prefix, owner } = require("../../config.json");
 
 module.exports = {
   name: "create-chanel",

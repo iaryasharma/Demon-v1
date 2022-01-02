@@ -1,4 +1,5 @@
 const { MessageEmbed, TextChannel } = require('discord.js');
+const { prefix, owner } = require("../../config.json");
 
 module.exports = {
   name: 'fleave',

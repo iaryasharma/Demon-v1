@@ -1,4 +1,6 @@
 const { owners } = require("../../config.json")
+const { prefix, owner } = require("../../config.json");
+
 module.exports = {
   name: 'reload',
   aliases: [],

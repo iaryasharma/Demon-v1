@@ -1,10 +1,9 @@
-/*const Discord = require("discord.js");
-const ownerid = ["730424922639302693"];
-const ownerid2 = ["612803327675334673"];
+const Discord = require("discord.js");
+const { prefix, owner } = require("../../config.json");
 
 module.exports = {
     name: "serverlist",
-    aliases: ["slt"],
+    aliases: ["slt1"],
     category: "owner",
     group: "owner",
     ownerOnly: true,
@@ -12,8 +11,8 @@ module.exports = {
     usage: " ",
     accessableby: "Owner",
   run: async (bot, message, args) => {
-    if (message.author.id == ownerid || ownerid2) {
-      if (!message.guild.me.hasPermission("ADMINISTRATOR"))
+    if (message.author.id !== owner) return; {
+      if (!message.guild.me.hasPermission("EMBED_LINKS"))
         return message.channel
           .send("I Dont Have Permissions")
           .then(msg => msg.delete({ timeout: 5000 }));
@@ -136,4 +135,4 @@ module.exports = {
       return;
     }
   }
-};*/
+};

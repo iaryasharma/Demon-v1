@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const { owners } = require("../../config.json")
+const { prefix, owner } = require("../../config.json");
 
 module.exports = {
   name: "reboot",

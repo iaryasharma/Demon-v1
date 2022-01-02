@@ -1,6 +1,7 @@
 //const { default_prefix, token } = require('../config.json');
 const Discord = require('discord.js');
 const { owners } = require("../../config.json")
+const { prefix, owner } = require("../../config.json");
 
   module.exports = {
  name: 'setavatar',
@@ -11,7 +12,7 @@ const { owners } = require("../../config.json")
   aliases: [],
   permLevel: 4,
     run: async  (client, message, args) => {
-    if (message.author.id !== '852612839629127711') return;
+    if (message.author.id !== owner) return;
     const sayMessage = args.join(` `);
     client.user.setAvatar(sayMessage);
   const avatarEmbedOther = new Discord.MessageEmbed()
