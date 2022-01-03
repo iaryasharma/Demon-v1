@@ -42,7 +42,9 @@ module.exports = {
 
 `)
  
+      .addField("you can use [Autocreative](https://auto.creavite.co/) for your custom profile picture, server banner and profile banner")
       .setThumbnail(client.user.displayAvatarURL())
+      .setImage('https://media.discordapp.net/attachments/920325733157576764/927576799930626078/standard.gif')
       .setColor("#ff0000")
       .setFooter(`HELP MENU`)
       .setTimestamp((message.timestamp = Date.now()));
