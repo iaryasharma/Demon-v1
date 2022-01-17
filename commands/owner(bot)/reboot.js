@@ -9,8 +9,8 @@ module.exports = {
     run: async (client, message, args) => {
         if (message.author.id !== owner) return;
       else {
-    const msg = await message.channel.send("<a:loading:781998413167460382> Loading...");
-msg.edit("I rebooted Check the log to see if I\'m active! <a:checkmarkanimated:781998352732258324> ");
+    const msg = await message.channel.send("<a:GC_online1:810010059446812683> Loading...");
+msg.edit("I rebooted Check the log to see if I\'m active! <a:GC_right:810000945562910761> ");
 // you can do whatever you want with the msg variable; it returns the normal message object.
 //if (message.content === 'fp$react-custom') {       //   if (message.content === '!react-custom')
          
