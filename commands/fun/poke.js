@@ -1,45 +1,45 @@
-const Discord = require("discord.js");
-const { MessageEmbed } = require("discord.js");
-const superagent = require("superagent");
+  const Discord = require("discord.js");
+  const { MessageEmbed } = require("discord.js");
+  const superagent = require("superagent");
 
-module.exports = {
-  name: "poke",
-  //    noalias: [""],
-  category: "emojis",
-  description: "Shows random baka image",
-  usage: "",
+  module.exports = {
+    name: "poke",
+    //    noalias: [""],
+    category: "emojis",
+    description: "Shows random baka image",
+    usage: "",
 
-  //   accessableby: "everyone"
+    //   accessableby: "everyone"
 
-  async run(client, message, args) {
-    let victim =
-      message.mentions.users.first() ||
-      (args.length > 0
-        ? message.users.cache
-            .filter(e =>
-              e.username.toLowerCase().includes(args.join(" ").toLowerCase())
-            )
-            .first()
-        : message.author) ||
-      message.author;
+    async run(client, message, args) {
+      let victim =
+        message.mentions.users.first() ||
+        (args.length > 0
+          ? message.users.cache
+              .filter(e =>
+                e.username.toLowerCase().includes(args.join(" ").toLowerCase())
+              )
+              .first()
+          : message.author) ||
+        message.author;
 
-    const { body } = await superagent.get("https://nekos.life/api/v2/img/poke");
+      const { body } = await superagent.get("https://nekos.life/api/v2/img/poke");
 
-    const embed = new MessageEmbed()
+      const embed = new MessageEmbed()
 
-      .setColor("#6cffbd")
-      .setTitle("POKE")
-      .setDescription(`${message.author} pokes ${victim}`)
-      .setImage(body.url)
-      .setTimestamp()
-      .setFooter(
-        "Requested By :-" + message.author.tag,
+        .setColor("#6cffbd")
+        .setTitle("POKE")
+        .setDescription(`${message.author} pokes ${victim}`)
+        .setImage(body.url)
+        .setTimestamp()
+        .setFooter(
+          "Requested By :-" + message.author.tag,
 
-        message.author.displayAvatarURL()
-      )
+          message.author.displayAvatarURL()
+        )
 
-      .setTimestamp((message.timestamp = Date.now()));
+        .setTimestamp((message.timestamp = Date.now()));
 
-    message.channel.send(embed);
-  }
-};
+      message.channel.send(embed);
+    }
+  };
