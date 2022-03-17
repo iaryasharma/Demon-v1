@@ -2,6 +2,7 @@ dependencies:
   '@discordjs/opus': 0.7.0
   akaneko: 4.5.3
   animejs: 3.2.1
+  animequotes: 2.0.0
   ascii-table: 0.0.9
   canvas-senpai: 1.0.0
   colornames: 1.1.1
@@ -649,6 +650,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
+  /animequotes/2.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-FH2udsb8GQZ+ANNS23h0S2aBxC9COwk/h2cs8prr9Vw0m8YBTbnNK1WK1e4DwoJ8k/T86NJiN3mWsfXpEyIGhw==
   /ansi-escapes/3.2.0:
     dev: false
     engines:
@@ -4446,6 +4451,7 @@ specifiers:
   '@discordjs/opus': ^0.7.0
   akaneko: ^4.5.3
   animejs: ^3.2.1
+  animequotes: ^2.0.0
   ascii-table: ^0.0.9
   canvas-senpai: ^1.0.0
   colornames: ^1.1.1
