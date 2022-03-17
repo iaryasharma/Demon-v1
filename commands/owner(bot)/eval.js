@@ -24,7 +24,7 @@ module.exports = {
 
     let extra = new disbut.MessageButton()
       .setStyle("blurple")
-      .setLabel("⭐ Saperation")
+      .setLabel("⭐ Extra")
       .setID("eval_extra")
       .setDisabled(false);
 
