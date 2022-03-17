@@ -31,6 +31,7 @@ dependencies:
   neko-love-wrapper: 1.2.1
   nekos.life: 2.0.7
   node-fetch: 2.6.1
+  node-kitsu: 1.1.1
   node-superfetch: 0.1.11
   novelcovid: 1.2.7
   opusscript: 0.0.8
@@ -3028,6 +3029,12 @@ packages:
       node: ^10.17 || >=12.3
     resolution:
       integrity: sha512-RdbZCEynH2tH46+tj0ua9caUHVWrd/RHnRfvly2EVdqGmI3ndS1Vn/xjm5KuGejDt2RNDQsVRLPNd2QPwcewVg==
+  /node-kitsu/1.1.1:
+    dependencies:
+      request: 2.88.2
+    dev: false
+    resolution:
+      integrity: sha512-Cp0HS5ck1/LRE5cJ8U0UOfUe2xwp2/cj3m2hpqnriKZBbYUzyn4HtNRyxhGtGSIZUlLVHmzSj2kgvMelWWepWA==
   /node-pre-gyp/0.15.0:
     dependencies:
       detect-libc: 1.0.3
@@ -4468,6 +4475,7 @@ specifiers:
   neko-love-wrapper: ^1.2.1
   nekos.life: ^2.0.7
   node-fetch: ^2.6.1
+  node-kitsu: ^1.1.1
   node-superfetch: ^0.1.11
   novelcovid: ^1.2.6
   opusscript: ^0.0.8

@@ -63,7 +63,8 @@
     "discord-reply": "^0.1.0",
     "@discordjs/opus": "^0.7.0",
     "discord-buttons": "^4.0.0",
-    "ytdl-core": "^4.4.5"
+    "ytdl-core": "^4.4.5",
+    "node-kitsu": "^1.1.1"
   },
   "engines": {
     "node": "12.x"
