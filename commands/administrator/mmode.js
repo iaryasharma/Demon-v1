@@ -12,7 +12,7 @@ module.exports = {
 
   async run(client, message, args) {
     if (!client.config.bowner.includes(message.author.id)) {
-      if (message.member !== message.guild.owner) 
+      if (message.member !== message.guild.owner) {
         if (
           message.member.roles.highest.position <=
           message.guild.me.roles.highest.position
@@ -24,7 +24,7 @@ module.exports = {
                 client.emoji.fail + "| Your Role isn't High Enough"
             })
           );
-      
+      }
     }
     if (!args[0]) {
       return message.lineReply(
