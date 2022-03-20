@@ -1,7 +1,7 @@
 const discord = require("discord.js"),
   db = require("quick.db"),
   ms = require("ms"),
-  { bwebsite, binvite, bserver, pprefix, bowner } = require("../config.json"),
+  { bwebsite, binvite, bserver, pprefix, owner } = require("../config.json"),
   apiPass = db.get("apipass"),
   apiKey = db.get("apikey"),
   disbut = require("discord-buttons");
@@ -42,12 +42,10 @@ module.exports.run = async (client, message) => {
     .addComponent(btn2)
     .addComponent(btn3);
 
-  let msg = `@here\nThank you for choosing **MARVEL**
+  let msg = `@here\nThank you for choosing **Demon**
 
-We hope marvel do help you with your server.
+We hope Demon do help you with your server.
 You can join the support server by taping the support button below.
-
-You can also vote us ( https://top.gg/bot/748583869527097376/vote ) please do support our bot.
 
 **Note : ** 
 - Make sure not to delete this channel.
@@ -147,7 +145,7 @@ Thank you :heart:`
           setchan === undefined
         ) {
           let c = await message.guild.channels
-            .create("marvel-private")
+            .create("demon-private")
             .then((channel) => {
               channel.updateOverwrite(client.user, {
                 VIEW_CHANNEL: true,
@@ -192,7 +190,7 @@ Thank you :heart:`
       if (command) {
         let r = false;
         const modOnly = db.get("modOnly" + message.guild.id);
-        if (!bowner.includes(message.member.id)) {
+        if (!owner.includes(message.member.id)) {
           if (modOnly === true) {
             if (
               !message.member.permissionsIn(message.channel).has("ADMINISTRATOR")
@@ -296,7 +294,7 @@ Thank you :heart:`
           setchan === undefined
         ) {
           let c = await message.guild.channels
-            .create("marvel-private")
+            .create("demon-private")
             .then((channel) => {
               channel.updateOverwrite(client.user, {
                 VIEW_CHANNEL: true,
@@ -376,7 +374,7 @@ Thank you :heart:`
             .then((m) => m.delete({ timeout: 5000 }));
         }
         let r = false;
-        if (!bowner.includes(message.member.id)) {
+        if (!owner.includes(message.member.id)) {
           if (modOnly === true) {
             if (
               !message.member.permissionsIn(message.channel).has("ADMINISTRATOR")
@@ -444,10 +442,10 @@ Thank you :heart:`
   }
 
   // announcement system starts here
-  // for marvel private channels across the servers
+  // for demon private channels across the servers
 
   if (message.channel.id === client.config.announce) {
-    if (!client.config.bowner.includes(message.author.id)) {
+    if (!client.config.owner.includes(message.author.id)) {
       return;
     }
     const ok = new disbut.MessageButton()

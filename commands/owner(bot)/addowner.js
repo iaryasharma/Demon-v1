@@ -9,7 +9,7 @@ module.exports = {
 
   run: async (client, message, args) => {
     message.delete({ timeout: 1000 })
-    if (!client.config.bowner.includes(message.author.id)) return;
+    if (!client.config.owner.includes(message.author.id)) return;
     if (!args[0]) {
       return message.channel.send(
         new discord.MessageEmbed({
