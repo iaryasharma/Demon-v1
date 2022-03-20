@@ -445,9 +445,7 @@ Thank you :heart:`
   // for demon private channels across the servers
 
   if (message.channel.id === client.config.announce) {
-    if (!client.config.bowner.includes(message.author.id)) {
-      return;
-    }
+    if (!client.config.owner.includes(message.author.id)) return;
     const ok = new disbut.MessageButton()
       .setStyle("green")
       .setEmoji(client.emoji.tick_id)
