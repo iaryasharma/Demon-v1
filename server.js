@@ -19,15 +19,20 @@ require("./uptime.js");
 client.db = require("quick.db");
 client.commands = new discord.Collection();
 client.aliases = new discord.Collection();
+client.emoji = require("./json/emoji.json");
+client.embed = require("./json/embed.json");
+client.color = require("./json/embed.json");
+client.gif = require("./json/gif.json");
+client.config = require("./config.json");
+client.badge = require("./json/badges.json");
+client.snipes = new discord.Collection();
+
 ["command", "events"].forEach((handler) => {
   require(`./handlers/${handler}`)(client);
 });
 
-require("./alive.js");
-require("./events2/snipe.js")(client)
-require("./events2/autorole.js")(client)
-require("./events2/embedwel.js")(client)
-require("./button/ticketing.js")(client)
+require("./events/snipe.js")(client)
+require("./events/embedwel.js")(client)
 
 /*client.on("guildCreate", guild => {
     const min = "15"

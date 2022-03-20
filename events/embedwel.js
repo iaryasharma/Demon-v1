@@ -22,7 +22,7 @@ module.exports = function(client, options) {
     }
     let nchx = member.guild.channels.cache.get(chx),
       default_url = client.gif.wel,
-      default_msg = 
+      default_msg = `<a:GC_star:810009286129876992> **WELCOME ${member} TO ${member.guild}**<a:GC_star:810009286129876992> 
   
 **━━━━━━━━━━━━━━━━━━━━━**
 
@@ -34,38 +34,39 @@ module.exports = function(client, options) {
 
 `;
 
-  let m1 = db.get(`msg_${member.guild.id}`);
-  if (!m1) m1 = default_msg;
-  const msg = m1
-    .replace("{member}", member.user)
-    .replace("{member.guild}", member.guild)
-    .replace("{member.user.tag}", member.user.tag)
-    .replace("{member.user.usercount}", member.user.usercount);
+ let createdate = moment.utc(member.createdAt).format("ddd, Do MMMM YYYY");
+    let m1 = db.get(`msg_${member.guild.id}`);
+    if (!m1 || m1 === null) { m1 = default_msg; }
+    const msg = m1
+      .replace("{joined}", createdate)
+      .replace("{member}", member.user)
+      .replace("{member.guild}", member.guild)
+      .replace("{server}", member.guild)
+      .replace("{member.user.tag}", member.user.tag)
+      .replace("{tag}", member.user.tag)
+      .replace("{member.user.usercount}", member.user.usercount)
+      .replace("{membercount}", member.user.usercount);
 
-  // let data = await canva.welcome(member, {
-  //   link: "https://wallpapercave.com/wp/wp5128415.jpg"
-  // });
+    let url = db.get(`url_${member.guild.id}`);
+    if (url === null) url = default_url;
+    let colour = db.get("welClr" + member.guild.id)
+    if (!colour) {
+      colour = client.embed.cm
+    }
+    let wembed = new discord.MessageEmbed()
+      .setAuthor(member.guild)
+      .setTitle("━━━━━━━━━━━━━━━━━")
+      .setColor(colour)
+      .setImage(url)
+      .setTimestamp()
+      .setDescription(msg)
+      .setFooter(
+        member.user.tag, member.user.displayAvatarURL({ dynamic: true })
+      )
 
-  let url = db.get(`url_${member.guild.id}`);
-  if (url === null) url = default_url;
-  let createdate = moment.utc(member.createdAt).format("ddd, Do MMMM YYYY");
-
-  // let link = db.get(`link_${member.guild.id}`);
-  //if (link === null) link = link;
-
-  //const attachment = new discord.MessageAttachment(data, "welcome-image.png");
-
-  let wembed = new discord.MessageEmbed()
-    .setAuthor(member.guild)
-    .setTitle("━━━━━━━━━━━━━━━━━━━━━")
-    .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
-    .setColor("#ff0073")
-    .setImage(url)
-    .setTimestamp()
-    .setDescription(msg)
-    .setFooter(member.guild, member.guild.iconURL())
-    .addField(
-      "━━━━━━━━━━━━━━━━━━━━━",
+    if (ust === true) {
+      wembed.addField(
+        "━━━━━━━━━━━━━━━━━━━━━",
       `
 
 <a:GC_check:810001170734120990> **MEMBER USERNAME :-** __**${member.user.tag}**__
@@ -75,14 +76,29 @@ module.exports = function(client, options) {
 <a:GC_check:810001170734120990> **MEMBER COUNT :-** **__${member.guild.memberCount}__**
 
 `
-    )
-    .addField(
+      )
+    }
+    wembed.addField(
       "━━━━━━━━━━━━━━━━━━━━━",
       `
 
 <a:GC_Golden_Heart:818793534533926953> **THANKS FOR JOINING ${member.guild}** <a:GC_Golden_Heart:818793534533926953>`
     );
-
-  client.channels.cache.get(chx).send(wembed);
-  //  client.channels.cache.get(chx).send(attachment);
-  });
+    try {
+      if (ment === true) {
+        await nchx.send(
+          "**<@" + member.user.id + "> Welcome To " +
+          member.guild.name + "**",
+          wembed
+        );
+      } else {
+        await nchx.send(wembed);
+      }
+    } catch (e) {
+      return client.web.send(
+        "```js\n" + e.message + "\n in "
+        + member.guild.name + " in non embed welcomer\n```"
+      )
+    }
+  })
+}
