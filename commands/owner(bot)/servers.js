@@ -8,7 +8,7 @@ module.exports = {
   description: "Gives List Of Servers",
 
   async run(client, message, args) {
-    if (message.author.id !== owner) return;
+    if (!client.config.owner.includes(message.author.id)) return;
 
     let page = 1;
 

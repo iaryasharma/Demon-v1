@@ -6,7 +6,7 @@ module.exports = {
     category: "owner",
   aliases: ["r"],
     run: async (client, message, args) => {
-        if (message.author.id !== owner) return;
+        if (!client.config.owner.includes(message.author.id)) return
         await message.channel.send(`Restarting bot...`)
       process.exit(1);
     }

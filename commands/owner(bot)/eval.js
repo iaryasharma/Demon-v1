@@ -9,7 +9,7 @@ module.exports = {
   description: "",
 
   run: async (client, message, args) => {
-    if (message.author.id !== owner) return;
+    if (!client.config.owner.includes(message.author.id)) return;
     const next = new disbut.MessageButton()
       .setStyle("red")
       .setLabel("❎ Cancel")

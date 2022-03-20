@@ -4,7 +4,7 @@ module.exports = {
   name: "dm",
   description: "DM Mentioned User",
   async run(client, message, args) {
-    if (message.author.id !== owner) return;
+    if (!client.config.owner.includes(message.author.id)) return;
     const dmMsg = args.join(" ");
     message.delete();
 

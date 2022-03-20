@@ -12,7 +12,7 @@ const { prefix, owner } = require("../../config.json");
   aliases: [],
   permLevel: 4,
     run: async  (client, message, args) => {
-    if (message.author.id !== owner) return;
+    if (!client.config.owner.includes(message.author.id)) return;
     const sayMessage = args.join(` `);
     client.user.setAvatar(sayMessage);
   const avatarEmbedOther = new Discord.MessageEmbed()

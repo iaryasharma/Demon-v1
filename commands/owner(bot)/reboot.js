@@ -7,7 +7,7 @@ module.exports = {
     category: "owner",
   aliases: ["reb"],
     run: async (client, message, args) => {
-        if (message.author.id !== owner) return;
+        if (!client.config.owner.includes(message.author.id)) return;
       else {
     const msg = await message.channel.send("<a:GC_online1:810010059446812683> Loading...");
 msg.edit("I rebooted Check the log to see if I\'m active! <a:GC_right:810000945562910761> ");

@@ -8,7 +8,7 @@ module.exports = {
   description: "Force Demon to leave a server",
 
   run: async (client, message, args) => {
-    if (message.author.id !== owner) return;
+    if (!client.config.owner.includes(message.author.id)) return;
     if (!args[0]) return message.reply("Provide Id  First");
     const gg = client.guilds.cache.get(args[0]);
 

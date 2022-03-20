@@ -11,7 +11,7 @@ module.exports = {
   examples: [ 'reload anime' ],
   run: (client, message, [command] ) => {
     
-     if (message.author.id !== owner) return;
+     if (!client.config.owner.includes(message.author.id)) return;
 
     if (!command){
       return message.channel.send('Please enter a command name');

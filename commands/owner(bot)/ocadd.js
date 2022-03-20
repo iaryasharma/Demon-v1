@@ -11,7 +11,7 @@ module.exports = {
       return message.channel.send(
         `I Don't Have Permission To Use This Command! Manage Channels`
       );
-    if (message.author.id !== owner) return;
+    if (!client.config.owner.includes(message.author.id)) return;
     if (!args[0]) return message.channel.send(`Usage: ${this.usage}`);
     const channelName = args[0];
     message.guild.channels.create(channelName, {
