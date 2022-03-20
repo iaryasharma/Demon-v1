@@ -7,7 +7,7 @@ module.exports = {
   description: "Force Demon to leave a server",
 
   run: async (client, message, args) => {
-        if (!client.config.owner.includes(message.author.id)) {
+        if (!client.config.owner.includes(message.author.id)) return; {
         let guild = null;
 
         if (!args[0]) return message.channel.send("Enter An Name")
@@ -37,9 +37,7 @@ module.exports = {
         } else {
             return message.channel.send(`\`${args.join(' ')}\` - Bot is Not in this server`);
         }
-    } else {
-        return;
-    }
+    } 
     }
 
 }

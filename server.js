@@ -93,13 +93,15 @@ client.on("ready", async () => {
 
 client.on("ready", async () => {
   console.log(client.user.tag + " Has Logged In");
-  client.user
+  let totalUsers = client.guilds.cache.reduce((acc, value) => acc + value.memberCount, 0)
+    var activities = [ `${client.guilds.cache.size} servers`, `${totalUsers} users!`, `V3 Soon`, ], i = 0;
+    setInterval(() => client.user.setActivity(`${prefix}help | ${activities[i++ % activities.length]}`, { type: "WATCHING" }, {status: 'dnd'}),10000)
+  /*client.user
     .setActivity(
       `Servers : ${await client.guilds.cache.size} | Users : ${await client
         .users.cache.size}`,
       { type: "WATCHING" }
-    )
-    .catch(error => console.log(error));
+    )*/
 });
 
 //   client.on("message", async message => {
