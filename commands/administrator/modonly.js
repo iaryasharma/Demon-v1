@@ -12,7 +12,10 @@ module.exports = {
   botPermissions: ["EMBED_LINKS"],
 
   async run(client, message, args) {
-    if (!message.author.id !== message.guild.owner.id) {
+    if (!message.member.permissions.has("ADMINISTRATOR"))
+      return message.channel.send(
+        `You Don't Have Permission To Use This Command! Administrator`
+      ); {
       if (
         message.member.roles.highest.position <
         message.guild.me.roles.highest.position
