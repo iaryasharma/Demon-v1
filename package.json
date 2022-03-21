@@ -62,9 +62,7 @@
     "discord.js-commando": "^0.12.3",
     "discord-reply": "^0.1.0",
     "@discordjs/opus": "^0.7.0",
-    "discord-buttons": "^4.0.0",
-    "animequotes": "^2.0.0",
-    "node-kitsu": "^1.1.1"
+    "discord-buttons": "^4.0.0"
   },
   "engines": {
     "node": "12.x"
