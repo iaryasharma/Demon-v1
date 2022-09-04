@@ -309,4 +309,4 @@ client.giveawaysManager.on(
     );
   }
 );
-client.login('Nzk1NDg3MTk5MTk3NTI4MDk1.X_KFLw.Wm3nlSyGMJtgKN3N1Hdh-l2pZuo');
+client.login(process.env.TOKEN);
